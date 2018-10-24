@@ -2433,7 +2433,7 @@ msgstr "Deudor Malo"
 #: model:ir.ui.view,arch_db:account.report_payment_receipt
 #: model:ir.ui.view,arch_db:account.report_trialbalance
 msgid "Balance"
-msgstr "Balance"
+msgstr "Saldo"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line_balance_cash_basis
