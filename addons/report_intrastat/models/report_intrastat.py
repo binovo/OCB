@@ -12,7 +12,6 @@ class res_country(models.Model):
 class ReportIntrastatCode(models.Model):
     _name = "report.intrastat.code"
     _description = "Intrastat code"
-    _translate = False
 
     name = fields.Char(string='Intrastat Code')
     description = fields.Char(string='Description')
