@@ -33,7 +33,7 @@ class PurchaseRequisition(models.Model):
     _order = "id desc"
 
     def _get_picking_in(self):
-        pick_in = self.env.ref('stock.picking_type_in')
+        pick_in = self.env.ref('stock.picking_type_in', raise_if_not_found=False)
         company = self.env['res.company']._company_default_get('purchase.requisition')
         if not pick_in or pick_in.sudo().warehouse_id.company_id.id != company.id:
             pick_in = self.env['stock.picking.type'].search(
@@ -200,7 +200,7 @@ class PurchaseOrder(models.Model):
 
         self.partner_id = partner.id
         self.fiscal_position_id = fpos.id
-        self.payment_term_id = payment_term.id,
+        self.payment_term_id = payment_term.id
         self.company_id = requisition.company_id.id
         self.currency_id = currency.id
         if not self.origin or requisition.name not in self.origin.split(', '):
@@ -337,3 +337,14 @@ class ProcurementRule(models.Model):
         values['picking_type_id'] = self.picking_type_id.id
         self.env['purchase.requisition'].create(values)
         return True
+
+class Orderpoint(models.Model):
+    _inherit = "stock.warehouse.orderpoint"
+
+    def _quantity_in_progress(self):
+        res = super(Orderpoint, self)._quantity_in_progress()
+        for op in self:
+            for pr in self.env['purchase.requisition'].search([('state','=','draft'),('origin','=',op.name)]):
+                for prline in pr.line_ids.filtered(lambda l: l.product_id.id == op.product_id.id):
+                    res[op.id] += prline.product_uom_id._compute_quantity(prline.product_qty, op.product_uom, round=False)
+        return res
