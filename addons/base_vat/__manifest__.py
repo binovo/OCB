@@ -34,9 +34,13 @@ Supported countries currently include EU countries, and a few non-EU countries
 such as Chile, Colombia, Mexico, Norway or Russia. For unsupported countries,
 only the country code will be validated.
     """,
+    "contributors": [
+        'Israel C. Rebollo, Binovo <irebollo@binovo.es>',
+    ],
     'depends': ['account'],
     'website': 'https://www.odoo.com/page/accounting',
     'data': [
+        'views/res_company_views.xml',
         'views/res_partner_views.xml',
         'views/res_config_settings_views.xml',
     ],
