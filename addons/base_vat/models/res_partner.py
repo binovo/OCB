@@ -94,11 +94,7 @@ class ResPartner(models.Model):
         try:
             # Validate against  VAT Information Exchange System (VIES)
             # see also http://ec.europa.eu/taxation_customs/vies/
-            if vatnumber.check_vies(country_code.upper() + vat_number):
-                return True
-            else:
-                return self.simple_vat_check(country_code, vat_number)
-            # return vatnumber.check_vies(country_code.upper() + vat_number)
+            return vatnumber.check_vies(country_code.upper() + vat_number)
         except Exception:
             # see http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl
             # Fault code may contain INVALID_INPUT, SERVICE_UNAVAILABLE, MS_UNAVAILABLE,
