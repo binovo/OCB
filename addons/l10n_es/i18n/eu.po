@@ -1,21 +1,1271 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * l10n_es
+# 	* l10n_es
 #
-# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 08:19+0000\n"
-"PO-Revision-Date: 2015-09-19 08:16+0000\n"
-"Last-Translator: Martin Trigaux\n"
-"Language-Team: Basque (http://www.transifex.com/odoo/odoo-9/language/eu/)\n"
-"Language: eu\n"
+"POT-Creation-Date: 2019-02-06 16:22+0000\n"
+"PO-Revision-Date: 2019-02-07 09:58+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: eu_ES\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_req05
+msgid "0.50% Recargo Equivalencia Compras"
+msgstr "%0.50 baliokidetasun-erlazioa erosketak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_req05
+msgid "0.50% Recargo Equivalencia Ventas"
+msgstr "%0.50 baliokidetasun-erlazioa salmentak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_req014
+msgid "1.4% Recargo Equivalencia Compras"
+msgstr "%1.4 baliokidetasun-erlazioa erosketak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_req014
+msgid "1.4% Recargo Equivalencia Ventas"
+msgstr "%1.4 baliokidetasun-erlazioa salmentak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_bi
+msgid "10% IVA Soportado (bienes de inversión)"
+msgstr "%10 jasandako BEZ (inbertsio ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_bc
+msgid "10% IVA soportado (bienes corrientes)"
+msgstr "%10 jasandako BEZ (ohiko ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sc
+msgid "10% IVA soportado (servicios corrientes)"
+msgstr "%10 jasandako BEZ (ohiko zerbitzuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva105_gan
+msgid "10,5% IVA Soportado régimen ganadero o pesca"
+msgstr "%10,5 jasandako BEZ abeltzaintza edo arrantza erregimena"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva12_agr
+msgid "12% IVA Soportado régimen agricultura"
+msgstr "%12 jasandako BEZ nekazaritza erregimena"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_bi
+msgid "21% IVA Soportado (bienes de inversión)"
+msgstr "%21 jasandako BEZ (inbertsio ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_bc
+msgid "21% IVA soportado (bienes corrientes)"
+msgstr "%21 jasandako BEZ (ohiko ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sc
+msgid "21% IVA soportado (servicios corrientes)"
+msgstr "%21 jasandako BEZ (ohiko zerbitzuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_bi
+msgid "4% IVA Soportado (bienes de inversión)"
+msgstr "%4 jasandako BEZ (inbertsio ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_bc
+msgid "4% IVA soportado (bienes corrientes)"
+msgstr "%4 jasandako BEZ (ohiko ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sc
+msgid "4% IVA soportado (servicios corrientes)"
+msgstr "%4 jasandako BEZ (ohiko zerbitzuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_req52
+msgid "5.2% Recargo Equivalencia Compras"
+msgstr "%5.2 baliokidetasun-erlazioa erosketak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_req52
+msgid "5.2% Recargo Equivalencia Ventas"
+msgstr "%5.2 baliokidetasun-erlazioa salmentak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_iva_0
+msgid "IVA 0%"
+msgstr "%0 BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva0_ic
+msgid "IVA 0% Entregas Intracomunitarias exentas"
+msgstr "%0 BEZ erkidego-barruko sarrerak salbuetsita"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva0_e
+msgid "IVA 0% Exportaciones"
+msgstr "%0 BEZ esportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva_e
+msgid "IVA 0% Prestación de servicios extracomunitaria"
+msgstr "%0 BEZ erkidego-kanpoko zerbitzu hornitzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva0_sp_i
+msgid "IVA 0% Prestación de servicios intracomunitario"
+msgstr "%0 BEZ erkidego-barruko zerbitzu hornitzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva0_isp
+msgid "IVA 0% Venta con Inversión del Sujeto Pasivo"
+msgstr "%0 BEZ subjektu pasiboaren salmenta inbertsioarekin "
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_iva_10
+msgid "IVA 10%"
+msgstr "%10 BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva10b
+msgid "IVA 10% (Bienes)"
+msgstr "%10 BEZ (Ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva10s
+msgid "IVA 10% (Servicios)"
+msgstr "%10 BEZ (Zerbitzuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ic_bc
+msgid "IVA 10% Adquisición Intracomunitario. Bienes corrientes"
+msgstr "%10 BEZ  erkidego-barruko eskuratzea. Ohiko ondasunak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ic_bi
+msgid "IVA 10% Adquisición Intracomunitario. Bienes de inversión"
+msgstr "%10 BEZ  erkidego-barruko eskuratzea. Inbertsio ondasunak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sp_ex
+msgid "IVA 10% Adquisición de servicios extracomunitarios"
+msgstr "%10 BEZ  erkidego-kanpoko zerbitzu eskuratzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sp_in
+msgid "IVA 10% Adquisición de servicios intracomunitarios"
+msgstr "%10 BEZ  erkidego-barruko zerbitzu eskuratzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_isp
+msgid "IVA 10% Compra con Inversión del Sujeto Pasivo Nacional"
+msgstr "%10 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_isp_1
+msgid "IVA 10% Compra con Inversión del Sujeto Pasivo Nacional (1)"
+msgstr "%10 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_isp_2
+msgid "IVA 10% Compra con Inversión del Sujeto Pasivo Nacional (2)"
+msgstr "%10 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ibc
+msgid "IVA 10% Importaciones bienes corrientes"
+msgstr "%10 BEZ ohiko ondasunak inportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ibi
+msgid "IVA 10% Importaciones bienes de inversión"
+msgstr "%10 BEZ inbertsio ondasunak inportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ic_bc_1
+msgid "IVA 10% Intracomunitario. Bienes corrientes (1)"
+msgstr "%10 BEZ erkidego-barruko. Ohiko ondasunak (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ic_bc_2
+msgid "IVA 10% Intracomunitario. Bienes corrientes (2)"
+msgstr "%10 BEZ erkidego-barruko. Ohiko ondasunak (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ic_bi_1
+msgid "IVA 10% Intracomunitario. Bienes de inversión (1)"
+msgstr "%10 BEZ erkidego-barruko. Inbertsio ondasunak (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_ic_bi_2
+msgid "IVA 10% Intracomunitario. Bienes de inversión (2)"
+msgstr "%10 BEZ erkidego-barruko. Inbertsio ondasunak (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sp_ex_1
+msgid "IVA 10% Inversión del sujeto pasivo extracomunitario (1)"
+msgstr "%10 BEZ erkidego-kanpoko subjektu pasiboaren inbertsioa (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sp_ex_2
+msgid "IVA 10% Inversión del sujeto pasivo extracomunitario (2)"
+msgstr "%10 BEZ erkidego-kanpoko subjektu pasiboaren inbertsioa (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sp_in_1
+msgid "IVA 10% Inversión del sujeto pasivo intracomunitario (1)"
+msgstr "%10 BEZ erkidego-barruko subjektu pasiboaren inbertsioa (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva10_sp_in_2
+msgid "IVA 10% Inversión del sujeto pasivo intracomunitario (2)"
+msgstr "%10 BEZ erkidego-barruko subjektu pasiboaren inbertsioa (2)"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_iva_12
+msgid "IVA 12%"
+msgstr "%12 BEZ"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_iva_21
+msgid "IVA 21%"
+msgstr "%21 BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva21b
+msgid "IVA 21% (Bienes)"
+msgstr "%21 BEZ (Ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva21isp
+msgid "IVA 21% (ISP)"
+msgstr "%21 BEZ (ISP)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva21s
+msgid "IVA 21% (Servicios)"
+msgstr "%21 BEZ (Zerbitzuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ic_bc
+msgid "IVA 21% Adquisición Intracomunitaria. Bienes corrientes"
+msgstr "%21 BEZ  erkidego-barruko eskuratzea. Ohiko ondasunak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ic_bi
+msgid "IVA 21% Adquisición Intracomunitaria. Bienes de inversión"
+msgstr "%21 BEZ  erkidego-barruko eskuratzea. Inbertsio ondasunak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sp_ex
+msgid "IVA 21% Adquisición de servicios extracomunitarios"
+msgstr "%21 BEZ  erkidego-kanpoko zerbitzu eskuratzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sp_in
+msgid "IVA 21% Adquisición de servicios intracomunitarios"
+msgstr "%21 BEZ  erkidego-barruko zerbitzu eskuratzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_isp
+msgid "IVA 21% Compra con Inversión del Sujeto Pasivo Nacional"
+msgstr "%21 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_isp_1
+msgid "IVA 21% Compra con Inversión del Sujeto Pasivo Nacional (1)"
+msgstr "%21 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_isp_2
+msgid "IVA 21% Compra con Inversión del Sujeto Pasivo Nacional (2)"
+msgstr "%21 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ibc
+msgid "IVA 21% Importaciones bienes corrientes"
+msgstr "%21 BEZ ohiko ondasunak inportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ibi
+msgid "IVA 21% Importaciones bienes de inversión"
+msgstr "%21 BEZ inbertsio ondasunak inportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ic_bc_1
+msgid "IVA 21% Intracomunitario. Bienes corrientes (1)"
+msgstr "%21 BEZ erkidego-barruko. Ohiko ondasunak  (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ic_bc_2
+msgid "IVA 21% Intracomunitario. Bienes corrientes (2)"
+msgstr "%21 BEZ erkidego-barruko. Ohiko ondasunak  (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ic_bi_1
+msgid "IVA 21% Intracomunitario. Bienes de inversión (1)"
+msgstr "%21 BEZ erkidego-barruko. Inbertsio ondasunak  (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_ic_bi_2
+msgid "IVA 21% Intracomunitario. Bienes de inversión (2)"
+msgstr "%21 BEZ erkidego-barruko. Inbertsio ondasunak (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sp_ex_1
+msgid "IVA 21% Inversión del sujeto pasivo extracomunitario (1)"
+msgstr "%21 BEZ erkidego-kanpoko subjektu pasiboaren inbertsioa (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sp_ex_2
+msgid "IVA 21% Inversión del sujeto pasivo extracomunitario (2)"
+msgstr "%21 BEZ erkidego-kanpoko subjektu pasiboaren inbertsioa (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sp_in_1
+msgid "IVA 21% Inversión del sujeto pasivo intracomunitario (1)"
+msgstr "%21 BEZ erkidego-barruko subjektu pasiboaren inbertsioa (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva21_sp_in_2
+msgid "IVA 21% Inversión del sujeto pasivo intracomunitario (2)"
+msgstr "%21 BEZ erkidego-barruko subjektu pasiboaren inbertsioa (2)"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_iva_4
+msgid "IVA 4%"
+msgstr "%4 BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva4b
+msgid "IVA 4% (Bienes)"
+msgstr "%4 BEZ (Ondasunak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva4s
+msgid "IVA 4% (Servicios)"
+msgstr "%4 BEZ (Zerbitzuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ic_bc
+msgid "IVA 4% Adquisición Intracomunitario. Bienes corrientes"
+msgstr "%4 BEZ  erkidego-barruko eskuratzea. Ohiko ondasunak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ic_bi
+msgid "IVA 4% Adquisición Intracomunitario. Bienes de inversión"
+msgstr "%4 BEZ  erkidego-barruko eskuratzea. Inbertsio ondasunak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sp_ex
+msgid "IVA 4% Adquisición de servicios extracomunitarios"
+msgstr "%4 BEZ  erkidego-kanpoko zerbitzu eskuratzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sp_in
+msgid "IVA 4% Adquisición de servicios intracomunitarios"
+msgstr "%4 BEZ  erkidego-barruko zerbitzu eskuratzea"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_isp
+msgid "IVA 4% Compra con Inversión del Sujeto Pasivo Nacional"
+msgstr "%4 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_isp_1
+msgid "IVA 4% Compra con Inversión del Sujeto Pasivo Nacional (1)"
+msgstr "%4 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_isp_2
+msgid "IVA 4% Compra con Inversión del Sujeto Pasivo Nacional (2)"
+msgstr "%4 BEZ subjektu pasibo nazionalaren erosketa inbertsioarekin(2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ibc
+msgid "IVA 4% Importaciones bienes corrientes"
+msgstr "%4 BEZ ohiko ondasunak inportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ibi
+msgid "IVA 4% Importaciones bienes de inversión"
+msgstr "%4 BEZ inbertsio ondasunak inportazioak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ic_bc_1
+msgid "IVA 4% Intracomunitario. Bienes corrientes (1)"
+msgstr "%4 BEZ erkidego-barruko. Ohiko ondasunak (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ic_bc_2
+msgid "IVA 4% Intracomunitario. Bienes corrientes (2)"
+msgstr "%4 BEZ erkidego-barruko. Ohiko ondasunak (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ic_bi_1
+msgid "IVA 4% Intracomunitario. Bienes de inversión (1)"
+msgstr "%4 BEZ erkidego-barruko. Inbertsio ondasunak (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_ic_bi_2
+msgid "IVA 4% Intracomunitario. Bienes de inversión (2)"
+msgstr "%4 BEZ erkidego-barruko. Inbertsio ondasunak (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sp_ex_1
+msgid "IVA 4% Inversión del sujeto pasivo extracomunitario (1)"
+msgstr "%4 BEZ erkidego-kanpoko subjektu pasiboaren inbertsioa (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sp_ex_2
+msgid "IVA 4% Inversión del sujeto pasivo extracomunitario (2)"
+msgstr "%4 BEZ erkidego-kanpoko subjektu pasiboaren inbertsioa (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sp_in_1
+msgid "IVA 4% Inversión del sujeto pasivo intracomunitario (1)"
+msgstr "%4 BEZ erkidego-barruko subjektu pasiboaren inbertsioa (1)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva4_sp_in_2
+msgid "IVA 4% Inversión del sujeto pasivo intracomunitario (2)"
+msgstr "%4 BEZ erkidego-barruko subjektu pasiboaren inbertsioa (2)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva0
+msgid "IVA Exento Repercutido"
+msgstr "Salbuetsitako jasandako BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva0_bc
+msgid "IVA Soportado exento (operaciones corrientes)"
+msgstr "Salbuetsitako jasandako BEZ (operazio arruntak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva0_nd
+msgid "IVA Soportado no deducible"
+msgstr "Kengarrigbeko jasandako BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_iva0_ns
+msgid "IVA Soportado no sujeto"
+msgstr "Lotugabeko jasandako BEZ"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_iva_ns
+msgid "No sujeto Repercutido"
+msgstr "Lotugabeko jasanarazitakoa"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf1
+msgid "P_IRPF1"
+msgstr "P_IRPF1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf15
+msgid "P_IRPF15"
+msgstr "P_IRPF15"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf18
+msgid "P_IRPF18"
+msgstr "P_IRPF18"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf19
+msgid "P_IRPF19"
+msgstr "P_IRPF19"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf2
+msgid "P_IRPF2"
+msgstr "P_IRPF2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf20
+msgid "P_IRPF20"
+msgstr "P_IRPF20"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf21p
+msgid "P_IRPF21P"
+msgstr "P_IRPF21P"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf7
+msgid "P_IRPF7"
+msgstr "P_IRPF7"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf9
+msgid "P_IRPF9"
+msgstr "P_IRPF9"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf21t
+msgid "P_IRPFT"
+msgstr "P_IRPFT"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf21td
+msgid "P_IRPFTD"
+msgstr "P_IRPFTD"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf21te
+msgid "P_IRPFTE"
+msgstr "P_IRPFTE"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva0_bc
+msgid "P_IVA0_BC"
+msgstr "P_IVA0_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva0_nd
+msgid "P_IVA0_ND"
+msgstr "P_IVA0_ND"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva0_ns
+msgid "P_IVA0_NS"
+msgstr "P_IVA0_NS"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva105_gan
+msgid "P_IVA105_GAN"
+msgstr "P_IVA105_GAN"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_bc
+msgid "P_IVA10_BC"
+msgstr "P_IVA10_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_bi
+msgid "P_IVA10_BI"
+msgstr "P_IVA10_BI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ibc
+msgid "P_IVA10_IBC"
+msgstr "P_IVA10_IBC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ibi
+msgid "P_IVA10_IBI"
+msgstr "P_IVA10_IBI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ic_bc
+msgid "P_IVA10_IC_BC"
+msgstr "P_IVA10_IC_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ic_bc_1
+msgid "P_IVA10_IC_BC_1"
+msgstr "P_IVA10_IC_BC_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ic_bc_2
+msgid "P_IVA10_IC_BC_2"
+msgstr "P_IVA10_IC_BC_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ic_bi
+msgid "P_IVA10_IC_BI"
+msgstr "P_IVA10_IC_BI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ic_bi_1
+msgid "P_IVA10_IC_BI_1"
+msgstr "P_IVA10_IC_BI_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_ic_bi_2
+msgid "P_IVA10_IC_BI_2"
+msgstr "P_IVA10_IC_BI_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_isp
+msgid "P_IVA10_ISP"
+msgstr "P_IVA10_ISP"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_isp_1
+msgid "P_IVA10_ISP_1"
+msgstr "P_IVA10_ISP_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_isp_2
+msgid "P_IVA10_ISP_2"
+msgstr "P_IVA10_ISP_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sc
+msgid "P_IVA10_SC"
+msgstr "P_IVA10_SC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sp_ex
+msgid "P_IVA10_SP_EX"
+msgstr "P_IVA10_SP_EX"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sp_ex_1
+msgid "P_IVA10_SP_EX_1"
+msgstr "P_IVA10_SP_EX_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sp_ex_2
+msgid "P_IVA10_SP_EX_2"
+msgstr "P_IVA10_SP_EX_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sp_in
+msgid "P_IVA10_SP_IN"
+msgstr "P_IVA10_SP_IN"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sp_in_1
+msgid "P_IVA10_SP_IN_1"
+msgstr "P_IVA10_SP_IN_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva10_sp_in_2
+msgid "P_IVA10_SP_IN_2"
+msgstr "P_IVA10_SP_IN_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva12_agr
+msgid "P_IVA12_AGR"
+msgstr "P_IVA12_AGR"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_bc
+msgid "P_IVA21_BC"
+msgstr "P_IVA21_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_bi
+msgid "P_IVA21_BI"
+msgstr "P_IVA21_BI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ibc
+msgid "P_IVA21_IBC"
+msgstr "P_IVA21_IBC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ibi
+msgid "P_IVA21_IBI"
+msgstr "P_IVA21_IBI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ic_bc
+msgid "P_IVA21_IC_BC"
+msgstr "P_IVA21_IC_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ic_bc_1
+msgid "P_IVA21_IC_BC_1"
+msgstr "P_IVA21_IC_BC_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ic_bc_2
+msgid "P_IVA21_IC_BC_2"
+msgstr "P_IVA21_IC_BC_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ic_bi
+msgid "P_IVA21_IC_BI"
+msgstr "P_IVA21_IC_BI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ic_bi_1
+msgid "P_IVA21_IC_BI_1"
+msgstr "P_IVA21_IC_BI_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_ic_bi_2
+msgid "P_IVA21_IC_BI_2"
+msgstr "P_IVA21_IC_BI_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_isp
+msgid "P_IVA21_ISP"
+msgstr "P_IVA21_ISP"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_isp_1
+msgid "P_IVA21_ISP_1"
+msgstr "P_IVA21_ISP_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_isp_2
+msgid "P_IVA21_ISP_2"
+msgstr "P_IVA21_ISP_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sc
+msgid "P_IVA21_SC"
+msgstr "P_IVA21_SC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sp_ex
+msgid "P_IVA21_SP_EX"
+msgstr "P_IVA21_SP_EX"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sp_ex_1
+msgid "P_IVA21_SP_EX_1"
+msgstr "P_IVA21_SP_EX_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sp_ex_2
+msgid "P_IVA21_SP_EX_2"
+msgstr "P_IVA21_SP_EX_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sp_in
+msgid "P_IVA21_SP_IN"
+msgstr "P_IVA21_SP_IN"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sp_in_1
+msgid "P_IVA21_SP_IN_1"
+msgstr "P_IVA21_SP_IN_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva21_sp_in_2
+msgid "P_IVA21_SP_IN_2"
+msgstr "P_IVA21_SP_IN_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_bc
+msgid "P_IVA4_BC"
+msgstr "P_IVA4_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_bi
+msgid "P_IVA4_BI"
+msgstr "P_IVA4_BI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ibc
+msgid "P_IVA4_IBC"
+msgstr "P_IVA4_IBC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ibi
+msgid "P_IVA4_IBI"
+msgstr "P_IVA4_IBI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ic_bc
+msgid "P_IVA4_IC_BC"
+msgstr "P_IVA4_IC_BC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ic_bc_1
+msgid "P_IVA4_IC_BC_1"
+msgstr "P_IVA4_IC_BC_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ic_bc_2
+msgid "P_IVA4_IC_BC_2"
+msgstr "P_IVA4_IC_BC_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ic_bi
+msgid "P_IVA4_IC_BI"
+msgstr "P_IVA4_IC_BI"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ic_bi_1
+msgid "P_IVA4_IC_BI_1"
+msgstr "P_IVA4_IC_BI_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_ic_bi_2
+msgid "P_IVA4_IC_BI_2"
+msgstr "P_IVA4_IC_BI_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_isp
+msgid "P_IVA4_ISP"
+msgstr "P_IVA4_ISP"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_isp_1
+msgid "P_IVA4_ISP_1"
+msgstr "P_IVA4_ISP_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_isp_2
+msgid "P_IVA4_ISP_2"
+msgstr "P_IVA4_ISP_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sc
+msgid "P_IVA4_SC"
+msgstr "P_IVA4_SC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sp_ex
+msgid "P_IVA4_SP_EX"
+msgstr "P_IVA4_SP_EX"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sp_ex_1
+msgid "P_IVA4_SP_EX_1"
+msgstr "P_IVA4_SP_EX_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sp_ex_2
+msgid "P_IVA4_SP_EX_2"
+msgstr "P_IVA4_SP_EX_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sp_in
+msgid "P_IVA4_SP_IN"
+msgstr "P_IVA4_SP_IN"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sp_in_1
+msgid "P_IVA4_SP_IN_1"
+msgstr "P_IVA4_SP_IN_1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_iva4_sp_in_2
+msgid "P_IVA4_SP_IN_2"
+msgstr "P_IVA4_SP_IN_2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf195a
+msgid "P_RAC195A"
+msgstr "P_RAC195A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf19a
+msgid "P_RAC19A"
+msgstr "P_RAC19A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf20a
+msgid "P_RAC20A"
+msgstr "P_RAC20A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_irpf21a
+msgid "P_RAC21A"
+msgstr "P_RAC21A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_req014
+msgid "P_REQ014"
+msgstr "P_REQ014"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_req05
+msgid "P_REQ05"
+msgstr "P_REQ05"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_req52
+msgid "P_REQ5.2"
+msgstr "P_REQ5.2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_rp19
+msgid "P_RP19"
+msgstr "P_RP19"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_p_rrD19
+msgid "P_RRD19"
+msgstr "P_RRD19"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_recargo_0-5
+msgid "Recargo de Equivalencia 0.5%"
+msgstr "%0.5 baliokidetasun-erlazioa "
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_recargo_1-4
+msgid "Recargo de Equivalencia 1.4%"
+msgstr "%1.4 baliokidetasun-erlazioa "
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_recargo_5-2
+msgid "Recargo de Equivalencia 5.2%"
+msgstr "%5.2 baliokidetasun-erlazioa "
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_1
+msgid "Retenciones 1%"
+msgstr "%1 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_15
+msgid "Retenciones 15%"
+msgstr "%15 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_18
+msgid "Retenciones 18%"
+msgstr "%18 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_19
+msgid "Retenciones 19%"
+msgstr "%19 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf19a
+msgid "Retenciones 19% (Arrendamientos)"
+msgstr "%19 atxikipenak (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_rp19
+msgid "Retenciones 19% (préstamos)"
+msgstr "%19 atxikipenak (maileguak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_rrD19
+msgid "Retenciones 19% (reparto de dividendos)"
+msgstr "%19 atxikipenak (dibidendu banaketa)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf195a
+msgid "Retenciones 19,5% (Arrendamientos)"
+msgstr "%19,5 atxikipenak (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_19-5
+msgid "Retenciones 19.5%"
+msgstr "%19,5 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_2
+msgid "Retenciones 2%"
+msgstr "%2 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_20
+msgid "Retenciones 20%"
+msgstr "%20 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf20a
+msgid "Retenciones 20% (Arrendamientos)"
+msgstr "%20 atxikipenak (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_21
+msgid "Retenciones 21%"
+msgstr "%21 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf21a
+msgid "Retenciones 21% (Arrendamientos)"
+msgstr "%21 atxikipenak (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_7
+msgid "Retenciones 7%"
+msgstr "%7 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax.group,name:l10n_es.tax_group_retenciones_9
+msgid "Retenciones 9%"
+msgstr "%9 atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf21td
+msgid "Retenciones IRPF (Trabajadores) dinerarios"
+msgstr "PFEZren atxikipenak (langileak) diruzkoak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf21te
+msgid "Retenciones IRPF (Trabajadores) en especie"
+msgstr "PFEZren atxikipenak (langileak) gauzaz"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf1
+msgid "Retenciones IRPF 1%"
+msgstr "%1 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf15
+msgid "Retenciones IRPF 15%"
+msgstr "%15 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf18
+msgid "Retenciones IRPF 18%"
+msgstr "%18 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf19
+msgid "Retenciones IRPF 19%"
+msgstr "%19 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf2
+msgid "Retenciones IRPF 2%"
+msgstr "%2 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf20
+msgid "Retenciones IRPF 20%"
+msgstr "%20 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf21p
+msgid "Retenciones IRPF 21%"
+msgstr "%21 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf21t
+msgid "Retenciones IRPF 21% (Trabajadores)"
+msgstr "%21 PFEZ atxikipenak (langileak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf7
+msgid "Retenciones IRPF 7%"
+msgstr "%7 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_p_irpf9
+msgid "Retenciones IRPF 9%"
+msgstr "%9 PFEZ atxikipenak"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf19a
+msgid "Retenciones a cuenta 19% (Arrendamientos)"
+msgstr "%19 atxikipenak kontura (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf195a
+msgid "Retenciones a cuenta 19,5% (Arrendamientos)"
+msgstr "%19,5 atxikipenak kontura (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf20a
+msgid "Retenciones a cuenta 20% (Arrendamientos)"
+msgstr "%20 atxikipenak kontura (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf21a
+msgid "Retenciones a cuenta 21% (Arrendamientos)"
+msgstr "%21 atxikipenak kontura (alokairuak)"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf1
+msgid "Retenciones a cuenta IRPF 1%"
+msgstr "%1 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf15
+msgid "Retenciones a cuenta IRPF 15%"
+msgstr "%15 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf18
+msgid "Retenciones a cuenta IRPF 18%"
+msgstr "%18 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf19
+msgid "Retenciones a cuenta IRPF 19%"
+msgstr "%19 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf2
+msgid "Retenciones a cuenta IRPF 2%"
+msgstr "%2 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf20
+msgid "Retenciones a cuenta IRPF 20%"
+msgstr "%20 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf21
+msgid "Retenciones a cuenta IRPF 21%"
+msgstr "%21 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf7
+msgid "Retenciones a cuenta IRPF 7%"
+msgstr "%7 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,name:l10n_es.1_account_tax_template_s_irpf9
+msgid "Retenciones a cuenta IRPF 9%"
+msgstr "%9 atxikipenak kontura"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf1
+msgid "S_IRPF1"
+msgstr "S_IRPF1"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf15
+msgid "S_IRPF15"
+msgstr "S_IRPF15"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf18
+msgid "S_IRPF18"
+msgstr "S_IRPF18"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf19
+msgid "S_IRPF19"
+msgstr "S_IRPF19"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf2
+msgid "S_IRPF2"
+msgstr "S_IRPF2"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf20
+msgid "S_IRPF20"
+msgstr "S_IRPF20"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf21
+msgid "S_IRPF21"
+msgstr "S_IRPF21"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf7
+msgid "S_IRPF7"
+msgstr "S_IRPF7"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf9
+msgid "S_IRPF9"
+msgstr "S_IRPF9"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva0
+msgid "S_IVA0"
+msgstr "S_IVA0"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva0_e
+msgid "S_IVA0_E"
+msgstr "S_IVA0_E"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva0_ic
+msgid "S_IVA0_IC"
+msgstr "S_IVA0_IC"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva0_isp
+msgid "S_IVA0_ISP"
+msgstr "S_IVA0_ISP"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva0_sp_i
+msgid "S_IVA0_SP_I"
+msgstr "S_IVA0_SP_I"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva10b
+msgid "S_IVA10B"
+msgstr "S_IVA10B"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva10s
+msgid "S_IVA10S"
+msgstr "S_IVA10S"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva21b
+msgid "S_IVA21B"
+msgstr "S_IVA21B"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva21isp
+msgid "S_IVA21ISP"
+msgstr "S_IVA21ISP"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva21s
+msgid "S_IVA21S"
+msgstr "S_IVA21S"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva4b
+msgid "S_IVA4B"
+msgstr "S_IVA4B"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva4s
+msgid "S_IVA4S"
+msgstr "S_IVA4S"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva_ns
+msgid "S_IVA_NS"
+msgstr "S_IVA_NS"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_iva_e
+msgid "S_IVA_SP_E"
+msgstr "S_IVA_SP_E"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf195a
+msgid "S_RAC195A"
+msgstr "S_RAC195A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf19a
+msgid "S_RAC19A"
+msgstr "S_RAC19A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf20a
+msgid "S_RAC20A"
+msgstr "S_RAC20A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_irpf21a
+msgid "S_RAC21A"
+msgstr "S_RAC21A"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_req014
+msgid "S_REQ014"
+msgstr "S_REQ014"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_req05
+msgid "S_REQ05"
+msgstr "S_REQ05"
+
+#. module: l10n_es
+#: model:account.tax,description:l10n_es.1_account_tax_template_s_req52
+msgid "S_REQ52"
+msgstr "S_REQ52"
 
 #. module: l10n_es
 #: model:account.account.type,name:l10n_es.account_type_financieras
@@ -25,7 +1275,7 @@ msgstr "Finantziarioak"
 #. module: l10n_es
 #: model:ir.ui.menu,name:l10n_es.account_reports_es_statements_menu
 msgid "Spanish Statements"
-msgstr ""
+msgstr "Espainiako adierazpenak"
 
 #. module: l10n_es
 #: model:account.account.type,name:l10n_es.account_type_terceros
