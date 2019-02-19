@@ -4631,6 +4631,7 @@ msgstr "Posiciones fiscales"
 #: field:account.print.journal,fiscalyear_id:0
 #: field:account.report.general.ledger,fiscalyear_id:0
 #: field:account.sequence.fiscalyear,fiscalyear_id:0
+#: field:account.tax.chart,fiscalyear_id:0
 #: field:account.vat.declaration,fiscalyear_id:0
 #: field:accounting.report,fiscalyear_id:0
 #: field:accounting.report,fiscalyear_id_cmp:0
