@@ -86,6 +86,8 @@ class account_tax_chart(osv.osv_memory):
         else:
             result['context'] = str({'state': data.target_move,
                                      'fiscalyear_id': data.fiscalyear_id.id})
+            fiscalyear_name = data.fiscalyear_id.name
+            result['name'] += fiscalyear_name and (':' + fiscalyear_name) or ''
         return result
 
     _defaults = {
