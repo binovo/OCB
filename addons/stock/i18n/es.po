@@ -4843,7 +4843,7 @@ msgstr "Movimientos de albarán"
 #. module: stock
 #: model:ir.actions.report,name:stock.action_report_picking
 msgid "Picking Operations"
-msgstr "Operaciones de de albarán"
+msgstr "Operaciones de albarán"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.vpicktree
