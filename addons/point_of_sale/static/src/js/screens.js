@@ -1558,11 +1558,21 @@ var ReceiptScreenWidget = ScreenWidget.extend({
         };
     },
     print_web: function() {
-        if($.browser.safari){
+        if ($.browser.safari) {
             document.execCommand('print', false, null);
-        }
-        else{
-            window.print();
+        } else {
+            try {
+                window.print();
+            } catch(err) {
+                if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+                    this.gui.show_popup('error',{
+                        'title':_t('Printing is not supported on some android browsers'),
+                        'body': _t('Printing is not supported on some android browsers due to no default printing protocol is available. It is possible to print your tickets by making use of an IoT Box.'),
+                    });
+                } else {
+                    throw err;
+                }
+            }
         }
         this.pos.get_order()._printed = true;
     },
@@ -1949,16 +1959,11 @@ var PaymentScreenWidget = ScreenWidget.extend({
         $('body').keypress(this.keyboard_handler);
         // that one comes from the pos, but we prefer to cover all the basis
         $('body').keydown(this.keyboard_keydown_handler);
-        // legacy vanilla JS listeners
-        window.document.body.addEventListener('keypress',this.keyboard_handler);
-        window.document.body.addEventListener('keydown',this.keyboard_keydown_handler);
         this._super();
     },
     hide: function(){
         $('body').off('keypress', this.keyboard_handler);
         $('body').off('keydown', this.keyboard_keydown_handler);
-        window.document.body.removeEventListener('keypress',this.keyboard_handler);
-        window.document.body.removeEventListener('keydown',this.keyboard_keydown_handler);
         this._super();
     },
     // sets up listeners to watch for order changes
@@ -2071,6 +2076,17 @@ var PaymentScreenWidget = ScreenWidget.extend({
                         'body': _t('You need to select the customer before you can invoice an order.'),
                         confirm: function(){
                             self.gui.show_screen('clientlist');
+                        },
+                    });
+                } else if (error.message === 'Backend Invoice') {
+                    self.gui.show_popup('confirm',{
+                        'title': _t('Please print the invoice from the backend'),
+                        'body': _t('The order has been synchronized earlier. Please make the invoice from the backend for the order: ') + error.data.order.name,
+                        confirm: function () {
+                            this.gui.show_screen('receipt');
+                        },
+                        cancel: function () {
+                            this.gui.show_screen('receipt');
                         },
                     });
                 } else if (error.code < 0) {        // XmlHttpRequest Errors

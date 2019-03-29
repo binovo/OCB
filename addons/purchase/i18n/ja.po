@@ -3,23 +3,25 @@
 # * purchase
 # 
 # Translators:
-# 高木正勝 <masakatsu.takagi@pro-spire.co.jp>, 2017
-# Yoshi Tashiro <tashiro@roomsfor.hk>, 2017
-# Martin Trigaux, 2017
-# Manami Hashi <manami@roomsfor.hk>, 2017
-# Takahiro MURAKAMI <murakami@date-yakkyoku.com>, 2017
-# Takuya Sawada <takuya@tuntunkun.com>, 2017
-# Norimichi Sugimoto <norimichi.sugimoto@tls-ltd.co.jp>, 2017
-# kent_ocean <ke.tanabe@gmail.com>, 2017
 # SHIMIZU Taku <shimizu.taku@gmail.com>, 2017
+# Manami Hashi <manami@roomsfor.hk>, 2017
+# 高木正勝 <masakatsu.takagi@pro-spire.co.jp>, 2017
+# Takahiro MURAKAMI <murakami@date-yakkyoku.com>, 2017
+# Martin Trigaux, 2017
+# kent_ocean <ke.tanabe@gmail.com>, 2017
 # 城谷 龍弥 <tatsuya.shirotani@pro-spire.co.jp>, 2018
+# Takuya Sawada <takuya@tuntunkun.com>, 2018
+# Norimichi Sugimoto <norimichi.sugimoto@tls-ltd.co.jp>, 2018
+# Yoshi Tashiro <tashiro@roomsfor.hk>, 2019
+# Yoon Nankyung <nankyung.yoon@pro-spire.co.jp>, 2019
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 11:55+0000\n"
-"PO-Revision-Date: 2018-07-27 11:55+0000\n"
-"Last-Translator: 城谷 龍弥 <tatsuya.shirotani@pro-spire.co.jp>, 2018\n"
+"POT-Creation-Date: 2019-01-03 15:06+0000\n"
+"PO-Revision-Date: 2017-09-20 10:22+0000\n"
+"Last-Translator: Yoon Nankyung <nankyung.yoon@pro-spire.co.jp>, 2019\n"
 "Language-Team: Japanese (https://www.transifex.com/odoo/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -215,6 +217,14 @@ msgid ""
 msgstr ""
 
 #. module: purchase
+#: model:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
+#: model:ir.ui.view,arch_db:purchase.res_config_settings_view_form_stock
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+
+#. module: purchase
 #: model:ir.ui.view,arch_db:purchase.portal_my_purchase_orders
 msgid ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> "
@@ -231,7 +241,7 @@ msgstr "<strong>金額</strong>"
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Date Req.</strong>"
-msgstr "<strong>依頼日</strong>"
+msgstr "<strong>納入予定日</strong>"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.portal_my_purchase_order
@@ -247,7 +257,7 @@ msgstr "<strong>説明</strong>"
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchasequotation_document
 msgid "<strong>Expected Date</strong>"
-msgstr ""
+msgstr "<strong>納入予定日</strong>"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document
@@ -703,7 +713,7 @@ msgstr ""
 #. module: purchase
 #: selection:purchase.report,state:0
 msgid "Draft RFQ"
-msgstr ""
+msgstr "ドラフト見積依頼書"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_dest_address_id
@@ -1227,7 +1237,7 @@ msgstr "プロダクトカテゴリ"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line_product_image
 msgid "Product Image"
-msgstr ""
+msgstr "プロダクト画像"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_report_unit_quantity

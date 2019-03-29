@@ -196,6 +196,8 @@ class MailThread(models.AbstractModel):
     @api.multi
     def _get_message_needaction(self):
         res = dict((res_id, 0) for res_id in self.ids)
+        if not res:
+            return
 
         # search for unread messages, directly in SQL to improve performances
         self._cr.execute(""" SELECT msg.res_id FROM mail_message msg
@@ -1226,7 +1228,8 @@ class MailThread(models.AbstractModel):
                 subtype = 'mail.mt_note'
                 if message_dict.get('parent_id'):
                     parent_message = self.env['mail.message'].sudo().browse(message_dict['parent_id'])
-                    partner_ids = [(4, parent_message.author_id.id)]
+                    if parent_message.author_id:
+                        partner_ids = [(4, parent_message.author_id.id)]
             else:
                 subtype = 'mail.mt_comment'
             new_msg = thread.message_post(subtype=subtype, partner_ids=partner_ids, **message_dict)

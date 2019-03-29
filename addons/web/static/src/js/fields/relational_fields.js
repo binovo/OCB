@@ -193,6 +193,12 @@ var FieldMany2One = AbstractField.extend({
      */
     _bindAutoComplete: function () {
         var self = this;
+        // avoid ignoring autocomplete="off" by obfuscating placeholder, see #30439
+        if (this.$input.attr('placeholder')) {
+            this.$input.attr('placeholder', function (index, val) {
+                return val.split('').join('\ufeff');
+            });
+        }
         this.$input.autocomplete({
             source: function (req, resp) {
                 self._search(req.term).then(function (result) {
@@ -468,6 +474,7 @@ var FieldMany2One = AbstractField.extend({
             initial_ids: ids ? _.map(ids, function (x) { return x[0]; }) : undefined,
             initial_view: view,
             disable_multiple_selection: true,
+            no_create: !self.can_create,
             on_selected: function (records) {
                 self.reinitialize(records[0]);
                 self.activate();
