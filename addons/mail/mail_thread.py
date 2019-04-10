@@ -485,11 +485,15 @@ class mail_thread(osv.AbstractModel):
 
     def message_track(self, cr, uid, ids, tracked_fields, initial_values, context=None):
 
-        def convert_for_display(value, col_info):
+        def convert_for_display(value, col_info, timezone):
             if not value and col_info['type'] == 'boolean':
                 return 'False'
             if not value:
                 return ''
+            if col_info['type'] == 'datetime':
+                value = datetime.datetime.strptime(value, '%Y-%m-%d %H:%M:%S')
+                value = value + timezone.localize(value).utcoffset()
+                return value.strftime("%Y-%m-%d %H:%M:%S")
             if col_info['type'] == 'many2one':
                 return value.name_get()[0][1]
             if col_info['type'] == 'selection':
@@ -510,6 +514,7 @@ class mail_thread(osv.AbstractModel):
         if not tracked_fields:
             return True
 
+        timezone = pytz.timezone(context.get('tz') or 'UTC')
         for browse_record in self.browse(cr, uid, ids, context=context):
             initial = initial_values[browse_record.id]
             changes = set()
@@ -520,18 +525,17 @@ class mail_thread(osv.AbstractModel):
                 field = self._fields[col_name]
                 initial_value = initial[col_name]
                 record_value = getattr(browse_record, col_name)
-
                 if record_value == initial_value and getattr(field, 'track_visibility', None) == 'always':
                     tracked_values[col_name] = dict(
                         col_info=col_info['string'],
-                        new_value=convert_for_display(record_value, col_info),
+                        new_value=convert_for_display(record_value, col_info, timezone),
                     )
                 elif record_value != initial_value and (record_value or initial_value):  # because browse null != False
                     if getattr(field, 'track_visibility', None) in ['always', 'onchange']:
                         tracked_values[col_name] = dict(
                             col_info=col_info['string'],
-                            old_value=convert_for_display(initial_value, col_info),
-                            new_value=convert_for_display(record_value, col_info),
+                            old_value=convert_for_display(initial_value, col_info, timezone),
+                            new_value=convert_for_display(record_value, col_info, timezone),
                         )
                     if col_name in tracked_fields:
                         changes.add(col_name)
