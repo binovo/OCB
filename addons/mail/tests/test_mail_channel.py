@@ -6,8 +6,11 @@ from .common import TestMail
 from odoo import api
 from odoo.exceptions import AccessError, except_orm
 from odoo.tools import mute_logger
+import odoo.tests.common as common
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestMailGroup(TestMail):
 
     @classmethod

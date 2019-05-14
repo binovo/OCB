@@ -5,8 +5,11 @@ import base64
 from odoo.addons.mail.tests.common import TestMail
 from odoo.addons.mail.tests.test_mail_gateway import MAIL_TEMPLATE_PLAINTEXT
 from odoo.tools import mute_logger
+import odoo.tests.common as common
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestMailFeatures(TestMail):
     # TDE TODO: tests on the redirection controller
 
@@ -40,6 +43,8 @@ class TestMailFeatures(TestMail):
         self.assertEqual(na_emp2_new, na_emp2_base)
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestMessagePost(TestMail):
 
     @mute_logger('odoo.addons.mail.models.mail_mail')

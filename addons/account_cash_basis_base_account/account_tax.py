@@ -9,3 +9,12 @@ class AccountTax(models.Model):
     cash_basis_base_account_id = fields.Many2one('account.account', domain=[('deprecated', '=', False)],
         string='Base Tax Received Account',
         help='Account that will be set on lines created in cash basis journal entry and used to keep track of the tax base amount.')
+
+
+class AccountTaxTemplate(models.Model):
+    _inherit = 'account.tax.template'
+
+    cash_basis_base_account_id = fields.Many2one(
+        'account.account', domain=[('deprecated', '=', False)], string='Base Tax Received Account',
+        help='Account that will be set on lines created in cash basis journal entry and used to keep track of the tax '
+             'base amount.')
