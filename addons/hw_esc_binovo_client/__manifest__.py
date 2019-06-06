@@ -9,10 +9,10 @@
     'summary': 'HW Esc Binovo client',
     'website': 'http://www.binovo.es',
     'depends': ['base',
+                'hw_proxy'
                 ],
     'category': 'stock',
-    "data": ["data/ir_actions.xml"
-             ],
+    "data": [],
     'installable': True,
     'auto_install': False,
 }

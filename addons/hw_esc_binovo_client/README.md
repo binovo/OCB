@@ -7,7 +7,6 @@ HW Esc Binovo client
 This module allow to print documents in local printer when Odoo is installed
 in a remote server.
 
-
 Credits
 =======
 
