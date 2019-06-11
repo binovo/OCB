@@ -23,19 +23,19 @@ def jsonrpc(params=None, session_id=None, printer=None):
                 os.close(fd)
             connection = cups.Connection(host='localhost', port=631)
             connection.printFile(printer, file_name, file_name, options={})
-            return _('Document sent to the printer.')
+            return 1
         else:
             if 500 == resp.status_code:
-                return _('Record does not exist or has been deleted.')
+                return 2
             elif 404 == resp.status_code:
-                return 'Report does not exist.'
+                return 3
             else:
-                return _('Undefined error.')
+                return 4
     except (ValueError, requests.exceptions.ConnectionError, requests.exceptions.MissingSchema,
             requests.exceptions.Timeout, requests.exceptions.HTTPError) as e:
-        return _('The url that this service requested returned an error')
+        return 5
     except:
-        return _('Undefined error.')
+        return 4
 
 
 class PrintInClient(http.Controller):
@@ -47,4 +47,4 @@ class PrintInClient(http.Controller):
             params = {'report_url': report_url}
             return jsonrpc(params=params, session_id=kwargs['session_id'], printer=kwargs['printer'])
         else:
-            return _('Record does not exist or has been deleted.')
+            return 2
