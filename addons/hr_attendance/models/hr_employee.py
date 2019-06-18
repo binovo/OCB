@@ -6,6 +6,9 @@ from string import digits
 
 from odoo import models, fields, api, exceptions, _, SUPERUSER_ID
 
+import logging
+_logger = logging.getLogger(__name__)
+
 
 class HrEmployee(models.Model):
     _inherit = "hr.employee"
@@ -70,6 +73,9 @@ class HrEmployee(models.Model):
             Returns either an action or a warning.
         """
         employee = self.search([('barcode', '=', barcode)], limit=1)
+        # TEMPORARY *********************************************
+        _logger.info("TEMPORARY LOG -> RFID leido: %s, del empleado: %s", barcode, employee.name)
+        # *******************************************************
         return employee and employee.attendance_action('hr_attendance.hr_attendance_action_kiosk_mode') or \
             {'warning': _('No employee corresponding to barcode %(barcode)s') % {'barcode': barcode}}
 
@@ -116,10 +122,16 @@ class HrEmployee(models.Model):
                 'employee_id': self.id,
                 'check_in': action_date,
             }
+            # TEMPORARY *********************************************
+            _logger.info("TEMPORARY LOG -> Alta check_in: %s, del empleado: %s", action_date, self.name)
+            # *******************************************************
             return self.env['hr.attendance'].create(vals)
         else:
             attendance = self.env['hr.attendance'].search([('employee_id', '=', self.id), ('check_out', '=', False)], limit=1)
             if attendance:
+                # TEMPORARY *********************************************
+                _logger.info("TEMPORARY LOG -> Modificacion check_out: %s, del empleado: %s", action_date, self.name)
+                # *******************************************************
                 attendance.check_out = action_date
             else:
                 raise exceptions.UserError(_('Cannot perform check out on %(empl_name)s, could not find corresponding check in. '

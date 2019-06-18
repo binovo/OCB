@@ -6,6 +6,9 @@ from datetime import datetime
 from odoo import models, fields, api, exceptions, _
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
+import logging
+_logger = logging.getLogger(__name__)
+
 
 class HrAttendance(models.Model):
     _name = "hr.attendance"
@@ -70,6 +73,11 @@ class HrAttendance(models.Model):
                 ('id', '!=', attendance.id),
             ], order='check_in desc', limit=1)
             if last_attendance_before_check_in and last_attendance_before_check_in.check_out and last_attendance_before_check_in.check_out > attendance.check_in:
+                # TEMPORARY *********************************************
+                _logger.info(
+                    "TEMPORARY LOG -> Check_in: %s, del empleado: %s, habiendo otro sin check_in para el mismo empleado",
+                    attendance.check_in, attendance.employee_id.name)
+                # *******************************************************
                 raise exceptions.ValidationError(_("Cannot create new attendance record for %(empl_name)s, the employee was already checked in on %(datetime)s") % {
                     'empl_name': attendance.employee_id.name,
                     'datetime': fields.Datetime.to_string(fields.Datetime.context_timestamp(self, fields.Datetime.from_string(attendance.check_in))),
@@ -83,6 +91,10 @@ class HrAttendance(models.Model):
                     ('id', '!=', attendance.id),
                 ], order='check_in desc', limit=1)
                 if no_check_out_attendances:
+                    # TEMPORARY *********************************************
+                    _logger.info("TEMPORARY LOG -> Check_in: %s, del empleado: %s, habiendo otro check_in: %s, sin check_out para el mismo empleado",
+                                 attendance.check_in, attendance.employee_id.name, no_check_out_attendances.check_in)
+                    # *******************************************************
                     raise exceptions.ValidationError(_("Cannot create new attendance record for %(empl_name)s, the employee hasn't checked out since %(datetime)s") % {
                         'empl_name': attendance.employee_id.name,
                         'datetime': fields.Datetime.to_string(fields.Datetime.context_timestamp(self, fields.Datetime.from_string(no_check_out_attendances.check_in))),
@@ -96,6 +108,10 @@ class HrAttendance(models.Model):
                     ('id', '!=', attendance.id),
                 ], order='check_in desc', limit=1)
                 if last_attendance_before_check_out and last_attendance_before_check_in != last_attendance_before_check_out:
+                    # TEMPORARY *********************************************
+                    _logger.info("TEMPORARY LOG -> Check_in: %s, del empleado: %s, habiendo otro sin check_in: %s, para el mismo empleado",
+                                 attendance.check_in, attendance.employee_id.name, last_attendance_before_check_out.check_in)
+                    # *******************************************************
                     raise exceptions.ValidationError(_("Cannot create new attendance record for %(empl_name)s, the employee was already checked in on %(datetime)s") % {
                         'empl_name': attendance.employee_id.name,
                         'datetime': fields.Datetime.to_string(fields.Datetime.context_timestamp(self, fields.Datetime.from_string(last_attendance_before_check_out.check_in))),
