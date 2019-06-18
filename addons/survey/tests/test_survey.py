@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import random
-import re
+from urllib.parse import urlparse
 from collections import Counter
 from itertools import product
 
@@ -12,7 +12,11 @@ from odoo import _
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.exceptions import UserError
 from odoo.tests.common import TransactionCase
+import odoo.tests.common as common
 
+
+@common.at_install(False)
+@common.post_install(True)
 class TestSurvey(TransactionCase):
 
     def setUp(self):
@@ -162,24 +166,12 @@ class TestSurvey(TransactionCase):
             self.assertRaises(UserError, message.send_mail)
 
     def test_08_survey_urls(self):
-        def validate_url(url):
-            """ Reference: https://github.com/django/django/blob/master/django/core/validators.py """
-            url_regex = re.compile(
-                r'^https?://'  # http:// or https://
-                r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|'  # domain...
-                r'localhost|'  # localhost...
-                r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|'  # ...or ipv4
-                r'\[?[A-F0-9]*:[A-F0-9:]+\]?)'  # ...or ipv6
-                r'(?::\d+)?'  # optional port
-                r'(?:/?|[/?]\S+)$', re.IGNORECASE)
-            return True if url_regex.match(url) else False
-
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         urltypes = {'public': 'start', 'print': 'print', 'result': 'results'}
         for urltype, urltxt in urltypes.items():
             survey_url = getattr(self.survey1, urltype + '_url')
             survey_url_relative = getattr(self.survey1.with_context({'relative_url': True}), urltype + '_url')
-            self.assertTrue(validate_url(survey_url))
+            self.assertTrue(urlparse(survey_url, scheme='http') or urlparse(survey_url, scheme='https'))
             url = "survey/%s/%s" % (urltxt, slug(self.survey1))
             full_url = urls.url_join(base_url, url)
             self.assertEqual(full_url, survey_url)

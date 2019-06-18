@@ -11,8 +11,11 @@ from dateutil.relativedelta import relativedelta
 from odoo.fields import Date, Datetime
 from odoo.addons.resource.models.resource import to_naive_utc, to_naive_user_tz
 from odoo.addons.resource.tests.common import TestResourceCommon
+import odoo.tests.common as common
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestIntervals(TestResourceCommon):
 
     def setUp(self):
@@ -87,6 +90,8 @@ class TestIntervals(TestResourceCommon):
         self.assertEqual(result[0][:2], (Datetime.from_string('2013-02-04 12:30:00'), Datetime.from_string('2013-02-04 14:00:00')))
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestCalendarBasics(TestResourceCommon):
 
     def test_calendar_weekdays(self):
@@ -221,6 +226,8 @@ class TestCalendarBasics(TestResourceCommon):
         self.assertEqual(wh, 5.5)
 
 
+@common.at_install(False)
+@common.post_install(True)
 class ResourceWorkingHours(TestResourceCommon):
 
     def test_calendar_working_hours(self):
@@ -407,6 +414,8 @@ WAR_START = date(1932, 11, 2)
 WAR_END = date(1932, 12, 10)
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestWorkDays(TestResourceCommon):
 
     def _make_attendance(self, weekday, **kw):
@@ -534,6 +543,8 @@ class TestWorkDays(TestResourceCommon):
         self.assertFalse(r.calendar_id._is_work_day(date(1932, 12, 6), r.id))  # personal leave
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestResourceMixin(TestResourceCommon):
 
     def setUp(self):

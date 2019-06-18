@@ -3,8 +3,11 @@
 
 from odoo.addons.mail.tests.common import TestMail
 from odoo.tools.misc import mute_logger
+import odoo.tests.common as common
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestPortal(TestMail):
 
     def test_mail_compose_access_rights(self):
