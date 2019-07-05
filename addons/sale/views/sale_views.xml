@@ -153,7 +153,7 @@
                 <tree string="Sales Orders" decoration-bf="message_needaction==True" decoration-muted="state=='cancel'">
                     <field name="message_needaction" invisible="1"/>
                     <field name="name" string="Order Number"/>
-                    <field name="confirmation_date" string="Order Date"/>
+                    <field name="confirmation_date" string="Confirmation Date"/>
                     <field name="partner_id"/>
                     <field name="user_id"/>
                     <field name="amount_total" sum="Total Tax Included" widget="monetary"/>
@@ -278,6 +278,13 @@
                                             <div name="discount" groups="sale.group_discount_per_so_line">
                                                 <field name="discount" class="oe_inline"/> %%
                                             </div>
+                                            <!--
+                                                We need the sequence field to be here
+                                                because we want to be able to overwrite the default sequence value in the JS
+                                                in order for new lines to be added at the correct position.
+                                                NOTE: at some point we want to fix this in the framework so that an invisible field is not required.
+                                            -->
+                                            <field name="sequence" invisible="1"/>
                                         </group>
                                         <group>
                                             <field name="tax_id" widget="many2many_tags" options="{'no_create': True}" domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
@@ -852,7 +859,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,calendar,graph,kanban,pivot</field>
             <field name="search_view_id" ref="sale.sale_order_view_search_inherit_sale"/>
-            <field name="domain">[('state', '=', 'sale'),('invoice_status','=','to invoice')]</field>
+            <field name="domain">[('invoice_status','=','to invoice')]</field>
             <field name="context">{
                     'search_default_team_id': [active_id],
                     'default_team_id': active_id,

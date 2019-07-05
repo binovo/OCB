@@ -636,6 +636,9 @@
                             help="Opportunities that are assigned to me"/>
                     <filter string="Unassigned" name="unassigned"
                             domain="[('user_id','=', False)]" help="No salesperson"/>
+                    <filter string="Open Opportunities" name="open_opportunities"
+                            domain="[('probability', '&lt;', 100), ('type', '=', 'opportunity')]"
+                            help="Open Opportunities"/>
                     <separator/>
                     <filter string="Activities Todo" name="activities_my"
                             domain="[('activity_ids.user_id', '=', uid)]"/>
@@ -833,7 +836,6 @@ for rec in records:
             <field name="domain">[('type','=','opportunity')]</field>
             <field name="context">{
                     'default_type': 'opportunity',
-                    'default_user_id': uid
                 }
             </field>
             <field name="search_view_id" ref="crm.view_crm_case_opportunities_filter"/>
@@ -884,7 +886,6 @@ for rec in records:
             <field name="domain">[('type','=','opportunity')]</field>
             <field name="context">{
                     'default_type': 'opportunity',
-                    'default_user_id': uid,
                     'search_default_assigned_to_me': 1,
             }</field>
             <field name="view_ids"

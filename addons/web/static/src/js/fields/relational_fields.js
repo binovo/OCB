@@ -194,7 +194,7 @@ var FieldMany2One = AbstractField.extend({
     _bindAutoComplete: function () {
         var self = this;
         // avoid ignoring autocomplete="off" by obfuscating placeholder, see #30439
-        if (this.$input.attr('placeholder')) {
+        if ($.browser.chrome && this.$input.attr('placeholder')) {
             this.$input.attr('placeholder', function (index, val) {
                 return val.split('').join('\ufeff');
             });
@@ -1259,13 +1259,15 @@ var FieldOne2Many = FieldX2Many.extend({
      */
     _onAddRecord: function (ev) {
         var self = this;
+        var data = ev.data || {};
+
         // we don't want interference with the components upstream.
         ev.stopPropagation();
 
         if (this.editable) {
             if (!this.activeActions.create) {
-                if (ev.data.onFail) {
-                    ev.data.onFail();
+                if (data.onFail) {
+                    data.onFail();
                 }
             } else if (!this.creatingRecord) {
                 this.creatingRecord = true;

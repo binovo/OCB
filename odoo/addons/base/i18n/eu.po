@@ -12,6 +12,7 @@
 # Esther Martín Menéndez <esthermartin001@gmail.com>, 2018
 # Gorka Toledo <gorka.toledo@gmail.com>, 2018
 # Naomi Hidalgo <naomihid96@gmail.com>, 2018
+# Imanol Aranburu <iaranburu@binovo.es>, 2018
 # Mikel Lizarralde <mikellizarralde@gmail.com>, 2018
 # 
 msgid ""

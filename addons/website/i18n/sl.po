@@ -4,10 +4,12 @@
 # 
 # Translators:
 # matjaz k <matjaz@mentis.si>, 2018
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2018
 # Vida Potočnik <vida.potocnik@mentis.si>, 2018
 # Martin Trigaux, 2019
 # Dejan Sraka <dejan.sraka@picolabs.si>, 2019
+# Matjaz Mozetic <m.mozetic@matmoz.si>, 2019
+# Grega Vavtar <grega@hbs.si>, 2019
+# Tadej Lupšina <tadej@hbs.si>, 2019
 # 
 msgid ""
 msgstr ""
@@ -15,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-03 15:06+0000\n"
 "PO-Revision-Date: 2017-09-20 10:25+0000\n"
-"Last-Translator: Dejan Sraka <dejan.sraka@picolabs.si>, 2019\n"
+"Last-Translator: Tadej Lupšina <tadej@hbs.si>, 2019\n"
 "Language-Team: Slovenian (https://www.transifex.com/odoo/teams/41243/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -566,6 +568,9 @@ msgid ""
 "                                <span class=\"css_publish\">Unpublished</span>\n"
 "                                <span class=\"css_unpublish\">Published</span>"
 msgstr ""
+"<span/>\n"
+"                                <span class=\"css_publish\">Neobjavljeno</span>\n"
+"                                <span class=\"css_unpublish\">Objavljeno</span>"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
@@ -715,7 +720,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "<strong>Next actions:</strong>"
-msgstr ""
+msgstr "<strong>Naslednji ukrepi:</strong>"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -730,7 +735,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "<strong>Publish events</strong>"
-msgstr ""
+msgstr "<strong>Objavi dogodke</strong>"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -848,7 +853,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings_module_website_version
 msgid "A/B Testing"
-msgstr ""
+msgstr "A/B preizkušanje"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
@@ -1034,7 +1039,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page_arch_fs
 msgid "Arch Filename"
-msgstr ""
+msgstr "Naziv Arch datoteke"
 
 #. module: website
 #. openerp-web
@@ -1056,7 +1061,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_auto_redirect_lang
 msgid "Autoredirect Language"
-msgstr ""
+msgstr "Jezik za avtomatsko preusmeritev"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.bs_debug_page_ir_ui_view
@@ -1156,13 +1161,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_res_config_settings_cdn_url
 #: model:ir.model.fields,field_description:website.field_website_cdn_url
 msgid "CDN Base URL"
-msgstr ""
+msgstr "Osnovni CDN URL"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings_cdn_filters
 #: model:ir.model.fields,field_description:website.field_website_cdn_filters
 msgid "CDN Filters"
-msgstr ""
+msgstr "CDN filtri"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -1349,7 +1354,7 @@ msgstr "Potrditev"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Congratulations, you're done!"
-msgstr ""
+msgstr "Čestitamo, opravljeno je!"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.footer_default
@@ -1410,7 +1415,7 @@ msgstr "Vsebina"
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Content Delivery Network (CDN)"
-msgstr ""
+msgstr "Content Delivery Network (CDN)"
 
 #. module: website
 #. openerp-web
@@ -1450,7 +1455,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Create several versions of your website pages"
-msgstr ""
+msgstr "Ustvarite več verzij svojih spletnih strani"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_create_uid
@@ -1514,12 +1519,12 @@ msgstr "Privzeto"
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Default Access Rights"
-msgstr ""
+msgstr "Privzete pravice dostopa"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_default_lang_id
 msgid "Default Language"
-msgstr ""
+msgstr "Privzeti jezik"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings_default_lang_id
@@ -1598,7 +1603,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website.bs_debug_page_ir_ui_view
 #: model:website.page,arch_db:website.bs_debug_page
 msgid "Disabled"
-msgstr ""
+msgstr "Onemogočeno"
 
 #. module: website
 #. openerp-web
@@ -1857,7 +1862,7 @@ msgstr "Hitri"
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings_favicon
 msgid "Favicon"
-msgstr ""
+msgstr "Favicon"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_three_columns
@@ -2037,7 +2042,7 @@ msgstr ""
 #: code:addons/website/static/src/xml/website.backend.xml:22
 #, python-format
 msgid "Go to Website"
-msgstr ""
+msgstr "Pojdi na spletno stran"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2107,12 +2112,12 @@ msgstr "Tajna šifra Google odjemalca"
 #: model:ir.model.fields,field_description:website.field_res_config_settings_has_google_maps
 #: model:ir.ui.view,arch_db:website.company_description
 msgid "Google Maps"
-msgstr ""
+msgstr "Google zemljevidi"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings_google_maps_api_key
 msgid "Google Maps API Key"
-msgstr ""
+msgstr "Google Maps API Ključ"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2275,7 +2280,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 #, python-format
 msgid "How to get my Tracking ID"
-msgstr ""
+msgstr "Kako dobim svojo sledilno ID"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_id
@@ -2375,12 +2380,12 @@ msgstr "Namesti jezik"
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Install new language"
-msgstr ""
+msgstr "Namesti nov jezik"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Install new languages"
-msgstr ""
+msgstr "Namesti nove jezike"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.show_website_info
@@ -2409,7 +2414,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_website_menu_is_visible
 #: model:ir.model.fields,field_description:website.field_website_page_is_visible
 msgid "Is Visible"
-msgstr ""
+msgstr "Je vidno"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2498,7 +2503,7 @@ msgstr "Jeziki"
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Languages available on your website"
-msgstr ""
+msgstr "Jeziki, ki so na voljo na spletni strani"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.bs_debug_page_ir_ui_view
@@ -2579,7 +2584,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Let your customers log in to see their documents"
-msgstr ""
+msgstr "Omogočite kupcem prijavo in vpogled v njihove dokumente"
 
 #. module: website
 #. openerp-web
@@ -2646,7 +2651,7 @@ msgstr "Nalaganje …"
 #. module: website
 #: model:ir.ui.view,arch_db:website.external_snippets
 msgid "Local Events"
-msgstr ""
+msgstr "Lokalni dogodki"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_menu_id
@@ -2657,17 +2662,17 @@ msgstr "Glavni meni"
 #. module: website
 #: model:ir.ui.view,arch_db:website.user_navbar
 msgid "Manage Pages"
-msgstr ""
+msgstr "Upravljaj strani"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.edit_website_pages
 msgid "Manage Your Pages"
-msgstr ""
+msgstr "Upravljaj svoje strani"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.user_navbar
 msgid "Manage Your Website Pages"
-msgstr ""
+msgstr "Upravljaj svoje spletne strani"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2889,7 +2894,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings_language_count
 msgid "Number of languages"
-msgstr ""
+msgstr "Število jezikov"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2958,7 +2963,7 @@ msgstr ""
 #: code:addons/website/static/src/xml/website.backend.xml:5
 #, python-format
 msgid "On Website"
-msgstr ""
+msgstr "na spletni strani"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -3083,7 +3088,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page_website_indexed
 msgid "Page Indexed"
-msgstr ""
+msgstr "Indeksirana stran"
 
 #. module: website
 #. openerp-web
@@ -3114,7 +3119,7 @@ msgstr "Naslov strani"
 #: model:ir.model.fields,field_description:website.field_website_page_url
 #, python-format
 msgid "Page URL"
-msgstr ""
+msgstr "URL spletne strani"
 
 #. module: website
 #: code:addons/website/models/website.py:221
@@ -3275,7 +3280,7 @@ msgstr "Promoviraj stran na spletu"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Promote your catalog of services"
-msgstr ""
+msgstr "Promovirajte svoj katalog storitev"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -3334,7 +3339,7 @@ msgstr "Objavljeno"
 #: model:ir.model.fields,field_description:website.field_website_page_date_publish
 #, python-format
 msgid "Publishing Date"
-msgstr ""
+msgstr "Datum objave"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.http_error_debug
@@ -3370,7 +3375,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_redirect_url_from
 msgid "Redirect From"
-msgstr ""
+msgstr "Preusmeri iz"
 
 #. module: website
 #. openerp-web
@@ -3382,17 +3387,17 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_redirect_url_to
 msgid "Redirect To"
-msgstr ""
+msgstr "Preusmeri na"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_redirect_type
 msgid "Redirection Type"
-msgstr ""
+msgstr "Tip preusmeritve"
 
 #. module: website
 #: model:ir.ui.menu,name:website.menu_website_redirect_list
 msgid "Redirects"
-msgstr ""
+msgstr "Preusmeritve"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -3414,12 +3419,12 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page_menu_ids
 msgid "Related Menus"
-msgstr ""
+msgstr "Povezani meniji"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_menu_page_id
 msgid "Related Page"
-msgstr ""
+msgstr "Povezana stran"
 
 #. module: website
 #. openerp-web
@@ -3897,6 +3902,7 @@ msgstr ""
 #: model:ir.model.fields,help:website.field_website_favicon
 msgid "This field holds the image used to display a favicon on the website."
 msgstr ""
+"To polje vsebuje sliko, ki je uporabljena kot favico na spletni strani"
 
 #. module: website
 #: model:ir.model.fields,help:website.field_res_config_settings_default_lang_code
@@ -3983,7 +3989,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Tracking ID"
-msgstr ""
+msgstr "Sledilna ID"
 
 #. module: website
 #. openerp-web
@@ -4042,7 +4048,7 @@ msgstr "UA-XXXXXXXX-Y"
 #: model:ir.model.fields,help:website.field_res_config_settings_cdn_filters
 #: model:ir.model.fields,help:website.field_website_cdn_filters
 msgid "URL matching those filters will be rewritten using the CDN Base URL"
-msgstr ""
+msgstr "URL ujemajoč te filte, bo prepisan z osnovnim CDN URL-jem"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
@@ -4071,7 +4077,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website.publish_short
 #, python-format
 msgid "Unpublished"
-msgstr ""
+msgstr "Neobjavljeno"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -4167,7 +4173,7 @@ msgstr "Prikaz načina dedovanja"
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page_inherit_children_ids
 msgid "Views which inherit from this one"
-msgstr ""
+msgstr "Pogledi, ki se podedujejo od trenutnega"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_blog_post_website_published
@@ -4264,12 +4270,12 @@ msgstr "Aplikacije spletne strani"
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_domain
 msgid "Website Domain"
-msgstr ""
+msgstr "Spletna domena"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_favicon
 msgid "Website Favicon"
-msgstr ""
+msgstr "Favicon spletne strani"
 
 #. module: website
 #: model:ir.actions.act_url,name:website.action_website_homepage
@@ -4297,7 +4303,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:website.action_website_pages_list
 #: model:ir.ui.view,arch_db:website.website_pages_tree_view
 msgid "Website Pages"
-msgstr ""
+msgstr "Spletne strani"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_ir_act_server_website_path
@@ -4318,7 +4324,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:website.action_website_redirect_list
 #: model:ir.ui.view,arch_db:website.website_redirect_tree_view
 msgid "Website Redirects"
-msgstr ""
+msgstr "Preusmeritve spletne strani"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.view_website_form
@@ -4333,7 +4339,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Website Title"
-msgstr ""
+msgstr "Naziv spletne strani"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_blog_post_website_url
@@ -4610,7 +4616,7 @@ msgstr ""
 #: code:addons/website/static/src/xml/website.backend.xml:95
 #, python-format
 msgid "Your Tracking ID:"
-msgstr ""
+msgstr "Vaša sledilna ID:"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_title
@@ -4841,7 +4847,7 @@ msgstr ""
 #. module: website
 #: model:ir.model,name:website.model_res_config_settings
 msgid "res.config.settings"
-msgstr ""
+msgstr "res.config.settings"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner

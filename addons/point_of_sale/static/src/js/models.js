@@ -134,11 +134,16 @@ exports.PosModel = Backbone.Model.extend({
                         done.resolve();
                 },
                 function(statusText, url){
-                        if (statusText == 'error' && window.location.protocol == 'https:') {
-                            var error = {message: 'TLSError', url: url};
-                            self.chrome.loading_error(error);
-                        } else {
-                            done.resolve();
+                        var show_loading_error = (self.gui.current_screen === null);
+                        done.resolve();
+                        if (show_loading_error && statusText == 'error' && window.location.protocol == 'https:') {
+                            self.gui.show_popup('alert', {
+                                title: _t('HTTPS connection to IoT Box failed'),
+                                body: _.str.sprintf(
+                                  _t('Make sure you are using IoT Box v18.12 or higher. Navigate to %s to accept the certificate of your IoT Box.'),
+                                  url
+                                ),
+                            });
                         }
                 });
         return done;
@@ -898,6 +903,9 @@ exports.PosModel = Backbone.Model.extend({
                     }}).done(function () {
                         invoiced.resolve();
                         done.resolve();
+                    }).fail(function (error) {
+                        invoiced.reject({code:401, message:'Backend Invoice', data:{order: order}});
+                        done.reject();
                     });
                 } else {
                     // The order has been pushed separately in batch when
@@ -1464,7 +1472,7 @@ exports.Orderline = Backbone.Model.extend({
         var lots_required = 1;
 
         if (this.product.tracking == 'serial') {
-            lots_required = this.quantity;
+            lots_required = Math.abs(this.quantity);
         }
 
         return lots_required;
@@ -1681,25 +1689,37 @@ exports.Orderline = Backbone.Model.extend({
         return taxes;
     },
     _map_tax_fiscal_position: function(tax) {
+        var self = this;
         var current_order = this.pos.get_order();
         var order_fiscal_position = current_order && current_order.fiscal_position;
+        var taxes = [];
 
         if (order_fiscal_position) {
-            var mapped_tax = _.find(order_fiscal_position.fiscal_position_taxes_by_id, function (fiscal_position_tax) {
+            var tax_mappings = _.filter(order_fiscal_position.fiscal_position_taxes_by_id, function (fiscal_position_tax) {
                 return fiscal_position_tax.tax_src_id[0] === tax.id;
             });
 
-            if (mapped_tax) {
-                tax = this.pos.taxes_by_id[mapped_tax.tax_dest_id[0]];
+            if (tax_mappings && tax_mappings.length) {
+                _.each(tax_mappings, function(tm) {
+                    taxes.push(self.pos.taxes_by_id[tm.tax_dest_id[0]]);
+                });
+            } else {
+                // If no map default to the one given by the product
+                taxes.push(tax);
             }
+        } else {
+            taxes.push(tax);
         }
 
-        return tax;
+        return taxes;
     },
     _compute_all: function(tax, base_amount, quantity) {
         if (tax.amount_type === 'fixed') {
-            var sign_base_amount = base_amount >= 0 ? 1 : -1;
-            return (Math.abs(tax.amount) * sign_base_amount) * quantity;
+            var sign_base_amount = Math.sign(base_amount) || 1;
+            // Since base amount has been computed with quantity
+            // we take the abs of quantity
+            // Same logic as bb72dea98de4dae8f59e397f232a0636411d37ce
+            return tax.amount * sign_base_amount * Math.abs(quantity);
         }
         if ((tax.amount_type === 'percent' && !tax.price_include) || (tax.amount_type === 'division' && tax.price_include)){
             return base_amount * tax.amount / 100;
@@ -1722,13 +1742,18 @@ exports.Orderline = Backbone.Model.extend({
         var total_excluded = round_pr(price_unit * quantity, currency_rounding);
         var total_included = total_excluded;
         var base = total_excluded;
-        _(taxes).each(function(tax) {
-            if (!no_map_tax){
-                tax = self._map_tax_fiscal_position(tax);
-            }
-            if (!tax){
-                return;
-            }
+        var taxes_mapped = [];
+
+        if (!no_map_tax){
+            _(taxes).each(function(tax){
+                _(self._map_tax_fiscal_position(tax)).each(function(tax){
+                    taxes_mapped.push(tax);
+                });
+            });
+        } else {
+            taxes_mapped = taxes;
+        }
+        _(taxes_mapped).each(function(tax) {
             if (tax.amount_type === 'group'){
                 var ret = self.compute_all(tax.children_tax_ids, price_unit, quantity, currency_rounding);
                 total_excluded = ret.total_excluded;
@@ -1867,8 +1892,11 @@ var PacklotlineCollection = Backbone.Collection.extend({
 
     set_quantity_by_lot: function() {
         if (this.order_line.product.tracking == 'serial') {
-            var valid_lots = this.get_valid_lots();
-            this.order_line.set_quantity(valid_lots.length);
+            var valid_lots_quantity = this.get_valid_lots().length;
+            if (this.order_line.quantity < 0){
+                valid_lots_quantity = -valid_lots_quantity;
+            }
+            this.order_line.set_quantity(valid_lots_quantity);
         }
     }
 });
@@ -2301,12 +2329,12 @@ exports.Order = Backbone.Model.extend({
             var taxes = line.get_taxes();
             var mapped_included_taxes = [];
             _(taxes).each(function(tax) {
-                var line_tax = line._map_tax_fiscal_position(tax);
-                if(tax.price_include && tax.id != line_tax.id){
+                var line_taxes = line._map_tax_fiscal_position(tax);
+                if(tax.price_include && _.contains(line_taxes, tax)){
 
                     mapped_included_taxes.push(tax);
                 }
-            })
+            });
 
             if (mapped_included_taxes.length > 0) {
                 unit_price = line.compute_all(mapped_included_taxes, unit_price, 1, this.pos.currency.rounding, true).total_excluded;
@@ -2653,7 +2681,7 @@ exports.NumpadState = Backbone.Model.extend({
             this.set({
                 buffer: "-" + newChar
             });
-        } else {
+        } else if (!(newChar === '.') || oldBuffer.indexOf('.') === -1) {
             this.set({
                 buffer: (this.get('buffer')) + newChar
             });
