@@ -117,7 +117,7 @@ msgstr "Pravidlo čárového kódu"
 #. module: barcodes
 #: model:ir.model.fields,field_description:barcodes.field_barcodes_barcode_events_mixin__barcode_scanned
 msgid "Barcode Scanned"
-msgstr ""
+msgstr "Naskenovaný čárový kód"
 
 #. module: barcodes
 #: selection:barcode.rule,type:0
@@ -396,7 +396,7 @@ msgstr "UPC/EAN konverze"
 #: code:addons/barcodes/models/barcodes.py:184 selection:barcode.rule,type:0
 #, python-format
 msgid "Unit Product"
-msgstr ""
+msgstr "Jednotkový produkt"
 
 #. module: barcodes
 #: model:ir.model.fields,help:barcodes.field_barcode_rule_sequence

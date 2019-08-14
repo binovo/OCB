@@ -2479,8 +2479,7 @@ msgstr ""
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_template_search_view
 msgid "Show all records which has next action date is before today"
-msgstr ""
-"Mostra tutti i record che hanno la prossima data dell’azione è prima di oggi"
+msgstr "Mostra tutti i record con data prossima azione precedente a oggi"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_res_config_settings_group_product_pricelist
@@ -2517,9 +2516,9 @@ msgid ""
 "image, with aspect ratio preserved. Use this field anywhere a small image is"
 " required."
 msgstr ""
-"Immagine grandezza piccola del prodotto. Automaticamente ridimenzionata a "
-"64x64px, preservando le proporzioni. Usa questo campo ovunque è richiesta "
-"un'immagine piccola."
+"Immagine piccola per il prodotto. Ridimensionata automaticamente a 64x64px "
+"con proporzioni conservate. Usare questo campo dove è richiesta un'immagine "
+"di piccole dimensioni."
 
 #. module: product
 #: selection:product.uom,uom_type:0
