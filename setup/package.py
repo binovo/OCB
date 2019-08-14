@@ -12,6 +12,7 @@ import subprocess
 import tempfile
 import time
 import traceback
+import sys
 try:
     from xmlrpc import client as xmlrpclib
 except ImportError:
@@ -287,7 +288,9 @@ def build_deb(o):
             deb.send(GPGPASSPHRASE + '\r\n')
         deb.expect(pexpect.EOF, timeout=1200)
     else:
-        subprocess.call(['dpkg-buildpackage', '-rfakeroot', '-uc', '-us'], cwd=o.build_dir)
+        status_code = subprocess.call(['dpkg-buildpackage', '-rfakeroot', '-uc', '-us'], cwd=o.build_dir)
+        if 0 != status_code:
+            raise Exception("An error ocurred while building package %s" % o.package_name)
     # As the packages are built in the parent of the buildir, we move them back to build_dir
     build_dir_parent = '{}/../'.format(o.build_dir)
     wildcards = ['odoo_{}'.format(wc) for wc in ('*.deb', '*.dsc', '*_amd64.changes', '*.tar.gz', '*.tar.xz')]
@@ -473,6 +476,7 @@ def options():
     return o
 
 def main():
+    errors = 0
     o = options()
     _prepare_build_dir(o)
     if not o.no_testing:
@@ -494,6 +498,7 @@ def main():
                 published_files = publish(o, 'debian', ['deb', 'dsc', 'changes', 'tar.xz'])
                 gen_deb_package(o, published_files)
             except Exception as e:
+                errors += 1
                 logging.error("Won't publish the deb release.\n Exception: %s" % str(e))
                 traceback.print_exc()
         if not o.no_rpm:
@@ -515,6 +520,7 @@ def main():
             except Exception as e:
                 logging.error("Won't publish the exe release.\n Exception: %s" % str(e))
     except Exception as e:
+        errors += 1
         logging.error('Something bad happened ! : {}'.format(e))
         traceback.print_exc()
     finally:
@@ -527,6 +533,7 @@ def main():
         if not o.no_testing and not (o.no_debian and o.no_rpm and o.no_tarball):
             system("docker rm -f `docker ps -a | awk '{print $1 }'` 2>>/dev/null")
             logging.info('Remaining dockers removed')
+        sys.exit(errors)
 
 
 if __name__ == '__main__':

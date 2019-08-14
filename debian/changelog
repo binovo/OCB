@@ -1,3 +1,10 @@
+odoo (11.0.0) stable; urgency=low
+
+  * #2710: add python3-gevent as OCB dependency. Modify default Odoo
+    configuration to work with workers.
+
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 14 Aug 2019 09:15:44 +0200
+
 odoo (8.0.0) stable; urgency=low
 
   * Renamed package
