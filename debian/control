@@ -8,7 +8,7 @@ Standards-Version: 3.9.8
 Homepage: http://www.odoo.com/
 Vcs-Git: https://github.com/odoo/odoo
 
-Package: odoo
+Package: odoo-11.0
 Architecture: all
 Depends:
  ${misc:Depends},
@@ -42,6 +42,7 @@ Depends:
  python3-werkzeug,
  python3-xlsxwriter,
  python3-yaml,
+ python3-gevent
 Conflicts: tinyerp-server, openerp-server, openerp-web, openerp
 Replaces: tinyerp-server, openerp-server, openerp-web, openerp
 Recommends:
