@@ -378,13 +378,13 @@ msgstr ""
 #: model:ir.ui.menu,name:membership.menu_membership
 #: view:res.partner:membership.membership_members_tree
 msgid "Members"
-msgstr ""
+msgstr "Bazkideak "
 
 #. module: membership
 #: model:ir.actions.act_window,name:membership.action_report_membership_tree
 #: model:ir.ui.menu,name:membership.menu_report_membership
 msgid "Members Analysis"
-msgstr ""
+msgstr "Bazkideak analisia"
 
 #. module: membership
 #: field:membership.invoice,product_id:0
@@ -395,7 +395,7 @@ msgstr ""
 #: view:res.partner:membership.view_partner_form
 #: field:res.partner,member_lines:0
 msgid "Membership"
-msgstr ""
+msgstr "Bazkide"
 
 #. module: membership
 #: field:res.partner,membership_amount:0

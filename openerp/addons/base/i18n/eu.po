@@ -5029,7 +5029,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_association
 #: model:ir.ui.menu,name:base.menu_report_association
 msgid "Association"
-msgstr ""
+msgstr "Bazkide"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_association
