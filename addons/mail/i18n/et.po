@@ -9,8 +9,8 @@
 # Marek Pontus, 2018
 # Egon Raamat <egon@avalah.ee>, 2018
 # Rivo Zängov <eraser@eraser.ee>, 2018
-# Martin Aavastik <martin@avalah.ee>, 2018
 # Helen Sulaoja <helen@avalah.ee>, 2018
+# Martin Aavastik <martin@avalah.ee>, 2019
 # Eneli Õigus <enelioigus@gmail.com>, 2019
 # 
 msgid ""
@@ -934,7 +934,7 @@ msgstr "Sisu"
 #: model:ir.model.fields,field_description:mail.field_res_partner_message_bounce
 #: model:ir.model.fields,field_description:mail.field_res_users_message_bounce
 msgid "Bounce"
-msgstr ""
+msgstr "Põrkemäär"
 
 #. module: mail
 #: selection:mail.notification,email_status:0
@@ -1221,7 +1221,7 @@ msgstr "Vestlused"
 #: model:ir.model.fields,help:mail.field_res_partner_message_bounce
 #: model:ir.model.fields,help:mail.field_res_users_message_bounce
 msgid "Counter of the number of bounced emails for this contact"
-msgstr ""
+msgstr "Counter of the number of bounced emails for this contact"
 
 #. module: mail
 #. openerp-web
@@ -4701,7 +4701,7 @@ msgstr "Tähistatud"
 #: model:ir.model.fields,field_description:mail.field_stock_picking_activity_state
 #: model:ir.model.fields,field_description:mail.field_survey_survey_activity_state
 msgid "State"
-msgstr "Maakond"
+msgstr "Staatus"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail_state

@@ -18,6 +18,7 @@
 # Giacomo Grasso <giacomo.grasso.82@gmail.com>, 2018
 # Léonie Bouchat <lbo@odoo.com>, 2019
 # Paolo Valier, 2019
+# Luigia Cimmino Caserta <lcc@odoo.com>, 2019
 # Sergio Zanchetta <primes2h@gmail.com>, 2019
 # 
 msgid ""
@@ -235,7 +236,7 @@ msgstr "Sistema"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_token_acquirer_id
 msgid "Acquirer Account"
-msgstr ""
+msgstr "Account del sistema"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_token_acquirer_ref
@@ -983,7 +984,7 @@ msgstr "Transazioni di Pagamento"
 #. module: payment
 #: selection:payment.acquirer,payment_flow:0
 msgid "Payment from Odoo"
-msgstr ""
+msgstr "Pagamento da Odoo"
 
 #. module: payment
 #: code:addons/payment/models/account_payment.py:59
@@ -1372,7 +1373,7 @@ msgstr "Attenzione!"
 #: code:addons/payment/static/src/js/payment_form.js:135
 #, python-format
 msgid "We are not able to add your payment method at the moment."
-msgstr ""
+msgstr "Non ci è possibile aggiungere il tuo metodo di pagamento al momento."
 
 #. module: payment
 #. openerp-web

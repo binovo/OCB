@@ -114,8 +114,10 @@ class AccountInvoice(models.Model):
             if line.currency_id == self.currency_id:
                 residual += line.amount_residual_currency if line.currency_id else line.amount_residual
             else:
-                from_currency = (line.currency_id and line.currency_id.with_context(date=line.date)) or line.company_id.currency_id.with_context(date=line.date)
-                residual += from_currency.compute(line.amount_residual, self.currency_id)
+                if line.currency_id:
+                    residual += line.currency_id.with_context(date=line.date).compute(line.amount_residual_currency, self.currency_id)
+                else:
+                    residual += line.company_id.currency_id.with_context(date=line.date).compute(line.amount_residual, self.currency_id)
         self.residual_company_signed = abs(residual_company_signed) * sign
         self.residual_signed = abs(residual) * sign
         self.residual = abs(residual)
@@ -199,7 +201,7 @@ class AccountInvoice(models.Model):
             if payment_currency_id and payment_currency_id == self.currency_id:
                 amount_to_show = amount_currency
             else:
-                amount_to_show = payment.company_id.currency_id.with_context(date=self.date).compute(amount,
+                amount_to_show = payment.company_id.currency_id.with_context(date=payment.date).compute(amount,
                                                                                                         self.currency_id)
             if float_is_zero(amount_to_show, precision_rounding=self.currency_id.rounding):
                 continue
@@ -1360,8 +1362,7 @@ class AccountInvoice(models.Model):
 
         values['type'] = TYPE2REFUND[invoice['type']]
         values['date_invoice'] = date_invoice or fields.Date.context_today(invoice)
-        if values.get('date_due', False) and values['date_invoice'] > values['date_due']:
-            values['date_due'] = values['date_invoice']
+        values['date_due'] = values['date_invoice']
         values['state'] = 'draft'
         values['number'] = False
         values['origin'] = invoice.number

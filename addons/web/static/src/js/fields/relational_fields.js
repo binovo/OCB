@@ -2045,7 +2045,7 @@ var FieldStatus = AbstractField.extend({
 var FieldSelection = AbstractField.extend({
     template: 'FieldSelection',
     specialData: "_fetchSpecialRelation",
-    supportedFieldTypes: ['selection', 'many2one'],
+    supportedFieldTypes: ['selection'],
     events: _.extend({}, AbstractField.prototype.events, {
         'change': '_onChange',
     }),
@@ -2347,9 +2347,9 @@ var FieldReference = FieldMany2One.extend({
      * @private
      */
     _reset: function () {
+        this._super.apply(this, arguments);
         var value = this.$('select').val();
         this._setState();
-        this._super.apply(this, arguments);
         this.$('select').val(this.value && this.value.model || value);
     },
     /**

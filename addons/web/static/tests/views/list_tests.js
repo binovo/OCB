@@ -489,6 +489,50 @@ QUnit.module('Views', {
         list.destroy();
     });
 
+    QUnit.test('editable list view: no active element', function (assert) {
+        assert.expect(3);
+        this.data.bar= {
+            fields: {
+                titi: {string: "Char", type: "char"},
+                grosminet: {string: "Bool", type: "boolean"},
+            },
+            records: [
+                {titi: 'cui', grosminet: true},
+                {titi: 'cuicui', grosminet: false},
+            ]
+        };
+        this.data.foo.records[0].o2m = [1, 2];
+        var form = createView({
+            View: FormView,
+            model: 'foo',
+            data: this.data,
+            res_id: 1,
+            viewOptions: { mode: 'edit' },
+            arch: '<form>'+
+                    '<field name="o2m">'+
+                        '<tree editable="top">'+
+                            '<field name="titi" readonly="1"/>'+
+                            '<field name="grosminet" widget="boolean_toggle"/>'+
+                        '</tree>'+
+                    '</field>'+
+                '</form>',
+        });
+        var $td = form.$('.o_data_cell').first();
+        var $td2 = form.$('.o_data_cell').eq(1);
+        assert.ok($td.hasClass("o_readonly_modifier"), "first field must be readonly");
+        assert.ok($td2.hasClass("o_boolean_toggle_cell"), "second field must be not activable but updatable on click (boolean toggle in this case)"); 
+        $td.click(); //select row first
+        var $slider = $td2.find('.slider').first();
+        try {
+            $slider.click(); //toggle boolean
+            assert.ok(true);
+        }
+        catch(e) {
+            assert.ok(false, "should not crash when clicking on the slider");
+        }
+        form.destroy();
+    });
+
     QUnit.test('basic operations for editable list renderer', function (assert) {
         assert.expect(2);
 
@@ -2614,6 +2658,87 @@ QUnit.module('Views', {
         assert.strictEqual(list.$('tbody tr:first td:contains(new value)').length, 1,
             "should have the new value visible in dom");
         assert.verifySteps(["write", "read"]);
+        list.destroy();
+    });
+
+    QUnit.test('pressing SHIFT-TAB in editable list with a readonly field [REQUIRE FOCUS]', function (assert) {
+        assert.expect(4);
+
+        var list = createView({
+            View: ListView,
+            model: 'foo',
+            data: this.data,
+            arch: '<tree editable="bottom">' +
+                    '<field name="foo"/>' +
+                    '<field name="int_field" readonly="1"/>' +
+                    '<field name="qux"/>' +
+                '</tree>',
+        });
+
+        // start on 'qux', line 3
+        list.$('.o_data_row:nth(2) .o_data_cell:nth(2)').click();
+        assert.ok(list.$('.o_data_row:nth(2)').hasClass('o_selected_row'));
+        assert.strictEqual(document.activeElement, list.$('.o_data_row:nth(2) .o_data_cell input[name=qux]')[0]);
+
+        // Press 'shift-Tab' -> should go to first cell (same line)
+        $(document.activeElement).trigger({type: 'keydown', which: $.ui.keyCode.TAB, shiftKey: true});
+        assert.ok(list.$('.o_data_row:nth(2)').hasClass('o_selected_row'));
+        assert.strictEqual(document.activeElement, list.$('.o_data_row:nth(2) .o_data_cell input[name=foo]')[0]);
+
+        list.destroy();
+    });
+
+    QUnit.test('pressing SHIFT-TAB in editable list with a readonly field in first column [REQUIRE FOCUS]', function (assert) {
+        assert.expect(4);
+
+        var list = createView({
+            View: ListView,
+            model: 'foo',
+            data: this.data,
+            arch: '<tree editable="bottom">' +
+                    '<field name="int_field" readonly="1"/>' +
+                    '<field name="foo"/>' +
+                    '<field name="qux"/>' +
+                '</tree>',
+        });
+
+        // start on 'foo', line 3
+        list.$('.o_data_row:nth(2) .o_data_cell:nth(1)').click();
+        assert.ok(list.$('.o_data_row:nth(2)').hasClass('o_selected_row'));
+        assert.strictEqual(document.activeElement, list.$('.o_data_row:nth(2) .o_data_cell input[name=foo]')[0]);
+
+        // Press 'shift-Tab' -> should go to previous line (last cell)
+        $(document.activeElement).trigger({type: 'keydown', which: $.ui.keyCode.TAB, shiftKey: true});
+        assert.ok(list.$('.o_data_row:nth(1)').hasClass('o_selected_row'));
+        assert.strictEqual(document.activeElement, list.$('.o_data_row:nth(1) .o_data_cell input[name=qux]')[0]);
+
+        list.destroy();
+    });
+
+    QUnit.test('pressing SHIFT-TAB in editable list with a readonly field in last column [REQUIRE FOCUS]', function (assert) {
+        assert.expect(4);
+
+        var list = createView({
+            View: ListView,
+            model: 'foo',
+            data: this.data,
+            arch: '<tree editable="bottom">' +
+                    '<field name="int_field"/>' +
+                    '<field name="foo"/>' +
+                    '<field name="qux" readonly="1"/>' +
+                '</tree>',
+        });
+
+        // start on 'int_field', line 3
+        list.$('.o_data_row:nth(2) .o_data_cell:first').click();
+        assert.ok(list.$('.o_data_row:nth(2)').hasClass('o_selected_row'));
+        assert.strictEqual(document.activeElement, list.$('.o_data_row:nth(2) .o_data_cell input[name=int_field]')[0]);
+
+        // Press 'shift-Tab' -> should go to previous line ('foo' field)
+        $(document.activeElement).trigger({type: 'keydown', which: $.ui.keyCode.TAB, shiftKey: true});
+        assert.ok(list.$('.o_data_row:nth(1)').hasClass('o_selected_row'));
+        assert.strictEqual(document.activeElement, list.$('.o_data_row:nth(1) .o_data_cell input[name=foo]')[0]);
+
         list.destroy();
     });
 
