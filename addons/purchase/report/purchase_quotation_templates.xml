@@ -31,20 +31,20 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th><strong>Description</strong></th>
-                        <th class="text-center"><strong>Expected Date</strong></th>
-                        <th class="text-right"><strong>Qty</strong></th>
+                        <th class="purchase_order_line_name"><strong>Description</strong></th>
+                        <th class="text-center purchase_order_line_date_planned"><strong>Expected Date</strong></th>
+                        <th class="text-right purchase_order_line_product_qty"><strong>Qty</strong></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr t-foreach="o.order_line" t-as="order_line">
-                        <td>
+                        <td class="purchase_order_line_name">
                             <span t-field="order_line.name"/>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center purchase_order_line_date_planned">
                             <span t-field="order_line.date_planned"/>
                         </td>
-                        <td class="text-right">
+                        <td class="text-right purchase_order_line_product_qty">
                             <span t-field="order_line.product_qty"/>
                             <span t-field="order_line.product_uom" groups="product.group_uom"/>
                         </td>
