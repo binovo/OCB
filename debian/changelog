@@ -1,9 +1,15 @@
 odoo (11.0.0) stable; urgency=low
 
+  [ Imanol Aranburu ]
+  * #3252: Add class names in purchase order reports
+
+  [ Luis J. Salvatierra ]
   * #2710: add python3-gevent as OCB dependency. Modify default Odoo
     configuration to work with workers.
+  * Modify default Odoo configuration. Logfile by default. Memory limits
+    and workers.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 14 Aug 2019 09:15:44 +0200
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 30 Oct 2019 10:58:21 +0100
 
 odoo (8.0.0) stable; urgency=low
 
