@@ -137,7 +137,7 @@
                 <page string="Work Instruction" attrs="{'invisible': [('worksheet', '=', False)]}">
                     <field name="worksheet" widget="pdf_viewer"/>
                 </page>
-                <page string="Current Production">
+                <page string="Current Production" class="mrp_current_production">
                     <group>
                         <group>
                             <field name="qty_producing" string="Current Qty" attrs="{'readonly': ['|', ('product_tracking', '=', 'serial'), ('state', 'in', ('done', 'cancel'))]}"/>
@@ -160,7 +160,7 @@
                         </tree>
                     </field>
                 </page>
-                <page string="Time Tracking" groups="mrp.group_mrp_manager">
+                <page string="Time Tracking" groups="mrp.group_mrp_manager" class="mrp_time_tracking">
                     <group>
                         <group>
                             <label for="date_planned_start" string="Planned Date"/>
@@ -181,7 +181,7 @@
                                 </div>
                             </div>
                         </group>
-                        <group>
+                        <group class="mrp_time_tracking_group_group_2">
                             <label for="duration_expected"/>
                             <div>
                                 <field name="duration_expected" widget="float_time" class="oe_inline"/>
@@ -195,7 +195,7 @@
                             </div>
                         </group>
                     </group>
-                    <group>
+                    <group class="mrp_time_tracking_group_2">
                         <field name="time_ids" nolabel="1" context="{'default_workcenter_id': workcenter_id}">
                             <tree>
                                 <field name="date_start"/>
@@ -222,7 +222,7 @@
                         </field>
                     </group>
                 </page>
-                <page string="Miscellaneous" groups="mrp.group_mrp_manager">
+                <page string="Miscellaneous" groups="mrp.group_mrp_manager" class="mrp_miscellaneous">
                     <group>
                         <group>
                             <field name="name"/>
