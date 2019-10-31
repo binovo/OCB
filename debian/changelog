@@ -5,8 +5,9 @@ odoo (8.0.0) stable; urgency=low
 
   [ Luis J. Salvatierra ]
   * #3445: add support for Debian 10 Buster.
+  * #3445: add pypi evdev dependency to postinst script.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Thu, 31 Oct 2019 12:18:27 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Thu, 31 Oct 2019 14:00:47 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 

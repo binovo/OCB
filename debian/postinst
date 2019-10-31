@@ -7,7 +7,7 @@ ODOO_GROUP="odoo"
 ODOO_DATA_DIR=/var/lib/odoo
 ODOO_LOG_DIR=/var/log/odoo
 ODOO_USER="odoo"
-PYPI_DEPENDENCIES="pyPdf"
+PYPI_DEPENDENCIES="pyPdf evdev"
 
 case "${1}" in
     configure)
