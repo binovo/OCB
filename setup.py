@@ -143,7 +143,7 @@ setup(
         'psutil',  # windows binary code.google.com/p/psutil/downloads/list
         'psycogreen',
         'psycopg2 >= 2.2',
-        'python-chart',
+        'PyChart',
         'pydot',
         'pyparsing',
         'pypdf',

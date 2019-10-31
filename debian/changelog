@@ -1,8 +1,12 @@
 odoo (8.0.0) stable; urgency=low
 
+  [ Simon Lejeune ]
   * Renamed package
 
- -- Simon Lejeune <sle@odoo.com>  Wed, 17 Sep 2014 15:40:00 +0100 
+  [ Luis J. Salvatierra ]
+  * #3445: add support for Debian 10 Buster.
+
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Thu, 31 Oct 2019 12:18:27 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 
