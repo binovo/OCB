@@ -19,7 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
+import logging
 import optparse
 import os
 import pexpect
@@ -34,11 +34,11 @@ from glob import glob
 from os.path import abspath, dirname, join
 from sys import stdout
 from tempfile import NamedTemporaryFile
+import re
+import traceback
+import sys
 
 
-#----------------------------------------------------------
-# Utils
-#----------------------------------------------------------
 execfile(join(dirname(__file__), '..', 'openerp', 'release.py'))
 version = version.split('-')[0]
 timestamp = time.strftime("%Y%m%d", time.gmtime())
@@ -263,7 +263,18 @@ def build_tgz(o):
 
 def build_deb(o):
     # Append timestamp to version for the .dsc to refer the right .tar.gz
-    cmd=['sed', '-i', '1s/^.*$/odoo (%s.%s) stable; urgency=low/'%(version,timestamp), 'debian/changelog']
+    changelog_version = "%s.%s" % (version, timestamp)
+    if o.version:
+        regex = "^%s([.][0-9]+)?$" % changelog_version
+        if not re.match(regex, o.version):
+            raise Exception(
+                "The provided version %s does not comply with the naming convention.\n"
+                "<odoo version>.<today timestamp>[.<number of today releases>]\n"
+                "e.g.: %s\n"
+                "e.g.: %s.1\n" %
+                (o.version, changelog_version, changelog_version))
+        changelog_version = o.version
+    cmd = ['sed', '-i', '1s/^.*$/odoo (%s) stable; urgency=low/' % (changelog_version), 'debian/changelog']
     subprocess.call(cmd, cwd=o.build_dir)
     deb = pexpect.spawn('dpkg-buildpackage -rfakeroot -k%s' % GPGID, cwd=o.build_dir)
     deb.logfile = stdout
@@ -273,7 +284,6 @@ def build_deb(o):
         deb.expect_exact('Enter passphrase: ')
         deb.send(GPGPASSPHRASE + '\r\n')
     deb.expect(pexpect.EOF, timeout=1200)
-    system(['mv', glob('%s/../odoo_*.deb' % o.build_dir)[0], '%s' % o.build_dir])
     system(['mv', glob('%s/../odoo_*.dsc' % o.build_dir)[0], '%s' % o.build_dir])
     system(['mv', glob('%s/../odoo_*_amd64.changes' % o.build_dir)[0], '%s' % o.build_dir])
     system(['mv', glob('%s/../odoo_*.tar.gz' % o.build_dir)[0], '%s' % o.build_dir])
@@ -381,9 +391,10 @@ def gen_deb_package(o, published_files):
     # Remove temp directory
     shutil.rmtree(temp_path)
 
-    # Generate Release.gpg (= signed Release)
-    # Options -abs: -a (Create ASCII armored output), -b (Make a detach signature), -s (Make a signature)
-    subprocess.call(['gpg', '--default-key', GPGID, '--passphrase', GPGPASSPHRASE, '--yes', '-abs', '--no-tty', '-o', 'Release.gpg', 'Release'], cwd=os.path.join(o.pub, 'deb'))
+    if not o.no_debsign:
+        # Generate Release.gpg (= signed Release)
+        # Options -abs: -a (Create ASCII armored output), -b (Make a detach signature), -s (Make a signature)
+        subprocess.call(['gpg', '--default-key', GPGID, '--passphrase', GPGPASSPHRASE, '--yes', '-abs', '--no-tty', '-o', 'Release.gpg', 'Release'], cwd=os.path.join(o.pub, 'deb'))
 
 #---------------------------------------------------------
 # Generates an RPM repo
@@ -420,9 +431,10 @@ def options():
     op.add_option("-b", "--build-dir", default=build_dir, help="build directory (%default)", metavar="DIR")
     op.add_option("-p", "--pub", default=None, help="pub directory (%default)", metavar="DIR")
     op.add_option("", "--no-testing", action="store_true", help="don't test the builded packages")
-    op.add_option("-v", "--version", default='8.0', help="version (%default)")
+    op.add_option("", "--version", default=None, help="version (%default)")
 
     op.add_option("", "--no-debian", action="store_true", help="don't build the debian package")
+    op.add_option("", "--no-debsign", action="store_true", help="don't sign the debian package")
     op.add_option("", "--no-rpm", action="store_true", help="don't build the rpm package")
     op.add_option("", "--no-tarball", action="store_true", help="don't build the tarball")
     op.add_option("", "--no-windows", action="store_true", help="don't build the windows package")
@@ -437,13 +449,14 @@ def options():
     # derive other options
     o.odoo_dir = root
     o.pkg = join(o.build_dir, 'pkg')
-    o.version_full = '%s-%s' % (o.version, timestamp)
+    o.version_full = '%s-%s' % ('8.0', timestamp)
     o.work = join(o.build_dir, 'openerp-%s' % o.version_full)
     o.work_addons = join(o.work, 'openerp', 'addons')
 
     return o
 
 def main():
+    errors = 0
     o = options()
     _prepare_build_dir(o)
     if not o.no_testing:
@@ -455,17 +468,19 @@ def main():
                 if not o.no_testing:
                     test_tgz(o)
                 published_files = publish(o, 'tarball', ['tar.gz', 'zip'])
-            except Exception, e:
+            except Exception as e:
                 print("Won't publish the tgz release.\n Exception: %s" % str(e))
         if not o.no_debian:
             build_deb(o)
             try:
                 if not o.no_testing:
                     test_deb(o)
-                published_files = publish(o, 'debian', ['deb', 'dsc', 'changes', 'tar.gz'])
+                published_files = publish(o, 'debian', ['dsc', 'changes', 'tar.gz'])
                 gen_deb_package(o, published_files)
-            except Exception, e:
-                print("Won't publish the deb release.\n Exception: %s" % str(e))
+            except Exception as e:
+                errors += 1
+                logging.error("Won't publish the deb release.\n Exception: %s" % str(e))
+                traceback.print_exc()
         if not o.no_rpm:
             build_rpm(o)
             try:
@@ -473,7 +488,7 @@ def main():
                     test_rpm(o)
                 published_files = publish(o, 'redhat', ['noarch.rpm'])
                 gen_rpm_repo(o, published_files[0])
-            except Exception, e:
+            except Exception as e:
                 print("Won't publish the rpm release.\n Exception: %s" % str(e))
         if not o.no_windows:
             _prepare_build_dir(o, win32=True)
@@ -482,10 +497,12 @@ def main():
                 if not o.no_testing:
                     test_exe(o)
                 published_files = publish(o, 'windows', ['exe'])
-            except Exception, e:
+            except Exception as e:
                 print("Won't publish the exe release.\n Exception: %s" % str(e))
-    except:
-        pass
+    except Exception as e:
+        errors += 1
+        logging.error('Something bad happened ! : {}'.format(e))
+        traceback.print_exc()
     finally:
         shutil.rmtree(o.build_dir)
         print('Build dir %s removed' % o.build_dir)
@@ -493,6 +510,7 @@ def main():
         if not o.no_testing:
             system("docker rm -f `docker ps -a | awk '{print $1 }'` 2>>/dev/null")
             print('Remaining dockers removed')
+        sys.exit(errors)
 
 
 if __name__ == '__main__':
