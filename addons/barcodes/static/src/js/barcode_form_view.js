@@ -310,7 +310,7 @@ FormController.include({
                     // redraw the view if we scanned a real barcode (required if
                     // we manually apply the change in JS, e.g. incrementing the
                     // quantity)
-                    self.update({}, {reload: false});
+                    self.update({}, {reload: true});
                 }
             });
         });
