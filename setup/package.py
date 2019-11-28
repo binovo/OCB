@@ -22,6 +22,7 @@ from glob import glob
 from os.path import abspath, dirname, join
 from sys import stdout, stderr
 from tempfile import NamedTemporaryFile
+import re
 
 # apt-get install rsync python-pexpect debhelper python-setuptools
 
@@ -276,7 +277,18 @@ def build_tgz(o):
 
 def build_deb(o):
     # Append timestamp to version for the .dsc to refer the right .tar.gz
-    cmd=['sed', '-i', '1s/^.*$/odoo (%s.%s) stable; urgency=low/'%(version,timestamp), 'debian/changelog']
+    changelog_version = "%s.%s" % (version, timestamp)
+    if o.version:
+        regex = "^%s([.][0-9]+)?$" % changelog_version
+        if not re.match(regex, o.version):
+            raise Exception(
+                "The provided version %s does not comply with the naming convention.\n"
+                "<odoo version>.<today timestamp>[.<number of today releases>]\n"
+                "e.g.: %s\n"
+                "e.g.: %s.1\n" %
+                (o.version, changelog_version, changelog_version))
+        changelog_version = o.version
+    cmd = ['sed', '-i', '1s/^.*$/odoo (%s) stable; urgency=low/' % (changelog_version), 'debian/changelog']
     subprocess.call(cmd, cwd=o.build_dir)
     if not o.no_debsign:
         deb = pexpect.spawn('dpkg-buildpackage -rfakeroot -k%s' % GPGID, cwd=o.build_dir)
@@ -293,7 +305,7 @@ def build_deb(o):
             raise Exception("An error ocurred while building package %s" % o.package_name)
     # As the packages are built in the parent of the buildir, we move them back to build_dir
     build_dir_parent = '{}/../'.format(o.build_dir)
-    wildcards = ['odoo_{}'.format(wc) for wc in ('*.deb', '*.dsc', '*_amd64.changes', '*.tar.gz', '*.tar.xz')]
+    wildcards = ['odoo_{}'.format(wc) for wc in ('*.dsc', '*_amd64.changes', '*.tar.gz', '*.tar.xz')]
     move_glob(build_dir_parent, wildcards, o.build_dir)
 
 def build_rpm(o):
@@ -445,7 +457,7 @@ def options():
     build_dir = "%s-%s" % (root, timestamp)
 
     log_levels = { "debug" : logging.DEBUG, "info": logging.INFO, "warning": logging.WARN, "error": logging.ERROR, "critical": logging.CRITICAL }
-
+    op.add_option("", "--version", default=None, help="override default calculated version")
     op.add_option("-b", "--build-dir", default=build_dir, help="build directory (%default)", metavar="DIR")
     op.add_option("-p", "--pub", default=None, help="pub directory (%default)", metavar="DIR")
     op.add_option("", "--no-testing", action="store_true", help="don't test the built packages")

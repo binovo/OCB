@@ -8,8 +8,11 @@ odoo (11.0.0) stable; urgency=low
     configuration to work with workers.
   * Modify default Odoo configuration. Logfile by default. Memory limits
     and workers.
+  * Allow the package to be built with a custom version through a new
+    parameter '--version'. Simplify MANIFEST.in and remove the
+    python3:Recommends on the control file.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 30 Oct 2019 10:58:21 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Thu, 28 Nov 2019 09:11:33 +0100
 
 odoo (8.0.0) stable; urgency=low
 
