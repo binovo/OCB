@@ -2,5 +2,5 @@ include requirements.txt
 include LICENSE
 include README.md
 graft openerp
-global-exclude * *.py[co]
-global-exclude * *.hg*
+global-exclude *.py[co]
+global-exclude *.hg*
