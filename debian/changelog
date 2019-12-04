@@ -14,10 +14,8 @@ odoo (11.0.0) stable; urgency=low
   * Allow the package to be built with a custom version through a new
     parameter '--version'. Simplify MANIFEST.in and remove the
     python3:Recommends on the control file.
-  * On some cases the barcodes onchange event does not reload the data
-    of a record, so we force its reload.
 
- -- Ugaitz Olaizola <uolaizola@binovo.es>  Thu, 28 Nov 2019 12:31:09 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 04 Dec 2019 16:10:49 +0100
 
 odoo (8.0.0) stable; urgency=low
 
