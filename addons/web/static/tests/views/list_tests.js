@@ -520,7 +520,7 @@ QUnit.module('Views', {
         var $td = form.$('.o_data_cell').first();
         var $td2 = form.$('.o_data_cell').eq(1);
         assert.ok($td.hasClass("o_readonly_modifier"), "first field must be readonly");
-        assert.ok($td2.hasClass("o_boolean_toggle_cell"), "second field must be not activable but updatable on click (boolean toggle in this case)"); 
+        assert.ok($td2.hasClass("o_boolean_toggle_cell"), "second field must be not activable but updatable on click (boolean toggle in this case)");
         $td.click(); //select row first
         var $slider = $td2.find('.slider').first();
         try {
@@ -1540,7 +1540,7 @@ QUnit.module('Views', {
     });
 
     QUnit.test('list view, editable, without data', function (assert) {
-        assert.expect(11);
+        assert.expect(13);
 
         this.data.foo.records = [];
 
@@ -1590,11 +1590,15 @@ QUnit.module('Views', {
         assert.strictEqual(list.$('tbody tr:eq(0) td:eq(1)').text().trim(), "",
             "the date field td should not have any content");
 
+        assert.strictEqual(list.$('tr.o_selected_row .o_list_record_selector input').prop('disabled'), true,
+            "record selector checkbox should be disabled while the record is not yet created");
         assert.strictEqual(list.$('.o_list_button button').prop('disabled'), true,
             "buttons should be disabled while the record is not yet created");
 
         list.$buttons.find('.o_list_button_save').click();
 
+        assert.strictEqual(list.$('tbody tr:eq(0) .o_list_record_selector input').prop('disabled'), false,
+            "record selector checkbox should not be disabled once the record is created");
         assert.strictEqual(list.$('.o_list_button button').prop('disabled'), false,
             "buttons should not be disabled once the record is created");
 
@@ -2659,6 +2663,82 @@ QUnit.module('Views', {
             "should have the new value visible in dom");
         assert.verifySteps(["write", "read"]);
         list.destroy();
+    });
+
+    QUnit.test('edition, then navigation with tab (with a readonly field and onchange)', function (assert) {
+        // This test makes sure that if we have a read-only cell in a row, in
+        // case the keyboard navigation move over it and there a unsaved changes
+        // (which will trigger an onchange), the focus of the next activable
+        // field will not crash
+        assert.expect(4);
+
+        this.data.bar.onchanges = {
+            o2m: function () {},
+        };
+        this.data.bar.fields.o2m = {string: "O2M field", type: "one2many", relation: "foo"};
+        this.data.bar.records[0].o2m = [1, 4];
+
+        var form = createView({
+            View: FormView,
+            model: 'bar',
+            res_id: 1,
+            data: this.data,
+            arch: '<form>' +
+                    '<group>' +
+                        '<field name="display_name"/>' +
+                        '<field name="o2m">' +
+                            '<tree editable="bottom">' +
+                                '<field name="foo"/>' +
+                                '<field name="date" readonly="1"/>' +
+                                '<field name="int_field"/>' +
+                            '</tree>' +
+                        '</field>' +
+                    '</group>' +
+                '</form>',
+            mockRPC: function (route, args) {
+                if (args.method === 'onchange') {
+                    assert.step(args.method + ':' + args.model);
+                }
+                return this._super.apply(this, arguments);
+            },
+            fieldDebounce: 1,
+        });
+
+        // Switch to edit mode
+        form.$buttons.find('.o_form_button_edit').click();
+
+        var jq_evspecial_focus_trigger = $.event.special.focus.trigger;
+        try {
+            // As KeyboardEvent will be triggered by JS and not from the
+            // User-Agent itself, the focus event will not trigger default
+            // action (event not being trusted), we need to manually trigger
+            // 'change' event on the currently focused element
+            $.event.special.focus.trigger = function () {
+                if (this !== document.activeElement && this.focus) {
+                    var activeElement = document.activeElement;
+                    this.focus();
+                    $(activeElement).trigger('change');
+                }
+            };
+
+            // editable list, click on first td and press TAB
+            form.$('td:contains(yop)').click();
+            assert.strictEqual(document.activeElement, form.$('tr.o_selected_row input[name="foo"]')[0],
+                "focus should be on an input with name = foo");
+            form.$('tr.o_selected_row input[name="foo"]').val('new value').trigger('input');
+            form.$('tr.o_selected_row input[name="foo"]').trigger({type: 'keydown', which: $.ui.keyCode.TAB});
+            assert.strictEqual(document.activeElement, form.$('tr.o_selected_row input[name="int_field"]')[0],
+                "focus should be on an input with name = int_field");
+
+        } catch ( err ) {
+            assert.notOk("Keyboad navigation over read-only field that trigger an onchange() should not crash");
+        }
+
+        // Restore origin jQuery special trigger for 'focus'
+        $.event.special.focus.trigger = jq_evspecial_focus_trigger;
+
+        assert.verifySteps(["onchange:bar"], "onchange method should have been called");
+        form.destroy();
     });
 
     QUnit.test('pressing SHIFT-TAB in editable list with a readonly field [REQUIRE FOCUS]', function (assert) {
@@ -4018,6 +4098,78 @@ QUnit.module('Views', {
         $('.o_list_button_add').click();
 
         assert.strictEqual($('.o_data_cell').text(), "blipblipyopgnap" + inputText);
+
+        list.destroy();
+    });
+
+    QUnit.test("quickcreate in a many2one in a list", function (assert) {
+        assert.expect(2);
+
+        var list = createView({
+            arch: '<tree editable="top"><field name="m2o"/></tree>',
+            data: this.data,
+            model: 'foo',
+            View: ListView,
+        });
+
+        list.$('.o_data_row:first .o_data_cell:first').click();
+
+        var $input = list.$('.o_data_row:first .o_data_cell:first input');
+        $input.val("aaa");
+        $input.trigger('keyup');
+        $input.trigger('blur');
+        list.el.click();
+
+        assert.strictEqual(document.body.getElementsByClassName('modal').length, 1,
+            "the quick_create modal should appear");
+
+        $('.modal .btn-primary:first').click();
+        list.el.click();
+
+        assert.strictEqual(list.$('.o_data_row:first').text(), "aaa", "value should have been updated");
+        list.destroy();
+    });
+
+    QUnit.test('readonly boolean in editable list is readonly', function (assert) {
+        assert.expect(6);
+
+        var list = createView({
+            View: ListView,
+            model: 'foo',
+            data: this.data,
+            arch: '<tree editable="bottom">' +
+                      '<field name="foo"/>' +
+                      '<field name="bar" attrs="{\'readonly\': [(\'foo\', \'!=\', \'yop\')]}"/>' +
+                  '</tree>',
+        });
+
+        // clicking on disabled checkbox with active row does not work
+        var $disabledCell = list.$('.o_data_row:eq(1) .o_data_cell:last-child');
+        $disabledCell.prev().click();
+        assert.strictEqual($disabledCell.find(':disabled:checked').length, 1);
+        var $disabledLabel = $disabledCell.find('.custom-control-label');
+        $disabledLabel.click();
+        assert.strictEqual($disabledCell.find(':checked').length, 1,
+            "clicking disabled checkbox did not work"
+        );
+        assert.ok(
+            $(document.activeElement).is('input[type="text"]'),
+            "disabled checkbox is not focused after click"
+        );
+
+        // clicking on enabled checkbox with active row toggles check mark
+        var $enabledCell = list.$('.o_data_row:eq(0) .o_data_cell:last-child');
+        $enabledCell.prev().click();
+        assert.strictEqual($enabledCell.find(':checked:not(:disabled)').length, 1);
+        var $enabledLabel = $enabledCell.find('span');
+        $enabledLabel.click();
+        assert.strictEqual($enabledCell.find(':checked').length, 0,
+            "clicking enabled checkbox worked and unchecked it"
+        );
+        assert.ok(
+            $(document.activeElement).is('input[type="checkbox"]'),
+            "enabled checkbox is focused after click"
+        );
 
         list.destroy();
     });

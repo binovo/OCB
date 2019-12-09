@@ -9,6 +9,7 @@
 # Simon Hohler <simon.hohler@gmail.com>, 2018
 # Martin Trigaux, 2018
 # jl2035 <jaka.luthar@gmail.com>, 2018
+# Jasmina Macur <jasmina@hbs.si>, 2019
 # Matjaz Mozetic <m.mozetic@matmoz.si>, 2019
 # 
 msgid ""
@@ -99,7 +100,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr_payroll.report_payslip
 #: model:ir.ui.view,arch_db:hr_payroll.report_payslipdetails
 msgid "<strong>Identification No</strong>"
-msgstr ""
+msgstr "<strong>Identifikacija št.</strong>"
 
 #. module: hr_payroll
 #: model:ir.ui.view,arch_db:hr_payroll.report_payslip
@@ -694,7 +695,7 @@ msgstr "Ustvari plačilne liste za vse izbrane kadre."
 #. module: hr_payroll
 #: model:hr.salary.rule,name:hr_payroll.hr_salary_rule_sales_commission
 msgid "Get 1% of sales"
-msgstr ""
+msgstr "Pridobite 1% prodaje"
 
 #. module: hr_payroll
 #: code:addons/hr_payroll/models/hr_payslip.py:183
@@ -900,7 +901,7 @@ msgstr "Največji obseg"
 #. module: hr_payroll
 #: model:hr.salary.rule,name:hr_payroll.hr_salary_rule_meal_voucher
 msgid "Meal Voucher"
-msgstr ""
+msgstr "Vavčer za prehrano"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip_line_condition_range_min

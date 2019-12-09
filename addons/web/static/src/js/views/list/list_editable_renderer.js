@@ -143,7 +143,7 @@ ListRenderer.include({
             currentWidget = this.allFieldWidgets[currentRowID][this.currentFieldIndex];
             if (currentWidget.isFocusable()) {
                 focusedElement = currentWidget.getFocusableElement().get(0);
-                if (currentWidget.formatType !== 'boolean') {
+                if (currentWidget.formatType !== 'boolean' && focusedElement) {
                     selectionRange = dom.getSelectionRange(focusedElement);
                 }
             }
@@ -340,6 +340,7 @@ ListRenderer.include({
 
         // Toggle selected class here so that style is applied at the end
         $row.toggleClass('o_selected_row', editMode);
+        $row.find('.o_list_record_selector input').prop('disabled', !record.res_id)
 
         return $.when.apply($, defs);
     },
