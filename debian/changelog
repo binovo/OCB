@@ -9,8 +9,10 @@ odoo (8.0.0) stable; urgency=low
   * Modify package.py to build with custom version. Simplify
     MANIFEST.in.
   * Add python-dev as a dependency when installing debian package.
+  * Fix Odoo build package version regex and publish timestamp replace
+    when given version to the builder script.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Tue, 10 Dec 2019 10:00:29 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Tue, 10 Dec 2019 11:40:28 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 

@@ -104,7 +104,10 @@ def publish(o, type, extensions):
 
         # Latest/symlink handler
         release_abspath = abspath(release_path)
-        latest_abspath = release_abspath.replace(timestamp, 'latest')
+        if o.version:
+            latest_abspath = release_abspath.replace(o.version, '%s.latest' % version)
+        else:
+            latest_abspath = release_abspath.replace(timestamp, 'latest')
 
         if os.path.islink(latest_abspath):
             os.unlink(latest_abspath)
@@ -265,7 +268,7 @@ def build_deb(o):
     # Append timestamp to version for the .dsc to refer the right .tar.gz
     changelog_version = "%s.%s" % (version, timestamp)
     if o.version:
-        regex = "^%s([.][0-9]+)?$" % changelog_version
+        regex = "^%s[.][0-9]{4}[0-9]{2}[0-9]{2}([.][0-9]+)?$" % version
         if not re.match(regex, o.version):
             raise Exception(
                 "The provided version %s does not comply with the naming convention.\n"
