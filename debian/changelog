@@ -8,8 +8,9 @@ odoo (8.0.0) stable; urgency=low
   * #3445: add pypi evdev dependency to postinst script.
   * Modify package.py to build with custom version. Simplify
     MANIFEST.in.
+  * Add python-dev as a dependency when installing debian package.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Thu, 28 Nov 2019 10:26:42 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Tue, 10 Dec 2019 10:00:29 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 
