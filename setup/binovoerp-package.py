@@ -61,7 +61,10 @@ def publish(o, type, extensions):
         os.renames(build_path, release_path)
         # Latest/symlink handler
         release_abspath = abspath(release_path)
-        latest_abspath = release_abspath.replace(timestamp, 'latest')
+        if o.version:
+            latest_abspath = release_abspath.replace(o.version, '%s.latest' % version)
+        else:
+            latest_abspath = release_abspath.replace(timestamp, 'latest')
         if os.path.islink(latest_abspath):
             os.unlink(latest_abspath)
         os.symlink(release_abspath, latest_abspath)

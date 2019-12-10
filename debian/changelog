@@ -14,8 +14,9 @@ odoo (11.0.0) stable; urgency=low
   * Allow the package to be built with a custom version through a new
     parameter '--version'. Simplify MANIFEST.in and remove the
     python3:Recommends on the control file.
+  * Fix Binovo Odoo package builder script.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 04 Dec 2019 16:10:49 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Tue, 10 Dec 2019 11:30:18 +0100
 
 odoo (8.0.0) stable; urgency=low
 
