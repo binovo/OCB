@@ -15,8 +15,10 @@ odoo (11.0.0) stable; urgency=low
     parameter '--version'. Simplify MANIFEST.in and remove the
     python3:Recommends on the control file.
   * Fix Binovo Odoo package builder script.
+  * Fix odoo.conf with new way of calculating the memory limits and
+    workers. Add python3-dev dependency. Add shell to odoo user.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Tue, 10 Dec 2019 11:30:18 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 11 Dec 2019 10:44:12 +0100
 
 odoo (8.0.0) stable; urgency=low
 
