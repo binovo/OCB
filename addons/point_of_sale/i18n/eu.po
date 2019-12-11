@@ -3241,7 +3241,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:768
 #, python-format
 msgid "Served by"
-msgstr "Zerbitzatuta"
+msgstr "Zerbitzaria"
 
 #. module: point_of_sale
 #. openerp-web
