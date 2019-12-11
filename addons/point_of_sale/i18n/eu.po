@@ -616,7 +616,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:847
 #, python-format
 msgid "CHANGE"
-msgstr "ALDATU"
+msgstr "KANBIOA"
 
 #. module: point_of_sale
 #. openerp-web
@@ -3241,7 +3241,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:768
 #, python-format
 msgid "Served by"
-msgstr "Zerbitzaria"
+msgstr "Saltzailea"
 
 #. module: point_of_sale
 #. openerp-web
