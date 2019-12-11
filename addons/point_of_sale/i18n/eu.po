@@ -616,7 +616,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:847
 #, python-format
 msgid "CHANGE"
-msgstr ""
+msgstr "ALDATU"
 
 #. module: point_of_sale
 #. openerp-web
@@ -3241,7 +3241,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:768
 #, python-format
 msgid "Served by"
-msgstr ""
+msgstr "Zerbitzatuta"
 
 #. module: point_of_sale
 #. openerp-web
@@ -3981,7 +3981,7 @@ msgstr "Guztira"
 #: code:addons/point_of_sale/static/src/xml/pos.xml:868
 #, python-format
 msgid "Total Taxes"
-msgstr ""
+msgstr "Zergak guztira"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_session_cash_register_total_entry_encoding
