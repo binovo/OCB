@@ -251,6 +251,7 @@ var AbstractView = Class.extend({
                         .then(function (views) {
                             for (var viewName in views) {
                                 attrs.views[viewName] = views[viewName];
+                                self._processSubViewAttrs(attrs.views[viewName], attrs)
                             }
                             self._setSubViewLimit(attrs);
                         }));
@@ -275,6 +276,44 @@ var AbstractView = Class.extend({
             limit = 1000;
         }
         attrs.limit = limit || 40;
+    },
+
+    /**
+     * Processes in place the subview attributes (in particular,
+     * `default_order``and `column_invisible`).
+     *
+     * @private
+     * @param {Object} view - the field subview
+     * @param {Object} attrs - the field attributes (from the xml)
+     */
+    _processSubViewAttrs: function (view, attrs) {
+        var defaultOrder = view.arch.attrs.default_order;
+        if (defaultOrder) {
+            // process the default_order, which is like 'name,id desc'
+            // but we need it like [{name: 'name', asc: true}, {name: 'id', asc: false}]
+            attrs.orderedBy = _.map(defaultOrder.split(','), function (order) {
+                order = order.trim().split(' ');
+                return {name: order[0], asc: order[1] !== 'desc'};
+            });
+        } else {
+            // if there is a field with widget `handle`, the x2many
+            // needs to be ordered by this field to correctly display
+            // the records
+            var handleField = _.find(view.arch.children, function (child) {
+                return child.attrs && child.attrs.widget === 'handle';
+            });
+            if (handleField) {
+                attrs.orderedBy = [{name: handleField.attrs.name, asc: true}];
+            }
+        }
+
+        attrs.columnInvisibleFields = {};
+        _.each(view.arch.children, function (child) {
+            if (child.attrs && child.attrs.modifiers) {
+                attrs.columnInvisibleFields[child.attrs.name] =
+                    child.attrs.modifiers.column_invisible || false;
+            }
+        });
     },
 });
 
