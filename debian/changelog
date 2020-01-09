@@ -1,3 +1,10 @@
+odoo (11.0.31) stable; urgency=low
+
+  * #3607: Add python3-greenlet and python3-xlrd as dependencies for
+    debian package.
+
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Thu, 09 Jan 2020 10:13:41 +0100
+
 odoo (11.0.0) stable; urgency=low
 
   [ Ugaitz Olaizola ]
