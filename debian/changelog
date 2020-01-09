@@ -1,5 +1,8 @@
 odoo (11.0.31) stable; urgency=low
 
+  [ Israel C. Rebollo ]
+  * #3252: Add class names in sale, sale_report_templates.xml
+
   [ Luis J. Salvatierra ]
   * #3607: Add python3-greenlet and python3-xlrd as dependencies for
     debian package.
@@ -8,7 +11,7 @@ odoo (11.0.31) stable; urgency=low
   * 3765: move test data from data file (delivery_data.xml, removed) to demo file (delivery_demo.xml) to avoid
   upgrade problems with these demo data
 
- -- Ugaitz Olaizola <uolaizola@binovo.es>  Thu, 09 Jan 2020 11:54:06 +0100
+ -- Israel C. Rebollo <irebollo@binovo.es>  Thu, 09 Jan 2020 16:09:30 +0100
 
 odoo (11.0.0) stable; urgency=low
 
