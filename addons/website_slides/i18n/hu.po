@@ -812,7 +812,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_likes
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 msgid "Likes"
-msgstr ""
+msgstr "Kedvelések"
 
 #. module: website_slides
 #: model:slide.tag,name:website_slides.tag2
@@ -1030,7 +1030,7 @@ msgstr "Privát"
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.channels
 msgid "Private channel"
-msgstr ""
+msgstr "Zárt csatorna"
 
 #. module: website_slides
 #: selection:slide.channel,visibility:0
