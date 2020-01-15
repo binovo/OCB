@@ -25,6 +25,8 @@ import werkzeug
 import werkzeug.utils
 import werkzeug.wrappers
 import werkzeug.wsgi
+from io import BytesIO
+from werkzeug.wsgi import wrap_file
 from collections import OrderedDict
 from werkzeug.urls import url_decode, iri_to_uri
 from xml.etree import ElementTree
@@ -1014,7 +1016,9 @@ class Binary(http.Controller):
         else:
             content_base64 = base64.b64decode(content)
             headers.append(('Content-Length', len(content_base64)))
-            response = request.make_response(content_base64, headers)
+            buf = BytesIO(content_base64)
+            data = wrap_file(http.request.httprequest.environ, buf)
+            response = http.Response(data, headers=headers, direct_passthrough=True)
         if token:
             response.set_cookie('fileToken', token)
         return response
