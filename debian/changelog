@@ -1,3 +1,10 @@
+odoo (11.0.32) stable; urgency=low
+
+  * #2612: calendar, show x2many field avatars when the widget is used
+    and field name when its not.
+
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 22 Jan 2020 15:38:25 +0100
+
 odoo (11.0.31) stable; urgency=low
 
   [ Israel C. Rebollo ]

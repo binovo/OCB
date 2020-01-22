@@ -533,80 +533,80 @@ return AbstractModel.extend({
      */
     _loadRecordsToFilters: function (element, events) {
         var self = this;
-        var new_filters = {};
-        var to_read = {};
-
+        var eventsToRead = {};
+        var eventsData = {};
+        var defs = [];
         _.each(this.data.filters, function (filter, fieldName) {
             var field = self.fields[fieldName];
-
-            new_filters[fieldName] = filter;
-            if (filter.write_model) {
-                if (field.relation === self.model_color) {
-                    _.each(filter.filters, function (f) {
-                        f.color_index = f.value;
-                    });
-                }
-                return;
-            }
-
-            _.each(filter.filters, function (filter) {
-                filter.display = !filter.active;
-            });
-
-            var fs = [];
-            var undefined_fs = [];
-            _.each(events, function (event) {
-                var data =  event.record[fieldName];
-                if (!_.contains(['many2many', 'one2many'], field.type)) {
-                    data = [data];
-                } else {
-                    to_read[field.relation] = (to_read[field.relation] || []).concat(data);
-                }
-                _.each(data, function (_value) {
-                    var value = _.isArray(_value) ? _value[0] : _value;
-                    var f = {
-                        'color_index': self.model_color === (field.relation || element.model) ? value : false,
-                        'value': value,
-                        'label': fieldUtils.format[field.type](_value, field) || _t("Undefined"),
-                        'avatar_model': field.relation || element.model,
-                    };
-                    // if field used as color does not have value then push filter in undefined_fs,
-                    // such filters should come last in filter list with Undefined string, later merge it with fs
-                    value ? fs.push(f) : undefined_fs.push(f);
+            if (!filter.write_model) {
+                _.each(events, function (event) {
+                    if (event.id in eventsData === false) {
+                        eventsData[event.id] = {};
+                    }
+                    var data = event.record[fieldName];
+                    if (_.contains(['many2many', 'one2many'], field.type)) {
+                        defs.push(self._rpc({
+                            model: field.relation,
+                            method: 'name_get',
+                            args: [_.uniq(data)]
+                        }).then(function (res) {
+                            eventsData[event.id][fieldName] = res;
+                        }));
+                    } else {
+                        eventsData[event.id][fieldName] = [data];
+                    }
                 });
-            });
-            _.each(_.union(fs, undefined_fs), function (f) {
-                var f1 = _.findWhere(filter.filters, f);
-                if (f1) {
-                    f1.display = true;
-                } else {
-                    f.display = f.active = true;
-                    filter.filters.push(f);
-                }
-            });
-        });
-
-        var defs = [];
-        _.each(to_read, function (ids, model) {
-            defs.push(self._rpc({
-                    model: model,
-                    method: 'name_get',
-                    args: [_.uniq(ids)],
-                })
-                .then(function (res) {
-                    to_read[model] = _.object(res);
-                }));
+            }
         });
         return $.when.apply($, defs).then(function () {
-            _.each(self.data.filters, function (filter) {
+            _.each(self.data.filters, function (filter, fieldName) {
+                var field = self.fields[fieldName];
+
                 if (filter.write_model) {
+                    if (field.relation === self.model_color) {
+                        _.each(filter.filters, function (f) {
+                            f.color_index = f.value;
+                        });
+                    }
                     return;
                 }
-                if (filter.filters.length && (filter.filters[0].avatar_model in to_read)) {
-                    _.each(filter.filters, function (f) {
-                        f.label = to_read[f.avatar_model][f.value];
+
+                _.each(filter.filters, function (filter) {
+                    filter.display = !filter.active;
+                });
+
+                var fs = [];
+                var undefined_fs = [];
+                _.each(eventsData, function (eventData) {
+                    var data =  eventData[fieldName];
+                    _.each(data, function (_value) {
+                        var value = _.isArray(_value) ? _value[0] : _value;
+                        var label = '';
+                        if (_.contains(['many2many', 'one2many'], field.type)) {
+                            label = _value[1];
+                        } else {
+                            label = fieldUtils.format[field.type](_value, field) || _t("Undefined");
+                        }
+                        var f = {
+                            'color_index': self.model_color === (field.relation || element.model) ? value : false,
+                            'value': value,
+                            'label': label,
+                            'avatar_model': field.relation || element.model,
+                        };
+                        // if field used as color does not have value then push filter in undefined_fs,
+                        // such filters should come last in filter list with Undefined string, later merge it with fs
+                        value ? fs.push(f) : undefined_fs.push(f);
                     });
-                }
+                });
+                _.each(_.union(fs, undefined_fs), function (f) {
+                    var f1 = _.findWhere(filter.filters, f);
+                    if (f1) {
+                        f1.display = true;
+                    } else {
+                        f.display = f.active = true;
+                        filter.filters.push(f);
+                    }
+                });
             });
         });
     },
