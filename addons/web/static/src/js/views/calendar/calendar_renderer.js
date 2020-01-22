@@ -304,7 +304,7 @@ return AbstractRenderer.extend({
     _format: function (record, fieldName) {
         var field = this.state.fields[fieldName];
         if (field.type === "one2many" || field.type === "many2many") {
-            return field_utils.format[field.type]({data: record[fieldName]}, field);
+            return _t(field.string) + ': ' + record[fieldName].length
         } else {
             return field_utils.format[field.type](record[fieldName], field, {forceString: true});
         }
