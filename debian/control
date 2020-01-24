@@ -46,7 +46,6 @@ Depends:
 Conflicts: tinyerp-server, openerp-server, openerp-web, openerp
 Replaces: tinyerp-server, openerp-server, openerp-web, openerp
 Recommends:
- ${python3:Recommends},
  postgresql,
  python3-pyldap,
  python3-qrcode,
