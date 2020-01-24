@@ -8,7 +8,7 @@ Standards-Version: 3.9.8
 Homepage: http://www.odoo.com/
 Vcs-Git: https://github.com/odoo/odoo
 
-Package: odoo
+Package: odoo-12.0
 Architecture: all
 Depends:
  ${misc:Depends},
