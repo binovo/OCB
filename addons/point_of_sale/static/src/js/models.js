@@ -2330,16 +2330,14 @@ exports.Order = Backbone.Model.extend({
             var taxes = line.get_taxes();
             var mapped_included_taxes = [];
             _(taxes).each(function(tax) {
-                var line_taxes = line._map_tax_fiscal_position(tax);
+                var line_taxes = _.filter(line._map_tax_fiscal_position(tax), {'price_include': false});
                 if(tax.price_include && _.contains(line_taxes, tax)){
 
                     mapped_included_taxes.push(tax);
                 }
             });
 
-            if (mapped_included_taxes.length > 0) {
-                unit_price = line.compute_all(mapped_included_taxes, unit_price, 1, this.pos.currency.rounding, true).total_excluded;
-            }
+            unit_price = line.compute_all(mapped_included_taxes, unit_price, 1, this.pos.currency.rounding, true).total_excluded;
 
             line.set_unit_price(unit_price);
         }
