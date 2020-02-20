@@ -1,3 +1,10 @@
+odoo (11.0.33) stable; urgency=low
+
+  * #4604: barcodes: remove special treatment of chrome mobile seeing
+     that in the devices at hand it makes more harm than good.
+
+ -- Victor Laskurain <blaskurain@binovo.es>  Thu, 20 Feb 2020 10:56:00 +0100
+
 odoo (11.0.32) stable; urgency=low
 
   * #2612: calendar, show x2many field avatars when the widget is used
@@ -48,7 +55,7 @@ odoo (8.0.0) stable; urgency=low
 
   * Renamed package
 
- -- Simon Lejeune <sle@odoo.com>  Wed, 17 Sep 2014 15:40:00 +0100 
+ -- Simon Lejeune <sle@odoo.com>  Wed, 17 Sep 2014 15:40:00 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 
@@ -76,7 +83,7 @@ openerp-server (6.0.1-1) unstable; urgency=low
   * Repackage, together with addons fixes
 
  -- P. Christeas <xrg@openerp.com>  Mon, 24 Jan 2011 12:50:00 +0100
- 
+
 openerp-server (6.0.1-0) testing; urgency=low
 
   * Update to version 6.0.1
