@@ -1,3 +1,9 @@
+odoo (11.0.34) stable; urgency=low
+
+  * #4513: Remove arbitrary file upload limit (25Mb) and turn it to an option.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 02 Mar 2020 14:16:00 +0100
+
 odoo (11.0.33) stable; urgency=low
 
   * #4604: barcodes: remove special treatment of chrome mobile seeing
