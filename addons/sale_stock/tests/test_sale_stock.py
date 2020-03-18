@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import logging
+
 from odoo.addons.sale.tests.test_sale_common import TestSale
 from odoo.exceptions import UserError
 
+_logger = logging.getLogger(__name__)
 
 class TestSaleStock(TestSale):
     def test_00_sale_stock_invoice(self):
@@ -497,8 +500,13 @@ class TestSaleStock(TestSale):
     def test_08_overserve_make_to_order_product(self):
         uom_unit = self.env.ref('product.product_uom_unit')
         item1    = self.products['prod_del']
-        item1.route_ids = self.env.ref('stock.route_warehouse0_mto') |\
-                          self.env.ref('purchase.route_warehouse0_buy') #:TODO: comprobar que existe
+        route_ids = self.env.ref('stock.route_warehouse0_mto')
+        try:
+            route_ids |= self.env.ref('purchase.route_warehouse0_buy')
+        except:
+            _logger.info("Apparently purchase not installed. Skipping test test_08_overserve_make_to_order_product.")
+            return
+        item1.route_ids = route_ids
         item1.seller_ids = self.env['product.supplierinfo'].create({
             'name': self.env.ref('base.res_partner_12').id
         })
