@@ -134,6 +134,7 @@ class AccountInvoice(models.Model):
             domain = [('account_id', '=', self.account_id.id),
                       ('partner_id', '=', self.env['res.partner']._find_accounting_partner(self.partner_id).id),
                       ('reconciled', '=', False),
+                      ('move_id.state', '=', 'posted'),
                       '|',
                         '&', ('amount_residual_currency', '!=', 0.0), ('currency_id','!=', None),
                         '&', ('amount_residual_currency', '=', 0.0), '&', ('currency_id','=', None), ('amount_residual', '!=', 0.0)]
@@ -206,8 +207,11 @@ class AccountInvoice(models.Model):
             if float_is_zero(amount_to_show, precision_rounding=self.currency_id.rounding):
                 continue
             payment_ref = payment.move_id.name
+            invoice_view_id = None
             if payment.move_id.ref:
                 payment_ref += ' (' + payment.move_id.ref + ')'
+            if payment.invoice_id:
+                invoice_view_id = payment.invoice_id.get_formview_id()
             payment_vals.append({
                 'name': payment.name,
                 'journal_name': payment.journal_id.name,
@@ -219,6 +223,7 @@ class AccountInvoice(models.Model):
                 'payment_id': payment.id,
                 'account_payment_id': payment.payment_id.id,
                 'invoice_id': payment.invoice_id.id,
+                'invoice_view_id': invoice_view_id,
                 'move_id': payment.move_id.id,
                 'ref': payment_ref,
             })

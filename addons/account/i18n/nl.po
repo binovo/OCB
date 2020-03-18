@@ -1274,7 +1274,8 @@ msgstr "Een geselecteerde boeking is al afgeletterd."
 #: code:addons/account/models/account_bank_statement.py:892
 #, python-format
 msgid "A selected statement line was already reconciled with an account move."
-msgstr "Een geselecteerd bankafschrift is al afgeletterd met een boeking."
+msgstr ""
+"Een geselecteerd bankafschrift is al afgeletterd met een andere boeking."
 
 #. module: account
 #: sql_constraint:account.fiscal.position.tax:0
@@ -4583,7 +4584,7 @@ msgstr "Concept-afschriften"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_overdue_document
 msgid "Due"
-msgstr "Tot"
+msgstr "Vervallen"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_residual
@@ -7596,7 +7597,7 @@ msgstr "Begin Dagboek"
 #: model:ir.model.fields,field_description:account.field_res_company_account_opening_move_id
 #, python-format
 msgid "Opening Journal Entry"
-msgstr "Openingsboeking"
+msgstr "Openingsbalans"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_opening_opening_move_line_ids
@@ -7606,7 +7607,7 @@ msgstr "Openingsboekingsregels"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_financial_year_op_opening_move_posted
 msgid "Opening Move Posted"
-msgstr "Openingsboeking geboekt"
+msgstr "Openingsbalans geboekt"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_cashbox_line_number
@@ -7851,7 +7852,7 @@ msgstr "Bedrijfsnaam relatie"
 #: model:ir.ui.menu,name:account.menu_partner_ledger
 #: model:ir.ui.view,arch_db:account.report_partnerledger
 msgid "Partner Ledger"
-msgstr "Saldilijst per relatie"
+msgstr "Saldilijst per klant/leverancier"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line_partner_name

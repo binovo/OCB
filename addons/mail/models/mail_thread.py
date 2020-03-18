@@ -425,6 +425,15 @@ class MailThread(models.AbstractModel):
     def _message_track_post_template(self, tracking):
         if not any(change for rec_id, (change, tracking_value_ids) in tracking.items()):
             return True
+        # Clean the context to get rid of residual default_* keys
+        # that could cause issues afterward during the mail.message
+        # generation. Example: 'default_parent_id' would refer to
+        # the parent_id of the current record that was used during
+        # its creation, but could refer to wrong parent message id,
+        # leading to a traceback in case the related message_id
+        # doesn't exist
+        ctx = {k: v for k, v in self.env.context.items() if not k.startswith('default_')} # Use clean_context on further versions
+        self = self.with_context(ctx)
         templates = self._track_template(tracking)
         for field_name, (template, post_kwargs) in templates.items():
             if not template:
@@ -1024,9 +1033,13 @@ class MailThread(models.AbstractModel):
         MailMessage = self.env['mail.message']
         Alias, dest_aliases = self.env['mail.alias'], self.env['mail.alias']
         bounce_alias = self.env['ir.config_parameter'].sudo().get_param("mail.bounce.alias")
+        alias_domain = self.env['ir.config_parameter'].sudo().get_param("mail.catchall.domain")
+        # activate strict alias domain check for stable, will be falsy by default to be backward compatible
+        alias_domain_check = self.env['ir.config_parameter'].sudo().get_param("mail.catchall.domain.strict")
         fallback_model = model
 
         # get email.message.Message variables for future processing
+        local_hostname = socket.gethostname()
         message_id = message.get('Message-Id')
 
         # compute references to find if message is a reply to an existing thread
@@ -1042,6 +1055,7 @@ class MailThread(models.AbstractModel):
         email_to_localparts = [
             e.split('@', 1)[0].lower()
             for e in (tools.email_split(email_to) or [''])
+            if not alias_domain_check or (not alias_domain or e.endswith('@%s' % alias_domain))
         ]
 
         # Delivered-To is a safe bet in most modern MTAs, but we have to fallback on To + Cc values
@@ -1055,6 +1069,7 @@ class MailThread(models.AbstractModel):
         rcpt_tos_localparts = [
             e.split('@')[0].lower()
             for e in tools.email_split(rcpt_tos)
+            if not alias_domain_check or (not alias_domain or e.endswith('@%s' % alias_domain))
         ]
 
         # 0. Verify whether this is a bounced email and use it to collect bounce data and update notifications for customers
