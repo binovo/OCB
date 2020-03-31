@@ -1,3 +1,9 @@
+odoo (11.0.35.2) stable; urgency=low
+
+  * #4787 Added class to mrp in mrp_workorder_views into a div in the mrp_production_workcenter_form_view_inherit view.
+
+ -- Ander Laín <alain@binovo.es>  Tue 31 Mar 2020 12:51:00 +0100
+
 odoo (11.0.34) stable; urgency=low
 
   * #4513: Remove arbitrary file upload limit (25Mb) and turn it to an option.

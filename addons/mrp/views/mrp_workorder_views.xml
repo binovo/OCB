@@ -116,8 +116,8 @@
                         </div>
                     </button>
                 </div>
-                <group>
-                    <group>
+                <group class="mrp_production_workcenter_production_qty_messages">
+                    <group class="mrp_production_workcenter_production_qty">
                         <field name="product_id" string="To Produce"/>
                         <label for="qty_produced" string="Quantity Produced"/>
                         <div class="o_row">
@@ -128,18 +128,18 @@
                         </div>
                         <field name="is_produced" invisible="1"/>
                     </group>
-                    <div class="alert alert-danger alert-dismissible text-left" role="alert" attrs="{'invisible': [('production_messages', '=', False)]}">
+                    <div class="alert alert-danger alert-dismissible text-left mrp_production_workcenter_production_messages" role="alert" attrs="{'invisible': [('production_messages', '=', False)]}">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
                         <field name="production_messages"/>
                     </div>
                 </group>
                 <notebook>
-                <page string="Work Instruction" attrs="{'invisible': [('worksheet', '=', False)]}">
+                <page string="Work Instruction" attrs="{'invisible': [('worksheet', '=', False)]}" class="mrp_production_workcenter_worksheet">
                     <field name="worksheet" widget="pdf_viewer"/>
                 </page>
                 <page string="Current Production" class="mrp_current_production">
                     <group>
-                        <group>
+                        <group class="mrp_production_workcenter_current_working_group">
                             <field name="qty_producing" string="Current Qty" attrs="{'readonly': ['|', ('product_tracking', '=', 'serial'), ('state', 'in', ('done', 'cancel'))]}"/>
                             <field name="final_lot_id" context="{'default_product_id': product_id}" domain="['|', '&amp;', ('product_id', '=', product_id), ('product_id.tracking', '!=', 'serial'), ('use_next_on_work_order_id', '=', id)]" attrs="{'invisible': [('product_tracking', '=', 'none')]}" groups="stock.group_production_lot"/>
                             <field name="product_tracking" invisible="1"/>
@@ -161,10 +161,10 @@
                     </field>
                 </page>
                 <page string="Time Tracking" groups="mrp.group_mrp_manager" class="mrp_time_tracking">
-                    <group>
-                        <group>
+                    <group class="mrp_workcenter_time_tracking_group_1">
+                        <group class="mrp_time_tracking_group_group_1">
                             <label for="date_planned_start" string="Planned Date"/>
-                            <div class="o_row">
+                            <div class="o_row mrp_production_workcenter_planned_date">
                                 <field name="date_planned_start" class="mr8"/>
                                 <div attrs="{'invisible': [('date_planned_start', '=', False)]}" class="o_row">
                                     <strong attrs="{'invisible': [('date_planned_finished', '=', False)]}" class="mr8">to</strong>
@@ -173,7 +173,7 @@
                                 </div>
                             </div>
                             <label for="date_start" string="Effective Date"/>
-                            <div class="o_row">
+                            <div class="o_row mrp_production_workcenter_time_tracking_date_start_finish">
                                 <field name="date_start" readonly="1"/>
                                 <div  attrs="{'invisible': [('date_finished', '=', False)]}">
                                     <strong class="mr8">to</strong>
@@ -224,7 +224,7 @@
                 </page>
                 <page string="Miscellaneous" groups="mrp.group_mrp_manager" class="mrp_miscellaneous">
                     <group>
-                        <group>
+                        <group class="mrp_production_workcenter_miscellaneous_group">
                             <field name="name"/>
                             <field name="workcenter_id" readonly="1"/>
                             <field name="production_id" readonly="1"/>
