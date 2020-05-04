@@ -1,3 +1,9 @@
+odoo (11.0.37.3) stable; urgency=low
+
+  * #5175 Add-item y trash options in fields many2many.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon 04 May 2020 19:47:00 +0100
+
 odoo (11.0.35.2) stable; urgency=low
 
   * #4787 Added class to mrp in mrp_workorder_views into a div in the mrp_production_workcenter_form_view_inherit view.
