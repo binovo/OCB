@@ -875,8 +875,8 @@ var FieldX2Many = AbstractField.extend({
             this.renderer = new ListRenderer(this, this.value, {
                 arch: arch,
                 editable: this.mode === 'edit' && arch.attrs.editable,
-                addCreateLine: !this.isReadonly && this.activeActions.create,
-                addTrashIcon: !this.isReadonly && this.activeActions.delete,
+                addCreateLine: !this.isReadonly && (this.activeActions.create || (this.nodeOptions.show_add_item_m2m && this.formatType === 'many2many')),
+                addTrashIcon: !this.isReadonly && (this.activeActions.delete || (this.nodeOptions.show_trash_m2m && this.formatType === 'many2many')),
                 viewType: viewType,
                 columnInvisibleFields: this.currentColInvisibleFields,
             });
