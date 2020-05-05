@@ -4,7 +4,7 @@
 import re
 
 from odoo import models, fields, api, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 from odoo.tools.float_utils import float_split_str
 from odoo.tools.misc import mod10r
 
@@ -91,7 +91,7 @@ class AccountInvoice(models.Model):
                 record.l10n_ch_isr_number = mod10r(invoice_issuer_ref + internal_ref)
                 record.l10n_ch_isr_number_spaced = _space_isr_number(record.l10n_ch_isr_number)
 
-    @api.depends('currency_id.name', 'amount_total', 'partner_bank_id.bank_id', 'number', 'partner_bank_id.l10n_ch_postal', 'partner_bank_id.bank_id.l10n_ch_postal_eur', 'partner_bank_id.bank_id.l10n_ch_postal_chf')
+    @api.depends('currency_id.name', 'residual', 'partner_bank_id.bank_id', 'number', 'partner_bank_id.l10n_ch_postal', 'partner_bank_id.bank_id.l10n_ch_postal_eur', 'partner_bank_id.bank_id.l10n_ch_postal_chf')
     def _compute_l10n_ch_isr_optical_line(self):
         """ The optical reading line of the ISR looks like this :
                 left>isr_ref+ bank_ref>
@@ -117,7 +117,7 @@ class AccountInvoice(models.Model):
                     currency_code = '01'
                 elif record.currency_id.name == 'EUR':
                     currency_code = '03'
-                units, cents = float_split_str(record.amount_total, 2)
+                units, cents = float_split_str(record.residual, 2)
                 amount_to_display = units + cents
                 amount_ref = amount_to_display.zfill(10)
                 left = currency_code + amount_ref
@@ -145,10 +145,11 @@ class AccountInvoice(models.Model):
         This function is needed on the model, as it must be called in the report
         template, which cannot reference static functions
         """
-        return float_split_str(self.amount_total, 2)
+        return float_split_str(self.residual, 2)
 
     def display_swiss_qr_code(self):
-        """ Trigger the print of the Swiss QR code in the invoice report or not
+        """ DEPRECATED FUNCTION: not used anymore. QR-bills can now always
+        be generated, with a dedicated report
         """
         self.ensure_one()
         qr_parameter = self.env['ir.config_parameter'].sudo().get_param('l10n_ch.print_qrcode')
@@ -169,6 +170,17 @@ class AccountInvoice(models.Model):
                                    - associate this bank with a postal reference for the currency used in this invoice\n
                                    - fill the 'bank account' field of the invoice with the postal to be used to receive the related payment. A default account will be automatically set for all invoices created after you defined a postal account for your company."""))
 
+    def print_ch_qr_bill(self):
+        """ Triggered by the 'Print QR-bill' button.
+        """
+        self.ensure_one()
+
+        if not self.partner_bank_id.validate_swiss_code_arguments(self.partner_bank_id.currency_id, self.partner_id, self.reference):
+            raise UserError(_("Cannot generate the QR-bill. Please check you have configured the address of your company and debtor. If you are using a QR-IBAN, also check the invoice's payment reference is a QR reference."))
+
+        self.l10n_ch_isr_sent = True
+        return self.env.ref('l10n_ch.l10n_ch_qr_report').report_action(self)
+
     def action_invoice_sent(self):
         """ Overridden. Triggered by the 'send by mail' button.
         """
@@ -185,3 +197,11 @@ class AccountInvoice(models.Model):
         if self.env.context.get('l10n_ch_mark_isr_as_sent'):
             self.filtered(lambda inv: not inv.l10n_ch_isr_sent).write({'l10n_ch_isr_sent': True})
         return super(AccountInvoice, self.with_context(mail_post_autofollow=True)).message_post(**kwargs)
+
+    @api.multi
+    def _get_computed_reference(self):
+        self.ensure_one()
+        if self.company_id.invoice_reference_type == 'ch_isr':
+            return self.l10n_ch_isr_number
+        else:
+            return super()._get_computed_reference()

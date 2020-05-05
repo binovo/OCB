@@ -6388,13 +6388,15 @@ msgid ""
 "<span class=\"o_form_label\">The selected language has been successfully installed.\n"
 "You must change the preferences of the user to view the changes.</span>"
 msgstr ""
+"<span class=\"o_form_label\">השפה שנבחרה הותקנה בהצלחה.\n"
+"עליך לשנות את העדפות המשתמש כדי להציג את השינויים.</span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade_install
 msgid ""
 "<span class=\"o_form_label\">The selected modules have been updated / "
 "installed !</span>"
-msgstr ""
+msgstr "<span class=\"o_form_label\">המודולים שנבחרו עודכנו / הותקנו !</span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade_install
@@ -6409,6 +6411,8 @@ msgid ""
 "<span class=\"searchIcon\"><i class=\"fa fa-search\" role=\"img\" aria-"
 "label=\"Search\" title=\"Search\"/></span>"
 msgstr ""
+"<span class=\"searchIcon\"><i class=\"fa fa-search\" role=\"img\" aria-"
+"label=\"Search\" title=\"Search\"/></span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_force_install_form
@@ -6879,7 +6883,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_A
 msgid "A AGRICULTURE, FORESTRY AND FISHING"
-msgstr ""
+msgstr "חקלאות, ייעור ודייג"
 
 #. module: base
 #: code:addons/models.py:2986
@@ -7083,7 +7087,7 @@ msgstr "תפריט גישה"
 #: model_terms:ir.ui.view,arch_db:base.view_view_form
 #: model:res.groups,name:base.group_erp_manager
 msgid "Access Rights"
-msgstr "זכויות גישה"
+msgstr "הרשאות"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__access_token
@@ -7606,7 +7610,7 @@ msgstr "אפגניסטן"
 #. module: base
 #: selection:res.country,name_position:0
 msgid "After Address"
-msgstr ""
+msgstr "אחרי כתובת"
 
 #. module: base
 #: selection:res.currency,position:0
@@ -7915,12 +7919,12 @@ msgstr "יישומים:"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_db
 msgid "Arch Blob"
-msgstr ""
+msgstr "Arch Blob"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_fs
 msgid "Arch Filename"
-msgstr ""
+msgstr "Arch Filename"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_view_form
@@ -8002,7 +8006,7 @@ msgstr "לפחות שפה אחת חייבת להיות פעילה."
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_attachment
 msgid "Attach a new document"
-msgstr ""
+msgstr "הוסף מסמך חדש"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
@@ -8613,7 +8617,7 @@ msgstr "בוליביה - דוחות כספיים"
 #. module: base
 #: model:res.country,name:base.bq
 msgid "Bonaire, Sint Eustatius and Saba"
-msgstr ""
+msgstr "סנט אוסטטיוס "
 
 #. module: base
 #: selection:ir.property,type:0
@@ -8746,7 +8750,7 @@ msgstr "כברירת מחדל, הווידג'ט משתמש במידע מהשדו�
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_C
 msgid "C MANUFACTURING"
-msgstr ""
+msgstr "ייצור"
 
 #. module: base
 #: selection:report.paperformat,format:0
@@ -8965,7 +8969,7 @@ msgstr "שנה את העדפות שלי"
 #: model:ir.actions.act_window,name:base.change_password_wizard_action
 #: model_terms:ir.ui.view,arch_db:base.change_password_wizard_view
 msgid "Change Password"
-msgstr "שנה סיסמא"
+msgstr "שנה סיסמה"
 
 #. module: base
 #: model:ir.model,name:base.model_change_password_wizard
@@ -8975,7 +8979,7 @@ msgstr "אשף לשינוי סיסמא"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Change password"
-msgstr "שנה סיסמא"
+msgstr "שנה סיסמה"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_country_form
@@ -9257,7 +9261,7 @@ msgstr ""
 #: selection:ir.actions.act_window.view,view_mode:0
 #: selection:ir.ui.view,type:0
 msgid "Cohort"
-msgstr ""
+msgstr "Cohort"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_cohort
@@ -12867,7 +12871,7 @@ msgstr "תפקוד"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_G
 msgid "G WHOLESALE AND RETAIL TRADE;REPAIR OF MOTOR VEHICLES AND MOTORCYCLES"
-msgstr ""
+msgstr "G סחר סיטונאי וקמעוני, תיקון כלי רכב ואופנועים"
 
 #. module: base
 #: selection:ir.module.module,license:0
@@ -13741,7 +13745,7 @@ msgstr "הונגריה"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_I
 msgid "I ACCOMMODATION AND FOOD SERVICE ACTIVITIES"
-msgstr ""
+msgstr "I פעילויות אירוח ושירותי מזון"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_iban
@@ -13893,7 +13897,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_J
 msgid "IT/Communication"
-msgstr ""
+msgstr "מערכות מידע/תקשורת"
 
 #. module: base
 #: model:res.country,name:base.is
@@ -14812,7 +14816,7 @@ msgstr "הרגע נעשה"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_K
 msgid "K FINANCIAL AND INSURANCE ACTIVITIES"
-msgstr ""
+msgstr "K פעילויות פיננסיות וביטוח"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_digest
@@ -14824,7 +14828,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 #: selection:ir.ui.view,type:0
 msgid "Kanban"
-msgstr ""
+msgstr "קנבן"
 
 #. module: base
 #: model:res.country,name:base.kz
@@ -14887,7 +14891,7 @@ msgstr "קירגיזסטן"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_L
 msgid "L REAL ESTATE ACTIVITIES"
-msgstr ""
+msgstr "L פעילויות נדל\"ן"
 
 #. module: base
 #: selection:ir.module.module,license:0
@@ -15274,7 +15278,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 msgid "Learn More"
-msgstr ""
+msgstr "למד עוד"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_hr_holidays
@@ -15300,7 +15304,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__margin_left
 msgid "Left Margin (mm)"
-msgstr ""
+msgstr "שוליים שמאליים (מ\"מ)"
 
 #. module: base
 #: selection:res.lang,direction:0
@@ -15412,7 +15416,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_link_tracker
 #: model:ir.module.module,shortdesc:base.module_website_links
 msgid "Link Tracker"
-msgstr ""
+msgstr "מעקב קישורים"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale
@@ -15545,7 +15549,7 @@ msgstr "לוגו אינטרנט"
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_search_view
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_tree_view
 msgid "Logs"
-msgstr ""
+msgstr "רישומים"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_loyalty
@@ -15580,7 +15584,7 @@ msgstr "לוקסמבורג - דוחות כספיים"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_M
 msgid "M PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
-msgstr ""
+msgstr "M פעילויות מקצועיות, מדעיות וטכנולוגיות"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_byproduct
@@ -16538,7 +16542,7 @@ msgstr "מיאנמר"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_N
 msgid "N ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES"
-msgstr ""
+msgstr "פעילויות מנהלתיות ותמיכה"
 
 #. module: base
 #: model:res.country,vat_label:base.gt
@@ -16863,7 +16867,7 @@ msgstr "לא מוכן"
 #: code:addons/base/models/ir_model.py:1407
 #, python-format
 msgid "Not enough access rights on the external ID:"
-msgstr "אין מספיק זכויות גישה במזהה החיצוני:"
+msgstr "אין מספיק הרשאות במזהה החיצוני:"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__comment
@@ -16902,7 +16906,7 @@ msgstr "מספר מודולים עודכנו."
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_O
 msgid "O PUBLIC ADMINISTRATION AND DEFENCE;COMPULSORY SOCIAL SECURITY"
-msgstr ""
+msgstr "מנהל ציבורי, הגנה וביטחון"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_oauth
@@ -19516,7 +19520,7 @@ msgstr "ביטוי Python"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_Q
 msgid "Q HUMAN HEALTH AND SOCIAL WORK ACTIVITIES"
-msgstr ""
+msgstr "Q בריאות ופעילויות עבודה סוציאלית"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
@@ -19595,7 +19599,7 @@ msgstr "הצעת מחיר, הזמנות מכירות, משלוח & חשבוני�
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb
 msgid "Qweb"
-msgstr ""
+msgstr "Qweb"
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field
@@ -19698,7 +19702,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_R
 msgid "R ARTS, ENTERTAINMENT AND RECREATION"
-msgstr ""
+msgstr "R אומנויות, בידור ופנאי"
 
 #. module: base
 #: model:res.country,vat_label:base.mx
@@ -19799,7 +19803,7 @@ msgstr "חוקי רישום"
 #: code:addons/models.py:3421 code:addons/models.py:4326
 #, python-format
 msgid "Records:"
-msgstr ""
+msgstr "רשומות:"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_hr_recruitment
@@ -20027,7 +20031,7 @@ msgstr "נדרש"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__res_model_name
 msgid "Res Model Name"
-msgstr ""
+msgstr "שם מודל Res"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_crm_partner_assign
@@ -20189,12 +20193,12 @@ msgstr "רואנדה"
 #. module: base
 #: model:res.country,name:base.re
 msgid "Réunion"
-msgstr ""
+msgstr "ראוניון"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_S
 msgid "S OTHER SERVICE ACTIVITIES"
-msgstr ""
+msgstr "S פעילויות שירות אחרות"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_sepa
@@ -20391,7 +20395,7 @@ msgstr "סן מרינו"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__sanitized_acc_number
 msgid "Sanitized Account Number"
-msgstr ""
+msgstr "מספר חשבון באותיות גדולות וללא רווחים"
 
 #. module: base
 #: selection:res.lang,week_start:0
@@ -21516,6 +21520,8 @@ msgid ""
 "T ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS;UNDIFFERENTIATED GOODS- AND "
 "SERVICES-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE"
 msgstr ""
+"פעילויות של משקי בית כמעסיקים, ייצור שירותים של פעילויות משקי בית לשימוש "
+"עצמי"
 
 #. module: base
 #: selection:base.language.export,format:0
@@ -22688,6 +22694,9 @@ msgid ""
 "\n"
 "(Document type: %s, Operation: %s)"
 msgstr ""
+"לא ניתן להשלים את הפעולה המבוקשת עקב מגבלות אבטחה. אנא צור קשר עם מנהל המערכת שלך.\n"
+"\n"
+"(סוג מסמך: %s, פעולה: %s)"
 
 #. module: base
 #: sql_constraint:res.currency:0
@@ -23030,7 +23039,7 @@ msgstr "הזחות אזור זמן"
 #. module: base
 #: model:res.country,name:base.tl
 msgid "Timor-Leste"
-msgstr ""
+msgstr "מזרח טימור"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__title
@@ -23417,7 +23426,7 @@ msgstr "סוג:"
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_U
 msgid "U ACTIVITIES OF EXTRA TERRITORIAL ORGANISATIONS AND BODIES"
-msgstr ""
+msgstr "U פעילויות של גופים וארגונים מחוץ לתחום השיפוטי של המדינה"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ae
