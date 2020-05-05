@@ -182,7 +182,7 @@ class Lead(models.Model):
     def _compute_day_open(self):
         """ Compute difference between create date and open date """
         for lead in self.filtered(lambda l: l.date_open and l.create_date):
-            date_create = fields.Datetime.from_string(lead.create_date)
+            date_create = fields.Datetime.from_string(lead.create_date).replace(microsecond=0)
             date_open = fields.Datetime.from_string(lead.date_open)
             lead.day_open = abs((date_open - date_create).days)
 
@@ -1164,8 +1164,8 @@ class Lead(models.Model):
 
     @api.multi
     def get_formview_id(self, access_uid=None):
-        if self.type == 'opportunity':
-            view_id = self.env.ref('crm.crm_case_form_view_oppor').id
+        if self.type == 'lead':
+            view_id = self.env.ref('crm.crm_case_form_view_leads').id
         else:
             view_id = super(Lead, self).get_formview_id()
         return view_id

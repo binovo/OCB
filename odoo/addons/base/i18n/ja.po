@@ -12,6 +12,7 @@
 # Norimichi Sugimoto <norimichi.sugimoto@tls-ltd.co.jp>, 2019
 # Martin Trigaux, 2019
 # Tim Siu Lai <tl@roomsfor.hk>, 2019
+# Hau Dao <hau@quartile.co>, 2020
 # Yoshi Tashiro <tashiro@roomsfor.hk>, 2020
 # 
 msgid ""
@@ -80,6 +81,10 @@ msgid ""
 "Allow cashier to reprint receipts\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"レジでのレシート再発行を許可\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_hu
@@ -6672,7 +6677,7 @@ msgstr "<strong>Seq</strong>"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "<strong>The contact linked to this user is still active</strong>"
-msgstr ""
+msgstr "<strong>このユーザに紐付く連絡先はまだ有効です</strong>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
@@ -8657,7 +8662,7 @@ msgstr "金額の前"
 #, python-format
 msgid ""
 "Before clicking on 'Change Password', you have to write a new password."
-msgstr ""
+msgstr "[パスワードの変更]をクリックする前に、新しいパスワードを作成する必要があります。"
 
 #. module: base
 #: model:res.country,name:base.by
@@ -11208,7 +11213,7 @@ msgstr ""
 #: code:addons/base/models/ir_qweb_fields.py:225
 #, python-format
 msgid "Display only the time"
-msgstr ""
+msgstr "時間だけ表する"
 
 #. module: base
 #: code:addons/base/models/ir_qweb_fields.py:634
@@ -15358,7 +15363,7 @@ msgstr "リード自動化"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_reveal
 msgid "Lead Generation"
-msgstr ""
+msgstr "リード生成"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_crm_score
@@ -15592,7 +15597,7 @@ msgstr "翻訳読込"
 #. module: base
 #: model:ir.actions.act_window,name:base.demo_force_install_action
 msgid "Load demo data"
-msgstr ""
+msgstr "デモデータをロード"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__code
@@ -18903,12 +18908,12 @@ msgstr "パスワード"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_password_policy
 msgid "Password Policy"
-msgstr ""
+msgstr "パスワードに関する政策"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_password_policy_signup
 msgid "Password Policy support for Signup"
-msgstr ""
+msgstr "登録為のパスワードサポートポリシー"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_logging__path
@@ -20950,7 +20955,7 @@ msgstr "アクティブでない通貨を表示"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Show technical modules"
-msgstr ""
+msgstr "技術モジュールを表示"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_google_map
@@ -23964,7 +23969,7 @@ msgstr "ユーザタイプ"
 #. module: base
 #: model:ir.model,name:base.model_change_password_user
 msgid "User, Change Password Wizard"
-msgstr ""
+msgstr "ユーザー、パスワード変更のウィザード"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.ir_default_menu_action
@@ -24677,7 +24682,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "You can archive the contact"
-msgstr ""
+msgstr "必要に応じて次の連絡先をアーカイブしてください"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_attachment__type

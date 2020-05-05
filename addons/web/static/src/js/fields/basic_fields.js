@@ -1987,7 +1987,7 @@ var StateSelectionWidget = AbstractField.extend({
             .addClass(currentState.state_class)
             .prop('special_click', true)
             .parent().attr('title', currentState.state_name)
-            .attr('aria-label', currentState.state_name);
+            .attr('aria-label', self.string + ": " + currentState.state_name);
 
         // Render "FormSelection.Items" and move it into "FormSelection"
         var $items = $(qweb.render('FormSelection.items', {
@@ -2577,7 +2577,10 @@ var JournalDashboardGraph = AbstractField.extend({
      * Called when the field is detached from the DOM.
      */
     on_detach_callback: function () {
-        this.chart.tooltip.hidden(true);
+        // ignore chart that have not yet been rendered
+        if (this.chart !== null) {
+            this.chart.tooltip.hidden(true);
+        }
         this._isInDOM = false;
     },
 
