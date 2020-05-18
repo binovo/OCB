@@ -151,7 +151,7 @@
                                 <group groups="stock.group_stock_multi_locations">
                                     <field name="picking_type_id" domain="[('code', '=', 'mrp_operation')]" attrs="{'readonly': [('has_moves', '=', True)]}"/>
                                     <field name="location_src_id" domain="[('usage','=','internal')]" attrs="{'readonly': [('has_moves', '=', True)]}"/>
-                                    <field name="location_dest_id" domain="[('usage','=','internal')]" attrs="{'readonly': [('has_moves', '=', True)]}"/>
+                                    <field name="location_dest_id" class='production_miscellaneous_location_dest_id' domain="[('usage','=','internal')]" attrs="{'readonly': [('has_moves', '=', True)]}"/>
                                 </group>
                                 <group>
                                     <field name="availability" groups="base.group_no_one"/>
