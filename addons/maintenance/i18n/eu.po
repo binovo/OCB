@@ -1034,7 +1034,7 @@ msgstr "Azpikontratista"
 #. module: maintenance
 #: model:ir.model.fields,field_description:maintenance.field_maintenance_request_name
 msgid "Subjects"
-msgstr "Ikasgaiak"
+msgstr "Mantenuak"
 
 #. module: maintenance
 #: model:ir.model.fields,field_description:maintenance.field_maintenance_request_maintenance_team_id
