@@ -1,3 +1,9 @@
+odoo (11.0.40) stable; urgency=low
+
+  * #5362 Cambiar traducción a solicitud de mantenimiento.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon 01 Jun 2020 16:27:00 +0200
+
 odoo (11.0.37.3) stable; urgency=low
 
   * #5175 Add-item y trash options in fields many2many.
