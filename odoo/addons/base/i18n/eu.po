@@ -7923,12 +7923,12 @@ msgstr "Menua sortu"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_form_project
 msgid "Create Tasks From Contact Form"
-msgstr "Zereginak sortu kontaktu formulariotik"
+msgstr "Atazak sortu kontaktu formulariotik"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_project
 msgid "Create Tasks from Leads"
-msgstr "Sortu Zereginak Ekimenetatik"
+msgstr "Sortu atazak ekimenetatik"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_menu_create
@@ -12564,7 +12564,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_project
 msgid "Lead to Tasks"
-msgstr "Ekimenetik Zereginera"
+msgstr "Ekimenetik atazara"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm
@@ -16419,12 +16419,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_helpdesk_timesheet
 msgid "Project, Tasks, Timesheet"
-msgstr "Proiektua, Zereginak, Denbora-orria"
+msgstr "Proiektua, atazak, denbora-orria"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_project
 msgid "Projects, Tasks"
-msgstr "Proiektuak, Zereginak"
+msgstr "Proiektuak, atazak"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_fields_form

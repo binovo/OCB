@@ -2,8 +2,9 @@ odoo (11.0.40) stable; urgency=low
 
   * #5362 Cambiar traducción a solicitud de mantenimiento.
   * #5361 Cambiar traducción a artikulu bat gehitu.
+  * #5251 Cambiar traducción a zeregina por ataza.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Tue 02 Jun 2020 08:45:00 +0200
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue 02 Jun 2020 12:07:00 +0200
 
 odoo (11.0.37.3) stable; urgency=low
 

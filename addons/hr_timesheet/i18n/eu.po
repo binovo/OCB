@@ -337,7 +337,7 @@ msgstr "Ataza"
 #. module: hr_timesheet
 #: model:ir.model,name:hr_timesheet.model_report_project_task_user
 msgid "Tasks by user and project"
-msgstr "Zereginak erabiltzaileka eta proiektuka"
+msgstr "Atazak erabiltzaileka eta proiektuka"
 
 #. module: hr_timesheet
 #: model:ir.ui.view,arch_db:hr_timesheet.hr_timesheet_line_search

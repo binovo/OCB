@@ -130,7 +130,7 @@ msgstr ""
 #. module: analytic
 #: model:ir.actions.act_window,help:analytic.account_analytic_tag_action
 msgid "Click to add a new tag."
-msgstr "Egin klik zeregin berri bat gehitzeko. "
+msgstr "Egin klik tag berri bat gehitzeko. "
 
 #. module: analytic
 #: model:ir.actions.act_window,help:analytic.action_analytic_account_form
@@ -324,7 +324,7 @@ msgstr "Etiketak"
 #. module: analytic
 #: model:ir.ui.view,arch_db:analytic.view_account_analytic_line_filter
 msgid "Tasks Month"
-msgstr "Zereginak hilabeteko"
+msgstr "Hileko atazak"
 
 #. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_line_currency_id

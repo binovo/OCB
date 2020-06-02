@@ -189,7 +189,7 @@ msgid ""
 "(Un)archiving a project automatically (un)archives its tasks and issues. Do "
 "you want to proceed?"
 msgstr ""
-"Proiektu bat automatikoki (des)artxibatzeak, bere zereginak eta arazoak "
+"Proiektu bat automatikoki (des)artxibatzeak, bere atazak eta arazoak "
 "(des)artxibatzen ditu. Jarraitu nahi duzu?"
 
 #. module: project
@@ -218,7 +218,7 @@ msgid ""
 "<b>Assign the task</b> to someone. <i>You can create and invite a new user "
 "on the fly.</i>"
 msgstr ""
-"<b>Esleitu zeregina</b> norbaiti. <i>Erabiltzaile berria sortu eta gonbidatu"
+"<b>Esleitu ataza</b> norbaiti. <i>Erabiltzaile berria sortu eta gonbidatu"
 " dezakezu hau egin ahala.</i>"
 
 #. module: project
@@ -226,7 +226,7 @@ msgstr ""
 #: code:addons/project/static/src/js/tour.js:80
 #, python-format
 msgid "<b>Click the save button</b> to apply your changes to the task."
-msgstr "<b>Egin klik Gorde botoia</b> zure aldaketak zereginari aplikatzeko."
+msgstr "<b>Egin klik Gorde botoia</b> zure aldaketak atazari aplikatzeko."
 
 #. module: project
 #. openerp-web
@@ -234,7 +234,7 @@ msgstr "<b>Egin klik Gorde botoia</b> zure aldaketak zereginari aplikatzeko."
 #, python-format
 msgid "<b>Drag &amp; drop tasks</b> between columns as you work on them."
 msgstr ""
-"<b>Arrastatu &amp; jaregin zereginak</b> zutabeen artean haiekin lanean "
+"<b>Arrastatu &amp; jaregin atazak</b> zutabeen artean haiekin lanean "
 "zabiltzala."
 
 #. module: project
@@ -252,7 +252,7 @@ msgstr ""
 #: code:addons/project/static/src/js/tour.js:54
 #, python-format
 msgid "<b>Star tasks</b> to mark team priorities."
-msgstr "<b>Izarra jarri zereginei</b> taldearen lehentasunak markatzeko."
+msgstr "<b>Izarra jarri atazeei</b> taldearen lehentasunak markatzeko."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -270,7 +270,7 @@ msgid ""
 "                    </p>"
 msgstr ""
 "<p class=\"oe_view_nocontent_create\">\n"
-"                        Dokumentuak zure proiektuko zeregin eta arazoei eransten zaizkie.</p><p>\n"
+"                        Dokumentuak zure proiektuko atazeei eta arazoei eransten zaizkie.</p><p>\n"
 "                        Mezuak bidali edo gehitu barne-oharrak eranskinekin\n"
 "                        dokumentuak lotzeko zure proiektuekin.\n"
 "                    </p>"
@@ -434,7 +434,7 @@ msgid ""
 msgstr ""
 "<span class=\"panel-title\">\n"
 "                                        <span class=\"fa fa-check-square-o\"/>\n"
-"                                        <strong> Zereginak</strong>\n"
+"                                        <strong> Atazak</strong>\n"
 "                                    </span>"
 
 #. module: project
@@ -514,7 +514,7 @@ msgid ""
 "                                Walk through your project plan and allow each team member to provide a brief status of assignments due this week and tasks planned for the next two  weeks. You want to know whether tasks are on track and if any will miss  their projected deadline. You also want to allow the team member to share  any special considerations that might affect other tasks or members of  the project. Carefully manage this part because some team members will  want to pontificate and spend more time than is really needed. Remember, you’re the project manager."
 msgstr ""
 "<strong> Proiektuaren plangintzaren egoera ikuskatu (20 min) </strong>\n"
-"                                Proiektuaren plangintza errepasatu eta utzi taldekide bakoitzari informazio laburra ematen aste honetarako esleitutako lanen eta hurrengo bi asteetarako zereginen inguruan. Zereginak egunean dauden jakin nahi duzu eta ea epemugarik bete behar ez den. Halaber, taldekideei utzi nahi diezu proiektuko beste zeregin edota kideri eragin diezaieken edozein gairi buruz hitz egiten. Kontuz landu atal hau, zenbait taldekidek sermoia bota eta beharrezkoa den baino denbora gehiago erabili nahiko dute eta. Gogoratu, zu zara proiektu arduraduna."
+"                                Proiektuaren plangintza errepasatu eta utzi taldekide bakoitzari informazio laburra ematen aste honetarako esleitutako lanen eta hurrengo bi asteetarako atazen inguruan. Atazak egunean dauden jakin nahi duzu eta ea epemugarik bete behar ez den. Halaber, taldekideei utzi nahi diezu proiektuko beste ataza edota kideri eragin diezaieken edozein gairi buruz hitz egiten. Kontuz landu atal hau, zenbait taldekidek sermoia bota eta beharrezkoa den baino denbora gehiago erabili nahiko dute eta. Gogoratu, zu zara proiektu arduraduna."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -654,7 +654,7 @@ msgid ""
 "                                    Add keywords in the 'Task title' field, for example [Customer name] or [Website]. This will help you navigate and search through the dozens of tasks in your project."
 msgstr ""
 "<strong>Izendatze-logika zehaztu</strong><br/>\n"
-"                                    Gehitu etiketak 'Zereginaren izenburua' eremuan, adibidez [Bezeroaren izena] edo [Webgunea]. Honek lagunduko dizu zure proiektuko dozenaka zereginen artean nabigatu eta bilaketak egiten."
+"                                    Gehitu etiketak 'Atazaren izenburua' eremuan, adibidez [Bezeroaren izena] edo [Webgunea]. Honek lagunduko dizu zure proiektuko dozenaka atazen artean nabigatu eta bilaketak egiten."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.portal_my_task
@@ -704,7 +704,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "<strong>For tasks:</strong>"
-msgstr "<strong>Zereginentzat:</strong>"
+msgstr "<strong>Atazentzat:</strong>"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -717,7 +717,7 @@ msgid ""
 "<strong>Getting statistics</strong> on how much time a task takes to be "
 "completed"
 msgstr ""
-"<strong>Estatistikak eskuratu</strong> zeregin bat egiteko behar den "
+"<strong>Estatistikak eskuratu</strong> ataza bat egiteko behar den "
 "denborari buruz"
 
 #. module: project
@@ -727,7 +727,7 @@ msgid ""
 "                                    The person assigned to a task is responsible for its progress and their avatar is displayed in Kanban view for quick reference. Of course, the responsibility for a task can change depending on its stage."
 msgstr ""
 "<strong>Ardurak garbi eduki</strong><br/>\n"
-"                                    Zeregin bat esleitu zaion pertsona da bere arduraduna eta bere avatarra erakusten da Kanban ikuspegian, erreferentzia azkar gisa. Zeregin baten ardura aldatu egin daiteke bere egoeraren arabera, noski."
+"                                    Ataza bat esleitu zaion pertsona da bere arduraduna eta bere avatarra erakusten da Kanban ikuspegian, erreferentzia azkar gisa. Ataza baten ardura aldatu egin daiteke bere egoeraren arabera, noski."
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -740,9 +740,9 @@ msgid ""
 "stages."
 msgstr ""
 "<strong>'Tira egin' moduan</strong>, hurrengo etapara pasatzeko prest dauden"
-" zereginak 'Hurrengo etaparako prest' moduan (egoeraren ikonoa erabiliz) "
+" atazak 'Hurrengo etaparako prest' moduan (egoeraren ikonoa erabiliz) "
 "markatzen ditu etapa honen arduradunak. Ondoren, hurrengo etaparen "
-"arduradunak zeregina hartu eta hurrengo etapara mugitzen du. Hau da lana "
+"arduradunak ataza hartu eta hurrengo etapara mugitzen du. Hau da lana "
 "egiteko modurik egokiena zure Kanban etapetako ardura banatu badituzu."
 
 #. module: project
@@ -753,7 +753,7 @@ msgid ""
 "stage. This is a simple way to work but only functions well if you work "
 "alone."
 msgstr ""
-"<strong>'Bultza egin' moduan</strong>, zereginei bultza egiten die hurrengo "
+"<strong>'Bultza egin' moduan</strong>, atazei bultza egiten die hurrengo "
 "etapara (behin zehaztapenak betetzen dituztenean) egungo etaparen "
 "arduradunak. Lana egiteko modu sinpleagoa da hau, baina bakarrik lana egiten"
 " baduzu soilik funtzionatzen du ondo."
@@ -1113,7 +1113,7 @@ msgstr "Egokitutako hilabetea "
 #. module: project
 #: model:ir.actions.act_window,name:project.act_res_users_2_project_task_opened
 msgid "Assigned Tasks"
-msgstr "Egokitutako zereginak "
+msgstr "Egokitutako atazak "
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_user_id
@@ -1318,7 +1318,7 @@ msgstr "Deskribapen eta helburu garbia "
 #: code:addons/project/static/src/js/tour.js:59
 #, python-format
 msgid "Click on a card to get the details of the task."
-msgstr "Egin klik txartel batean, zereginen xehetasunak lortzeko."
+msgstr "Egin klik txartel batean, atazen xehetasunak lortzeko."
 
 #. module: project
 #. openerp-web
@@ -1327,7 +1327,7 @@ msgstr "Egin klik txartel batean, zereginen xehetasunak lortzeko."
 msgid ""
 "Click on the card to <b>go to your project</b> and start organizing tasks."
 msgstr ""
-"Egin klik txartel batean <b>zure proiektura joateko</b> eta zereginak "
+"Egin klik txartel batean <b>zure proiektura joateko</b> eta atazak "
 "antolatzeko."
 
 #. module: project
@@ -1335,12 +1335,12 @@ msgstr ""
 #: code:addons/project/static/src/js/tour.js:64
 #, python-format
 msgid "Click on this button to modify the task."
-msgstr "Egin klik botoi honetan zeregina aldatzeko. "
+msgstr "Egin klik botoi honetan ataza aldatzeko. "
 
 #. module: project
 #: model:ir.actions.act_window,help:project.project_tags_action
 msgid "Click to add a new tag."
-msgstr "Egin klik zeregin berri bat gehitzeko. "
+msgstr "Egin klik tag berri bat gehitzeko. "
 
 #. module: project
 #: model:ir.actions.act_window,help:project.open_task_type_form
@@ -1463,7 +1463,7 @@ msgstr "Sortze data"
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Create a Gantt chart with your projects tasks and deadlines"
-msgstr "Sortu Gantt diagrama zure proiektuen zereginekin eta epeekin"
+msgstr "Sortu Gantt diagrama zure proiektuen atazeekin eta epeekin"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.open_create_project
@@ -1490,7 +1490,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Create at least 3 tasks"
-msgstr "Sortu gutxienez 3 zeregin"
+msgstr "Sortu gutxienez 3 ataza"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -1802,7 +1802,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:project.portal_my_task
 #: model:ir.ui.view,arch_db:project.view_task_kanban
 msgid "Edit Task"
-msgstr "Editatu zeregina"
+msgstr "Editatu ataza"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_email_from
@@ -2049,7 +2049,7 @@ msgstr ""
 msgid ""
 "Green: the Task is ready for next stage (the job for this stage is complete)"
 msgstr ""
-"Berdea: zeregina prest dago hurrengo faserako (lana etapa honetarako osatuta"
+"Berdea: ataza prest dago hurrengo faserako (lana etapa honetarako osatuta"
 " dago)"
 
 #. module: project
@@ -2065,7 +2065,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Grey: the Task is in progress (someone is working on it)"
-msgstr "Grisa: zeregina prozesuan dago (norbait lanean ari da)"
+msgstr "Grisa: ataza prozesuan dago (norbait lanean ari da)"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_project_project_filter
@@ -2082,7 +2082,7 @@ msgstr "Hona hemen eskuragarri dauden <strong>pertsonalizazio batzuk</strong>"
 #. module: project
 #: model:ir.actions.act_window,help:project.act_project_project_2_project_task_all
 msgid "Here, you can create new tasks"
-msgstr "Hemen, zeregin berriak sor ditzakezu"
+msgstr "Hemen, ataza berriak sor ditzakezu"
 
 #. module: project
 #: selection:report.project.task.user,priority:0
@@ -2166,7 +2166,7 @@ msgid ""
 "If set an email will be sent to the customer when the task or issue reaches "
 "this step."
 msgstr ""
-"Posta elektronikoa bezeroari bidaliko zaio, zeregina edo arazoa urrats "
+"Posta elektronikoa bezeroari bidaliko zaio, ataza edo arazoa urrats "
 "honetara iristen denean."
 
 #. module: project
@@ -2581,7 +2581,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_task_search_form
 msgid "My Tasks"
-msgstr "Nire zereginak "
+msgstr "Nire atazak "
 
 #. module: project
 #: code:addons/project/controllers/portal.py:35
@@ -2693,7 +2693,7 @@ msgstr "Jakinarazpenak "
 #: code:addons/project/static/src/js/tour.js:43
 #, python-format
 msgid "Now that the project is set up, <b>create a few tasks</b>."
-msgstr "Proiektua konfiguratuta dagoenez, <b>sortu zeregin batzuk</b>."
+msgstr "Proiektua konfiguratuta dagoenez, <b>sortu ataza batzuk</b>."
 
 #. module: project
 #: model:ir.model.fields,help:project.field_report_project_task_user_working_days_open
@@ -2772,7 +2772,7 @@ msgstr ""
 #. module: project
 #: model:ir.actions.act_window,name:project.action_view_task_overpassed_draft
 msgid "Overpassed Tasks"
-msgstr "Egindako zereginak "
+msgstr "Egindako atazak "
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_legend_blocked
@@ -2950,7 +2950,7 @@ msgstr ""
 #. module: project
 #: model:res.request.link,name:project.req_link_task
 msgid "Project task"
-msgstr "Proiektu zereginak "
+msgstr "Proiektu atazak "
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
@@ -2981,7 +2981,7 @@ msgstr "Proiektuak "
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
 msgid "Projects & Tasks"
-msgstr "Proiektuak eta zereginak "
+msgstr "Proiektuak eta atazak "
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_res_config_settings_module_rating_project
@@ -3099,7 +3099,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Red: the Task is blocked (there's a problem)"
-msgstr "Gorria: zeregina blokeatuta dago (arazo bat dago)"
+msgstr "Gorria: ataza blokeatuta dago (arazo bat dago)"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.portal_my_tasks
@@ -3233,7 +3233,7 @@ msgstr "Aukeratu "
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Send an alert when a task is stuck in red for more than a few days"
 msgstr ""
-"Bidali alerta zeregin bat gorriz blokeatuta dagoenean egun batzuk baino "
+"Bidali alerta ataza bat gorriz blokeatuta dagoenean egun batzuk baino "
 "gehiagotan"
 
 #. module: project
@@ -3327,7 +3327,7 @@ msgstr "Espezifikazioa balidatu da "
 #: code:addons/project/static/src/js/web_planner_project.js:23
 #, python-format
 msgid "Specification of task is written"
-msgstr "Zereginaren zehaztapena idatzita dago"
+msgstr "Atazaren zehaztapena idatzita dago"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -3420,7 +3420,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:project.field_res_config_settings_group_subtask_project
 #: model:ir.ui.view,arch_db:project.view_task_form2
 msgid "Sub-tasks"
-msgstr "Azpi-zereginak"
+msgstr "Azpi-atazak"
 
 #. module: project
 #: sql_constraint:project.tags:0
@@ -3457,18 +3457,18 @@ msgstr "Ataza"
 #. module: project
 #: model:ir.ui.view,arch_db:project.portal_my_task
 msgid "Task -"
-msgstr "Zereginak -"
+msgstr "Atazak -"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_tasks
 msgid "Task Activities"
-msgstr "Zereginaren jarduerak "
+msgstr "Atazaren jarduerak "
 
 #. module: project
 #: model:mail.message.subtype,name:project.mt_project_task_blocked
 #: model:mail.message.subtype,name:project.mt_task_blocked
 msgid "Task Blocked"
-msgstr "Zeregina blokeatuta "
+msgstr "Ataza blokeatuta "
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -3479,7 +3479,7 @@ msgstr ""
 #: model:mail.message.subtype,name:project.mt_project_task_new
 #: model:mail.message.subtype,name:project.mt_task_new
 msgid "Task Opened"
-msgstr "Zeregin irekia "
+msgstr "Ataza irekia "
 
 #. module: project
 #: model:ir.filters,name:project.filter_task_report_task_pipe
@@ -3490,66 +3490,66 @@ msgstr ""
 #: model:mail.message.subtype,name:project.mt_project_task_ready
 #: model:mail.message.subtype,name:project.mt_task_ready
 msgid "Task Ready"
-msgstr "Zeregina prest "
+msgstr "Ataza prest "
 
 #. module: project
 #: model:ir.model,name:project.model_project_task_type
 #: model:ir.ui.view,arch_db:project.task_type_edit
 #: model:ir.ui.view,arch_db:project.task_type_tree
 msgid "Task Stage"
-msgstr "Zereginaren etapa"
+msgstr "Atazaren etapa"
 
 #. module: project
 #: model:mail.message.subtype,name:project.mt_project_task_stage
 msgid "Task Stage Changed"
-msgstr "Zereginaren etapa aldatua "
+msgstr "Atazaren etapa aldatua "
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_name
 #: model:ir.model.fields,field_description:project.field_report_project_task_user_name
 msgid "Task Title"
-msgstr "Zereginaren titulua "
+msgstr "Atazaren titulua "
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.view_task_form2
 msgid "Task Title..."
-msgstr "Zereginaren titulua..."
+msgstr "Atazaren titulua..."
 
 #. module: project
 #: model:mail.message.subtype,description:project.mt_task_blocked
 msgid "Task blocked"
-msgstr "Zeregina blokeatuta "
+msgstr "Ataza blokeatuta "
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/web_planner_project.js:25
 #, python-format
 msgid "Task is Developed"
-msgstr "Zeregina garatu da "
+msgstr "Ataza garatu da "
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/web_planner_project.js:105
 #, python-format
 msgid "Task is completed"
-msgstr "Zeregina bukatu da "
+msgstr "Ataza bukatu da "
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/web_planner_project.js:26
 #, python-format
 msgid "Task is tested"
-msgstr "Zeregina probatu da "
+msgstr "Ataza probatu da "
 
 #. module: project
 #: model:mail.message.subtype,description:project.mt_task_new
 msgid "Task opened"
-msgstr "Zeregina irekita "
+msgstr "Ataza irekita "
 
 #. module: project
 #: model:mail.message.subtype,description:project.mt_task_ready
 msgid "Task ready for Next Stage"
-msgstr "Zeregina hurrengo etaparako prest"
+msgstr "Ataza hurrengo etaparako prest"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.act_project_project_2_project_task_all
@@ -3583,29 +3583,29 @@ msgstr "Atazak"
 #: model:ir.ui.view,arch_db:project.view_task_project_user_pivot
 #: model:ir.ui.view,arch_db:project.view_task_project_user_search
 msgid "Tasks Analysis"
-msgstr "Zereginen analisia "
+msgstr "Atazen analisia "
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_type_ids
 #: model:ir.ui.view,arch_db:project.task_type_search
 msgid "Tasks Stages"
-msgstr "Zereginen etapak"
+msgstr "Atazen etapak"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Tasks analysis"
-msgstr "Zereginen analisia "
+msgstr "Atazen analisia "
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
 msgid "Tasks are the main mechanism in Odoo and are activated by default."
 msgstr ""
-"Zereginak Odoo-ren mekanismo nagusiak dira eta lehenetsita aktibatzen dira."
+"Atazak Odoo-ren mekanismo nagusiak dira eta lehenetsita aktibatzen dira."
 
 #. module: project
 #: model:ir.model,name:project.model_report_project_task_user
 msgid "Tasks by user and project"
-msgstr "Zereginak erabiltzaileka eta proiektuka"
+msgstr "Atazak erabiltzaileka eta proiektuka"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_merge_wizard_task_ids
@@ -3692,7 +3692,7 @@ msgstr "Ez dago proiekturik."
 #. module: project
 #: model:ir.ui.view,arch_db:project.portal_my_tasks
 msgid "There are no tasks."
-msgstr "Ez dago zereginik."
+msgstr "Ez dago atazarik."
 
 #. module: project
 #. openerp-web
@@ -3781,7 +3781,7 @@ msgstr ""
 #. module: project
 #: model:res.groups,name:project.group_time_work_estimation_tasks
 msgid "Time Estimation on Tasks"
-msgstr "Zereginen denbora estimazioa "
+msgstr "Atazen denbora estimazioa "
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -3861,7 +3861,7 @@ msgstr ""
 #. module: project
 #: model:ir.ui.view,arch_db:project.res_config_settings_view_form
 msgid "Track customer satisfaction on tasks"
-msgstr "Jarraitu bezeroen gogobetetzea zereginetan"
+msgstr "Jarraitu bezeroen gogobetetzea atazetan"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -3888,7 +3888,7 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_label_tasks
 msgid "Use Tasks as"
-msgstr "Erabili zereginak "
+msgstr "Erabili atazak "
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
@@ -4286,7 +4286,7 @@ msgstr "bidaliguzu e-posta mezu bat"
 #: code:addons/project/models/project.py:610
 #, python-format
 msgid "tasks"
-msgstr "zereginak"
+msgstr "atazak"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner
