@@ -345,7 +345,7 @@ msgstr "Gehitu baldintza"
 #: code:addons/web/static/src/js/views/list/list_editable_renderer.js:518
 #, python-format
 msgid "Add an item"
-msgstr "Artikulu bat gehitu"
+msgstr "Elementu bat gehitu"
 
 #. module: web
 #. openerp-web
