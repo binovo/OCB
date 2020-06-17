@@ -370,11 +370,11 @@
                         </page>
                         <page name='sales_purchases' string="Sales &amp; Purchases">
                             <group name="container_row_2">
-                                <group string="Sale" name="sale">
+                                <group string="Sale" name="sale" style="white-space: nowrap">
                                     <field name="customer"/>
                                     <field name="user_id"/>
                                 </group>
-                                <group string="Purchase" name="purchase">
+                                <group string="Purchase" name="purchase" style="white-space: nowrap">
                                     <field name="supplier"/>
                                 </group>
                                 <group string="Misc">
