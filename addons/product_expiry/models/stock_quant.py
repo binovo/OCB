@@ -8,9 +8,10 @@ class StockQuant(models.Model):
     _inherit = 'stock.quant'
 
     removal_date = fields.Datetime(related='lot_id.removal_date', store=True)
+    life_date = fields.Datetime(related='lot_id.life_date', store=True)
 
     @api.model
     def _get_removal_strategy_order(self, removal_strategy):
         if removal_strategy == 'fefo':
-            return 'removal_date, in_date, id'
+            return 'removal_date, life_date, in_date, id'
         return super(StockQuant, self)._get_removal_strategy_order(removal_strategy)
