@@ -14,7 +14,9 @@
 # Naomi Hidalgo <naomihid96@gmail.com>, 2018
 # Mikel Lizarralde <mikellizarralde@gmail.com>, 2018
 # Victor Laskurain <blaskurain@binovo.es>, 2019
-#
+# Maialen Rodriguez <maialenrodriguez98@gmail.com>, 2020
+# mgalarza005 <mikelgalarza99@gmail.com>, 2020
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
@@ -50,7 +52,7 @@ msgstr "# Non erabili da material zerrenda"
 #. module: mrp
 #: model:ir.model.fields,field_description:mrp.field_mrp_production_workorder_done_count
 msgid "# Done Work Orders"
-msgstr "# Lan aginduak eginak"
+msgstr "# Lan agindu eginak"
 
 #. module: mrp
 #: model:ir.model.fields,field_description:mrp.field_product_product_mo_count
@@ -2223,6 +2225,7 @@ msgstr "Lehengaiak"
 
 #. module: mrp
 #: model:ir.model.fields,field_description:mrp.field_mrp_production_location_src_id
+#: model:ir.model.fields,field_description:mrp.field_mrp_routing_location_id
 msgid "Raw Materials Location"
 msgstr "Lehengaien kokapena"
 

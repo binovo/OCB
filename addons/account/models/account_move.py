@@ -185,10 +185,7 @@ class AccountMove(models.Model):
 
     @api.multi
     def unlink(self):
-        for move in self:
-            #check the lock date + check if some entries are reconciled
-            move.line_ids._update_check()
-            move.line_ids.unlink()
+        self.mapped('line_ids').unlink()
         return super(AccountMove, self).unlink()
 
     @api.multi
@@ -1800,6 +1797,7 @@ class AccountPartialReconcile(models.Model):
         return {
             'name': line.name,
             'account_id': account_id,
+            'journal_id': new_move.journal_id.id,
             'tax_exigible': True,
             'tax_ids': [(6, 0, [tax])],
             'move_id': new_move.id,
@@ -1845,7 +1843,10 @@ class AccountPartialReconcile(models.Model):
                         percentage_before = percentage_before_rec[move.id]
                         percentage_after = line._get_matched_percentage()[move.id]
                         #amount is the current cash_basis amount minus the one before the reconciliation
-                        amount = line.balance * percentage_after - line.balance * percentage_before
+                        if percentage_after == 1.0 and line.amount_residual:
+                            amount = line.amount_residual
+                        else:
+                            amount = line.balance * percentage_after - line.balance * percentage_before
                         rounded_amt = self._get_amount_tax_cash_basis(amount, line)
                         if float_is_zero(rounded_amt, precision_rounding=line.company_id.currency_id.rounding):
                             continue
@@ -1866,6 +1867,7 @@ class AccountPartialReconcile(models.Model):
                                 'currency_id': line.currency_id.id,
                                 'move_id': newly_created_move.id,
                                 'partner_id': line.partner_id.id,
+                                'journal_id': newly_created_move.journal_id.id,
                             })
                             # Group by cash basis account and tax
                             self.env['account.move.line'].with_context(check_move_validity=False).create({
@@ -1882,6 +1884,7 @@ class AccountPartialReconcile(models.Model):
                                 'currency_id': line.currency_id.id,
                                 'move_id': newly_created_move.id,
                                 'partner_id': line.partner_id.id,
+                                'journal_id': newly_created_move.journal_id.id,
                             })
                             if line.account_id.reconcile:
                                 #setting the account to allow reconciliation will help to fix rounding errors

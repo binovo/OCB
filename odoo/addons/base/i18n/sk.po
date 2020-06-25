@@ -4,7 +4,6 @@
 # 
 # Translators:
 # Robert Kirschner <robertkirschner@yahoo.com>, 2018
-# Stefan Stieranka <stieranka@itec.sk>, 2018
 # Radoslav Sloboda <rado.sloboda@gmail.com>, 2018
 # Matus Krnac <matus.krnac@gmail.com>, 2018
 # Pavol Krnáč <pavol.krnac@ekoenergo.sk>, 2018
@@ -12,6 +11,10 @@
 # Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2019
 # gebri <gebri@inmail.sk>, 2019
 # Jan Prokop, 2020
+# Stefan Stieranka <stieranka@itec.sk>, 2020
+# Adam Levrinc <adam.levrinc@26house.com>, 2020
+# Alexandra Brencicova <alexandra.brencicova@gmail.com>, 2020
+# Rastislav Brencic <rastislav.brencic@azet.sk>, 2020
 # 
 msgid ""
 msgstr ""
@@ -19,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-03 15:05+0000\n"
 "PO-Revision-Date: 2017-09-20 10:13+0000\n"
-"Last-Translator: Jan Prokop, 2020\n"
+"Last-Translator: Rastislav Brencic <rastislav.brencic@azet.sk>, 2020\n"
 "Language-Team: Slovak (https://www.transifex.com/odoo/teams/41243/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +44,15 @@ msgid ""
 "\n"
 "    "
 msgstr ""
+"\n"
+"\n"
+"    科目类型\\会计科目表模板\\增值税\\辅助核算类别\\管理会计凭证簿\\财务会计凭证簿\n"
+"\n"
+"    添加中文省份数据\n"
+"\n"
+"    增加小企业会计科目表\n"
+"\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_reprint
@@ -7458,7 +7470,7 @@ msgstr "Automatizácia Marketingových Kampaní"
 #. module: base
 #: selection:ir.actions.server,usage:0
 msgid "Automated Action"
-msgstr ""
+msgstr "Automatizovaná akcia"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_automation
@@ -7960,7 +7972,7 @@ msgstr "Bouvetov ostrov"
 #. module: base
 #: selection:res.company,external_report_layout:0
 msgid "Boxed"
-msgstr ""
+msgstr "Boxed"
 
 #. module: base
 #: model:res.country,name:base.br
@@ -12744,6 +12756,9 @@ msgid ""
 "* if False, the view currently does not extend its parent but can be enabled\n"
 "         "
 msgstr ""
+"Ak je toto zobrazenie zdedené,\n"
+"* Ak je pravda, zobrazenie sa vždy rozširuje nadradené\n"
+"* Ak to nie je pravda, pohľad v súčasnosti nerozširuje pôvodné, ale môže byť povolený"
 
 #. module: base
 #: model:ir.actions.act_window,help:base.action_country_state
@@ -14090,7 +14105,7 @@ msgstr "Lotyško"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_im_livechat
 msgid "Live Chat"
-msgstr ""
+msgstr "Živý chat"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_im_livechat
@@ -16600,6 +16615,15 @@ msgid ""
 "(<xpath/>) are applied, and the result is used as if it were this view's\n"
 "actual arch.\n"
 msgstr ""
+"Použije sa iba v prípade, že toto zobrazenie zdedí od iného (inherit_id nie je False / Null).\n"
+"\n"
+"* ak je rozšírenie (predvolené), ak sa požaduje toto zobrazenie, najbližšie primárne zobrazenie\n"
+"sa vyhľadá (prostredníctvom inherit_id), potom sa z toho dedia všetky zobrazenia\n"
+"použije sa model zobrazenia\n"
+"* ak je primárne, najbližšie primárne zobrazenie je úplne vyriešené (aj keď používa\n"
+"iný model ako tento), potom špecifikácie pôvodného\n"
+"(<xpath/>) sa použijú a výsledok sa použije, akoby išlo o toto zobrazenie\n"
+"aktuálny.\n"
 
 #. module: base
 #: sql_constraint:res.currency.rate:0
@@ -20685,6 +20709,14 @@ msgstr ""
 #: model:ir.model.fields,help:base.field_ir_model_inherited_model_ids
 msgid "The list of models that extends the current model."
 msgstr "Zoznam modelov ktoré rozširujú súčasný model."
+
+#. module: base
+#: code:addons/base/ir/ir_model.py:522
+#, python-format
+msgid ""
+"The m2o field %s is required but declares its ondelete policy as being 'set "
+"null'. Only 'restrict' and 'cascade' make sense."
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_filters_action_id
