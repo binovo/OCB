@@ -1026,7 +1026,7 @@ msgstr ""
 #: code:addons/mail/models/mail_thread.py:363
 #, python-format
 msgid "Click here to add new %s"
-msgstr "Egin klik hemen jarduera berria gehitzeko"
+msgstr "Egin klik hemen %s berria gehitzeko"
 
 #. module: mail
 #: model:ir.actions.act_window,help:mail.mail_shortcode_action
