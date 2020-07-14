@@ -1,8 +1,9 @@
 odoo (11.0.42) stable; urgency=low
 
   * #5317 Error en traducción euskera módulo mail.
+  * #5317 Error 2 en traducción euskera módulo mail.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Mon 13 Jul 2020 15:08:00 +0200
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue 14 Jul 2020 10:03:00 +0200
 
 odoo (11.0.41) stable; urgency=low
 

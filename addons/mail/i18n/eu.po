@@ -186,7 +186,7 @@ msgstr "%s Sortu"
 #: code:addons/mail/models/res_users.py:83
 #, python-format
 msgid "%s has joined the %s network."
-msgstr "%s erronkara batu da"
+msgstr "%s elementua %s sarera batu da"
 
 #. module: mail
 #. openerp-web
