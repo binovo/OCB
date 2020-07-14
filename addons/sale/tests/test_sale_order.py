@@ -194,7 +194,7 @@ class TestSaleOrder(TestSale):
         curr_usd = self.env.ref('base.USD')
         curr_eur = self.env.ref('base.EUR')
         main_company = self.env.ref('base.main_company')
-        self.assertEqual(main_company.currency_id, curr_usd)
+        main_company.currency_id = curr_usd
         # main_company.currency_id = curr_eur # product.currency_id when no company_id set
         other_company = self.env["res.company"].create({
             "name": "Test",
