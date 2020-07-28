@@ -877,7 +877,7 @@ msgstr "Data"
 #. module: product
 #: model:product.uom,name:product.product_uom_day
 msgid "Day(s)"
-msgstr "Eguna(k)"
+msgstr "Egun"
 
 #. module: product
 #: code:addons/product/models/res_company.py:59
@@ -957,7 +957,7 @@ msgstr "Izena erakutsi"
 #. module: product
 #: model:product.uom,name:product.product_uom_dozen
 msgid "Dozen(s)"
-msgstr "Dozena(k)"
+msgstr "Dozena"
 
 #. module: product
 #: model:product.product,description_sale:product.consu_delivery_03
@@ -1274,7 +1274,7 @@ msgstr "Ondo baloratuak dauden diseinuak."
 #. module: product
 #: model:product.uom,name:product.product_uom_hour
 msgid "Hour(s)"
-msgstr "Ordua(k)"
+msgstr "Ordu"
 
 #. module: product
 #: model:product.product,website_description:product.product_product_8
@@ -1552,7 +1552,7 @@ msgstr "Lerroak"
 #. module: product
 #: model:product.uom,name:product.product_uom_litre
 msgid "Liter(s)"
-msgstr "Litro(ak)"
+msgstr "Litro"
 
 #. module: product
 #: model:product.product,name:product.consu_delivery_02
@@ -2820,7 +2820,7 @@ msgstr "Neurtze unitateen kategoriak"
 #. module: product
 #: model:product.uom,name:product.product_uom_unit
 msgid "Unit(s)"
-msgstr "Unitatea(k)"
+msgstr "Unitate"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_uom_form_action
@@ -3240,12 +3240,12 @@ msgstr "km"
 #. module: product
 #: model:product.uom,name:product.product_uom_lb
 msgid "lb(s)"
-msgstr "lb(k)"
+msgstr "lb"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_mile
 msgid "mile(s)"
-msgstr "mila(k)"
+msgstr "mila"
 
 #. module: product
 #: model:product.uom,name:product.product_uom_oz
