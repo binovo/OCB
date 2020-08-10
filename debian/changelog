@@ -1,8 +1,9 @@
 odoo (11.0.44) stable; urgency=low
 
   * #4801: remove mail.catchall.alias config parameter.
+  * #4801: remove test test_crm_message_default_alias from crm.
 
- -- Luis J. Salvatierra <ljsalvatierra@ljsalvatierra-desktop>  Mon, 10 Aug 2020 10:24:15 +0200
+ -- Luis J. Salvatierra <ljsalvatierra@ljsalvatierra-desktop>  Mon, 10 Aug 2020 12:10:13 +0200
 
 odoo (11.0.43) stable; urgency=low
 
