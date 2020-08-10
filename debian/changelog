@@ -1,21 +1,27 @@
+odoo (11.0.44) stable; urgency=low
+
+  * #4801: remove mail.catchall.alias config parameter.
+
+ -- Luis J. Salvatierra <ljsalvatierra@ljsalvatierra-desktop>  Mon, 10 Aug 2020 10:24:15 +0200
+
 odoo (11.0.43) stable; urgency=low
 
   * #5449 Corregir traducciones product y base_automation.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Tue 28 Jul 2020 14:27:00 +0200
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue, 28 Jul 2020 14:27:00 +0200
 
 odoo (11.0.42) stable; urgency=low
 
   * #5317 Error en traducción euskera módulo mail.
   * #5317 Error 2 en traducción euskera módulo mail.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Tue 14 Jul 2020 10:03:00 +0200
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue, 14 Jul 2020 10:03:00 +0200
 
 odoo (11.0.41) stable; urgency=low
 
   * #5441 Arreglar pestaña ventas-compras de la ficha cliente.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Wed 17 Jun 2020 09:54:00 +0200
+ -- Imanol Aranburu <iaranburu@binovo.es>  Wed, 17 Jun 2020 09:54:00 +0200
 
 odoo (11.0.40) stable; urgency=low
 
@@ -23,19 +29,19 @@ odoo (11.0.40) stable; urgency=low
   * #5361 Cambiar traducción a artikulu bat gehitu.
   * #5251 Cambiar traducción a zeregina por ataza.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Tue 02 Jun 2020 12:07:00 +0200
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue, 02 Jun 2020 12:07:00 +0200
 
 odoo (11.0.37.3) stable; urgency=low
 
   * #5175 Add-item y trash options in fields many2many.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Mon 04 May 2020 19:47:00 +0100
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 04 May 2020 19:47:00 +0100
 
 odoo (11.0.35.2) stable; urgency=low
 
   * #4787 Added class to mrp in mrp_workorder_views into a div in the mrp_production_workcenter_form_view_inherit view.
 
- -- Ander Laín <alain@binovo.es>  Tue 31 Mar 2020 12:51:00 +0100
+ -- Ander Laín <alain@binovo.es>  Tue, 31 Mar 2020 12:51:00 +0100
 
 odoo (11.0.34) stable; urgency=low
 
