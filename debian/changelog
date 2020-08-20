@@ -2,8 +2,10 @@ odoo (11.0.44) stable; urgency=low
 
   * #4801: remove mail.catchall.alias config parameter.
   * #4801: remove test test_crm_message_default_alias from crm.
+  * #5696: fix website_sale_delivery demo data inheritance of addon
+    delivery.
 
- -- Luis J. Salvatierra <ljsalvatierra@ljsalvatierra-desktop>  Mon, 10 Aug 2020 12:10:13 +0200
+ -- Luis J. Salvatierra <ljsalvatierra@ljsalvatierra-desktop>  Thu, 20 Aug 2020 08:20:24 +0200
 
 odoo (11.0.43) stable; urgency=low
 
