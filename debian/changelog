@@ -1,8 +1,9 @@
 odoo (11.0.45) stable; urgency=low
 
   * #5764: Cambiar formato fecha en presupuestos en línea.
+  * #5791: Arreglar bug paquetes duplicados.
 
- -- Alicia Rodríguez <arodriguez@binovo.es>  Mon, 07 Sep 2020 10:15:24 +0200
+ -- Guillermo Murcia <gmurcia@binovo.es>  Thu, 10 Sep 2020 14:58:24 +0200
 
 odoo (11.0.44) stable; urgency=low
 

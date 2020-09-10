@@ -322,7 +322,20 @@ class ProductTemplate(models.Model):
     @api.multi
     def write(self, vals):
         tools.image_resize_images(vals)
-        res = super(ProductTemplate, self).write(vals)
+
+        related_vals = ['barcode', 'default_code', 'standard_price', 'volume', 'weight']
+        found = False
+        for val in related_vals:
+            if val in vals:
+                found = True
+                break
+        if 'packaging_ids' in vals and found:
+            pack_ids = {'packaging_ids': vals.pop('packaging_ids')}
+            res = super(ProductTemplate, self).write(vals) \
+                  and super(ProductTemplate, self).write(pack_ids)
+        else:
+            res = super(ProductTemplate, self).write(vals)
+
         if 'attribute_line_ids' in vals or vals.get('active'):
             self.create_variant_ids()
         if 'active' in vals and not vals.get('active'):
