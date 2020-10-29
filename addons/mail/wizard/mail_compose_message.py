@@ -120,7 +120,7 @@ class MailComposer(models.TransientModel):
     auto_delete_message = fields.Boolean('Delete Message Copy', help='Do not keep a copy of the email in the document communication history (mass mailing only)')
     template_id = fields.Many2one(
         'mail.template', 'Use template', index=True,
-        domain="[('model', '=', model)]")
+        domain="[('model', '=', model), ('body_type', '!=', 'qweb')]")
     # mail_message updated fields
     message_type = fields.Selection(default="comment")
     subtype_id = fields.Many2one(default=lambda self: self.sudo().env.ref('mail.mt_comment', raise_if_not_found=False).id)
