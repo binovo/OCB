@@ -1,3 +1,9 @@
+odoo (11.0.50) stable; urgency=low
+
+  * #6197: Sincronizar con OCB.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Fri, 20 Nov 2020 10:30:24 +0100
+
 odoo (11.0.45) stable; urgency=low
 
   * #5764: Cambiar formato fecha en presupuestos en línea.
