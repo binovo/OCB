@@ -92,7 +92,7 @@
                                 <td class="account_invoice_line_origin hidden"></td>
                                 <td class="account_invoice_line_quantity"></td>
                                 <td class="account_invoice_line_price_unit"></td>
-                                <td class="account_invoice_line_discount" t-if="display_discount"></td>
+                                <td class="account_invoice_line_discount account_ldiscount" t-if="display_discount"></td>
                                 <td class="account_invoice_line_invoice_line_tax_ids"></td>
                                 <td class="account_invoice_line_price_subtotal"></td>
                             </tr>

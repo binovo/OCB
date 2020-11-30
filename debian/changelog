@@ -1,3 +1,9 @@
+odoo (11.0.51) stable; urgency=low
+
+  * #6386: Nuevo tag de class en repor_document de account.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 30 Nov 2020 16:36:24 +0100
+
 odoo (11.0.50) stable; urgency=low
 
   * #6197: Sincronizar con OCB.
