@@ -12,8 +12,10 @@ odoo (8.0.0) stable; urgency=low
   * Fix Odoo build package version regex and publish timestamp replace
     when given version to the builder script.
   * Add shell to odoo user.
+  * Add PR https://github.com/odoo/odoo/pull/24780 to avoid problems
+    with gevent importing wsgi.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Wed, 11 Dec 2019 11:03:29 +0100
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Fri, 18 Dec 2020 12:51:00 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 
