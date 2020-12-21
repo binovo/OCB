@@ -1249,14 +1249,42 @@
             <div class="product-img">
                 <img t-att-src='image_url' /> 
                 <t t-if="!product.to_weight">
-                    <span class="price-tag">
-                        <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')"/>
-                    </span>
+                    <t t-if="pricelist.discount_policy == 'without_discount' and
+                             product.get_percent_price(pricelist) &gt; 0 and
+                             product.get_origin_price(pricelist, 1) &gt; product.get_price(pricelist, 1)">
+                        <span class="price-tag" style="color: #f29448;text-decoration: line-through;background-color:#595959;font-weight:800;">
+                            <t t-esc="widget.format_currency(product.get_origin_price(pricelist, 1),'Product Price')"/>
+                        </span>
+                        <span class="price-tag" style="top:20px !important;background-color:#7f82ac;font-weight:800;">
+                            <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')"/>
+                        </span>
+                    </t>
+                    <t t-if="!(pricelist.discount_policy == 'without_discount' and
+                               product.get_percent_price(pricelist) &gt; 0 and
+                               product.get_origin_price(pricelist, 1) &gt; product.get_price(pricelist, 1))">
+                        <span class="price-tag">
+                            <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')"/>
+                        </span>
+                    </t>
                 </t>
                 <t t-if="product.to_weight">
-                    <span class="price-tag">
-                        <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/>
-                    </span>
+                    <t t-if="pricelist.discount_policy == 'without_discount' and
+                             product.get_percent_price(pricelist) &gt; 0 and
+                             product.get_origin_price(pricelist, 1) &gt; product.get_price(pricelist, 1)">
+                        <span class="price-tag" style="color: #f29448;text-decoration: line-through;background-color:#595959;font-weight:800;">
+                            <t t-esc="widget.format_currency(product.get_origin_price(pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/>
+                        </span>
+                        <span class="price-tag"  style="top:20px !important;background-color:#7f82ac;font-weight:800;">
+                            <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/>
+                        </span>
+                    </t>
+                    <t t-if="!(pricelist.discount_policy == 'without_discount' and
+                               product.get_percent_price(pricelist) &gt; 0 and
+                               product.get_origin_price(pricelist, 1) &gt; product.get_price(pricelist, 1))">
+                        <span class="price-tag">
+                            <t t-esc="widget.format_currency(product.get_price(pricelist, 1),'Product Price')+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/>
+                        </span>
+                    </t>
                 </t>
             </div>
             <div class="product-name">
