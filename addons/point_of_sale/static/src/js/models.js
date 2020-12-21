@@ -306,7 +306,7 @@ exports.PosModel = Backbone.Model.extend({
         loaded: function(self, locations){ self.shop = locations[0]; },
     },{
         model:  'product.pricelist',
-        fields: ['name', 'display_name'],
+        fields: ['name', 'display_name', 'discount_policy'],
         domain: function(self) { return [['id', 'in', self.config.available_pricelist_ids]]; },
         loaded: function(self, pricelists){
             _.map(pricelists, function (pricelist) { pricelist.items = []; });
@@ -1330,6 +1330,100 @@ exports.Product = Backbone.Model.extend({
         // pricelist that have base == 'pricelist'.
         return price;
     },
+
+    get_percent_price: function(pricelist){
+        var self = this;
+        var date = moment().startOf('day');
+
+        // In case of nested pricelists, it is necessary that all pricelists are made available in
+        // the POS. Display a basic alert to the user in this case.
+        if (pricelist === undefined) {
+            alert(_t(
+                'An error occurred when loading product prices. ' +
+                'Make sure all pricelists are available in the POS.'
+            ));
+        }
+
+        var category_ids = [];
+        var category = this.categ;
+        while (category) {
+            category_ids.push(category.id);
+            category = category.parent;
+        }
+
+        var pricelist_items = _.filter(pricelist.items, function (item) {
+            return (! item.product_tmpl_id || item.product_tmpl_id[0] === self.product_tmpl_id) &&
+                   (! item.product_id || item.product_id[0] === self.id) &&
+                   (! item.categ_id || _.contains(category_ids, item.categ_id[0])) &&
+                   (! item.date_start || moment(item.date_start).isSameOrBefore(date)) &&
+                   (! item.date_end || moment(item.date_end).isSameOrAfter(date));
+        });
+
+        var percent_price = 0;
+        _.find(pricelist_items, function (rule) {
+            if (rule.min_quantity && quantity < rule.min_quantity) {
+                return false;
+            }
+
+            if (rule.compute_price === 'percentage' && pricelist.discount_policy === 'without_discount') {
+                percent_price = rule.percent_price;
+                return true;
+            } else {
+                return false;
+            }
+
+            return false;
+        });
+
+        return percent_price;
+    },
+
+    get_origin_price: function(pricelist, quantity){
+        var self = this;
+        var date = moment().startOf('day');
+
+        // In case of nested pricelists, it is necessary that all pricelists are made available in
+        // the POS. Display a basic alert to the user in this case.
+        if (pricelist === undefined) {
+            alert(_t(
+                'An error occurred when loading product prices. ' +
+                'Make sure all pricelists are available in the POS.'
+            ));
+        }
+
+        var category_ids = [];
+        var category = this.categ;
+        while (category) {
+            category_ids.push(category.id);
+            category = category.parent;
+        }
+
+        var pricelist_items = _.filter(pricelist.items, function (item) {
+            return (! item.product_tmpl_id || item.product_tmpl_id[0] === self.product_tmpl_id) &&
+                   (! item.product_id || item.product_id[0] === self.id) &&
+                   (! item.categ_id || _.contains(category_ids, item.categ_id[0])) &&
+                   (! item.date_start || moment(item.date_start).isSameOrBefore(date)) &&
+                   (! item.date_end || moment(item.date_end).isSameOrAfter(date));
+        });
+
+        var origin_price = self.lst_price;
+        _.find(pricelist_items, function (rule) {
+            if (rule.min_quantity && quantity < rule.min_quantity) {
+                return false;
+            }
+
+            if (rule.base === 'pricelist') {
+                origin_price = self.get_price(rule.base_pricelist, quantity);
+            } else if (rule.base === 'standard_price') {
+                origin_price = self.standard_price;
+            }
+
+            return true;
+        });
+
+        return origin_price;
+    },
+
 });
 
 var orderline_id = 1;
@@ -2354,6 +2448,8 @@ exports.Order = Backbone.Model.extend({
         var attr = JSON.parse(JSON.stringify(product));
         attr.pos = this.pos;
         attr.order = this;
+        var percent_price = product.get_percent_price(attr.order.pricelist);
+        var origin_price =  product.get_origin_price(attr.order.pricelist, 1);
         var line = new exports.Orderline({}, {pos: this.pos, order: this, product: product});
 
         if(options.quantity !== undefined){
@@ -2367,8 +2463,14 @@ exports.Order = Backbone.Model.extend({
         //To substract from the unit price the included taxes mapped by the fiscal position
         this.fix_tax_included_price(line);
 
+        // Apply the discount applied to the rate
+        if(percent_price !== 0){
+            line.set_unit_price(origin_price);
+            line.set_discount(percent_price);
+        }
+
         if(options.discount !== undefined){
-            line.set_discount(options.discount);
+            line.set_discount(options.discount + percent_price);
         }
 
         if(options.extras !== undefined){

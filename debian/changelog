@@ -1,3 +1,9 @@
+odoo (11.0.52) stable; urgency=low
+
+  * #6392: Tickets descuento TPV, porcentage tarifas.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 21 Dec 2020 12:09:24 +0100
+
 odoo (11.0.51) stable; urgency=low
 
   * #6386: Nuevo tag de class en repor_document de account.
