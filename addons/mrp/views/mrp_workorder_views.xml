@@ -223,7 +223,7 @@
                         </field>
                     </group>
                 </page>
-                <page string="Miscellaneous" groups="mrp.group_mrp_manager">
+                <page name="miscellaneous" string="Miscellaneous" groups="mrp.group_mrp_manager">
                     <group>
                         <group>
                             <field name="name"/>
