@@ -1,8 +1,12 @@
 odoo (11.0.52) stable; urgency=low
 
+  [ Imanol Aranburu ]
   * #6392: Tickets descuento TPV, porcentage tarifas.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 21 Dec 2020 12:09:24 +0100
+  [ Guillermo Murcia ]
+  * #6538 Revertir cambio de domain en mail para añadirlo en el modulo que corresponde
+
+ -- Guillermo Murcia <gmurcia@binovo.es>  Mon, 28 Dec 2020 14:01:50 +0100
 
 odoo (11.0.51) stable; urgency=low
 
