@@ -7,19 +7,19 @@
                 <t t-foreach="docs" t-as="o">
                     <t t-call="web.external_layout">
                         <div class="page">
-                            <div class="row justify-content-end mb16">
+                            <div class="row justify-content-end mb16" name="picking_barcode">
                                 <div class="col-4" name="right_box">
                                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)" style="width:300px;height:50px;" alt="Barcode"/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <div t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
+                                    <div name="delivery_address" t-if="o.move_ids_without_package and o.move_ids_without_package[0].partner_id and o.move_ids_without_package[0].partner_id.id != o.partner_id.id">
                                         <span><strong>Delivery Address:</strong></span>
                                         <div t-field="o.move_ids_without_package[0].partner_id"
                                             t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
                                     </div>
-                                    <div t-if="o.picking_type_id.code != 'internal' and (not o.move_ids_without_package or not o.move_ids_without_package[0].partner_id) and o.picking_type_id.warehouse_id.partner_id">
+                                    <div name="warehouse_address" t-if="o.picking_type_id.code != 'internal' and (not o.move_ids_without_package or not o.move_ids_without_package[0].partner_id) and o.picking_type_id.warehouse_id.partner_id">
                                         <span><strong>Warehouse Address:</strong></span>
                                         <div t-field="o.picking_type_id.warehouse_id.partner_id"
                                             t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}'/>
@@ -32,7 +32,7 @@
                                     <div t-if="o.picking_type_id.code=='internal' and o.partner_id">
                                         <span><strong>Warehouse Address:</strong></span>
                                     </div>
-                                    <div t-if="o.picking_type_id.code=='outgoing' and o.partner_id">
+                                    <div t-if="o.picking_type_id.code=='outgoing' and o.partner_id" name="customer_address_label">
                                         <span><strong>Customer Address:</strong></span>
                                     </div>
                                     <div t-if="o.partner_id" name="partner_header">
