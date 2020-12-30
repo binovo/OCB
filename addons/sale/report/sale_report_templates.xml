@@ -74,7 +74,7 @@
                         <t t-set="colspan" t-value="5"/>
                         <th class="text-left">Description</th>
                         <th class="text-right">Quantity</th>
-                        <th class="text-right">Unit Price</th>
+                        <th name="th_unit_price" class="text-right">Unit Price</th>
                         <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
                             <span>Disc.(%)</span>
                             <!-- TODO: remove in master -->
