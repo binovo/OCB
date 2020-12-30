@@ -47,8 +47,8 @@
                         <th class="purchase_order_line_taxes_id"><strong>Taxes</strong></th>
                         <th class="text-center purchase_order_line_date_planned"><strong>Date Req.</strong></th>
                         <th class="text-right purchase_order_line_product_qty"><strong>Qty</strong></th>
-                        <th class="text-right purchase_order_line_price_unit"><strong>Unit Price</strong></th>
-                        <th class="text-right purchase_order_line_price_subtotal"><strong>Amount</strong></th>
+                        <th name="th_unit_price" class="text-right purchase_order_line_price_unit"><strong>Unit Price</strong></th>
+                        <th name="th_amount" class="text-right purchase_order_line_price_subtotal"><strong>Amount</strong></th>
                     </tr>
                 </thead>
                 <tbody>
