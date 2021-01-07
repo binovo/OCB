@@ -6,8 +6,9 @@ odoo (12.0.0) stable; urgency=low
 
   [ Imanol Aranburu ]
   * #6573: Tag en informes de albaranes, facturas, PV y PC.
+  * #6614: Actualizar función _get_invoiced de purchase.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Wed, 30 Dec 2020 13:51:43 +0100
+ -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 07 Jan 2020 16:04:43 +0100
 
 odoo (8.0.0) stable; urgency=low
 
