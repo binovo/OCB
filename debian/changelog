@@ -1,14 +1,15 @@
 odoo (12.0.0) stable; urgency=low
 
-  [ Luis J. Salvatierra ]
-  * Add name attribute to mrp xml form view
-    mrp_production_workorder_form_view_inherit, page Miscellaneous.
-
   [ Imanol Aranburu ]
   * #6573: Tag en informes de albaranes, facturas, PV y PC.
   * #6614: Actualizar función _get_invoiced de purchase.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 07 Jan 2020 16:04:43 +0100
+  [ Luis J. Salvatierra ]
+  * Add name attribute to mrp xml form view
+    mrp_production_workorder_form_view_inherit, page Miscellaneous.
+  * Use system log rotation utility instead of the built-in
+
+ -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Fri, 15 Jan 2021 10:03:04 +0100
 
 odoo (8.0.0) stable; urgency=low
 

@@ -1,4 +1,7 @@
 /var/log/odoo/*.log {
+    daily
+    rotate 30
+    compress
     copytruncate
     missingok
     notifempty
