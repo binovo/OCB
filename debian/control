@@ -16,6 +16,7 @@ Depends:
  adduser,
  lsb-base,
  node-less,
+ logrotate,
  postgresql-client,
  python3-babel,
  python3-dateutil,
