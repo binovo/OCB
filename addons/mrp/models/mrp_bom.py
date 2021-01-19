@@ -46,6 +46,7 @@ class MrpBom(models.Model):
     sequence = fields.Integer('Sequence', help="Gives the sequence order when displaying a list of bills of material.")
     routing_id = fields.Many2one(
         'mrp.routing', 'Routing',
+        track_visibility='onchange',
         help="The operations for producing this BoM.  When a routing is specified, the production orders will "
              " be executed through work orders, otherwise everything is processed in the production order itself. ")
     ready_to_produce = fields.Selection([
@@ -215,7 +216,7 @@ class MrpBomLine(models.Model):
 
     product_id = fields.Many2one(
         'product.product', 'Component', required=True)
-    product_tmpl_id = fields.Many2one('product.template', 'Product Template', related='product_id.product_tmpl_id', readonly=False)
+    product_tmpl_id = fields.Many2one('product.template', 'Product Template', related='product_id.product_tmpl_id')
     product_qty = fields.Float(
         'Quantity', default=1.0,
         digits=dp.get_precision('Product Unit of Measure'), required=True)
@@ -266,8 +267,7 @@ class MrpBomLine(models.Model):
         else:
             self.child_bom_id = self.env['mrp.bom']._bom_find(
                 product_tmpl=self.product_id.product_tmpl_id,
-                product=self.product_id,
-                picking_type=self.bom_id.picking_type_id)
+                product=self.product_id)
 
     @api.one
     @api.depends('product_id')

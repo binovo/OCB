@@ -233,14 +233,22 @@ class WebsiteSale(ProductConfiguratorController):
         Product = request.env['product.template'].with_context(bin_size=True)
 
         Category = request.env['product.public.category']
-        search_categories = False
-        search_product = Product.search(domain)
+        search_categories = request.env['product.template']
+        search_product = Product.search(domain, order=self._get_search_order(post))
         if search:
             categories = search_product.mapped('public_categ_ids')
             search_categories = Category.search([('id', 'parent_of', categories.ids)] + request.website.website_domain())
             categs = search_categories.filtered(lambda c: not c.parent_id)
         else:
             categs = Category.search([('parent_id', '=', False)] + request.website.website_domain())
+
+        # Configure prefetching to optimize recursive category trees if needed
+        if request.website.viewref("website_sale.products_categories").active:
+            prefetched_categs = Category.search(request.website.website_domain())
+            categs = categs.with_prefetch(prefetched_categs._prefetch)
+            search_categories = search_categories.with_prefetch(prefetched_categs._prefetch)
+            if category:
+                category = category.with_prefetch(prefetched_categs._prefetch)
 
         parent_category_ids = []
         if category:
@@ -253,12 +261,15 @@ class WebsiteSale(ProductConfiguratorController):
 
         product_count = len(search_product)
         pager = request.website.pager(url=url, total=product_count, page=page, step=ppg, scope=7, url_args=post)
-        products = Product.search(domain, limit=ppg, offset=pager['offset'], order=self._get_search_order(post))
+        offset = pager['offset']
+        products = search_product[offset: offset + ppg]
 
         ProductAttribute = request.env['product.attribute']
         if products:
-            # get all products without limit
-            attributes = ProductAttribute.search([('attribute_line_ids.value_ids', '!=', False), ('attribute_line_ids.product_tmpl_id', 'in', search_product.ids)])        
+            attributes = ProductAttribute.search([
+                ('attribute_line_ids.value_ids', '!=', False),
+                ('attribute_line_ids.product_tmpl_id', 'in', search_product.ids)
+            ])
         else:
             attributes = ProductAttribute.browse(attributes_ids)
 
