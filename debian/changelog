@@ -1,3 +1,9 @@
+odoo (12.0.53) stable; urgency=low
+
+  * #6590 Actualizar traducciones líneas presupuesto
+
+ -- Alicia Rodriguez <arodriguez@binovo.es>  Thu, 21 Jan 2021 17:32:52 +0100
+
 odoo (12.0.0) stable; urgency=low
 
   [ Imanol Aranburu ]

@@ -1245,7 +1245,7 @@ msgstr "Entregado Manualmente"
 #: model_terms:ir.ui.view,arch_db:sale.view_order_form
 #, python-format
 msgid "Delivered Quantity"
-msgstr "Cantidad Entregada"
+msgstr "Cantidad entregada"
 
 #. module: sale
 #: selection:product.template,invoice_policy:0
@@ -1321,7 +1321,7 @@ msgstr "Descuento %"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line__discount
 msgid "Discount (%)"
-msgstr "Descuento (%)"
+msgstr "Dto. (%)"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report__discount_amount
@@ -1777,7 +1777,7 @@ msgstr "Facturado"
 #: model_terms:ir.ui.view,arch_db:sale.view_order_form
 #, python-format
 msgid "Invoiced Quantity"
-msgstr "Cantidad Facturada"
+msgstr "Cantidad facturada"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_crm_team__invoiced
@@ -2397,7 +2397,7 @@ msgstr "Orden para Facturar"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.view_order_form
 msgid "Ordered Qty"
-msgstr "Ctdad pedida"
+msgstr "Cantidad pedida"
 
 #. module: sale
 #: code:addons/sale/models/sale.py:1057
@@ -4045,11 +4045,15 @@ msgid "Unit Price:"
 msgstr "Precio unitario:"
 
 #. module: sale
-#: model:ir.model.fields,field_description:sale.field_sale_order_line__product_uom
 #: model:ir.model.fields,field_description:sale.field_sale_report__product_uom
 #: model_terms:ir.ui.view,arch_db:sale.view_order_line_tree
 msgid "Unit of Measure"
 msgstr "Unidad de medida"
+
+#. module: sale
+#: model:ir.model.fields,field_description:sale.field_sale_order_line__product_uom
+msgid "Unit of Measure"
+msgstr "UdM"
 
 #. module: sale
 #: model:ir.ui.menu,name:sale.menu_product_uom_categ_form_action
