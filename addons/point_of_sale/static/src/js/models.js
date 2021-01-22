@@ -1361,10 +1361,6 @@ exports.Product = Backbone.Model.extend({
 
         var percent_price = 0;
         _.find(pricelist_items, function (rule) {
-            if (rule.min_quantity && quantity < rule.min_quantity) {
-                return false;
-            }
-
             if (rule.compute_price === 'percentage' && pricelist.discount_policy === 'without_discount') {
                 percent_price = rule.percent_price;
                 return true;

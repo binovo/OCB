@@ -1,8 +1,9 @@
 odoo (11.0.53) stable; urgency=low
 
   * #2804: use system log rotation utility instead of the built-in
+  * #6781. Point_of_sale dependencia de sale y arreglar quantity sin ambito.
 
- -- Luis J. Salvatierra <ljsalvatierra@binovo.es>  Fri, 15 Jan 2021 09:46:56 +0100
+ -- Imanol Aranburu <iaranburu@binovo.es>  Fri, 22 Jan 2021 12:50:56 +0100
 
 odoo (11.0.52) stable; urgency=low
 

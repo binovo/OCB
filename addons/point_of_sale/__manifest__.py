@@ -8,7 +8,7 @@
     'sequence': 20,
     'summary': 'Touchscreen Interface for Shops',
     'description': "",
-    'depends': ['stock_account', 'barcodes', 'web_editor'],
+    'depends': ['stock_account', 'barcodes', 'web_editor', 'sale'],
     'data': [
         'security/point_of_sale_security.xml',
         'security/ir.model.access.csv',
