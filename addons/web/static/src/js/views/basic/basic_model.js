@@ -2002,9 +2002,11 @@ var BasicModel = AbstractModel.extend({
                 var field = fields[name];
                 var fieldInfo = fieldsInfo[name];
                 var key = prefix + name;
-                specs[key] = (field.onChange) || "";
-                if (field.onChange) {
-                    hasOnchange = true;
+                if (field !== undefined) {
+                    specs[key] = (field.onChange) || "";
+                    if (field.onChange) {
+                        hasOnchange = true;
+                    }
                 }
                 _.each(fieldInfo.views, function (view) {
                     generateSpecs(view.fieldsInfo[view.type], view.fields, key + '.');

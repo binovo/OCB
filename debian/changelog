@@ -1,3 +1,9 @@
+odoo (11.0.54) stable; urgency=low
+
+  * #6794: Corregir BUG con widget many2many-tags.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue, 02 Feb 2021 09:48:56 +0100
+
 odoo (11.0.53) stable; urgency=low
 
   * #2804: use system log rotation utility instead of the built-in
