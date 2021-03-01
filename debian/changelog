@@ -1,3 +1,9 @@
+odoo (12.0.56) stable; urgency=low
+
+  * #6934 sale_timesheet añadir clases plantilla qweb timesheet_plan
+
+ -- Ugaitz Olaizola <uolaizola@binovo.es>  Mon, 01 Mar 2021 10:45:39 +0100
+
 odoo (12.0.53) stable; urgency=low
 
   * #6590 Actualizar traducciones líneas presupuesto

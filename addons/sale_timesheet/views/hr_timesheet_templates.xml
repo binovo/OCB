@@ -40,109 +40,109 @@
                             </div>
 
                             <t t-set="display_cost" t-value="dashboard['profit']['expense_cost'] != 0.0"/>
-                            <table class="table">
+                            <table class="table o_timesheet_plan_sale_timesheet_profitability_table">
                                 <tbody>
-                                    <tr>
-                                        <th rowspan="6">
+                                    <tr class="o_timesheet_plan_st_profitability_invoiced">
+                                        <th rowspan="6" class="o_timesheet_plan_st_profitability_hours_header">
                                             <a type="action" t-att-domain="json.dumps(timesheet_domain)" context="{'pivot_row_groupby': ['date:month'],'pivot_column_groupby': ['timesheet_invoice_type'], 'pivot_measures': ['unit_amount']}" tabindex="-1">Hours</a>
                                         </th>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_hours_billable_time">
                                             <t t-esc="dashboard['hours']['billable_time']" t-options="{'widget': 'float_time'}"/>
                                         </td>
-                                        <td>Timesheets</td>
-                                        <th rowspan="6">
+                                        <td class="o_timesheet_plan_st_profitability_invoiced_ts_1">Timesheets</td>
+                                        <th rowspan="6" class="o_timesheet_plan_st_profitability_rates_header">
                                             <a type="action" t-att-domain="json.dumps(timesheet_domain)" context="{'pivot_row_groupby': ['date:month', 'employee_id'], 'pivot_column_groupby': ['timesheet_invoice_type'],'pivot_measures': ['unit_amount']}" tabindex="-1">Rates</a>
                                         </th>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_rates_billable_time">
                                             <t t-esc="dashboard['rates']['billable_time']"/> %
                                         </td>
-                                        <td>Timesheets</td>
-                                        <th rowspan="6">
+                                        <td class="o_timesheet_plan_st_profitability_invoiced_ts_2">Timesheets</td>
+                                        <th rowspan="6" class="o_timesheet_plan_st_profitability_prof_header">
                                             <a type="action" t-att-domain="json.dumps(timesheet_domain)" context="{'pivot_row_groupby': ['timesheet_invoice_id'], 'pivot_column_groupby': ['date:month'],'pivot_measures': ['amount']}" tabindex="-1">Profitability</a>
                                         </th>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_profit_invoiced">
                                             <t t-esc="dashboard['profit']['invoiced']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                         </td>
-                                        <td>Invoiced</td>
+                                        <td class="o_timesheet_plan_st_profitability_invoiced_invoiced">Invoiced</td>
                                     </tr>
-                                    <tr>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                    <tr class="o_timesheet_plan_st_profitability_to_invoice">
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_hours_billable_fixed">
                                             <t t-esc="dashboard['hours']['billable_fixed']" t-options="{'widget': 'float_time'}"/>
                                         </td>
-                                        <td>Fixed</td>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_st_profitability_to_invoice_fixed_1">Fixed</td>
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_rates_billable_fixed">
                                             <t t-esc="dashboard['rates']['billable_fixed']"/> %
                                         </td>
-                                        <td>Fixed</td>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_st_profitability_to_invoice_fixed_2">Fixed</td>
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_profit_to_invoice">
                                             <t t-esc="dashboard['profit']['to_invoice']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                         </td>
-                                        <td>To invoice</td>
+                                        <td class="o_timesheet_plan_st_profitability_to_invoice_to_invoice">To invoice</td>
                                     </tr>
-                                    <tr>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                    <tr class="o_timesheet_plan_st_profitability_ts_costs">
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_hours_non_billable_project">
                                             <t t-esc="dashboard['hours']['non_billable_project']" t-options="{'widget': 'float_time'}"/>
                                         </td>
-                                        <td>No task found</td>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_st_profitability_no_task_1">No task found</td>
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_rates_non_billable_project">
                                             <t t-esc="dashboard['rates']['non_billable_project']"/> %
                                         </td>
-                                        <td>No task found</td>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_st_profitability_no_task_2">No task found</td>
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_profit_cost">
                                             <t t-esc="dashboard['profit']['cost']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                         </td>
-                                        <td>Timesheet costs</td>
+                                        <td class="o_timesheet_plan_st_profitability_ts_costs_td">Timesheet costs</td>
                                     </tr>
-                                    <tr>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                    <tr class="o_timesheet_plan_st_profitability_other_costs">
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_hours_non_billable">
                                             <t t-esc="dashboard['hours']['non_billable']" t-options="{'widget': 'float_time'}"/>
                                         </td>
-                                        <td><a class="o_timesheet_plan_non_billable_task">Non billable</a></td>
-                                        <td class="o_timesheet_plan_dashboard_cell">
+                                        <td class="o_timesheet_plan_st_profitability_o_costs_non_bill_1"><a class="o_timesheet_plan_non_billable_task">Non billable</a></td>
+                                        <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_rates_non_billable">
                                             <t t-esc="dashboard['rates']['non_billable']"/> %
                                         </td>
-                                        <td>Non billable</td>
+                                        <td class="o_timesheet_plan_st_profitability_o_costs_non_bill_2">Non billable</td>
                                         <t t-if="display_cost">
-                                            <td class="o_timesheet_plan_dashboard_cell">
+                                            <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_profit_expense_cost">
                                                 <t t-esc="dashboard['profit']['expense_cost']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                             </td>
-                                            <td>Other costs</td>
+                                            <td class="o_timesheet_plan_st_profitability_other_costs_td">Other costs</td>
                                         </t>
                                         <t t-else="">
-                                            <td class="o_timesheet_plan_dashboard_total">
+                                            <td class="o_timesheet_plan_dashboard_total o_timesheet_plan_st_profitability_other_costs_profit_total">
                                                 <t t-esc="dashboard['profit']['total']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                             </td>
-                                            <td><b>Total</b></td>
+                                            <td class="o_timesheet_plan_st_profitability_other_costs_total"><b>Total</b></td>
                                         </t>
                                     </tr>
-                                    <tr>
-                                        <td class="o_timesheet_plan_dashboard_total">
+                                    <tr class="o_timesheet_plan_st_profitability_re_invoiced_costs">
+                                        <td class="o_timesheet_plan_dashboard_total o_timesheet_plan_st_profitability_hours_total">
                                             <t t-esc="dashboard['hours']['total']" t-options="{'widget': 'float_time'}"/>
                                         </td>
-                                        <td><b>Total</b></td>
+                                        <td class="o_timesheet_plan_st_profitability_re_invoiced_costs_total"><b>Total</b></td>
                                         <td></td>
                                         <td></td>
                                         <t t-if="display_cost">
-                                            <td class="o_timesheet_plan_dashboard_cell">
+                                            <td class="o_timesheet_plan_dashboard_cell o_timesheet_plan_st_profitability_profit_expense_amount_untaxed_invoiced">
                                                 <t t-esc="dashboard['profit']['expense_amount_untaxed_invoiced']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                             </td>
-                                            <td>Re-invoiced costs</td>
+                                            <td class="o_timesheet_plan_st_profitability_re_invoiced_costs_td">Re-invoiced costs</td>
                                         </t>
                                         <t t-else="">
                                             <td></td>
                                             <td></td>
                                         </t>
                                     </tr>
-                                    <tr>
+                                    <tr class="o_timesheet_plan_st_profitability_totals">
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                         <t t-if="display_cost">
-                                            <td class="o_timesheet_plan_dashboard_total">
+                                            <td class="o_timesheet_plan_dashboard_total o_timesheet_plan_st_profitability_totals_profit_total">
                                                 <t t-esc="dashboard['profit']['total']" t-options='{"widget": "monetary", "display_currency": currency}'/>
                                             </td>
-                                            <td><b>Total</b></td>
+                                            <td class="o_timesheet_plan_st_profitability_totals_td"><b>Total</b></td>
                                         </t>
                                         <t t-else="">
                                             <td></td>
