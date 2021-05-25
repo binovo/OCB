@@ -1,3 +1,9 @@
+odoo (12.0.62) stable; urgency=low
+
+  * #7855 account - Ajustar report cabecera factura
+
+ -- Alicia Rodriguez <arodriguez@binovo.es>  Tue, 25 May 2021 11:35:39 +0100
+
 odoo (12.0.56) stable; urgency=low
 
   * #6934 sale_timesheet añadir clases plantilla qweb timesheet_plan
