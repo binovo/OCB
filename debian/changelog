@@ -1,8 +1,9 @@
 odoo (12.0.62) stable; urgency=low
 
   * #7855 account - Ajustar report cabecera factura
+  * #7846 Sincronizar con OCA/OCB
 
- -- Alicia Rodriguez <arodriguez@binovo.es>  Tue, 25 May 2021 11:35:39 +0100
+ -- Imanol Aranburu <iaranburu@binovo.es>  Wed, 26 May 2021 13:54:39 +0100
 
 odoo (12.0.56) stable; urgency=low
 
