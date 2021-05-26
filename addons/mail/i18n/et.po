@@ -13,10 +13,11 @@
 # Maidu Targama <m.targama@gmail.com>, 2019
 # Wanradt Koell <wanradt@gmail.com>, 2019
 # Algo Kärp <algokarp@gmail.com>, 2020
-# Piia Paurson <piia@avalah.ee>, 2020
-# Eneli Õigus <enelioigus@gmail.com>, 2021
-# atriine <triine@avalah.ee>, 2021
 # Andre Roomet <andreroomet@gmail.com>, 2021
+# Piia Paurson <piia@avalah.ee>, 2021
+# Eneli Õigus <enelioigus@gmail.com>, 2021
+# Triine Aavik <triine@avalah.ee>, 2021
+# Martin Talts <martin.t@avalah.ee>, 2021
 # 
 msgid ""
 msgstr ""
@@ -24,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-14 07:34+0000\n"
 "PO-Revision-Date: 2018-08-24 09:20+0000\n"
-"Last-Translator: Andre Roomet <andreroomet@gmail.com>, 2021\n"
+"Last-Translator: Martin Talts <martin.t@avalah.ee>, 2021\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -326,6 +327,8 @@ msgid ""
 "<strong>Internal communication</strong>: Replying will post an internal "
 "note. Followers won't receive any email notification."
 msgstr ""
+"<strong>Ettevõttesisene suhtlus</strong>Vastamine jätab Odoosse sisemise "
+"märkuse. Jälgijad ei saa e-maili teavitusi."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
@@ -898,7 +901,7 @@ msgstr "Järgmise tegevuse automaatne ajakava"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_channel_view_form
 msgid "Auto Subscribe Groups"
-msgstr ""
+msgstr "Automaatne tellimine gruppidele"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel__group_ids
@@ -1813,7 +1816,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_actions_server__activity_date_deadline_range_type
 msgid "Due type"
-msgstr ""
+msgstr "Tähtaja liik"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
@@ -2227,12 +2230,12 @@ msgstr ""
 #: code:addons/mail/static/src/xml/chatter.xml:40
 #, python-format
 msgid "Followers of"
-msgstr ""
+msgstr "Jälgijad dokumendil "
 
 #. module: mail
 #: selection:mail.alias,alias_contact:0
 msgid "Followers only"
-msgstr ""
+msgstr "Ainult jälgijad"
 
 #. module: mail
 #. openerp-web
@@ -3319,6 +3322,8 @@ msgid ""
 "Message type: email for email message, notification for system message, "
 "comment for other messages such as user replies"
 msgstr ""
+"Sõnumi viis: email sõnumiks, teade süsteemi sõnumiks, kommentaar muudeks "
+"sõnumiteks nagu kasutaja vastused."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message__message_id
@@ -3535,7 +3540,7 @@ msgstr "Nimi"
 #: model:ir.model.fields,help:mail.field_mail_mail__record_name
 #: model:ir.model.fields,help:mail.field_mail_message__record_name
 msgid "Name get of the related document."
-msgstr ""
+msgstr "Nime saamine puutuvast dokumendist."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_email_template_preview__report_name
@@ -3762,7 +3767,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:mail.field_mail_mail__no_auto_thread
 #: model:ir.model.fields,field_description:mail.field_mail_message__no_auto_thread
 msgid "No threading for answers"
-msgstr ""
+msgstr "Mitte ühtegi vastuse lõimet"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_actions_server__activity_note
@@ -3809,7 +3814,7 @@ msgstr "Teavita jälgijaid"
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message__notify
 msgid "Notify followers of the document (mass post only)"
-msgstr ""
+msgstr "Teavita antud dokumendi jälgijaid (ainult massipostituses)"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_blacklist__message_needaction_counter
@@ -3938,6 +3943,18 @@ msgstr "Üks jälgija"
 #, python-format
 msgid "Online"
 msgstr "Online"
+
+#. module: mail
+#: code:addons/mail/models/mail_message.py:1052
+#, python-format
+msgid "Only administrators are allowed to export mail message"
+msgstr ""
+
+#. module: mail
+#: code:addons/mail/models/mail_message.py:1043
+#, python-format
+msgid "Only administrators are allowed to use grouped read on message model"
+msgstr ""
 
 #. module: mail
 #: code:addons/mail/models/mail_channel.py:436
@@ -4264,7 +4281,7 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_bounce_catchall
 msgid "Please contact us instead using"
-msgstr ""
+msgstr "Palun kontakteeruge meiega selle asemel, et kasutada"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_channel_send_guidelines
@@ -4553,7 +4570,7 @@ msgstr "Seotud partner"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype__relation_field
 msgid "Relation field"
-msgstr ""
+msgstr "Seose väli"
 
 #. module: mail
 #: selection:mail.activity.type,category:0
@@ -4602,6 +4619,8 @@ msgid ""
 "Reply email address. Setting the reply_to bypasses the automatic thread "
 "creation."
 msgstr ""
+"Vastusmeili aadress. Määrates reply_to pääsed ümber automaatsest "
+"lõimeloomest."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview__reply_to
@@ -5761,7 +5780,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/thread.xml:58
 #, python-format
 msgid "Viewer"
-msgstr ""
+msgstr "Vaajataj"
 
 #. module: mail
 #. openerp-web
@@ -5909,6 +5928,13 @@ msgstr ""
 #: code:addons/mail/models/mail_channel.py:919
 #, python-format
 msgid "You are in channel <b>#%s</b>."
+msgstr ""
+
+#. module: mail
+#. openerp-web
+#: code:addons/mail/static/src/js/attachment_box.js:132
+#, python-format
+msgid "You are not allowed to upload an attachment here."
 msgstr ""
 
 #. module: mail
@@ -6395,7 +6421,7 @@ msgstr ""
 #: code:addons/mail/static/src/js/models/messages/abstract_message.js:52
 #, python-format
 msgid "unnamed"
-msgstr ""
+msgstr "nimetu"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_notification_email

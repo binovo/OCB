@@ -13,9 +13,9 @@
 # Rivo Zängov <eraser@eraser.ee>, 2018
 # Algo Kärp <algokarp@gmail.com>, 2020
 # Eneli Õigus <enelioigus@gmail.com>, 2020
-# atriine <triine@avalah.ee>, 2020
 # Piia Paurson <piia@avalah.ee>, 2020
 # Andre Roomet <andreroomet@gmail.com>, 2021
+# Triine Aavik <triine@avalah.ee>, 2021
 # 
 msgid ""
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-29 10:10+0000\n"
 "PO-Revision-Date: 2018-08-24 09:25+0000\n"
-"Last-Translator: Andre Roomet <andreroomet@gmail.com>, 2021\n"
+"Last-Translator: Triine Aavik <triine@avalah.ee>, 2021\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -604,7 +604,7 @@ msgstr "Loomise kuupäev"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.layout
 msgid "Create a"
-msgstr ""
+msgstr "Loo"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label__create_uid
@@ -1295,6 +1295,8 @@ msgid ""
 "Message type: email for email message, notification for system message, "
 "comment for other messages such as user replies"
 msgstr ""
+"Sõnumi viis: email sõnumiks, teade süsteemi sõnumiks, kommentaar muudeks "
+"sõnumiteks nagu kasutaja vastused."
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message__message_id
@@ -1379,7 +1381,7 @@ msgstr "Nimi"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message__record_name
 msgid "Name get of the related document."
-msgstr ""
+msgstr "Nime saamine puutuvast dokumendist."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message__needaction
@@ -1435,7 +1437,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message__no_auto_thread
 msgid "No threading for answers"
-msgstr ""
+msgstr "Mitte ühtegi vastuse lõimet"
 
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_user_input_line
@@ -1481,7 +1483,7 @@ msgstr "Teavita jälgijaid"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_mail_compose_message__notify
 msgid "Notify followers of the document (mass post only)"
-msgstr ""
+msgstr "Teavita antud dokumendi jälgijaid (ainult massipostituses)"
 
 #. module: survey
 #: selection:survey.user_input_line,answer_type:0
@@ -1793,6 +1795,8 @@ msgid ""
 "Reply email address. Setting the reply_to bypasses the automatic thread "
 "creation."
 msgstr ""
+"Vastusmeili aadress. Määrates reply_to pääsed ümber automaatsest "
+"lõimeloomest."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_mail_compose_message__reply_to
