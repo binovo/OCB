@@ -1,3 +1,9 @@
+odoo (12.0.64) stable; urgency=low
+
+  * #8054 base - Corregir traducción IVA por NIF
+
+ -- Alicia Rodriguez <arodriguez@binovo.es>  Mon, 28 Jun 2021 15:46:39 +0100
+
 odoo (12.0.62) stable; urgency=low
 
   * #7855 account - Ajustar report cabecera factura
