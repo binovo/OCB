@@ -1,3 +1,9 @@
+odoo (11.0.64) stable; urgency=low
+
+  * #8056: Ajustar report_overdue_document de account
+
+ -- Alicia Rodriguez <arodriguez@binovo.es>  Tue, 29 Jun 2021 14:25:24 +0100
+
 odoo (11.0.54) stable; urgency=low
 
   * #6794: Corregir BUG con widget many2many-tags.
