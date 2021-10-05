@@ -18,7 +18,7 @@ class BaseLanguageExport(models.TransientModel):
         langs = self.env['res.lang'].search([('translatable', '=', True)])
         return [(NEW_LANG_KEY, _('New Language (Empty translation template)'))] + \
                [(lang.code, lang.name) for lang in langs]
-   
+
     name = fields.Char('File Name', readonly=True)
     lang = fields.Selection(_get_languages, string='Language', required=True, default=NEW_LANG_KEY)
     format = fields.Selection([('csv','CSV File'), ('po','PO File'), ('tgz', 'TGZ Archive')],
@@ -37,7 +37,7 @@ class BaseLanguageExport(models.TransientModel):
 
         with contextlib.closing(io.BytesIO()) as buf:
             tools.trans_export(lang, mods, buf, this.format, self._cr)
-            out = base64.encodestring(buf.getvalue())
+            out = base64.encodebytes(buf.getvalue())
 
         filename = 'new'
         if lang:
