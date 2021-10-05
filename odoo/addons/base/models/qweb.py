@@ -1077,7 +1077,7 @@ class QWeb(object):
         body = []
         if el.text is not None:
             body.append(self._append(ast.Str(pycompat.to_text(el.text))))
-        if el.getchildren():
+        if list(el):
             for item in el:
                 # ignore comments & processing instructions
                 if isinstance(item, etree._Comment):
