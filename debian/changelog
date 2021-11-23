@@ -1,3 +1,9 @@
+odoo (12.0.73) stable; urgency=low
+
+  * #8618 Cambios en compras segunda cantidad
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue, 23 Nov 2021 10:14:42 +0100
+
 odoo (12.0.64) stable; urgency=low
 
   * #8054 base - Corregir traducción IVA por NIF
