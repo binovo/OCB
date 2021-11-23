@@ -25,7 +25,7 @@
                     <tr>
                         <th><strong>Description</strong></th>
                         <th class="text-center"><strong>Expected Date</strong></th>
-                        <th class="text-right"><strong>Qty</strong></th>
+                        <th class="text-right purchase_order_line_product_qty"><strong>Qty</strong></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +36,7 @@
                         <td class="text-center">
                             <span t-field="order_line.date_planned"/>
                         </td>
-                        <td class="text-right">
+                        <td class="text-right purchase_order_line_product_qty">
                             <span t-field="order_line.product_qty"/>
                             <span t-field="order_line.product_uom" groups="uom.group_uom"/>
                         </td>
