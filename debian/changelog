@@ -1,3 +1,9 @@
+odoo (12.0.74) stable; urgency=low
+
+  * #8618 Añadir etiquetas en report_invoice_document
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 25 Nov 2021 12:06:09 +0100
+
 odoo (12.0.73) stable; urgency=low
 
   * #8618 Cambios en compras segunda cantidad
