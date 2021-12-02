@@ -1,8 +1,9 @@
 odoo (12.0.74) stable; urgency=low
 
   * #8618 Añadir etiquetas en report_invoice_document
+  * #9089 Restringir acceso de escritura al grupo user para pos.config
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 25 Nov 2021 12:06:09 +0100
+ -- Alicia Rodriguez <arodriguez@binovo.es>  Thu, 2 Dec 2021 14:45:09 +0100
 
 odoo (12.0.73) stable; urgency=low
 
