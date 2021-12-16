@@ -1,3 +1,9 @@
+odoo (11.0.75) stable; urgency=low
+
+  * #9239: Añadir identificadores de clase en sale.report_invoice_layouted
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 16 Dec 2021 17:36:17 +0100
+
 odoo (11.0.64) stable; urgency=low
 
   * #8056: Ajustar report_overdue_document de account
