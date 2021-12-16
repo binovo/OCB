@@ -17,12 +17,13 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th>Description</th>
-                        <th class="text-right">Quantity</th>
-                        <th class="text-right">Unit Price</th>
-                        <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Disc.(%)</th>
-                        <th class="text-right">Taxes</th>
-                        <th class="text-right">Amount</th>
+                        <th class="account_invoice_line_description">Description</th>
+                        <th class="text-right account_invoice_line_quantity">Quantity</th>
+                        <th class="text-right account_invoice_line_unit_price">Unit Price</th>
+                        <th t-if="display_discount" class="text-right account_invoice_line_discount"
+                            groups="sale.group_discount_per_so_line">Disc.(%)</th>
+                        <th class="text-right account_invoice_line_taxes">Taxes</th>
+                        <th class="text-right account_invoice_line_amount">Amount</th>
                     </tr>
                 </thead>
                 <tbody class="invoice_tbody">
@@ -39,25 +40,27 @@
                         <!-- Lines associated -->
                         <t t-foreach="layout_category['lines']" t-as="l">
                             <tr>
-                                <td><span t-field="l.name"/></td>
-                                <td class="text-right">
+                                <td class="account_invoice_line_description"><span t-field="l.name"/></td>
+                                <td class="text-right account_invoice_line_quantity">
                                     <span t-field="l.quantity"/>
                                     <span t-field="l.uom_id"  groups="product.group_uom"/>
                                 </td>
-                                <td class="text-right">
+                                <td class="text-right account_invoice_line_unit_price">
                                     <span t-field="l.price_unit"/>
                                 </td>
-                                <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                <td t-if="display_discount" class="text-right account_invoice_line_discount"
+                                    groups="sale.group_discount_per_so_line">
                                     <span t-field="l.discount"/>
                                 </td>
-                                <td class="text-right">
+                                <td class="text-right account_invoice_line_taxes">
                                     <span t-esc="', '.join(map(lambda x: x.description or x.name, l.invoice_line_tax_ids))"/>
                                 </td>
-                                <td class="text-right">
+                                <td class="text-right account_invoice_line_price_subtotal">
                                     <span t-field="l.price_subtotal"
                                         t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                 </td>
-                                <td class="text-right" groups="sale.group_show_price_total">
+                                <td class="text-right account_invoice_line_price_total"
+                                    groups="sale.group_show_price_total">
                                     <span t-field="l.price_total"
                                         t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                 </td>
