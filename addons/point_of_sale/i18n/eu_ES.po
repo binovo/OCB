@@ -1,0 +1,4634 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* point_of_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-01 18:33+0000\n"
+"PO-Revision-Date: 2022-02-01 18:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1061
+#: code:addons/point_of_sale/models/pos_order.py:1073
+#, python-format
+msgid " REFUND"
+msgstr "ITZULKETA"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "$ 3.12"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "$ 4.40"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "$ 4.50"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "$ 8.50"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1478
+#, python-format
+msgid "% discount"
+msgstr "Deskontua (%)"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1607
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1647
+#, python-format
+msgid "&nbsp;"
+msgstr ""
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:89
+#, python-format
+msgid "(RESCUE FOR %(session)s)"
+msgstr "(ERRESKATEA FOR %(session)s)"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "(update)"
+msgstr "(eguneratu)"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "+ Transactions"
+msgstr "+ Transakzioak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Kudeatu\" title=\"Kudeatu\"/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_snippets
+msgid "<i class=\"fa fa-eye-slash\"/>Hide"
+msgstr "<i class=\"fa fa-eye-slash\"/>Ezkutatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "<i class=\"fa fa-fw fa-arrow-right\"/>How to manage tax-included prices"
+msgstr "<i class=\"fa fa-fw fa-arrow-right\"/>Nola kudeatu prezioak zergak barne"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_partner_pos_kanban
+msgid "<i class=\"fa fa-fw fa-shopping-bag\" role=\"img\" aria-label=\"Shopping cart\" title=\"Shopping cart\"/>"
+msgstr "<i class=\"fa fa-fw fa-shopping-bag\" role=\"img\" aria-label=\"Erosketa saskia\" title=\"Erosketa saskia \"/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_kanban
+msgid "<i class=\"fa fa-money\" role=\"img\" aria-label=\"Amount\" title=\"Amount\"/>"
+msgstr "<i class=\"fa fa-money\" role=\"img\" aria-label=\"Zenbatekoa\" title=\"Zenbatekoa\"/>"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/tour.js:24
+#, python-format
+msgid "<p>Click to start the point of sale interface. It <b>runs on tablets</b>, laptops, or industrial hardware.</p><p>Once the session launched, the system continues to run without an internet connection.</p>"
+msgstr "<p>Egin klik salmenta puntuko interfazea irekitzeko. <b>Tabletetan<b>, ordenagailu eramangarrietan edo ekipo industrialetan badabil.<p><p>Saioa abiarazten denean, sistemak exekutatzen jarraitzen du Interneteko konexiorik gabe.<p>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "<span class=\"o_form_label\">Journal Entries</span>"
+msgstr "<span class=\"o_form_label\">Kontabilitate oharrak</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "<span class=\"o_form_label\">Order Reference</span>"
+msgstr "<span class=\"o_form_label\">Eskaera erreferentzia</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "<span class=\"o_form_label\">Payment Methods</span>"
+msgstr "<span class=\"o_form_label\">Ordainketa metodoak</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_open_statement
+msgid "<span class=\"o_form_label\">The system will open all cash registers, so that you can start recording payments. We suggest you to control the opening balance of each register, using their CashBox tab.</span>"
+msgstr "<span class=\"o_form_label\">Sistemak kutxazainaren erregistro guztiak irekiko ditu, ordainketak egiten has zaitezen. Erregistro bakoitzaren saldo irekia egiaztatzea gomendatzen dizugu, bere Kutxa fitxa erabiliz.</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "<span class=\"o_stat_text\">Put</span>\n"
+"                                <span class=\"o_stat_text\">Money In</span>"
+msgstr "<span class=\"o_stat_text\">Jarri</span>\n"
+"                                <span class=\"o_stat_text\">Dirua</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "<span class=\"o_stat_text\">Set Closing Balance</span>"
+msgstr "<span class=\"o_stat_text\">Ezarri itxieraren balantzea</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "<span class=\"o_stat_text\">Set Opening Balance</span>"
+msgstr "<span class=\"o_stat_text\">Ezarri hasierako balantzea</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "<span class=\"o_stat_text\">Take</span>\n"
+"                                <span class=\"o_stat_text\">Money Out</span>"
+msgstr "<span class=\"o_stat_text\">Atera</span>\n"
+"                                <span class=\"o_stat_text\">Dirua</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "<span class=\"oe_inline\"><b>Skip Preview Screen</b></span>"
+msgstr "<span class=\"oe_inline\"><b>Saltatu aurrebista pantaila</b></span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "<span class=\"pos-change_amount\">$ 0.86</span>"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+msgid "<span class=\"pos-change_title\">Change</span>"
+msgstr "<span class=\"pos-change_title\">Kanbioa</span>"
+
+#. module: point_of_sale
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+msgid "<span class=\"total-amount-formatting\">TOTAL</span>"
+msgstr "<span class=\"total-amount-formatting\">GUZTIRA</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "<span id=\"total-amount\" class=\"pos_total-amount\">$ 469.14</span>"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+msgid "<span>$ 470.00</span>"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+msgid "<span>Cash (USD):</span>"
+msgstr "<span/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "<span>Cash Balance</span>"
+msgstr "<span>Esku diruzko saldoa</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "<span>Last Closing Date</span>"
+msgstr "<span>Azken amaierako data</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "<span>Reporting</span>"
+msgstr "<span>Txostenak</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "<span>View</span>"
+msgstr "<span>Ikusi</span>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Company</strong>:<br/>"
+msgstr "<strong>Enpresa</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Ending Balance</strong>:<br/>"
+msgstr "<strong>Amaitze balantzea</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Journal</strong>:<br/>"
+msgstr "<strong>Egunerokoa</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Opening Date</strong>:<br/>"
+msgstr "<strong>Irekiera data</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Starting Balance</strong>:<br/>"
+msgstr "<strong>Hasierako balantzea</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Statement Name</strong>:<br/>"
+msgstr "<strong>Aitorpen izena</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>Total</strong>"
+msgstr "<strong>Guztira</strong>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "<strong>User</strong>:<br/>"
+msgstr "<strong>Erabiltzailea</strong>:<br/>"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "= Theoretical Closing Balance"
+msgstr "= Teorikoki azken saldoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2126
+#, python-format
+msgid "? Clicking \"Confirm\" will validate the payment."
+msgstr "? \"Baieztatu\" sakatuz gero, ordainketa baliozkotuko da. "
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1334
+#, python-format
+msgid "A Customer Name Is Required"
+msgstr "Bezeroaren izena jartzea beharrezkoa da"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_res_users__pos_security_pin
+msgid "A Security PIN used to protect sensible functionality in the Point of Sale"
+msgstr "Saltokian funtzionaltasun sentikorra babesteko erabiltzen den segurtasun PIN bat"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__uuid
+msgid "A globally unique identifier for this pos configuration, used to prevent conflicts in client-generated data."
+msgstr "Saltokiaren konfigurazio honetarako identifikatzaile bakar globala, bezeroan sortutako datuetan gatazkak saihesteko erabiltzen dena."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__login_number
+msgid "A sequence number that is incremented each time a user resumes the pos session"
+msgstr "Sekuentzia-zenbakia, erabiltzaileak saltoki saioa berriro hasten den bakoitzean handitzen dena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__sequence_number
+msgid "A sequence number that is incremented with each order"
+msgstr "Eskaera bakoitzarekin handitzen den sekuentzia-zenbakia"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_session
+msgid "A session is a period of time, usually one day, during which you sell through the Point of Sale."
+msgstr "Saio bat denbora-tarte bat da non saltokiaren bidez saltzen duzun, normalean egun batekoa."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_order__sequence_number
+msgid "A session-unique sequence number for the order"
+msgstr "Eskaerarako saio bakoitzeko sekuentzia-zenbaki bakarra"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__receipt_footer
+msgid "A short text that will be inserted as a footer in the printed receipt."
+msgstr "Inprimatutako ordainagirian oin gisa txertatzeko testu labur bat."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__receipt_header
+msgid "A short text that will be inserted as a header in the printed receipt."
+msgstr "Inprimatutako ordainagirian goiburu gisa txertatzeko testu labur bat."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1646
+#, python-format
+msgid "ABC"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Accept payments with a credit card reader"
+msgstr "Onartu ordainketak txartel-irakurle integratu batekin"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Accounting"
+msgstr "Kontabilitatea"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Accounting Information"
+msgstr "Kontabilitate informazioa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__invoice_journal_id
+msgid "Accounting journal used to create invoices."
+msgstr "Fakturak sortzeko erabiltzen den kontabilitate aldizkaria."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__journal_id
+#: model:ir.model.fields,help:point_of_sale.field_pos_order__sale_journal
+msgid "Accounting journal used to post sales entries."
+msgstr "Sarrerak argitaratzeko erabiltzen den kontabilitate aldizkaria."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__active
+msgid "Active"
+msgstr "Aktiboa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1981
+#, python-format
+msgid "Add Tip"
+msgstr "Eskupekoa gehitu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Add a custom message to header and footer"
+msgstr "Gehitu pertsonalizatutako mezu bat goiburukora eta orri-oinera"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:487
+#, python-format
+msgid "Add a customer"
+msgstr "Bezeroa gehitu"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_account_journal_form
+msgid "Add a new payment method"
+msgstr "Ordainketa metodo berria gehitu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:414
+#: code:addons/point_of_sale/static/src/xml/pos.xml:511
+#, python-format
+msgid "Address"
+msgstr "Helbidea"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Advanced Currencies Setup"
+msgstr "Moneta ezarpen aurreratuak"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Alias"
+msgstr "Alias"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:247
+#, python-format
+msgid "All available pricelists must be in the same currency as the company or as the Sales Journal set on this point of sale if you use the Accounting application."
+msgstr "Eskuragarri dauden prezio-zerrenda guztiek konpainiaren edo salmenta-puntu honetan ezarritako salmenta aldizkariaren moneta berean egon behar dute Kontabilitate aplikazioa erabiltzen baduzu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:253
+#, python-format
+msgid "All payment methods must be in the same currency as the Sales Journal or the company currency if that is not set."
+msgstr "Ordainketa-metodo guztiek aalmenten aldizkariaren edo konpainiaren moneta berdinean egon behar dute ezarrita ez badago."
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_all_sales_lines
+msgid "All sales lines"
+msgstr "Lerro salmenta guztiak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Allow cashier to reprint receipts"
+msgstr "Onartu kutxazaina ordainagiriak birinprimatzeko"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Allow global discounts on orders"
+msgstr "Onartu deskontu globalak eskaeretan"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__amount
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "Amount"
+msgstr "Kopurua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_import_journal_creation__amount_authorized_diff
+#: model:ir.model.fields,field_description:point_of_sale.field_account_journal__amount_authorized_diff
+msgid "Amount Authorized Difference"
+msgstr "Onartutako diferentzia kopurua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree
+msgid "Amount total"
+msgstr "Zenbatekoa guztira"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:1268
+#, python-format
+msgid "An error occurred when loading product prices. Make sure all pricelists are available in the POS."
+msgstr "Errore bat gertatu da produktuen prezioak kargatzean. Ziurtatu prezio-zerrenda guztiak saltokian eskuragarri daudela."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__name
+msgid "An internal identification of the point of sale."
+msgstr "Saltokiaren barne identifikazioa."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:161
+#, python-format
+msgid "Another session is already opened for this point of sale."
+msgstr "Dagoeneko beste saio bat zabalik dago saltoki honetarako."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2118
+#, python-format
+msgid "Are you sure that the customer wants to  pay"
+msgstr "Ziur bezeroak ordaindu nahi duela?"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.pos_menu_products_variants_action
+msgid "Attribute Values"
+msgstr "Ezaugarrien balioak"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.pos_menu_products_attribute_action
+msgid "Attributes"
+msgstr "Ezaugarriak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__rescue
+msgid "Auto-generated session for orphan orders, ignored in constraints"
+msgstr "Eskaera umezurtzetarako automatikoki sortutako saioa, murrizketetan baztertuta"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_print_auto
+msgid "Automatic Receipt Printing"
+msgstr "Ordainagiriaren inprimaketa automatikoa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_cashdrawer
+msgid "Automatically open the cashdrawer."
+msgstr "Ireki automatikoki kutxazaina."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__journal_ids
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__journal_ids
+msgid "Available Payment Methods"
+msgstr "Eskuragarri dauden ordainketa metodoak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__available_pricelist_ids
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Available Pricelists"
+msgstr "Eskuragarri dauden prezioen zerrendak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_account_journal_search_inherit_point_of_sale
+msgid "Available for Point of Sale"
+msgstr "Eskuragarri saltokian"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_product_product__available_in_pos
+#: model:ir.model.fields,field_description:point_of_sale.field_product_template__available_in_pos
+#: model_terms:ir.ui.view,arch_db:point_of_sale.product_template_search_view_pos
+msgid "Available in POS"
+msgstr "Eskuragarri saltokian"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__average_price
+msgid "Average Price"
+msgstr "Batezbesteko Prezioa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:296
+#: code:addons/point_of_sale/static/src/xml/pos.xml:646
+#, python-format
+msgid "Back"
+msgstr "Atzera"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:179
+#: code:addons/point_of_sale/static/src/xml/pos.xml:625
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1193
+#, python-format
+msgid "Backspace"
+msgstr "Ezabatu"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_bank_statement
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__statement_ids
+msgid "Bank Statement"
+msgstr "Banku Deklarazioa"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_bank_statement_cashbox
+msgid "Bank Statement Cashbox"
+msgstr "Banku Deklarazio Kutxa"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Banku Deklarazio Lerro"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:380
+#: code:addons/point_of_sale/static/src/xml/pos.xml:443
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_userlabel
+#, python-format
+msgid "Barcode"
+msgstr "Barra-kodea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__barcode_nomenclature_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Barcode Nomenclature"
+msgstr "Barra-kode nomenklatura"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_barcode_rule
+msgid "Barcode Rule"
+msgstr "Barra-kode erregela"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1346
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__barcode_scanner
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#, python-format
+msgid "Barcode Scanner"
+msgstr "Barra-kode Scannerra"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "Base Amount"
+msgstr "Oinarrizko zenbatekoa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Bills &amp; Receipts"
+msgstr "Fakturak eta ordainagiriak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1023
+#, python-format
+msgid "Button"
+msgstr "Botoia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_print_via_proxy
+msgid "Bypass browser printing and prints via the hardware proxy."
+msgstr "Webgunearen imprimatzailea baztertu eta hardware proxy-arekin imprimatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:848
+#, python-format
+msgid "CHANGE"
+msgstr "KANBIOA"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:479
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1063
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1080
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1109
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1126
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1146
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1198
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_details_wizard
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_open_statement
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_payment
+#, python-format
+msgid "Cancel"
+msgstr "Utzi"
+
+#. module: point_of_sale
+#: selection:pos.order,state:0
+#: selection:report.pos.order,state:0
+msgid "Cancelled"
+msgstr "Ezeztatua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2107
+#, python-format
+msgid "Cannot return change without a cash payment method"
+msgstr "Ezin da kanbioa bueltatu eskudirutan ordainketa metodorik gabe"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_cash_box_in
+msgid "Cash Box In"
+msgstr "Kutxazainean sartu"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_cash_box_out
+msgid "Cash Box Out"
+msgstr "Kutxazaineatik atera"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:324
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__cash_control
+#, python-format
+msgid "Cash Control"
+msgstr "Eskudiru Kontrola"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_journal_id
+msgid "Cash Journal"
+msgstr "Diru-agiria"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_register_id
+msgid "Cash Register"
+msgstr "Eskudiru erregistroa"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:142
+#, python-format
+msgid "Cash control can only be applied to cash journals."
+msgstr "Eskudiru kontrola eskudiru aldizkarietan soilik aplikatu daiteke."
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_cashbox_line
+msgid "CashBox Line"
+msgstr "Kutxazain lerroa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.account_cashbox_line_view_tree
+msgid "Cashbox balance"
+msgstr "Kutxazain balantzea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_cashdrawer
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Cashdrawer"
+msgstr "Txanpon kutxa"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Cashier"
+msgstr "Kutxazaina"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Categories"
+msgstr "Kategoriak"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.product_pos_category_action
+msgid "Categories are used to browse your products through the\n"
+"                touchscreen interface."
+msgstr "Kategoriak produktuak pantaila taktilaren bitartez\n"
+"                bilatzeko erabiltzen dira."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:187
+#: model_terms:ir.ui.view,arch_db:point_of_sale.product_template_form_view
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_category_kanban
+#, python-format
+msgid "Category"
+msgstr "Kategoria"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Category Pictures"
+msgstr "Kategoria irudiak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_product_product__pos_categ_id
+#: model:ir.model.fields,help:point_of_sale.field_product_template__pos_categ_id
+msgid "Category used in the Point of Sale."
+msgstr "Saltokian erabilitako kategoria"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:552
+#, python-format
+msgid "Change"
+msgstr "Kanbioa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:105
+#, python-format
+msgid "Change Cashier"
+msgstr "Kutxazainen kanbioa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1279
+#, python-format
+msgid "Change Customer"
+msgstr "Bezeroan kanbioa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1981
+#, python-format
+msgid "Change Tip"
+msgstr "Eskupekoa aldatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:708
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1536
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1697
+#, python-format
+msgid "Change:"
+msgstr "Kanbioa:"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_product_product__to_weight
+#: model:ir.model.fields,help:point_of_sale.field_product_template__to_weight
+msgid "Check if the product should be weighted using the hardware scale integration."
+msgstr "Aukeratu produktua hardwarean integratutako balantzarekin pisatu behar den."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_product_product__available_in_pos
+#: model:ir.model.fields,help:point_of_sale.field_product_template__available_in_pos
+msgid "Check if you want this product to appear in the Point of Sale."
+msgstr "Aukeratu produktua saltokian agertzea nahi baduzu."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_uom_category__is_pos_groupable
+#: model:ir.model.fields,help:point_of_sale.field_uom_uom__is_pos_groupable
+msgid "Check if you want to group products of this category in point of sale orders"
+msgstr "Aukeratu kategoria honen produktuak saltokian taldekatuta agetzea nahi baduzu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__cash_control
+msgid "Check the amount of the cashbox at opening and closing."
+msgstr "Berrikusi zenbatekoa eskudirutan hasieran eta amaieran."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_account_bank_statement_import_journal_creation__journal_user
+#: model:ir.model.fields,help:point_of_sale.field_account_journal__journal_user
+msgid "Check this box if this journal define a payment method that can be used in a point of sale."
+msgstr "Aukeratu aldizkari honek saltokian erabil daitekeen ordainketa-metodo bat definitzen badu."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__group_by
+msgid "Check this if you want to group the Journal Items by Product while closing a Session."
+msgstr "Aukeratu aldizkariko sarrerak produktuaren arabera taldekatu nahi badituzu saio bat ixtean."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:222
+#, python-format
+msgid "Check your internet connection and try again."
+msgstr "Konprobatu Interneteko konexioa eta saiatu berriro."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__child_id
+msgid "Children Categories"
+msgstr "Haur kategoriak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Choose a pricelist for the Point Of Sale"
+msgstr "Hautatu saltokirako prezioen zerrenda"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Choose a specific tax regime at the order depending on the kind of customer (tax exempt, onsite vs. takeaway, etc.)."
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Choose among several tax regimes when processing an order"
+msgstr "Aukeratu zerga-posizio zehatz bat eskaeran, bezero motaren arabera"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:351
+#: code:addons/point_of_sale/static/src/xml/pos.xml:352
+#, python-format
+msgid "City"
+msgstr "Herria"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Client"
+msgstr "Bezeroa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:105
+#, python-format
+msgid "Client Screen Connected"
+msgstr "Bezeroaren pantaila konektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:102
+#, python-format
+msgid "Client Screen Disconnected"
+msgstr "Bezeroaren pantaila deskonektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:463
+#, python-format
+msgid "Client Screen Unsupported. Please upgrade the IoT Box"
+msgstr "Bezeroaren pantaila ez onartuta. Mesedez IoT Box-a eguneratu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:99
+#, python-format
+msgid "Client Screen Warning"
+msgstr "Bezeroaren pantaila abisua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:824
+#: code:addons/point_of_sale/static/src/js/chrome.js:832
+#: code:addons/point_of_sale/static/src/js/chrome.js:838
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#, python-format
+msgid "Close"
+msgstr "Irten"
+
+#. module: point_of_sale
+#: selection:pos.session,state:0
+msgid "Closed & Posted"
+msgstr "Itxita eta argitaratua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:350
+#, python-format
+msgid "Closing ..."
+msgstr "Ixten ..."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: selection:pos.session,state:0
+msgid "Closing Control"
+msgstr "Itxiera kontrola"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__stop_at
+msgid "Closing Date"
+msgstr "Itxiera data"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__company_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__company_id
+msgid "Company"
+msgstr "Enpresa"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurazio ezarpenak"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.menu_point_config_product
+msgid "Configuration"
+msgstr "Konfigurazioa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Configuration for journal entries of PoS orders"
+msgstr "Saltokiko eskaeren egunkari-sarreren konfigurazioa"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
+msgid "Configure at least one Point of Sale to be able to sell through the PoS interface."
+msgstr "Gutxienez saltoki bat konfiguratu saltokiko interfasetik salmentak egin ahal izateko."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:829
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1060
+#, python-format
+msgid "Confirm"
+msgstr "Baieztatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Connect devices to your PoS (ticket printer, barcode scanner, scale, etc.)"
+msgstr "Konektatu gailuak zure saltokira (txartelen inprimagailua, barra-kodeen eskanerra, balantza, etab.)"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:456
+#, python-format
+msgid "Connected, Not Owned"
+msgstr "Konektatua, ez jabetzakoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:76
+#, python-format
+msgid "Connecting to Proxy"
+msgstr "Proxy-ra konektatzen"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:121
+#, python-format
+msgid "Connecting to the IoT Box"
+msgstr "IoT Box-era konektatzen"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_res_partner
+msgid "Contact"
+msgstr "Kontaktua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Continue Selling"
+msgstr "Saltzen jarraitu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Control cash box at opening and closing"
+msgstr "Eskudiru kutxa kontrolatu ireki eta itxieran"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1443
+#, python-format
+msgid "Could Not Read Image"
+msgstr "Ezin da irudia irakurri"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:359
+#, python-format
+msgid "Country"
+msgstr "Herrialdea"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
+msgid "Create a new PoS config"
+msgstr "Beste saltoki konfigurazioa sortu"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.product_product_action
+msgid "Create a new product variant"
+msgstr "Produktu aldaera berria sortu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__create_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__create_uid
+msgid "Created by"
+msgstr "Nork sortua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__create_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__create_date
+msgid "Created on"
+msgstr "Noiz sortua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Credit Card Reader"
+msgstr "Kreditu txartel irakurlea"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Currencies"
+msgstr "Monetak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__currency_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__currency_id
+msgid "Currency"
+msgstr "Moneta"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__current_session_id
+msgid "Current Session"
+msgstr "Oraingo saioa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__current_session_state
+msgid "Current Session State"
+msgstr "Horaingo saioaren egoera"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1992
+#: code:addons/point_of_sale/static/src/xml/pos.xml:141
+#: code:addons/point_of_sale/static/src/xml/pos.xml:145
+#: code:addons/point_of_sale/static/src/xml/pos.xml:671
+#: code:addons/point_of_sale/static/src/xml/pos.xml:676
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__partner_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__partner_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#, python-format
+msgid "Customer"
+msgstr "Bezeroa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Customer Display"
+msgstr "Bezeroaren pantaila"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_customer_facing_display
+msgid "Customer Facing Display"
+msgstr "Bezeroentzako pantaila"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:719
+#: code:addons/point_of_sale/models/pos_order.py:773
+#, python-format
+msgid "Customer Invoice"
+msgstr "Bezeroaren Beza"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__customer_facing_display_html
+msgid "Customer facing display content"
+msgstr "Bezeroentzako pantailaren edukia"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.menu_point_of_sale_customer
+msgid "Customers"
+msgstr "Bezeroak"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.menu_pos_dashboard
+msgid "Dashboard"
+msgstr "Arbela"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1336
+#, python-format
+msgid "Debug Window"
+msgstr "Arazketa leihoa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__default_cashbox_lines_ids
+msgid "Default Balance"
+msgstr "Balantze lehenetsia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement__account_id
+msgid "Default Debit Account"
+msgstr "Lehenetsitako zordunketa kontua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__default_fiscal_position_id
+msgid "Default Fiscal Position"
+msgstr "Zerga-posizio lehenetsia"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Default Opening"
+msgstr "Irekiera lehenetsia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__pricelist_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Default Pricelist"
+msgstr "Lehenetsitako prezio zerrenda "
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__sale_tax_id
+msgid "Default Sale Tax"
+msgstr "Lehenetsitako salmenta zerga"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Default Sales Tax"
+msgstr "Lehenetsitako Salmentarako zerga"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_snippets
+msgid "Default company logo"
+msgstr "Konpainia logo lehenetsia"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Default sales tax for products"
+msgstr "Produktuen salmenta zerga lehenetsia"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.product_pos_category_action
+msgid "Define a new category"
+msgstr "Kategoria berria definitu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__barcode_nomenclature_id
+msgid "Defines what kind of barcodes are available and how they are assigned to products, customers and cashiers."
+msgstr "Zer motatako barra-kodeak dauden definitzen du eta nola esleitzen diren produktuei, bezeroei eta kutxazainei."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__delay_validation
+msgid "Delay Validation"
+msgstr "Balioztatzea atzeratu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:576
+#: code:addons/point_of_sale/static/src/xml/pos.xml:589
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1394
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1406
+#, python-format
+msgid "Delete"
+msgstr "Ezabatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1356
+#, python-format
+msgid "Delete Paid Orders"
+msgstr "Eskaera ordainduak ezabatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:264
+#, python-format
+msgid "Delete Paid Orders ?"
+msgstr "Eskaera ordainduak ezabatu ?"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1357
+#, python-format
+msgid "Delete Unpaid Orders"
+msgstr "Ezabatu ordaindu gabeko eskaerak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:274
+#, python-format
+msgid "Delete Unpaid Orders ?"
+msgstr "Ordaindu gabeko eskaerak ezabatu ?"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1437
+#, python-format
+msgid "Delete order"
+msgstr "Eskaera ezabatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1282
+#, python-format
+msgid "Deselect Customer"
+msgstr "Kendu bezeroa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "Desk Organizer"
+msgstr "Eskritorio antolatzailea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:56
+#, python-format
+msgid "Destroy Current Order ?"
+msgstr "Uneko eskaera suntsitu ?"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_register_difference
+msgid "Difference"
+msgstr "Ezberdintasun"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:527
+#, python-format
+msgid "Difference at closing PoS session"
+msgstr "Ezberdintasun saltoki saioa ixtean"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__cash_register_difference
+msgid "Difference between the theoretical closing balance and the real closing balance."
+msgstr "Ezberdintasun itxiera balantze teorikoa eta errealaren artean."
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_digest_digest
+msgid "Digest"
+msgstr "Laburpen"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:168
+#, python-format
+msgid "Disc"
+msgstr "Desk"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "Disc:"
+msgstr "Desk:"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:461
+#, python-format
+msgid "Disconnected"
+msgstr "Deskonektatuta"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__discount
+msgid "Discount (%)"
+msgstr "Deskontua (%)"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__notice
+msgid "Discount Notice"
+msgstr "Deskontu oharra"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:791
+#: code:addons/point_of_sale/static/src/xml/pos.xml:930
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1508
+#, python-format
+msgid "Discount:"
+msgstr "Deskontua:"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Discounted Product"
+msgstr "Produktu deskontatua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:857
+#, python-format
+msgid "Discounts"
+msgstr "Deskontuak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1337
+#, python-format
+msgid "Dismiss"
+msgstr "Baztertu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_display_categ_images
+msgid "Display Category Pictures"
+msgstr "Kategoria irudiak erakutsi"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_invoice__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_saledetails__display_name
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__display_name
+msgid "Display Name"
+msgstr "Izena erakutsi"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Display pictures of product categories"
+msgstr "Produktuen kategorien irudiak erakutsi"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/digest.py:16
+#, python-format
+msgid "Do not have access, skip this data for user's digest email"
+msgstr "Ez duzu baimenik, saltatu informazio hau erabiltzailearen laburpen-mezu elektronikorako"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_open_statement
+msgid "Do you want to open cash registers?"
+msgstr "Kutxa erregistratzaileak ireki nahi dituzu?"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Don't turn this option on if you take orders on smartphones or tablets. Such devices already benefit from a native keyboard."
+msgstr "Ez aktibatu aukera hau telefonoetan edo tabletetan eskaerak hartzen badituzu. Horrelako gailuek jatorrizko teklatua dute jada."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+msgid "Done"
+msgstr "Eginda"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_vkeyboard
+msgid "Don’t turn this option on if you take orders on smartphones or tablets. \n"
+" Such devices already benefit from a native keyboard."
+msgstr "Ez aktibatu aukera hau telefonoetan edo tabletetan eskaerak hartzen badituzu. \n"
+" Horrelako gailuek jatorrizko teklatua dute jada."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1024
+#, python-format
+msgid "Download"
+msgstr "Deskargatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1359
+#, python-format
+msgid "Download Paid Orders"
+msgstr "Ordaindutako eskaerak deskargatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1361
+#, python-format
+msgid "Download Unpaid Orders"
+msgstr "Ordaindu ez diren eskaerak deskargatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1021
+#, python-format
+msgid "Download error"
+msgstr "Errorea deskargatzean"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:550
+#, python-format
+msgid "Due"
+msgstr "Zor"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:409
+#, python-format
+msgid "Edit"
+msgstr "Editatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1339
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_electronic_scale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#, python-format
+msgid "Electronic Scale"
+msgstr "Balantza elektronikoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:372
+#: code:addons/point_of_sale/static/src/xml/pos.xml:423
+#, python-format
+msgid "Email"
+msgstr "Eposta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2089
+#, python-format
+msgid "Empty Order"
+msgstr "Eskaera hutsik"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:512
+#, python-format
+msgid "Empty Serial/Lot Number"
+msgstr "Serie/lote zenbakia hutsik"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_scan_via_proxy
+msgid "Enable barcode scanning with a remotely connected barcode scanner."
+msgstr "Gaitu barra-kodeen eskaneatzea urrunetik konektatutako barra-kodeen eskaner batekin."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_electronic_scale
+msgid "Enables Electronic Scale integration."
+msgstr "Balantza elektronikoa integratzea ahalbidetzen du."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_payment_terminal
+msgid "Enables Payment Terminal integration."
+msgstr "Ordainketa-terminal bat integratzea ahalbidetzen du. "
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__module_account
+#: model:ir.model.fields,help:point_of_sale.field_pos_order__invoice_group
+msgid "Enables invoice generation from the Point of Sale."
+msgstr "Saltokitik fakturak sortzea ahalbidetzen du."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__end_date
+msgid "End Date"
+msgstr "Amaiera Data"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "End of Session"
+msgstr "Saioaren amaiera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_register_balance_end_real
+msgid "Ending Balance"
+msgstr "Amaiera balantzea"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_category.py:13
+#, python-format
+msgid "Error ! You cannot create recursive categories."
+msgstr "Errorea! Ezin duzu errekurtsibitate kategoriak sortu."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1369
+#, python-format
+msgid "Error: Could not Save Changes"
+msgstr "Errorea: Ezin izan dira aldaketak gorde"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:257
+#, python-format
+msgid "Error: The Point of Sale User must belong to the same company as the Point of Sale. You are probably trying to load the point of sale as an administrator in a multi-company setup, with the administrator account set to the wrong company."
+msgstr "Errorea: Salmenta-puntuaren Erabiltzaileak Salmenta-puntuaren enpresa berekoa izan behar du. Seguruenik, salmenta-puntua administratzaile gisa kargatzen saiatzen ari zara enpresa anitzeko konfigurazio batean, administratzaile-kontua enpresa okerrean ezarrita."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1358
+#, python-format
+msgid "Export Paid Orders"
+msgstr "Ordaindutako eskaerak esportatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1360
+#, python-format
+msgid "Export Unpaid Orders"
+msgstr "Ordaindu gabeko eskaerak esportatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Extra Info"
+msgstr "Informazio gehigarria"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1212
+#, python-format
+msgid "Finished Importing Orders"
+msgstr "Eskaerak inportatzen bukatu da"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__fiscal_position_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Fiscal Position"
+msgstr "Posizio fiskala"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Fiscal Position per Order"
+msgstr "Eskaeren posizioa fiskala"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__fiscal_position_ids
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Fiscal Positions"
+msgstr "Posizio fiskalak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Footer"
+msgstr "Oina"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_big_scrollbars
+msgid "For imprecise industrial touchscreens."
+msgstr "Ukipen-pantaila industrial ez zehatzetarako"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "General Information"
+msgstr "Informazio Orokorra"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Generation of your order references"
+msgstr "Zure eskaeraren erreferentziak sortzea"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Get one journal item per product rather than one journal item per receipt line. This works for any anonymous order. If the customer is set on the order, one journal item is created for each receipt line. This option is recommended for an easy review of your journal entries when managing lots of orders."
+msgstr "Sortu aldizkari-elementu bat produktu bakoitzeko, errezibo-lerro bakoitzeko aldizkari-elementu bat baino. Horrek edozein eskaera anonimotarako balio du. Bezeroa eskaeran ezarrita badago, egunkari-elementu bat sortzen da ordainagiri-lerro bakoitzeko. Aukera hau gomendatzen da zure aldizkariko sarrerak erraz berrikusteko eskaera asko kudeatzen dituzunean."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Give customer rewards, free samples, etc."
+msgstr "Eman bezeroei sariak, doako laginak, etab."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_category__sequence
+msgid "Gives the sequence order when displaying a list of product categories."
+msgstr "Produktu kategorien zerrenda bistaratzen duen sekuentzia ordena ematen du."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_pos_discount
+msgid "Global Discounts"
+msgstr "Deskontu globalak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Group By"
+msgstr "Taldekatu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__group_by
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Group Journal Items"
+msgstr "Egunerokoaren apunteak taldekatu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_uom_category__is_pos_groupable
+#: model:ir.model.fields,field_description:point_of_sale.field_uom_uom__is_pos_groupable
+msgid "Group Products in POS"
+msgstr "Produktuak taldekatu saltokian"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:142
+#, python-format
+msgid "HTTPS connection to IoT Box failed"
+msgstr "HTTPS konexioa IoT Box-era huts egin du"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1373
+#, python-format
+msgid "Hardware Events"
+msgstr "Hardware-gertaerak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1368
+#, python-format
+msgid "Hardware Status"
+msgstr "Hardware egoera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_control
+msgid "Has Cash Control"
+msgstr "Eskudiruaren Kontrola izan"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Header"
+msgstr "Goiburua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__is_header_or_footer
+msgid "Header & Footer"
+msgstr "Goiburua eta oina"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:207
+#, python-format
+msgid "Home"
+msgstr "Hasiera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_invoice__id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_saledetails__id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__id
+msgid "ID"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/popups.js:115
+#, python-format
+msgid "IMPORTANT: Bug Report From Odoo Point Of Sale"
+msgstr "GARRANTZITSUA: Odoo Saltokiko errore-txostena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__proxy_ip
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "IP Address"
+msgstr "IP helbidea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__use_existing_lots
+msgid "If this is checked, you will be able to choose the Lots/Serial Numbers. You can also decide to not put lots in this operation type.  This means it will create stock with no lot or not put a restriction on the lot taken. "
+msgstr "Hau markatuta badago, lote/serie zenbakiak hautatzeko aukera izango duzu. Eragiketa honetan loterik ez erabiltzea ere erabaki dezakezu. Honek esan nahi du kantitateak sortuko direla lote gabe eta baita ere hartu ahalko direla loteaz arduratu gabe."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__image
+msgid "Image"
+msgstr "Irudia"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1362
+#, python-format
+msgid "Import Orders"
+msgstr "Eskaerak inportatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Improve navigation for imprecise industrial touchscreens"
+msgstr "Hobetu nabigazioa ukipen-pantaila industrial ez zehatzetan"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: selection:pos.session,state:0
+msgid "In Progress"
+msgstr "Lanean"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:701
+#, python-format
+msgid "In order to delete a sale, it must be new or cancelled."
+msgstr "Eskaera bat ezabatzeko, berria edo ezetatuta egon behar du."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_search
+msgid "Inactive"
+msgstr "Ez-aktibo"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:277
+#, python-format
+msgid "Incorrect Password"
+msgstr "Pasahitz okerra"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_start_categ_id
+msgid "Initial Category"
+msgstr "Hasierako kategoria"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_pos_mercury
+#: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__module_pos_mercury
+msgid "Integrated Card Payments"
+msgstr ""
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.product_category_action
+msgid "Internal Categories"
+msgstr "Txartelaren ordainketa integratua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__note
+msgid "Internal Notes"
+msgstr "Barne oharrak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1274
+#, python-format
+msgid "Invalid product lot"
+msgstr "Produktu lote okerra"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Inventory"
+msgstr "Inbentarioa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:684
+#: model:ir.actions.report,name:point_of_sale.pos_invoice_report
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__invoice_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#, python-format
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__invoice_journal_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Invoice Journal"
+msgstr "Fakturen aldizkaria"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Faktura lerroa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__invoiced
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+#: selection:pos.order,state:0
+#: selection:report.pos.order,state:0
+msgid "Invoiced"
+msgstr "Fakturatuta"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_account
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__invoice_group
+msgid "Invoicing"
+msgstr "Fakturazioa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "IoT Box"
+msgstr ""
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_pos_restaurant
+msgid "Is a Bar/Restaurant"
+msgstr "Taberna/Jatetxe bat da"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__is_installed_account_accountant
+msgid "Is the Full Accounting Installed"
+msgstr "Kontabilitatea osoa instalatuta al dago"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_account_bank_statement__account_id
+msgid "It acts as a default account for debit amount"
+msgstr "Zordunketa-kopuruaren kontu lehenetsi gisa jokatzen du"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/account_tax.py:23
+#, python-format
+msgid "It is forbidden to modify a tax used in a POS order not posted. You must close the POS sessions before modifying the tax."
+msgstr "Debekatuta dago argitaratu gabeko saltokiko eskaera batean erabilitako zerga aldatzea. Zerga aldatu aurretik POS saioak itxi behar dituzu. "
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_journal
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__journal_id
+msgid "Journal"
+msgstr "Egunkaria"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__account_move
+msgid "Journal Entry"
+msgstr "Egunkari-sarrera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_digest_digest__kpi_pos_total_value
+msgid "Kpi Pos Total Value"
+msgstr "Saltokiko KPI balio totala"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_big_scrollbars
+msgid "Large Scrollbars"
+msgstr "Scroll-barra handiak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_invoice____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_point_of_sale_report_saledetails____last_update
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order____last_update
+msgid "Last Modified on"
+msgstr "Azken aldaketa noiz"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__last_session_closing_cash
+msgid "Last Session Closing Cash"
+msgstr "Azken saioko itxierako eskudirua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__last_session_closing_date
+msgid "Last Session Closing Date"
+msgstr "Azken saioko itxierako data"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__write_uid
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__write_uid
+msgid "Last Updated by"
+msgstr "Azkenengoz eguneratu zuena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_open_statement__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__write_date
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__write_date
+msgid "Last Updated on"
+msgstr "Azken eguneraketa noiz"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "Led Lamp"
+msgstr "Led-lanpara"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__name
+msgid "Line No"
+msgstr "Lerro zk."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/wizard/pos_open_statement.py:33
+#, python-format
+msgid "List of Cash Registers"
+msgstr "Kutxa erregistroen zerrenda"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:545
+#: code:addons/point_of_sale/static/src/xml/pos.xml:38
+#, python-format
+msgid "Loading"
+msgstr "Kargatzen"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__location_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__location_id
+msgid "Location"
+msgstr "Kokapena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__login_number
+msgid "Login Sequence Number"
+msgstr "Saioa hasteko sekuentzia zenbakia"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:304
+#, python-format
+msgid "Login as a Manager"
+msgstr "Hasi saioa kudeatzaile gisa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:8
+#: code:addons/point_of_sale/static/src/xml/pos.xml:737
+#: code:addons/point_of_sale/static/src/xml/pos.xml:902
+#, python-format
+msgid "Logo"
+msgstr "Logoa"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Lot"
+msgstr "Lotea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__lot_name
+msgid "Lot Name"
+msgstr "Lote izena"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:2434
+#, python-format
+msgid "Lot/Serial Number(s) Required"
+msgstr "Lote/Serie zenbakia(k) beharrezkoa(k)"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__pack_lot_ids
+msgid "Lot/serial Number"
+msgstr "Lote/Serie zenbakia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_pos_loyalty
+msgid "Loyalty Program"
+msgstr "Fidelizazio programa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Loyalty program to use for this point of sale."
+msgstr "Saltoki honetan erabiliko den fidelizazio programa."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_payment
+msgid "Make Payment"
+msgstr "Ordaindu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__available_pricelist_ids
+msgid "Make several pricelists available in the Point of Sale. You can also apply a pricelist to specific customers from their contact form (in Sales tab). To be valid, this pricelist must be listed here as an available pricelist. Otherwise the default pricelist will apply."
+msgstr "Salmenta puntuan hainbat prezio-zerrenda eskuragarri jarri. Prezio-zerrenda bat ere aplika diezaiekezu bezero zehatzei beren harremanetarako formulariotik (Salmentak fitxan). Baliozkoa izateko, prezio-zerrenda hau hemen zerrendatu behar da eskuragarri dagoen prezio-zerrenda gisa. Bestela, prezio-zerrenda lehenetsia aplikatuko da."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:144
+#, python-format
+msgid "Make sure you are using IoT Box v18.12 or higher. Navigate to %s to accept the certificate of your IoT Box."
+msgstr "Ziurtatu IoT Box v18.12 edo berriagoa erabiltzen ari zarela. Nabigatu %s-era zure IoT Box-aren ziurtagiria onartzeko."
+
+#. module: point_of_sale
+#: model:res.groups,name:point_of_sale.group_pos_manager
+msgid "Manager"
+msgstr "Kudeatzailea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__image_medium
+msgid "Medium-sized image"
+msgstr "Irudi ertaina"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_category__image_medium
+msgid "Medium-sized image of the category. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Kategoriaren tamaina ertaineko irudia. Automatikoki tamainaz aldatzen da 128x128px irudi gisa, aspektu-erlazioa gordeta. Erabili eremu hau inprimaki-bistetan edo kanban-en bista batzuetan."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:553
+#, python-format
+msgid "Method"
+msgstr "Metodo"
+
+#. module: point_of_sale
+#: model:product.product,name:point_of_sale.product_product_consumable
+#: model:product.template,name:point_of_sale.product_product_consumable_product_template
+msgid "Miscellaneous"
+msgstr "Askotarikoa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "Monitor Stand"
+msgstr "Monitorearen standa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__pos_sales_price
+msgid "Multiple Product Prices"
+msgstr "Produktuen hainbat prezio"
+
+#. module: point_of_sale
+#: selection:res.config.settings,pos_pricelist_setting:0
+msgid "Multiple prices per product (e.g. customer segments, currencies)"
+msgstr "Hainbat prezio produktu bakoitzeko (adibidez, bezeroen segmentazioa, moneta)"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "My Sales"
+msgstr "Nire erosketak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:419
+#: code:addons/point_of_sale/static/src/xml/pos.xml:428
+#: code:addons/point_of_sale/static/src/xml/pos.xml:437
+#: code:addons/point_of_sale/static/src/xml/pos.xml:448
+#: code:addons/point_of_sale/static/src/xml/pos.xml:457
+#: code:addons/point_of_sale/static/src/xml/pos.xml:466
+#, python-format
+msgid "N/A"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:339
+#: code:addons/point_of_sale/static/src/xml/pos.xml:510
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__name
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+#, python-format
+msgid "Name"
+msgstr "Izena"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: selection:pos.order,state:0
+#: selection:report.pos.order,state:0
+msgid "New"
+msgstr "Berria"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "New Session"
+msgstr "Saio berria"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1434
+#, python-format
+msgid "New order"
+msgstr "Eskaera berria"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:709
+#, python-format
+msgid "Next Order"
+msgstr "Hurrengo eskaera"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1284
+#, python-format
+msgid "No Taxes"
+msgstr "Zergarik gabe"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:147
+#, python-format
+msgid "No cash statement found for this session. Unable to record returned cash."
+msgstr "Ez da aurkitu saio honetarako diru-agiririk. Ezin da itzulitako dirua erregistratu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/report/pos_invoice.py:25
+#, python-format
+msgid "No link to an invoice for %s."
+msgstr "Ez dago %s-ren fakturarako estekarik."
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_pos_form
+msgid "No orders found"
+msgstr "Ez da eskaerarik aurkitu"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:192
+#, python-format
+msgid "No payment method configured! \n"
+"Either no Chart of Account is installed or no payment method is configured for this POS."
+msgstr "Ez dago konfiguratu ordainketa-metodorik! \n"
+"Edo ez dago kontu-planik instalatuta edo ez dago ordainketa-metodorik konfiguratuta saltoki honetarako."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/wizard/pos_open_statement.py:24
+#, python-format
+msgid "No sequence defined on the journal"
+msgstr "Aldizkarian ez da sekuentziarik definitu"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_session
+msgid "No sessions found"
+msgstr "Ez da saiorik aurkitu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2193
+#: code:addons/point_of_sale/static/src/xml/pos.xml:361
+#, python-format
+msgid "None"
+msgstr "Hutsa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Not Invoiced"
+msgstr "Fakturatu gabe"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Notes"
+msgstr "Oharrak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__nb_print
+msgid "Number of Print"
+msgstr "Copia kopurua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "Odoo Logo"
+msgstr "Odoo logoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:403
+#, python-format
+msgid "Offline"
+msgstr "Deskonektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:336
+#, python-format
+msgid "Offline Orders"
+msgstr "Deskonektatutako eskaerak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:989
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1003
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1017
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1046
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1077
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1106
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1123
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1201
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1237
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:513
+#, python-format
+msgid "One or more product(s) required serial/lot number."
+msgstr "Produktu bat edo gehiago serie/lote-zenbakia behar dute."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__restrict_price_control
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Only users with Manager access rights for PoS app can modify the product prices on orders."
+msgstr "Saltoki aplikaziorako kudeatzaile eskubideak dituzten erabiltzaileek soilik alda ditzakete produktuen prezioak eskaeretan."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1429
+#, python-format
+msgid "Only web-compatible Image formats such as .png or .jpeg are supported"
+msgstr "Webarekin bateragarriak diren .png edo .jpeg bezalako irudi formatuak soilik onartzen dira "
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+msgid "Open"
+msgstr "Irekita"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_open_statement
+msgid "Open Cash Register"
+msgstr "Ireki kutxazain erregistratzailea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:695
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1375
+#, python-format
+msgid "Open Cashbox"
+msgstr "Ireki kutxa"
+
+#. module: point_of_sale
+#: model:ir.actions.client,name:point_of_sale.action_client_pos_menu
+msgid "Open POS Menu"
+msgstr "Ireki saltoki menua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_open_statement
+msgid "Open Registers"
+msgstr "Ireki kutxazain erregistratzaileak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Open Session"
+msgstr "Saioa ireki"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.act_pos_open_statement
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_open_statement
+msgid "Open Statements"
+msgstr "Adierazpenak ireki"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Opening Balance"
+msgstr "Balantzea ireki"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#: selection:pos.session,state:0
+msgid "Opening Control"
+msgstr "Irekiera kontrola"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__start_at
+msgid "Opening Date"
+msgstr "Irekiera data"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.account_cashbox_line_action
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Opening/Closing Values"
+msgstr "Irekiera/Itxiera balioak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__picking_type_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__picking_type_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Operation Type"
+msgstr "Eragiketa mota"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Operation type used to record product pickings"
+msgstr "Produktuen bilketak erregistratzeko erabiltzen den eragiketa mota"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Operation types show up in the Inventory dashboard."
+msgstr "Eragiketa motak Inbentarioaren panelean agertzen dira."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:311
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__order_id
+#, python-format
+msgid "Order"
+msgstr "Eskaera"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:2026
+#: code:addons/point_of_sale/static/src/js/models.js:2066
+#, python-format
+msgid "Order "
+msgstr "Eskaera "
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__date_order
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__date
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Order Date"
+msgstr "Eskaera data"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__sequence_id
+msgid "Order IDs Sequence"
+msgstr "Eskaera ID sekuentzia"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Order Interface"
+msgstr "Eskaera interfazea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__sequence_line_id
+msgid "Order Line IDs Sequence"
+msgstr "Eskaera lerro ID sekuentzia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__lines
+msgid "Order Lines"
+msgstr "Eskaera lerroak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__name
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__order_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__order_id
+msgid "Order Ref"
+msgstr "Eskaera erref."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__sequence_number
+msgid "Order Sequence Number"
+msgstr "Eskaera sekuentzia zenbakia"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:731
+#, python-format
+msgid "Order is not paid."
+msgstr "Eskaera ez da ordaindu."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Order lines"
+msgstr "Eskaera lerroak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1353
+#: model:ir.actions.act_window,name:point_of_sale.act_pos_session_orders
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_filtered
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_pos_form
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_sale_graph
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__order_ids
+#: model:ir.ui.menu,name:point_of_sale.menu_point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.menu_point_ofsale
+#: model:ir.ui.menu,name:point_of_sale.menu_report_pos_order_all
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+#, python-format
+msgid "Orders"
+msgstr "Eskaerak"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_report_pos_order_all
+#: model:ir.actions.act_window,name:point_of_sale.action_report_pos_order_all_filtered
+msgid "Orders Analysis"
+msgstr "Eskaeren analisia"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.account_journal_action_point_of_sale
+msgid "POS Journals"
+msgstr "Saltoki egunkariak"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:351
+#, python-format
+msgid "POS Order %s"
+msgstr "Saltokiko %s eskaera"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_line_form
+msgid "POS Order line"
+msgstr "Saltoki eskaera lerroa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
+msgid "POS Order lines"
+msgstr "Saltoki eskaera lerroak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree
+msgid "POS Orders"
+msgstr "Saltoki eskaerak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_tree_all_sales_lines
+msgid "POS Orders lines"
+msgstr "Saltoki eskaera lerroak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__pos_pricelist_setting
+msgid "POS Pricelists"
+msgstr "Saltoki prezio-zerrendak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_digest_digest__kpi_pos_total
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_partner_property_form
+msgid "POS Sales"
+msgstr "Saltoki salmentak"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:360
+#, python-format
+msgid "POS order line %s"
+msgstr "Saltokiko %s eskaera lerroa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_line__pos_statement_id
+msgid "POS statement"
+msgstr "Saltoki adierazpena"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Package"
+msgstr "Paketea"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__amount_paid
+#: selection:pos.order,state:0
+#: selection:report.pos.order,state:0
+msgid "Paid"
+msgstr "Ordainduta"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__parent_id
+msgid "Parent Category"
+msgstr "Goi kategoria"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:335
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+#, python-format
+msgid "Partner"
+msgstr "Kidea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:405
+#, python-format
+msgid "Partner logo"
+msgstr "Bezeroaren logoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:274
+#, python-format
+msgid "Password ?"
+msgstr "Pazahitza?"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:151
+#, python-format
+msgid "Pay"
+msgstr "Ordaindu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_payment
+msgid "Pay Order"
+msgstr "Eskaera ordaindu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:150
+#: code:addons/point_of_sale/static/src/xml/pos.xml:649
+#: code:addons/point_of_sale/wizard/pos_payment.py:68
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_payment
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#, python-format
+msgid "Payment"
+msgstr "Ordainketa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__payment_date
+msgid "Payment Date"
+msgstr "Ordainketa data"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_account_journal_form
+#: model:ir.ui.menu,name:point_of_sale.menu_action_account_journal_form_open
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Payment Methods"
+msgstr "Ordainketa metodoak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__journal_id
+msgid "Payment Mode"
+msgstr "Ordainketa metodoa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__payment_name
+msgid "Payment Reference"
+msgstr "Ordainketa erreferentzia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_payment_terminal
+msgid "Payment Terminal"
+msgstr "Ordainketa terminala"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_account_journal_form
+msgid "Payment methods are defined by accounting journals having the\n"
+"                field <i>PoS Payment Method</i> checked. In order to be useable\n"
+"                from the touchscreen interface, you must set the payment method\n"
+"                on the <i>Point of Sale</i> configuration."
+msgstr "Ordainketa-metodoak <i>Saltoki ordainketa metodoa</i> eremua\n"
+"autatuta duten kontabilitate aldizkariek definitzen dituzte.\n"
+"Ukipen-pantailako interfazetik erabilgarri izateko, ordainketa-metodoa\n"
+"ezarri behar duzu <i>Salmenta-puntuan</i. > ezarpenak."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Payment methods available"
+msgstr "Eskuragarri dauden ordainketa metodoak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__statement_ids
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Payments"
+msgstr "Ordainketak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:940
+#, python-format
+msgid "Payments:"
+msgstr "Ordainketak:"
+
+#. module: point_of_sale
+#: model:ir.filters,name:point_of_sale.filter_orders_per_session
+msgid "Per session"
+msgstr "Saioka"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_order__user_id
+msgid "Person who uses the cash register. It can be a reliever, a student or an interim employee."
+msgstr "Kutxa erregistratzailea erabiltzen duen pertsona. Ordezkoa, ikaslea edo behin-behineko langilea izan daiteke."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:376
+#: code:addons/point_of_sale/static/src/xml/pos.xml:432
+#: code:addons/point_of_sale/static/src/xml/pos.xml:512
+#, python-format
+msgid "Phone"
+msgstr "Telefonoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1454
+#, python-format
+msgid "Phone:"
+msgstr "Telefonoa:"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__picking_id
+msgid "Picking"
+msgstr "Albarana"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__picking_count
+msgid "Picking Count"
+msgstr "Albaran kopurua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Picking Errors"
+msgstr "Albaran erroreak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:332
+#, python-format
+msgid "Picture"
+msgstr "Irudia"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2117
+#, python-format
+msgid "Please Confirm Large Amount"
+msgstr "Mesedez, berretsi kopuru handia"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/models.js:1939
+#, python-format
+msgid "Please configure a payment method in your POS."
+msgstr "Mesedez, konfiguratu ordainketa-metodo bat zure saltokian."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:371
+#, python-format
+msgid "Please define income account for this product: \"%s\" (id:%d)."
+msgstr "Mesedez, zehaztu diru-sarreren kontua produktu honetarako: \"%s\" (id:%d)."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:210
+#, python-format
+msgid "Please print the invoice from the backend"
+msgstr "Mesedez, inprimatu faktura backend-etik"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:744
+#, python-format
+msgid "Please provide a partner for the sale."
+msgstr "Mesedez, hautatu bezero bat salmentarako."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:533
+#, python-format
+msgid "Please select a payment method."
+msgstr "Mesedez, hautatu ordainketa metodo bat."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:202
+#, python-format
+msgid "Please select the Customer"
+msgstr "Mesedez, hautatu Bezeroa"
+
+#. module: point_of_sale
+#: model:product.category,name:point_of_sale.product_category_pos
+msgid "PoS"
+msgstr "Saltokia"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.product_pos_category_action
+#: model:ir.ui.menu,name:point_of_sale.menu_products_pos_category
+msgid "PoS Categories"
+msgstr "Saltoki kategoriak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__pos_categ_id
+msgid "PoS Category"
+msgstr "Saltoki kategoria"
+
+#. module: point_of_sale
+#: model:stock.picking.type,name:point_of_sale.picking_type_posout
+msgid "PoS Orders"
+msgstr "Saltoki eskaera"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.product_template_form_view
+msgid "Point Of Sale"
+msgstr "Saltokia"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_config_kanban
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_config_pos
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__config_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__config_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__config_id
+#: model:ir.ui.menu,name:point_of_sale.menu_point_root
+#: model:ir.ui.menu,name:point_of_sale.menu_pos_config_pos
+#: model_terms:ir.ui.view,arch_db:point_of_sale.digest_digest_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_users_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_account_bank_journal_form_inherited_pos
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_account_journal_pos_user_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Point of Sale"
+msgstr "Saltokia"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_graph
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_pivot
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Point of Sale Analysis"
+msgstr "Saltokiaren azterketa"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_category
+#: model:ir.model.fields,field_description:point_of_sale.field_product_product__pos_categ_id
+#: model:ir.model.fields,field_description:point_of_sale.field_product_template__pos_categ_id
+msgid "Point of Sale Category"
+msgstr "Kategorien saltokia"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_search
+msgid "Point of Sale Config"
+msgstr "Saltokien konfigurazioa"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_config
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_tree
+msgid "Point of Sale Configuration"
+msgstr "Saltokien konfigurazioa"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_report_point_of_sale_report_saledetails
+msgid "Point of Sale Details"
+msgstr "Saltoki xehetasunak"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_details_wizard
+msgid "Point of Sale Details Report"
+msgstr "Saltoki xehetasun txostena"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_report_point_of_sale_report_invoice
+msgid "Point of Sale Invoice Report"
+msgstr "Saltoki factura txostena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__group_pos_manager_id
+msgid "Point of Sale Manager Group"
+msgstr "Talde administratzailearen salmenta puntua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__name
+msgid "Point of Sale Name"
+msgstr "Saltokiaren izena"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_open_statement
+msgid "Point of Sale Open Statement"
+msgstr "Saltokiaren kontu irekiaren egoera"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Saltokiaren eskaera lerroak"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_order
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_search
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Point of Sale Orders"
+msgstr "Saltokiko eskaerak"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_report_pos_order
+msgid "Point of Sale Orders Report"
+msgstr "Saltoki eskaeren txostena"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_make_payment
+msgid "Point of Sale Payment"
+msgstr "Saltokiaren ordainketak"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_session
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_tree
+msgid "Point of Sale Session"
+msgstr "Saltoki saioa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__group_pos_user_id
+msgid "Point of Sale User Group"
+msgstr "Saltoki erabiltzaile taldea"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.product_pos_category_form_view
+msgid "Pos Categories"
+msgstr "Saltoki kategoriak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__pos_config_ids
+msgid "Pos Config"
+msgstr "Saltoki konfig"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_res_partner__pos_order_count
+#: model:ir.model.fields,field_description:point_of_sale.field_res_users__pos_order_count
+msgid "Pos Order Count"
+msgstr "Saltoki eskaera kopurua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__pos_order_line_id
+msgid "Pos Order Line"
+msgstr "Saltoki eskaera lerroa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__pos_session_duration
+msgid "Pos Session Duration"
+msgstr "Saltoki saioaren iraupena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__pos_session_state
+msgid "Pos Session State"
+msgstr "Saltoki saioaren egoera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__pos_session_username
+msgid "Pos Session Username"
+msgstr "Saltoki saioaren erabiltzaile izena"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__is_posbox
+msgid "PosBox"
+msgstr "PosBox"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:355
+#, python-format
+msgid "Postcode"
+msgstr "Posta-kodea"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: selection:pos.order,state:0
+#: selection:report.pos.order,state:0
+msgid "Posted"
+msgstr "Argitaratuta"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_precompute_cash
+msgid "Prefill Cash Payment"
+msgstr "Aurrez bete eskudiru ordainketa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Prefill amount paid with the exact due amount"
+msgstr "Ordaindutako zenbatekoa bete behar den zenbatekoarekin osatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:173
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+#, python-format
+msgid "Price"
+msgstr "Prez."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Price Control"
+msgstr "Prezio kontrola"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "Price Unit"
+msgstr "Prezio unitatea"
+
+#. module: point_of_sale
+#: selection:res.config.settings,pos_pricelist_setting:0
+msgid "Price computed from formulas (discounts, margins, roundings)"
+msgstr "Formuletatik kalkulatutako prezioa (deskontuak, marjinak, biribilketak)"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:134
+#, python-format
+msgid "Price list"
+msgstr "Prezio-lista"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Priced Product"
+msgstr "Preziodun produktua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2281
+#: code:addons/point_of_sale/static/src/xml/pos.xml:388
+#: code:addons/point_of_sale/static/src/xml/pos.xml:461
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__pricelist_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__pricelist_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#, python-format
+msgid "Pricelist"
+msgstr "Prezio-zerrenda"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.pos_config_menu_action_product_pricelist
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Pricelists"
+msgstr "Prezio-zerrendak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Pricing"
+msgstr "Prezioak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:90
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_details_wizard
+#, python-format
+msgid "Print"
+msgstr "Inprimatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:717
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1376
+#, python-format
+msgid "Print Receipt"
+msgstr "Fakturak inprimatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Print invoices on customer request"
+msgstr "Fakturak inprimatu bezeroak eskatuta"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Print receipts automatically once the payment is registered"
+msgstr "Fakturak inprimatu zuzenean ordainketa egitean"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_print_via_proxy
+msgid "Print via Proxy"
+msgstr "Proxi bitartez inprimatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:391
+#, python-format
+msgid "Printer"
+msgstr "Inprimagailua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/devices.js:437
+#, python-format
+msgid "Printing Error: "
+msgstr "Errorea inprimatzean: "
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1643
+#, python-format
+msgid "Printing is not supported on some android browsers"
+msgstr "Android nabegador batzuetan ez da inprimatzea onartzen"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1644
+#, python-format
+msgid "Printing is not supported on some android browsers due to no default printing protocol is available. It is possible to print your tickets by making use of an IoT Box."
+msgstr "Android nabegador batzuetan ez da inprimatzea onartzen, ez baitago erabilgarri inprimatzeko protokolo lehenetsirik. Zure sarrerak inprimatu daitezke IoT Box bat erabiliz."
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_product_product
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__product_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_pack_operation_lot__product_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__product_id
+#: model:ir.ui.menu,name:point_of_sale.pos_config_menu_catalog
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Product"
+msgstr "Produktua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__product_categ_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Product Category"
+msgstr "Produktu Kategoria"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Product Prices"
+msgstr "Produktu prezioa"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.product_pos_category_tree_view
+msgid "Product Product Categories"
+msgstr "Produktu produktu kategoriak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__product_qty
+msgid "Product Quantity"
+msgstr "Produktu kantitatea"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_product_template
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__product_tmpl_id
+msgid "Product Template"
+msgstr "Produktuaren txantiloia"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Produktuaren Neurketa Unitatea"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_uom_category
+msgid "Product UoM Categories"
+msgstr "Produktu neurri unitate kategoriak"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.product_product_action
+#: model:ir.ui.menu,name:point_of_sale.pos_config_menu_action_product_product
+msgid "Product Variants"
+msgstr "Produktuaren aldaerak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1248
+#, python-format
+msgid "Product image"
+msgstr "Produktu irudia"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Product prices on receipts"
+msgstr "Produktuen prezioak agirietan"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_tipproduct
+msgid "Product tips"
+msgstr "Produktuen eskupekoak"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.product_template_action_pos_product
+#: model:ir.ui.menu,name:point_of_sale.menu_pos_products
+#: model:ir.ui.menu,name:point_of_sale.pos_menu_products_configuration
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Products"
+msgstr "Produktuak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:73
+#, python-format
+msgid "Proxy Connected"
+msgstr "Proxy-a konektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:82
+#, python-format
+msgid "Proxy Disconnected"
+msgstr "Proxy-a deskonektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:79
+#, python-format
+msgid "Proxy Warning"
+msgstr "Proxy abisua"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_box_in
+msgid "Put Money In"
+msgstr "Jarri dirua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:163
+#, python-format
+msgid "Qty"
+msgstr "Zenb"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__qty
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "Quantity"
+msgstr "Kopurua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1377
+#, python-format
+msgid "Read Weighing Scale"
+msgstr "Irakurri Balantza"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/tour.js:14
+#: code:addons/point_of_sale/static/src/js/tour.js:19
+#, python-format
+msgid "Ready to launch your <b>point of sale</b>? <i>Click here</i>."
+msgstr "Zure <b>saltokia</b> abiarazteko prest? <i>Egin klik hemen</i>."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Real Closing Balance"
+msgstr "Itxiera balantze erreala"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__receipt_footer
+msgid "Receipt Footer"
+msgstr "Ordainagiri-oina"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__receipt_header
+msgid "Receipt Header"
+msgstr "Ordainagiri goiburua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Receipt Printer"
+msgstr "Ordainagiri inprimagailua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__pos_reference
+msgid "Receipt Ref"
+msgstr "Ordainagiri erref"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__rescue
+msgid "Recovery Session"
+msgstr "Errekuperazio saioa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1371
+#, python-format
+msgid "Refresh Display"
+msgstr "Pantaila eguneratu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1101
+#, python-format
+msgid "Remove"
+msgstr "Ezabatu"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.menu_point_rep
+msgid "Reporting"
+msgstr "Txostenak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_pos_reprint
+msgid "Reprint Receipt"
+msgstr "Ordainagiria berinprimatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1343
+#, python-format
+msgid "Reset"
+msgstr "Berrezarri"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__user_id
+msgid "Responsible"
+msgstr "Arduraduna"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__restrict_price_control
+msgid "Restrict Price Modifications to Managers"
+msgstr "Prezio aldaketak arduradunetara mugatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Restrict price modification to managers"
+msgstr "Prezio aldaketak arduradunetara mugatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "Resume"
+msgstr "Jarraitu"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1082
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+#, python-format
+msgid "Return Products"
+msgstr "Produktuak itzuli"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__amount_return
+msgid "Returned"
+msgstr "Itzulita"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__nbr_lines
+msgid "Sale Line Count"
+msgstr "Salmenta lerro kontagailua"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line_day
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line_form
+msgid "Sale line"
+msgstr "Salmenta lerroa"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_report_pos_details
+#: model:ir.actions.report,name:point_of_sale.sale_details_report
+#: model:ir.ui.menu,name:point_of_sale.menu_report_order_details
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_details_wizard
+msgid "Sales Details"
+msgstr "Salmenta xehetasunak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__journal_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__sale_journal
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Sales Journal"
+msgstr "Salmenta aldizkaria"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "Sales Orders"
+msgstr "Salmenta eskaerak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__user_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__user_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
+msgid "Salesperson"
+msgstr "Saltzailea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:342
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+#, python-format
+msgid "Save"
+msgstr "Gorde"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Save this configuration to see and edit the customer display"
+msgstr "Gorde konfigurazio hau bezeroaren pantaila ikusteko eta editatzeko"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:399
+#, python-format
+msgid "Scale"
+msgstr "Eskala"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1349
+#, python-format
+msgid "Scan"
+msgstr "Eskaneatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1350
+#, python-format
+msgid "Scan EAN-13"
+msgstr "Eskaneatu EAN-13"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_scan_via_proxy
+msgid "Scan via Proxy"
+msgstr "Proxy bitartez eskaneatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:382
+#, python-format
+msgid "Scanner"
+msgstr "Eskanerra"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:483
+#, python-format
+msgid "Search Customers"
+msgstr "Bezeroak bilatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:220
+#, python-format
+msgid "Search Products"
+msgstr "Produktuak bilatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+msgid "Search Sales Order"
+msgstr "Salmenta eskaerak bilatu"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_res_users__pos_security_pin
+msgid "Security PIN"
+msgstr "Segurtasun PINa"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/res_users.py:15
+#, python-format
+msgid "Security PIN can only contain digits"
+msgstr "Segurtasun PINa zenbakiak soilik izan ditzake"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:491
+#, python-format
+msgid "Select Customer"
+msgstr "Bezeroa aukeratu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:247
+#, python-format
+msgid "Select User"
+msgstr "Erabiltzailea aukeratu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2269
+#, python-format
+msgid "Select pricelist"
+msgstr "Prezio-lista aukeratu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2204
+#, python-format
+msgid "Select tax"
+msgstr "Zerga aukeratu"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:260
+#, python-format
+msgid "Selected orders do not have the same session!"
+msgstr "Hautatutako eskaerak ez dute saio bera!"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Sell in several currencies"
+msgstr "Hainbat monetatan saldu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1027
+#, python-format
+msgid "Send by email"
+msgstr "Epostaz bidalia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__sequence
+msgid "Sequence"
+msgstr "Sekuentzia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__sequence_number
+msgid "Sequence Number"
+msgstr "Sekuentzia zenbakia"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1100
+#, python-format
+msgid "Serial/Lot Number"
+msgstr "Serie/Lote zenbakia"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:769
+#, python-format
+msgid "Served by"
+msgstr "Nork zerbitzatua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:229
+#, python-format
+msgid "Server Error"
+msgstr "Errorea zerbitzarian"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:466
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement__pos_session_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_make_payment__session_id
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__session_id
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__session_id
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+#, python-format
+msgid "Session"
+msgstr "Saioa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__name
+msgid "Session ID"
+msgstr "Saio ID-a"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1226
+#, python-format
+msgid "Session ids:"
+msgstr "Saio ID-ak:"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Session:"
+msgstr "Saioak:"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.act_pos_config_sessions
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_session
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_session_filtered
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__session_ids
+#: model:ir.ui.menu,name:point_of_sale.menu_pos_session_all
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "Sessions"
+msgstr "Saioak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_snippets
+msgid "Set Custom Image..."
+msgstr "Irudi pertsonalizatua ezarri..."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1277
+#, python-format
+msgid "Set Customer"
+msgstr "Bezeroa ezarri"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__start_category
+msgid "Set Start Category"
+msgstr "Hasierako kategoria ezarri"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1342
+#, python-format
+msgid "Set Weight"
+msgstr "Pisua ezarri"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Set barcodes to scan products, customer cards, etc."
+msgstr "Ezarri barra-kodeak produktuak, bezero-txartelak eta abar eskaneatzeko."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:128
+#, python-format
+msgid "Set fiscal position"
+msgstr "Posizio fiskala ezarri"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "Set multiple prices per product, automated discounts, etc."
+msgstr "Ezarri hainbat prezio produktu bakoitzeko, deskontu automatizatuko, etab. "
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Set shop-specific prices, seasonal discounts, etc."
+msgstr "Ezarri dendaren prezio espezifikoak, sasoiko deskontuak, etab."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/pos.web_editor.js:33
+#, python-format
+msgid "Set your customized advertisement here"
+msgstr "Ezarri zure iragarki pertsonalizatua hemen"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_configuration
+#: model:ir.ui.menu,name:point_of_sale.menu_pos_global_settings
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1312
+#, python-format
+msgid "Shopping cart"
+msgstr "Erosketa saskia"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_customer_facing_display
+msgid "Show checkout to customers with a remotely-connected screen."
+msgstr "Erakutsi ordainketa bezeroei urrunetik konektatutako pantaila batekin."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:42
+#, python-format
+msgid "Skip"
+msgstr "Jauzi egin"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_print_skip_screen
+msgid "Skip Preview Screen"
+msgstr "Saltatu aurrebista pantaila"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:212
+#, python-format
+msgid "Slash"
+msgstr "Barra"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_category__image_small
+msgid "Small-sized image"
+msgstr "Tamaina txikiko irudia "
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_category__image_small
+msgid "Small-sized image of the category. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Kategoriaren tamaina txikiko irudia. Automatikoki tamainaz aldatzen da 64x64px irudi gisa, aspektu-erlazioa gordeta. Erabili eremu hau irudi txiki bat behar den toki guztietan."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:324
+#, python-format
+msgid "Some orders could not be submitted to the server due to configuration errors. You can exit the Point of Sale, but do not close the session before the issue has been resolved."
+msgstr "Eskaera batzuk ezin izan dira zerbitzarira bidali konfigurazio-erroreengatik. Saltokitik irten zaitezke, baina ez itxi saioa arazoa konpondu baino lehen."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/gui.js:329
+#, python-format
+msgid "Some orders could not be submitted to the server due to internet connection issues. You can exit the Point of Sale, but do not close the session before the issue has been resolved."
+msgstr "Eskaera batzuk ezin izan dira zerbitzarira bidali Interneteko konexio-arazoak direla eta. Saltokitik irten zaitezke, baina ez itxi saioa arazoa konpondu baino lehen."
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_pos_pack_operation_lot
+msgid "Specify product lot/serial number in pos order line"
+msgstr "Zehaztu produktuaren lote/serie zenbakia saltoki eskaera-lerroan"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__start_date
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+msgid "Start Date"
+msgstr "Hasiera Data"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Start selling from a default product category"
+msgstr "Hasi produktu-kategoria lehenetsi batetik saltzen"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_register_balance_start
+msgid "Starting Balance"
+msgstr "Hasierako balantzea"
+
+#. module: point_of_sale
+#: model:ir.actions.report,name:point_of_sale.action_report_account_statement
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_statement
+msgid "Statement"
+msgstr "Adierazpena"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Statement lines"
+msgstr "Adierazpen lerroak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Statements"
+msgstr "Adierazpenak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__state
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__state
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__state
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
+msgid "Status"
+msgstr "Egoera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__stock_location_id
+msgid "Stock Location"
+msgstr "Stock kokalekua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Stock location used for the inventory"
+msgstr "Stock kokalekua inbentarioa erabiltzeko"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:347
+#: code:addons/point_of_sale/static/src/xml/pos.xml:348
+#, python-format
+msgid "Street"
+msgstr "Kalea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:819
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__price_subtotal_incl
+#, python-format
+msgid "Subtotal"
+msgstr "Guztizko partziala"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__price_subtotal
+msgid "Subtotal w/o Tax"
+msgstr "Guztizko partziala zergarik gabe"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__price_sub_total
+msgid "Subtotal w/o discount"
+msgstr "Guztizko partziala deskonturik gabe"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1493
+#, python-format
+msgid "Subtotal:"
+msgstr "Guztizko partziala:"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1218
+#, python-format
+msgid "Successfully  imported"
+msgstr "Arrakasta inportazioan"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1217
+#, python-format
+msgid "Successfully imported"
+msgstr "Arrakasta inportazioan"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__cash_register_balance_end
+msgid "Sum of opening balance and transactions."
+msgstr "Hasierako saldoaren eta eragiketen batura."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
+msgid "Sum of subtotals"
+msgstr "Guztizko partzialen batura"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Summary by Payment Methods"
+msgstr "Ordainketa metodoen araberako laburpena"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:55
+#, python-format
+msgid "Synchronisation Connected"
+msgstr "Sinkronizazio konektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:58
+#, python-format
+msgid "Synchronisation Connecting"
+msgstr "Sinkronizazio konektatzen"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:61
+#, python-format
+msgid "Synchronisation Disconnected"
+msgstr "Sinkronizazio deskonektatuta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:64
+#, python-format
+msgid "Synchronisation Error"
+msgstr "Sinkronizazio errorea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:832
+#, python-format
+msgid "TOTAL"
+msgstr "GUZTIRA"
+
+#. module: point_of_sale
+#: model:ir.actions.act_window,name:point_of_sale.action_pos_box_out
+msgid "Take Money Out"
+msgstr "Dirua atera"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/models/pos_order.py:415
+#: code:addons/point_of_sale/static/src/js/screens.js:2223
+#: model:ir.model,name:point_of_sale.model_account_tax
+#, python-format
+msgid "Tax"
+msgstr "Zerga"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "Tax Amount"
+msgstr "Zerga kopurua"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_tax_included
+msgid "Tax Display"
+msgstr "Zergen bistaratzea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:384
+#: code:addons/point_of_sale/static/src/xml/pos.xml:452
+#, python-format
+msgid "Tax ID"
+msgstr "Zerga ID"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__tax_regime
+msgid "Tax Regime"
+msgstr "Zerga-posizioa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__tax_regime_selection
+msgid "Tax Regime Selection value"
+msgstr "Zerga-posizioa aukeratzeko balioa"
+
+#. module: point_of_sale
+#: selection:pos.config,iface_tax_included:0
+msgid "Tax-Excluded Price"
+msgstr "Prezioa zergarik gabe"
+
+#. module: point_of_sale
+#: selection:pos.config,iface_tax_included:0
+msgid "Tax-Included Price"
+msgstr "Prezioa zergekin"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__amount_tax
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__tax_ids
+#: model:ir.ui.menu,name:point_of_sale.menu_action_tax_form_open
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
+msgid "Taxes"
+msgstr "Zergak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__tax_ids_after_fiscal_position
+msgid "Taxes to Apply"
+msgstr "Aplikatu beharreko zergak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:954
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1322
+#, python-format
+msgid "Taxes:"
+msgstr "Zergak:"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:749
+#, python-format
+msgid "Tel:"
+msgstr "Tel:"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:551
+#, python-format
+msgid "Tendered"
+msgstr "Lizitatua"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:352
+#, python-format
+msgid "The POS order must have lines when calling this method"
+msgstr "Saltoki eskaerak lerroak izan behar ditu metodo hau deitzean"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1041
+#, python-format
+msgid "The Point of Sale could not find any product, client, employee\n"
+"                    or action associated with the scanned barcode."
+msgstr "Saltokiak ezin izan du eskaneatutako barra-kodearekin\n"
+"lotutako produktu, bezero, langile edo ekintzarik aurkitu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:245
+#, python-format
+msgid "The default pricelist must be included in the available pricelists."
+msgstr "Prezio-zerrenda lehenetsia eskuragarri dauden prezio-zerrendetan sartu behar da."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__proxy_ip
+msgid "The hostname or ip address of the hardware proxy, Will be autodetected if left empty."
+msgstr "Proxy hardwarearen ostalari-izena edo ip helbidea, hutsik geratzen bada automatikoki detektatuko da."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:235
+#, python-format
+msgid "The invoice journal and the point of sale must belong to the same company."
+msgstr "Fakturen egunkariak eta saltokiak enpresa berekoak izan behar dute"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:251
+#, python-format
+msgid "The invoice journal must be in the same currency as the Sales Journal or the company currency if that is not set."
+msgstr "Fakturen aldizkariak Salmenten Aldizkariaren edo konpainiaren moneta berdinean egon behar du hori ezarrita ez badago."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:290
+#, python-format
+msgid "The journal type for your payment method should be bank or cash."
+msgstr "Zure ordainketa-metodoaren aldizkari motak bankua edo eskudirua izan behar du."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:240
+#, python-format
+msgid "The method payments and the point of sale must belong to the same company."
+msgstr "Ordainketa metodoak eta salmenta-puntuak enpresa berekoak izan behar dute."
+
+#. module: point_of_sale
+#: sql_constraint:pos.session:0
+msgid "The name of this POS Session must be unique !"
+msgstr "Saltoki saio honen izenak bakarra izan behar du!"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_res_partner__pos_order_count
+#: model:ir.model.fields,help:point_of_sale.field_res_users__pos_order_count
+msgid "The number of point of sales orders related to this customer"
+msgstr "Bezero honi lotutako salmenta puntuen eskaeren kopurua"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:221
+#, python-format
+msgid "The order could not be sent"
+msgstr "Eskaera ezin izan da bidali"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:235
+#, python-format
+msgid "The order could not be sent to the server due to an unknown error"
+msgstr "Ezin izan da eskaera zerbitzarira bidali errore ezezagun bat dela eta"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:211
+#, python-format
+msgid "The order has been synchronized earlier. Please make the invoice from the backend for the order: "
+msgstr "Eskaera lehenago sinkronizatu da. Mesedez, egin faktura eskaeraren backend-etik: "
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:715
+#, python-format
+msgid "The order has been synchronized earlier. To print the invoice please refer to the order in the backend"
+msgstr "Eskaera lehenago sinkronizatu da. Faktura inprimatzeko, mesedez begiratu backend-eko eskaera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_precompute_cash
+msgid "The payment input will behave similarily to bank payment input, and will be prefilled with the exact due amount."
+msgstr "Ordainketa-sarrerak bankuko ordainketa-sarreraren antzera jokatuko du, eta aurretiaz beteko da behar den zenbateko zehatzarekin."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_order__config_id
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__config_id
+msgid "The physical point of sale you will use."
+msgstr "Erabiliko duzun saltoki fisikoa."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_start_categ_id
+msgid "The point of sale will display this product category by default. If no category is specified, all available products will be shown."
+msgstr "Salmenta puntuak produktu-kategoria hau lehenespenez bistaratuko du. Kategoriarik ez bada zehazten, eskuragarri dauden produktu guztiak erakutsiko dira."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__pricelist_id
+msgid "The pricelist used if no customer is selected or if the customer has no Sale Pricelist configured."
+msgstr "Erabiltzen den prezio-zerrenda bezerorik ez bada hautatzen edo bezeroak ez badu Salmenta prezio-zerrenda konfiguratuta."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_display_categ_images
+msgid "The product categories will be displayed with pictures."
+msgstr "Produktu kategoriak irudiekin bistaratuko dira."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1444
+#, python-format
+msgid "The provided file could not be read due to an unknown error"
+msgstr "Ezin izan da emandako fitxategia irakurri errore ezezagun batengatik"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_print_skip_screen
+msgid "The receipt screen will be skipped if the receipt can be printed automatically."
+msgstr "Ordainagiriaren pantaila saltatu egingo da, ordainagiria automatikoki inprima badaiteke."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__iface_print_auto
+msgid "The receipt will automatically be printed at the end of each order."
+msgstr "Ordainagiria automatikoki inprimatuko da eskaera bakoitzaren amaieran."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:230
+#, python-format
+msgid "The sales journal and the point of sale must belong to the same company."
+msgstr "Salmenta aldizkariak eta saltokiak enpresa berekoak izan behar dute."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:258
+#, python-format
+msgid "The selected pricelists must belong to no company or the company of the point of sale."
+msgstr "Hautatutako prezio-zerrendak enpresa izatekotan saltokiko enpresa izan behar."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:230
+#, python-format
+msgid "The server encountered an error while receiving your order."
+msgstr "Zerbitzariak errore bat aurkitu du zure eskaera jasotzean."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "The session has been opened for an unusually long period. Please consider closing."
+msgstr "Saioa ezohiko epe luzerako ireki da. Mesedez, kontuan hartu ixtea."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:225
+#, python-format
+msgid "The stock location and the point of sale must belong to the same company."
+msgstr "Stock kokapena eta saltokiak enpresa berekoak izan behar dira."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_res_config_settings__module_pos_mercury
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "The transactions are processed by Vantiv. Set your Vantiv credentials on the related payment journal."
+msgstr "Vantivek prozesatzen ditu transakzioak. Ezarri zure Vantiv-ren kredentzialak erlazionatutako ordainketa aldizkarian."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_register_balance_end
+msgid "Theoretical Closing Balance"
+msgstr "Itziera balantze teorikoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:117
+#, python-format
+msgid "There are pending operations that could not be saved into the database, are you sure you want to exit?"
+msgstr "Zain dauden eragiketak daude datu-basean gorde ezin izan direnak, ziur al zaude irten nahi duzula?"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "There are two ways to manage pricelists: 1) Multiple prices per product (e.g. quantity, shop-specific) : must be set in the Sales tab of the product detail form. 2) Price computed from formulas (discounts, margins, rounding) : must be set in the pricelist form."
+msgstr "Prezio-zerrendak kudeatzeko bi modu daude: 1) Produktu bakoitzeko prezio anitz (adibidez, kantitatea, denda zehatza) : produktuaren xehetasunen inprimakiko Salmentak fitxan ezarri behar da. 2) Formuletatik kalkulatutako prezioa (beherak, marjinak, biribilketak) : prezioen zerrenda formularioan ezarri behar da."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2108
+#, python-format
+msgid "There is no cash payment method available in this point of sale to handle the change.\n"
+"\n"
+" Please pay the exact amount or add a cash payment method in the point of sale configuration"
+msgstr "Ez dago eskudirutan ordaintzeko metodorik eskuragarri saltoki honetan kanbioa kudeatzeko.\n"
+"\n"
+"Mesedez, ordaindu zenbateko zehatza edo gehitu eskudirutan ordainketa-metodo bat saltokiaren konfigurazioan"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/wizard/pos_box.py:21
+#, python-format
+msgid "There is no cash register for this PoS Session"
+msgstr "Ez dago kutxa erregistratzailerik saltoki saio honetarako"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1016
+#, python-format
+msgid "There is no receivable account defined to make payment for the partner: \"%s\" (id:%d)."
+msgstr "Ez dago kobratzeko konturik definituta hurrengo bazkidearen ordainketa egiteko: \"%s\" (id:%d)."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1014
+#, python-format
+msgid "There is no receivable account defined to make payment."
+msgstr "Ez dago kobratzeko konturik definitu ordainketa egiteko."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2090
+#, python-format
+msgid "There must be at least one product in your order before it can be validated"
+msgstr "Gutxienez produktu bat egon behar da zure eskaeran baliozkotu ahal izateko"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "This adds the choice of a currency on pricelists."
+msgstr "Honek prezio-zerrendetan moneta baten aukera gehitzen du."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_account_cashbox_line__default_pos_id
+msgid "This cashbox line is used by default when opening or closing a balance for this point of sale"
+msgstr "Diru-kutxako lerro hau lehenespenez erabiltzen da saltoki honetako saldoa ireki edo ixtean"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_account_bank_statement_import_journal_creation__amount_authorized_diff
+#: model:ir.model.fields,help:point_of_sale.field_account_journal__amount_authorized_diff
+msgid "This field depicts the maximum difference allowed between the ending balance and the theoretical cash when closing a session, for non-POS managers. If this maximum is reached, the user will have an error message at the closing of his session saying that he needs to contact his manager."
+msgstr "Eremu honek amaierako saldoaren eta eskudiru teorikoaren arteko gehienezko aldea ezaltzen du saio bat ixtean, saltoki kudeatzaile ez direnentzat. Maximo hori lortzen bada, erabiltzaileak errore-mezu bat izango du bere saioa ixtean esanez bere arduradunarekin harremanetan jarri behar da".
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_category__image
+msgid "This field holds the image used as image for the cateogry, limited to 1024x1024px."
+msgstr "Eremu honek kategoriarako irudi gisa erabilitako irudia dauka, 1024x1024 px-ra mugatuta."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__group_pos_manager_id
+msgid "This field is there to pass the id of the pos manager group to the point of sale client."
+msgstr "Eremu hau saltokiko bezeroari saltoki kudeatzaile taldearen IDa pasatzeko dago."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__group_pos_user_id
+msgid "This field is there to pass the id of the pos user group to the point of sale client."
+msgstr "Eremu hau saltokiko erabiltzaile taldearen IDa saltokiko bezeroari pasatzeko dago."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:752
+#, python-format
+msgid "This invoice has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "Faktura hau hurrengo saltokiko saiotik sortu da: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__fiscal_position_ids
+msgid "This is useful for restaurants with onsite and take-away services that imply specific tax rates."
+msgstr "Hau erabilgarria da zerga-tasa zehatzak inplikatzen dituzten tokian tokiko eta eramateko zerbitzuak dituzten jatetxeentzat."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:275
+#, python-format
+msgid "This operation will destroy all unpaid orders in the browser. You will lose all the unsaved data and exit the point of sale. This operation cannot be undone."
+msgstr "Eragiketa honek arakatzailean ordaindu gabeko eskaera guztiak suntsituko ditu. Gorde gabeko datu guztiak galduko dituzu eta salmenta puntutik irtengo zara. Eragiketa hau ezin da desegin."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:265
+#, python-format
+msgid "This operation will permanently destroy all paid orders from the local storage. You will lose all the data. This operation cannot be undone."
+msgstr "Eragiketa honek tokiko biltegiratzetik ordaindutako eskaera guztiak betiko suntsituko ditu. Datu guztiak galduko dituzu. Eragiketa hau ezin da desegin."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__tip_product_id
+msgid "This product is used as reference on customer receipts."
+msgstr "Produktu hau bezeroen ordainagirien erreferentzia gisa erabiltzen da."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__sequence_line_id
+msgid "This sequence is automatically created by Odoo but you can change it to customize the reference numbers of your orders lines."
+msgstr "Sekuentzia hau automatikoki sortzen du Odook baina alda dezakezu zure eskaera lerroen erreferentzia-zenbakiak pertsonalizatzeko."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_config__sequence_id
+msgid "This sequence is automatically created by Odoo but you can change it to customize the reference numbers of your orders."
+msgstr "Sekuentzia hau automatikoki sortzen du Odook baina alda dezakezu zure eskaeren erreferentzia-zenbakiak pertsonalizatzeko."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
+msgid "This tax is applied to any new product created in the catalog."
+msgstr "Zerga hau katalogoan sortutako edozein produktu berriri aplikatzen zaio."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:869
+#, python-format
+msgid "This transfer has been created from the point of sale session: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+msgstr "Transferentzia hau hurrengo salmenta puntutik sortu da: <a href=# data-oe-model=pos.order data-oe-id=%d>%s</a>"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:690
+#, python-format
+msgid "Tip"
+msgstr "Eskupekoa"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__tip_product_id
+msgid "Tip Product"
+msgstr "Eskupeko produktua"
+
+#. module: point_of_sale
+#: model:product.product,name:point_of_sale.product_product_tip
+#: model:product.template,name:point_of_sale.product_product_tip_product_template
+msgid "Tips"
+msgstr "Eskupekoak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "To Close"
+msgstr "Izteko"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_product_product__to_weight
+#: model:ir.model.fields,field_description:point_of_sale.field_product_template__to_weight
+msgid "To Weigh With Scale"
+msgstr "Balantzarekin pisatzeko"
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_pos_form
+msgid "To record new orders, start a new session."
+msgstr "Eskaera berriak grabatzeko, hasi saio berri bat."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1057
+#, python-format
+msgid "To return product(s), you need to open a session that will be used to register the refund."
+msgstr "Produktua(k) itzultzeko, itzulketa erregistratzeko erabiliko den saio bat ireki behar duzu."
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order__amount_total
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "Total"
+msgstr "Totala"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_register_total_entry_encoding
+msgid "Total Cash Transaction"
+msgstr "Transakzio osoa eskudirutan"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__total_discount
+msgid "Total Discount"
+msgstr "Deskontuak guztira"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__price_total
+msgid "Total Price"
+msgstr "Prezioa guztira"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:869
+#, python-format
+msgid "Total Taxes"
+msgstr "Zergak guztira"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__cash_register_total_entry_encoding
+msgid "Total of all paid sales orders"
+msgstr "Ordaindutako salmenta-agindu guztiak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__cash_register_balance_end_real
+msgid "Total of closing cash control lines."
+msgstr "Eskudirua ixteko lerroen guztizkoa."
+
+#. module: point_of_sale
+#: model:ir.model.fields,help:point_of_sale.field_pos_session__cash_register_balance_start
+msgid "Total of opening cash control lines."
+msgstr "Eskudirua kontrolatzeko irekitako lerroak guztira."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
+msgid "Total qty"
+msgstr "Kopuru osoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:968
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1321
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1515
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+#, python-format
+msgid "Total:"
+msgstr "Guztira:"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:445
+#, python-format
+msgid "Trade Receivables"
+msgstr "Kredituak salmenten arabera"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_barcode_rule__type
+msgid "Type"
+msgstr "Mota"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:179
+#, python-format
+msgid "Unable to open the session. You have to assign a sales journal to your point of sale."
+msgstr "Ezin da saioa ireki. Salmenta aldizkari bat esleitu behar diozu zure salmenta puntuari."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:341
+#, python-format
+msgid "Undo"
+msgstr "Desegin"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__price_unit
+msgid "Unit Price"
+msgstr "Unitateko prezioa"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Unit Product"
+msgstr "Produktu unitatea"
+
+#. module: point_of_sale
+#: model:product.product,uom_name:point_of_sale.product_product_consumable
+#: model:product.product,uom_name:point_of_sale.product_product_tip
+#: model:product.template,uom_name:point_of_sale.product_product_consumable_product_template
+#: model:product.template,uom_name:point_of_sale.product_product_tip_product_template
+msgid "Unit(s)"
+msgstr "Unitatea(k)"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1037
+#, python-format
+msgid "Unknown Barcode"
+msgstr "Barra-kode ezezaguna"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:234
+#, python-format
+msgid "Unknown Error"
+msgstr "Errore ezezaguna"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1428
+#, python-format
+msgid "Unsupported File Format"
+msgstr "Onartu gabeko fitxategi-formatua "
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
+msgid "Unused"
+msgstr "Ez erabilita"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__use_existing_lots
+msgid "Use Existing Lots/Serial Numbers"
+msgstr "Erabili existizen diren lote/serie zenbakiak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Use a default specific tax regime"
+msgstr "Erabili zerga-erregimen espezifiko lehenetsi bat"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__use_pricelist
+msgid "Use a pricelist."
+msgstr "Erabili prezioen zerrenda bat."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Use a virtual keyboard for touchscreens"
+msgstr "Erabili teklatu birtual bat ukipen-pantailetarako"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_account_bank_statement_import_journal_creation__journal_user
+#: model:ir.model.fields,field_description:point_of_sale.field_account_journal__journal_user
+msgid "Use in Point of Sale"
+msgstr "Erabili saltokian"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_search
+#: model:res.groups,name:point_of_sale.group_pos_user
+msgid "User"
+msgstr "Erabiltzailea"
+
+#. module: point_of_sale
+#: model:ir.actions.report,name:point_of_sale.report_user_label
+msgid "User Labels"
+msgstr "Erabiltzaileen etiketak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1457
+#, python-format
+msgid "User:"
+msgstr "Erabiltzailea:"
+
+#. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_res_users
+msgid "Users"
+msgstr "Erabiltzaileak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__uuid
+msgid "Uuid"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:752
+#, python-format
+msgid "VAT:"
+msgstr "BEZ:"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1272
+#, python-format
+msgid "Valid product lot"
+msgstr "Baliozko produktu-lotea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:650
+#, python-format
+msgid "Validate"
+msgstr "Balidatu"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "Validate Closing & Post Entries"
+msgstr "Balioztatu ixteko eta argitaratzeko sarrerak"
+
+#. module: point_of_sale
+#: model:ir.model.fields,field_description:point_of_sale.field_pos_config__iface_vkeyboard
+msgid "Virtual KeyBoard"
+msgstr "Teklatu birtuala"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1370
+#, python-format
+msgid "Weighing"
+msgstr "Pisatzen"
+
+#. module: point_of_sale
+#: selection:barcode.rule,type:0
+msgid "Weighted Product"
+msgstr "Produktua pisatzen"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "Whenever you close a session, one entry is generated in the following accounting journal for all the orders not invoiced. Invoices are recorded in accounting separately."
+msgstr "Saio bat ixten duzun bakoitzean, fakturatu gabeko eskaera guztientzat sarrera bat sortzen da kontabilitate aldizkarian. Fakturak kontabilitatean bereizita erregistratzen dira."
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.customer_facing_display_html
+#: model_terms:pos.config,customer_facing_display_html:point_of_sale.pos_config_main
+msgid "Whiteboard Pen"
+msgstr "Arbel zuriko boligrafoa"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1294
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1477
+#, python-format
+msgid "With a"
+msgstr "Honekin"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "You can define another list of available currencies on the\n"
+"                                    <i>Cash Registers</i> tab of the"
+msgstr "Eskuragarri dauden dibisen beste zerrenda bat defini dezakezu\n"
+"                                    <i>Kutxa Erregistratzaileak</i> fitxan"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:691
+#, python-format
+msgid "You cannot change the partner of a POS order for which an invoice has already been issued."
+msgstr "Ezin duzu dagoeneko fakturatuta dagoen saltoki eskaera baten bazkidea aldatu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:34
+#, python-format
+msgid "You cannot confirm all orders of this session, because they have not the 'paid' status.\n"
+"{reference} is in state {state}, total amount: {total}, paid: {paid}"
+msgstr "Ezin dituzu saio honetako eskaera guztiak baieztatu, ez baitute 'ordaindu' egoera.\n"
+"{erreferentzia} {state} egoeran dago, guztizko zenbatekoa: {total}, ordainduta: {paid}"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:152
+#, python-format
+msgid "You cannot create two active sessions with the same responsible."
+msgstr "Ezin dituzu bi saio aktibo sortu arduradun berarekin."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/product.py:21
+#: code:addons/point_of_sale/models/product.py:38
+#, python-format
+msgid "You cannot delete a product saleable in point of sale while a session is still opened."
+msgstr "Ezin duzu ezabatu saltokian sal daitekeen produktu bat saio bat irekita dagoen bitartean."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:306
+#, python-format
+msgid "You cannot use the session of another user. This session is owned by %s. Please first close this one to use this point of sale."
+msgstr "Ezin duzu beste erabiltzaile baten saioa erabili. Saio honen jabea %s da. Mesedez, itxi saio hau saltoki hau erabiltzeko."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/wizard/pos_open_statement.py:18
+#, python-format
+msgid "You have to define which payment method must be available in the point of sale by reusing existing bank and cash through \"Accounting / Configuration / Journals / Journals\". Select a journal and check the field \"PoS Payment Method\" from the \"Point of Sale\" tab. You can also create new payment methods directly from menu \"PoS Backend / Configuration / Payment Methods\"."
+msgstr "Salmenta puntuan zein ordainketa-metodo egon behar duen zehaztu behar duzu lehendik dagoen bankua eta eskudirua berrerabiliz \"Kontabilitatea / Konfigurazioa / Aldizkariak / Aldizkariak\". Hautatu aldizkari bat eta aukeratu \"PoS Ordainketa Metodoa\" eremua. \"Salmenta-puntua\" fitxatik. Ordainketa-metodo berriak ere sor ditzakezu zuzenean \"PoS Backend / Konfigurazioa / Ordainketa-metodoak\"."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1030
+#, python-format
+msgid "You have to open at least one cashbox."
+msgstr "Gutxienez kutxa bat ireki behar duzu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1177
+#, python-format
+msgid "You have to select a pricelist in the sale form !\n"
+"Please set one before choosing a product."
+msgstr "Salmenta formularioan prezio zerrenda bat hautatu behar duzu!\n"
+"Mesedez, ezarri bat produktu bat aukeratu aurretik."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_order.py:1191
+#, python-format
+msgid "You have to select a pricelist in the sale form."
+msgstr "Salmenta formularioan prezio zerrenda bat hautatu behar duzu"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:27
+#, python-format
+msgid "You have to set a Sale Journal for the POS:%s"
+msgstr "Salmenta aldizkaria ezarri behar duzu %s saltokirako"
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/wizard/pos_details.py:48
+#, python-format
+msgid "You have to set a logo or a layout for your company."
+msgstr "Zure enpresaren logotipoa edo diseinua ezarri behar duzu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/wizard/pos_details.py:50
+#, python-format
+msgid "You have to set your reports's header and footer layout."
+msgstr "Txostenen goiburua eta oinaren diseinua ezarri behar duzu."
+
+#. module: point_of_sale
+#: model_terms:ir.actions.act_window,help:point_of_sale.product_product_action
+msgid "You must define a product for everything you sell through\n"
+"                the point of sale interface."
+msgstr "Saltokiko interfazearen bidez saltzen duzun guztiarentzat\n"
+"produktu bat definitu behar duzu."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:203
+#, python-format
+msgid "You need to select the customer before you can invoice an order."
+msgstr "Eskaera bat fakturatu aurretik bezeroa hautatu behar duzu."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:167
+#, python-format
+msgid "You should assign a Point of Sale to your session."
+msgstr "Saltoki bat esleitu beharko zenioke zure saioari."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:57
+#, python-format
+msgid "You will lose any data associated with the current order"
+msgstr "Uneko eskaerarekin lotutako edozein datu galduko duzu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:1363
+#, python-format
+msgid "Your Internet connection is probably down."
+msgstr "Zure Interneteko konexioa akabatuta dago ziurrenik."
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_session.py:288
+#, python-format
+msgid "Your ending balance is too different from the theoretical cash closing (%.2f), the maximum allowed is: %.2f. You can contact your manager to force it."
+msgstr "Zure amaierako saldoa oso desberdina da eskudiruaren itxiera teorikotik (%.2f), baimendutako gehienezkoa %.2f da. Zure kudeatzailearekin harremanetan jar zaitezke behartzeko."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1313
+#, python-format
+msgid "Your shopping cart is empty"
+msgstr "Zure erosketa saskia hutsik dago"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:356
+#, python-format
+msgid "ZIP"
+msgstr "Posta kodea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1286
+#, python-format
+msgid "at"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1223
+#, python-format
+msgid "belong to another session:"
+msgstr "beste saio batera sartu:"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1582
+#, python-format
+msgid "caps lock"
+msgstr "letra larriak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1609
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1651
+#, python-format
+msgid "close"
+msgstr "itxi"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1567
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1644
+#, python-format
+msgid "delete"
+msgstr "ezabatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1296
+#, python-format
+msgid "discount"
+msgstr "deskontua"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "e.g. Company Address, Website"
+msgstr ""
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
+msgid "e.g. Return Policy, Thanks for shopping with us!"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/popups.js:109
+#, python-format
+msgid "error"
+msgstr "errorea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/screens.js:2122
+#, python-format
+msgid "for an order of"
+msgstr ""
+
+#. module: point_of_sale
+#: model:product.product,weight_uom_name:point_of_sale.product_product_consumable
+#: model:product.product,weight_uom_name:point_of_sale.product_product_tip
+#: model:product.template,weight_uom_name:point_of_sale.product_product_consumable_product_template
+#: model:product.template,weight_uom_name:point_of_sale.product_product_tip_product_template
+msgid "kg"
+msgstr ""
+
+#. module: point_of_sale
+#: code:addons/point_of_sale/models/pos_config.py:339
+#, python-format
+msgid "not used"
+msgstr "erabili gabea"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:294
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1217
+#, python-format
+msgid "paid orders"
+msgstr "eskaera ordainduak"
+
+#. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
+msgid "payment method."
+msgstr "ordainketa metodoa."
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/models/pos_order.py:152
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1594
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1649
+#, python-format
+msgid "return"
+msgstr "itzuli"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1595
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1606
+#, python-format
+msgid "shift"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1568
+#, python-format
+msgid "tab"
+msgstr ""
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/js/chrome.js:286
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1218
+#, python-format
+msgid "unpaid orders"
+msgstr "ordaindu gabeko eskaerak"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1220
+#, python-format
+msgid "unpaid orders could not be imported"
+msgstr "ordaindu gabeko eskaerak ezin izan dira inportatu"
+
+#. module: point_of_sale
+#. openerp-web
+#: code:addons/point_of_sale/static/src/xml/pos.xml:1222
+#, python-format
+msgid "were duplicates of existing orders"
+msgstr "lehendik dauden eskaeren bikoiztuak ziren"
+
