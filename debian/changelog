@@ -1,3 +1,9 @@
+odoo (12.0.80) stable; urgency=low
+
+  * #9024 Cambiar tbai-lib para corregir errores de redondeo en bases y descuentos pequeños
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Tue, 01 Mar 2022 08:25:39 +0100
+
 odoo (12.0.75) stable; urgency=low
 
   * #9291 Traducir a euskera ticket del POS
