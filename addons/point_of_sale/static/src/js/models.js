@@ -1787,7 +1787,8 @@ exports.Orderline = Backbone.Model.extend({
                 var tax_amount = self._compute_all(tax, base, quantity);
                 tax_amount = round_pr(tax_amount, currency_rounding);
 
-                if (tax_amount){
+                if ((tax_amount) ||
+                    (!tax_amount && self.product.taxes_id.length > 0  && Math.abs(price_unit) > 0)){
                     if (tax.price_include) {
                         total_excluded -= tax_amount;
                         base -= tax_amount;
