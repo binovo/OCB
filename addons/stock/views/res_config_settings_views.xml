@@ -245,8 +245,8 @@
                                 </div>
                             </div>
                         </div>
-                        <h2 class="mt32">Warehouse</h2>
-                        <div class="row mt16 o_settings_container">
+                        <h2 id="warehouse_info" class="mt32">Warehouse</h2>
+                        <div id="warehouse_info_div" class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box" title="Store products in specific locations of your warehouse (e.g. bins, racks) and to track inventory accordingly.">
                                 <div class="o_setting_left_pane">
                                     <field name="group_stock_multi_locations"/>

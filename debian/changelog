@@ -1,3 +1,9 @@
+odoo (12.0.81) stable; urgency=low
+
+  * #9268 Asignar id en xml stock, para identificar tag.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 21 Mar 2022 15:35:52 +0100
+
 odoo (12.0.80) stable; urgency=low
 
   * #9024 Cambiar tbai-lib para corregir errores de redondeo en bases y descuentos pequeños
