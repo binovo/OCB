@@ -7,7 +7,7 @@
 # Bagavathikumar Ramakrishnan <bagavathikumar@gmail.com>, 2019
 # Abul Hassan M I <miabulhassan@gmail.com>, 2019
 # Alagappan Karthikeyan <me@karthik.sg>, 2019
-# prassanna john paul augustin <prasaugus@gmail.com>, 2019
+# Prassanna <prasaugus@gmail.com>, 2019
 # Martin Trigaux, 2019
 # Thirunavukkarasu Deivasigamani <thiru_electrifiers@yahoo.co.in>, 2019
 # 
@@ -260,8 +260,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.portal_my_invoices
 msgid ""
 "<span class=\"badge badge-pill badge-info\"><i class=\"fa fa-fw fa-clock-o\""
-" aria-label=\"Opened\" title=\"Opened\" role=\"img\"/><span class=\"d-none d"
-"-md-inline\"> Waiting for Payment</span></span>"
+" aria-label=\"Opened\" title=\"Opened\" role=\"img\"/><span class=\"d-none "
+"d-md-inline\"> Waiting for Payment</span></span>"
 msgstr ""
 
 #. module: account
