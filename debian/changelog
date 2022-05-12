@@ -1,3 +1,9 @@
+odoo (12.0.84) stable; urgency=low
+
+  * #9815 Sincronizar con OCB.
+
+ -- Victor Laskurain <blaskurain@binovo.es>  Thu, 12 May 2022 09:27:59 +0200
+
 odoo (12.0.81) stable; urgency=low
 
   * #9268 Asignar id en xml stock, para identificar tag.
@@ -71,7 +77,7 @@ odoo (8.0.0) stable; urgency=low
 
   * Renamed package
 
- -- Simon Lejeune <sle@odoo.com>  Wed, 17 Sep 2014 15:40:00 +0100 
+ -- Simon Lejeune <sle@odoo.com>  Wed, 17 Sep 2014 15:40:00 +0100
 
 openerp (8.0.0~rc1-0) testing; urgency=low
 
@@ -99,7 +105,7 @@ openerp-server (6.0.1-1) unstable; urgency=low
   * Repackage, together with addons fixes
 
  -- P. Christeas <xrg@openerp.com>  Mon, 24 Jan 2011 12:50:00 +0100
- 
+
 openerp-server (6.0.1-0) testing; urgency=low
 
   * Update to version 6.0.1
