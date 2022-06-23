@@ -1,3 +1,11 @@
+odoo (12.0.88) stable; urgency=low
+
+  * #10047 pos_reprint fix, añadir condición de que el check de "Reimprimir recibo" esté
+  activo en la configuración del TPV, si ese check no está activo, el botón no tiene que
+  mostrarse
+
+ -- Ugaitz Olaizola <uolaizola@binovo.es>  Thu, 23 Jun 2022 13:29:24 +0200
+
 odoo (12.0.84) stable; urgency=low
 
   * #9815 Sincronizar con OCB.

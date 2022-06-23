@@ -49,7 +49,7 @@ screens.define_action_button({
     'name': 'reprint',
     'widget': ReprintButton,
     'condition': function(){
-        return this.pos.config.iface_print_via_proxy;
+        return this.pos.config.iface_print_via_proxy && this.pos.config.module_pos_reprint;
     },
 });
 
