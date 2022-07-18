@@ -26376,7 +26376,7 @@ msgstr "Use el formato \"%s\""
 #. module: base
 #: model:ir.model.fields,help:base.field_res_country__vat_label
 msgid "Use this field if you want to change vat label."
-msgstr "Utilice este campo si quiere cambiar la etiqueta del IVA."
+msgstr "Utilice este campo si quiere cambiar la etiqueta del NIF."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_country__address_view_id
@@ -26660,7 +26660,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__vat_label
 msgid "Vat Label"
-msgstr "Etiqueta del IVA"
+msgstr "Etiqueta del NIF"
 
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_0
