@@ -1656,7 +1656,7 @@
     <t t-name="CustomerFacingDisplayHead">
         <div class="resources">
             <base t-att-href="origin"/>
-            <link href="/point_of_sale/static/src/css/customer_facing_display.css" rel="stylesheet"/>
+            <link t-att-href="origin+'/point_of_sale/static/src/css/customer_facing_display.css'" rel="stylesheet"/>
             <script type="text/javascript">
                 // This function needs to be named that way, call it the foreign JS API
                 // The iotbox will execute it, with the behavior intended
@@ -1669,6 +1669,7 @@
                     }).trigger('resize');
                 };
             </script>
+
         </div>
     </t>
 
