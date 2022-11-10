@@ -1,6 +1,7 @@
 odoo.define('point_of_sale.models', function (require) {
 "use strict";
 
+var logger = require('point_of_sale.logger');
 var ajax = require('web.ajax');
 var BarcodeParser = require('barcodes.BarcodeParser');
 var PosDB = require('point_of_sale.DB');
@@ -839,8 +840,9 @@ exports.PosModel = Backbone.Model.extend({
     push_order: function(order, opts) {
         opts = opts || {};
         var self = this;
-
+        logger.warn('point_of_sale/push_order > in');
         if(order){
+            logger.warn('point_of_sale/push_order > ' + order.uid + ' > ' + order.simplified_invoice);
             this.db.add_order(order.export_as_JSON());
         }
 
@@ -855,6 +857,7 @@ exports.PosModel = Backbone.Model.extend({
 
             return flushed;
         });
+        logger.warn('point_of_sale/push_order > RETURN');
         return pushed;
     },
 
