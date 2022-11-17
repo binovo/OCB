@@ -1532,7 +1532,8 @@ exports.Orderline = Backbone.Model.extend({
     },
     // when we add an new orderline we want to merge it with the last line to see reduce the number of items
     // in the orderline. This returns true if it makes sense to merge the two
-    can_be_merged_with: function(orderline){
+    can_be_merged_with: function(orderline, options){
+        var compute_price = options && 'compute_price' in options ? options.compute_price : true;
         var price = parseFloat(round_di(this.price || 0, this.pos.dp['Product Price']).toFixed(this.pos.dp['Product Price']));
         if( this.get_product().id !== orderline.get_product().id){    //only orderline of the same product can be merged
             return false;
@@ -1542,8 +1543,9 @@ exports.Orderline = Backbone.Model.extend({
             return false;
         }else if(this.get_discount() > 0){             // we don't merge discounted orderlines
             return false;
-        }else if(!utils.float_is_zero(price - orderline.compute_fixed_price(orderline.get_product().get_price(orderline.order.pricelist, this.get_quantity())),
-                    this.pos.currency.decimals)){
+        }
+        var price_line = compute_price ? orderline.compute_fixed_price(orderline.get_product().get_price(orderline.order.pricelist, this.get_quantity())) : orderline.get_unit_price();
+        if(!utils.float_is_zero(price - price_line, this.pos.currency.decimals)){
             return false;
         }else if(this.product.tracking == 'lot') {
             return false;
