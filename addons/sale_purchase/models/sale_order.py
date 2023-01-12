@@ -256,6 +256,16 @@ class SaleOrderLine(models.Model):
             'sale_line_id': self.id,
         }
 
+    def _get_key_supplier_po_map(self,partner_supplier):
+        return partner_supplier.id
+
+    def _get_domain_purchase_order(self, line, partner_supplier):
+        return [
+            ('partner_id', '=', partner_supplier.id),
+            ('state', '=', 'draft'),
+            ('company_id', '=', line.company_id.id),
+        ]
+
     @api.multi
     def _purchase_service_create(self, quantity=False):
         """ On Sales Order confirmation, some lines (services ones) can create a purchase order line and maybe a purchase order.
@@ -276,13 +286,10 @@ class SaleOrderLine(models.Model):
             partner_supplier = supplierinfo.name  # yes, this field is not explicit .... it is a res.partner !
 
             # determine (or create) PO
-            purchase_order = supplier_po_map.get(partner_supplier.id)
+            purchase_order = supplier_po_map.get(self._get_key_supplier_po_map(partner_supplier))
             if not purchase_order:
-                purchase_order = PurchaseOrder.search([
-                    ('partner_id', '=', partner_supplier.id),
-                    ('state', '=', 'draft'),
-                    ('company_id', '=', line.company_id.id),
-                ], limit=1)
+                purchase_order = PurchaseOrder.search(self._get_domain_purchase_order(line, partner_supplier),
+                                                      limit=1)
             if not purchase_order:
                 values = line._purchase_service_prepare_order_values(supplierinfo)
                 purchase_order = PurchaseOrder.create(values)
@@ -296,7 +303,7 @@ class SaleOrderLine(models.Model):
                     purchase_order.write({
                         'origin': ', '.join(origins)
                     })
-            supplier_po_map[partner_supplier.id] = purchase_order
+            supplier_po_map[self._get_key_supplier_po_map(partner_supplier)] = purchase_order
 
             # add a PO line to the PO
             values = line._purchase_service_prepare_line_values(purchase_order, quantity=quantity)

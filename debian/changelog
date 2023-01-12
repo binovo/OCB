@@ -1,3 +1,9 @@
+odoo (12.0.98) stable; urgency=low
+
+  * #10659 Añadir funciones parametrizables sale_purchase.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 12 Jan 2023 12:16:27 +0100
+
 odoo (12.0.90) stable; urgency=low
 
   * #10080 point_of_sale fix, ajustar referencia de CSS para pantalla de cliente
