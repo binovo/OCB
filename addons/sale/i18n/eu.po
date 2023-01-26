@@ -276,7 +276,7 @@ msgid ""
 "<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
 "                                <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
 msgstr ""
-"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Zenbatekoa</span>\n"
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Guztira</span>\n"
 "<span groups=\"account.group_show_line_subtotals_tax_included\">Prezio totala</span>"
 
 #. module: sale
@@ -309,7 +309,7 @@ msgstr ""
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_template
 msgid "<span>For an amount of:</span>"
-msgstr "<span>Zenbatekoa:</span>"
+msgstr "<span>Guztira:</span>"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
@@ -426,7 +426,7 @@ msgstr "<strong>Totala:</strong>"
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content_totals_table
 msgid "<strong>Total</strong>"
-msgstr "Guztira"
+msgstr "<strong>Guztira</strong>"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
@@ -613,7 +613,7 @@ msgstr "Proforma faktura bidaltzea uzten dizu."
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
 msgid "Amount"
-msgstr "Kopurua"
+msgstr "Guztira"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order__amount_undiscounted

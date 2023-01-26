@@ -1,3 +1,9 @@
+odoo (12.0.100) stable; urgency=low
+
+  * #11745 Traducciones a euskera varias, para Miguel Altuna.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 26 Jan 2023 17:17:21 +0100
+
 odoo (12.0.99) stable; urgency=low
 
   * #11249 Traducciones a euskera varias.

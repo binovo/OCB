@@ -418,7 +418,7 @@ msgid ""
 "<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
 "                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
 msgstr ""
-"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Zenbatekoa</span>\n"
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Guztira</span>\n"
 "<span groups=\"account.group_show_line_subtotals_tax_included\">Prezio totala</span>"
 
 #. module: account
@@ -529,7 +529,7 @@ msgstr "<span>Jatorrizko kopurua</span>"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<span>Quantity</span>"
-msgstr "<span>Zenbatu</span>"
+msgstr "<span>Kopurua</span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
@@ -683,7 +683,7 @@ msgstr "<strong>Heburuzko mugimenduak </strong>"
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 #: model_terms:ir.ui.view,arch_db:account.report_journal
 msgid "<strong>Total</strong>"
-msgstr "Guztira"
+msgstr "<strong>Guztira</strong>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_account_kanban
@@ -7824,7 +7824,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Please use the following communication for your payment :"
-msgstr "Mesedez, erabili komunikazio hau zure ordainketa egiteko:"
+msgstr "Mesedez, erabili erreferentzia hau zure ordainketa egiteko:"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice__access_url
