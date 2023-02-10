@@ -422,6 +422,7 @@ var PosDB = core.Class.extend({
         // that where already stored should already have been removed.
         this.remove_unpaid_order(order);
 
+        logger.warn('point_of_sale/add_order > ' + order_id + ' > ' + JSON.stringify(order));
         orders.push({id: order_id, data: order});
         this.save('orders',orders);
         return order_id;

@@ -27,6 +27,7 @@ odoo.define('point_of_sale.screens', function (require) {
 // each screen display. A screen can be called with parameters, which are
 // to be used for the duration of the screen only. 
 
+var logger = require('point_of_sale.logger');
 var PosBaseWidget = require('point_of_sale.BaseWidget');
 var gui = require('point_of_sale.gui');
 var models = require('point_of_sale.models');
@@ -2137,14 +2138,17 @@ var PaymentScreenWidget = ScreenWidget.extend({
     finalize_validation: function() {
         var self = this;
         var order = this.pos.get_order();
+        logger.warn('point_of_sale/finalize_validation > ' + order.uid + ' > in');
 
-        if ((order.is_paid_with_cash() || order.get_change()) && this.pos.config.iface_cashdrawer) { 
+        if ((order.is_paid_with_cash() || order.get_change()) && this.pos.config.iface_cashdrawer) {
 
                 this.pos.proxy.open_cashbox();
         }
 
         order.initialize_validation_date();
         order.finalized = true;
+
+        logger.warn('point_of_sale/finalize_validation > ' + order.uid + ' > order > ' + JSON.stringify(order.export_as_JSON()));
 
         if (order.is_to_invoice()) {
             var invoiced = this.pos.push_and_invoice_order(order);
@@ -2160,7 +2164,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
             this.pos.push_order(order);
             this.gui.show_screen('receipt');
         }
-
+        logger.warn('point_of_sale/finalize_validation > ' + order.uid + ' > out');
     },
 
     // Check if the order is paid, then sends it to the backend,

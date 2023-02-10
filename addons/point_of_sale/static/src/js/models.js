@@ -2360,10 +2360,12 @@ exports.Order = Backbone.Model.extend({
     },
 
     add_product: function(product, options){
+        logger.warn('point_of_sale/add_product > in');
         if(this._printed){
             this.destroy();
             return this.pos.get_order().add_product(product, options);
         }
+        logger.warn('point_of_sale/add_product > add > order ' + this.uid + ' > ' + product.id + ' (' + product.display_name + ')');
         this.assert_editable();
         options = options || {};
         var attr = JSON.parse(JSON.stringify(product));
@@ -2408,6 +2410,7 @@ exports.Order = Backbone.Model.extend({
         if(line.has_product_lot){
             this.display_lot_popup();
         }
+        logger.warn('point_of_sale/add_product > out');
     },
     get_selected_orderline: function(){
         return this.selected_orderline;
@@ -2645,9 +2648,11 @@ exports.Order = Backbone.Model.extend({
                 }
             }
         }
+        logger.warn('point_of_sale/get_due > ' + this.uid + ' > ' + due);
         return round_pr(due, this.pos.currency.rounding);
     },
     is_paid: function(){
+        logger.warn('point_of_sale/is_paid > ' + this.uid + ' > ' + (this.get_due() <= 0).toString());
         return this.get_due() <= 0;
     },
     is_paid_with_cash: function(){
