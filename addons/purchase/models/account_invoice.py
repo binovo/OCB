@@ -61,21 +61,22 @@ class AccountInvoice(models.Model):
         date = self.date or self.date_invoice
         data = {
             'purchase_line_id': line.id,
-            'name': line.order_id.name + ': ' + line.name,
+            'name': line.order_id.name + ': ' + line.name if not line.display_type else line.name,
             'origin': line.order_id.origin,
             'uom_id': line.product_uom.id,
             'product_id': line.product_id.id,
-            'account_id': invoice_line.with_context({'journal_id': self.journal_id.id, 'type': 'in_invoice'})._default_account(),
+            'account_id': invoice_line.with_context({'journal_id': self.journal_id.id, 'type': 'in_invoice'})._default_account() if not line.display_type else False,
             'price_unit': line.order_id.currency_id._convert(
                 line.price_unit, self.currency_id, line.company_id, date or fields.Date.today(), round=False),
             'quantity': qty,
             'discount': 0.0,
             'account_analytic_id': line.account_analytic_id.id,
             'analytic_tag_ids': line.analytic_tag_ids.ids,
-            'invoice_line_tax_ids': invoice_line_tax_ids.ids
+            'invoice_line_tax_ids': invoice_line_tax_ids.ids,
+            'display_type': line.display_type
         }
         account = invoice_line.with_context(purchase_line_id=line.id).get_invoice_line_account('in_invoice', line.product_id, line.order_id.fiscal_position_id, self.env.user.company_id)
-        if account:
+        if account and not line.display_type:
             data['account_id'] = account.id
         return data
 
