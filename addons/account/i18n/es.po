@@ -1418,7 +1418,6 @@ msgstr "Añadir un diario"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.invoice_form
-#: model_terms:ir.ui.view,arch_db:account.invoice_supplier_form
 msgid "Add a line"
 msgstr "Agregar registro"
 
@@ -1434,7 +1433,6 @@ msgstr "Añadir nueva etiqueta"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.invoice_form
-#: model_terms:ir.ui.view,arch_db:account.invoice_supplier_form
 msgid "Add a note"
 msgstr "Agregar nota"
 
@@ -1457,7 +1455,6 @@ msgstr "Añadir una segunda línea"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.invoice_form
-#: model_terms:ir.ui.view,arch_db:account.invoice_supplier_form
 msgid "Add a section"
 msgstr "Agregar una sección"
 

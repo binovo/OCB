@@ -315,24 +315,15 @@
                     </group>
                     <notebook>
                         <page string="Bill">
-                            <field context="{'type': type, 'journal_id': journal_id}"
-                                   widget="section_and_note_one2many"
-                                   name="invoice_line_ids">
+                            <field context="{'type': type, 'journal_id': journal_id}" name="invoice_line_ids">
                                 <tree string="Bill lines" editable="bottom">
-                                    <control>
-                                        <create string="Add a line"/>
-                                        <create string="Add a section" context="{'default_display_type': 'line_section'}"/>
-                                        <create string="Add a note" context="{'default_display_type': 'line_note'}"/>
-                                    </control>
                                     <field name="sequence" widget="handle" />
-                                    <field name="display_type" invisible="1"/>
                                     <field name="product_id" groups="account.group_products_in_bills"
                                         context="{'partner_id': parent.partner_id}" domain="[('purchase_ok','=',True)]"/>
                                     <field name="name"/>
                                     <field name="company_id" invisible="1"/>
                                     <field name="account_id" groups="account.group_account_user"
-                                           attrs="{'required': [('display_type', '=', False)]}"
-                                           domain="[('company_id', '=', parent.company_id), ('internal_type', '=', 'other'), ('deprecated', '=', False)]"/>
+                                        domain="[('company_id', '=', parent.company_id), ('internal_type', '=', 'other'), ('deprecated', '=', False)]"/>
                                     <field name="account_analytic_id" groups="analytic.group_analytic_accounting"
                                         domain="[('company_id', '=', parent.company_id)]"
                                         context="{'default_partner_id': parent.partner_id}"/>

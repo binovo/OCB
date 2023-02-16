@@ -40,7 +40,7 @@ class PurchaseOrder(models.Model):
     def _compute_date_planned(self):
         for order in self:
             min_date = False
-            for line in order.order_line.filtered(lambda x: not x.display_type and x.date_planned):
+            for line in order.order_line:
                 if not min_date or line.date_planned < min_date:
                     min_date = line.date_planned
             if min_date:
@@ -56,9 +56,9 @@ class PurchaseOrder(models.Model):
                 order.invoice_status = 'no'
                 continue
 
-            if any(float_compare(line.qty_invoiced, line.product_qty if line.product_id.purchase_method == 'purchase' else line.qty_received, precision_digits=precision) == -1 for line in order.order_line.filtered(lambda l: not l.display_type)):
+            if any(float_compare(line.qty_invoiced, line.product_qty if line.product_id.purchase_method == 'purchase' else line.qty_received, precision_digits=precision) == -1 for line in order.order_line):
                 order.invoice_status = 'to invoice'
-            elif all(float_compare(line.qty_invoiced, line.product_qty if line.product_id.purchase_method == 'purchase' else line.qty_received, precision_digits=precision) >= 0 for line in order.order_line.filtered(lambda l: not l.display_type)) and order.invoice_ids:
+            elif all(float_compare(line.qty_invoiced, line.product_qty if line.product_id.purchase_method == 'purchase' else line.qty_received, precision_digits=precision) >= 0 for line in order.order_line) and order.invoice_ids:
                 order.invoice_status = 'invoiced'
             else:
                 order.invoice_status = 'no'
@@ -179,11 +179,10 @@ class PurchaseOrder(models.Model):
         self = self.with_context(ctx)
         new_po = super(PurchaseOrder, self).copy(default=default)
         for line in new_po.order_line:
-            if line.product_id:
-                seller = line.product_id._select_seller(
-                    partner_id=line.partner_id, quantity=line.product_qty,
-                    date=line.order_id.date_order and line.order_id.date_order.date(), uom_id=line.product_uom)
-                line.date_planned = line._get_date_planned(seller)
+            seller = line.product_id._select_seller(
+                partner_id=line.partner_id, quantity=line.product_qty,
+                date=line.order_id.date_order and line.order_id.date_order.date(), uom_id=line.product_uom)
+            line.date_planned = line._get_date_planned(seller)
         return new_po
 
     @api.multi
@@ -370,7 +369,7 @@ class PurchaseOrder(models.Model):
         for line in self.order_line:
             # Do not add a contact as a supplier
             partner = self.partner_id if not self.partner_id.parent_id else self.partner_id.parent_id
-            if line.product_id and partner not in line.product_id.seller_ids.mapped('name') and len(line.product_id.seller_ids) <= 10:
+            if partner not in line.product_id.seller_ids.mapped('name') and len(line.product_id.seller_ids) <= 10:
                 # Convert the price in the right currency.
                 currency = partner.property_purchase_currency_id or self.env.user.company_id.currency_id
                 price = self.currency_id._convert(line.price_unit, currency, line.company_id, line.date_order or fields.Date.today(), round=False)
@@ -442,7 +441,7 @@ class PurchaseOrder(models.Model):
     @api.multi
     def action_set_date_planned(self):
         for order in self:
-            order.order_line.filtered(lambda line: not line.display_type).update({'date_planned': order.date_planned})
+            order.order_line.update({'date_planned': order.date_planned})
 
 
 class PurchaseOrderLine(models.Model):
@@ -454,10 +453,10 @@ class PurchaseOrderLine(models.Model):
     sequence = fields.Integer(string='Sequence', default=10)
     product_qty = fields.Float(string='Quantity', digits=dp.get_precision('Product Unit of Measure'), required=True)
     product_uom_qty = fields.Float(string='Total Quantity', compute='_compute_product_uom_qty', store=True)
-    date_planned = fields.Datetime(string='Scheduled Date', index=True)
+    date_planned = fields.Datetime(string='Scheduled Date', required=True, index=True)
     taxes_id = fields.Many2many('account.tax', string='Taxes', domain=['|', ('active', '=', False), ('active', '=', True)])
-    product_uom = fields.Many2one('uom.uom', string='Product Unit of Measure')
-    product_id = fields.Many2one('product.product', string='Product', domain=[('purchase_ok', '=', True)], change_default=True)
+    product_uom = fields.Many2one('uom.uom', string='Product Unit of Measure', required=True)
+    product_id = fields.Many2one('product.product', string='Product', domain=[('purchase_ok', '=', True)], change_default=True, required=True)
     product_image = fields.Binary(
         'Product Image', related="product_id.image", readonly=False,
         help="Non-stored related field to allow portal user to see the image of the product he has ordered")
@@ -483,12 +482,6 @@ class PurchaseOrderLine(models.Model):
     partner_id = fields.Many2one('res.partner', related='order_id.partner_id', string='Partner', readonly=True, store=True)
     currency_id = fields.Many2one(related='order_id.currency_id', store=True, string='Currency', readonly=True)
     date_order = fields.Datetime(related='order_id.date_order', string='Order Date', readonly=True)
-
-    display_type = fields.Selection([
-        ('line_section', "Section"),
-        ('line_note', "Note")], default=False, help="Technical field for UX purpose.")
-
-
 
     @api.depends('product_qty', 'price_unit', 'taxes_id')
     def _compute_amount(self):
@@ -521,19 +514,6 @@ class PurchaseOrderLine(models.Model):
             'partner': self.order_id.partner_id,
         }
 
-    @api.model
-    def _prepare_add_missing_fields(self, values):
-        """ Deduce missing required fields from the onchange """
-        res = {}
-        onchange_fields = ['name', 'price_unit', 'product_qty', 'product_uom', 'taxes_id', 'date_planned']
-        if values.get('order_id') and values.get('product_id') and any(f not in values for f in onchange_fields):
-            line = self.new(values)
-            line.onchange_product_id()
-            for field in onchange_fields:
-                if field not in values:
-                    res[field] = line._fields[field].convert_to_write(line[field], line)
-        return res
-
     @api.multi
     def _compute_tax_id(self):
         for line in self:
@@ -554,26 +534,16 @@ class PurchaseOrderLine(models.Model):
                         qty -= inv_line.uom_id._compute_quantity(inv_line.quantity, line.product_uom)
             line.qty_invoiced = qty
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        for values in vals_list:
-            if values.get('display_type', self.default_get(['display_type'])['display_type']):
-                values.update(product_id=False, price_unit=0, product_uom_qty=0, product_uom=False, date_planned=False)
-            else:
-                values.update(self._prepare_add_missing_fields(values))
-
-        lines = super().create(vals_list)
-        for line in lines:
-            if line.product_id and line.order_id.state == 'purchase':
-                msg = _("Extra line with %s ") % (line.product_id.display_name,)
-                line.order_id.message_post(body=msg)
-        return lines
+    @api.model
+    def create(self, values):
+        line = super(PurchaseOrderLine, self).create(values)
+        if line.order_id.state == 'purchase':
+            msg = _("Extra line with %s ") % (line.product_id.display_name,)
+            line.order_id.message_post(body=msg)
+        return line
 
     @api.multi
     def write(self, values):
-        for values_dict in values:
-            if 'display_type' in values_dict and self.filtered(lambda line: line.display_type != values_dict.get('display_type')):
-                raise UserError(_("You cannot change the type of a purchase order line. Instead you should delete the current line and create a new line of the proper type."))
         if 'product_qty' in values:
             for line in self:
                 if line.order_id.state == 'purchase':
@@ -689,7 +659,7 @@ class PurchaseOrderLine(models.Model):
     @api.depends('product_uom', 'product_qty', 'product_id.uom_id')
     def _compute_product_uom_qty(self):
         for line in self:
-            if line.product_id and line.product_id.uom_id != line.product_uom:
+            if line.product_id.uom_id != line.product_uom:
                 line.product_uom_qty = line.product_uom._compute_quantity(line.product_qty, line.product_id.uom_id)
             else:
                 line.product_uom_qty = line.product_qty
