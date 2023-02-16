@@ -2212,3 +2212,45 @@ msgid ""
 msgstr ""
 "Debe definir un producto para todo lo que compre,\n"
 "no importa si es un producto físico, un consumible o servicios."
+
+#. module: purchase
+#: model:ir.model.fields,help:purchase.field_purchase_order_line__display_type
+msgid "Technical field for UX purpose."
+msgstr "Campo técnico para propósitos UX"
+
+#. module: purchase
+#: selection:purchase.order.line,display_type:0
+msgid "Section"
+msgstr "Sección"
+
+#. module: purchase
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
+#: selection:purchase.order.line,display_type:0
+msgid "Note"
+msgstr "Nota"
+
+#. module: purchase
+#: code:addons/purchase/models/purchase.py:576
+#, python-format
+msgid "You cannot change the type of a purchase order line. Instead you should delete the current line and create a new line of the proper type."
+msgstr "No puede cambiar el tipo de línea de pedido de compra. En su lugar, debe eliminar la línea actual y crear una nueva línea del tipo adecuado."
+
+#. module: purchase
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
+msgid "Add a product"
+msgstr "Agregar un producto"
+
+#. module: purchase
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
+msgid "Add a section"
+msgstr "Agregar una sección"
+
+#. module: purchase
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
+msgid "Add a note"
+msgstr "Agregar nota"
+
+#. module: purchase
+#: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
+msgid "Section Name (eg. Products, Services)"
+msgstr "Nombre de la sección (p. ej., productos, servicios)"
