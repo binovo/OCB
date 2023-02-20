@@ -635,6 +635,12 @@ class WebsiteSale(ProductConfiguratorController):
 
         return new_values, errors, error_msg
 
+    def prepare_address_values(self):
+        return {}
+
+    def prepare_address_errors(self):
+        return {}
+
     @http.route(['/shop/address'], type='http', methods=['GET', 'POST'], auth="public", website=True, sitemap=False)
     def address(self, **kw):
         Partner = request.env['res.partner'].with_context(show_address=1).sudo()
@@ -647,7 +653,8 @@ class WebsiteSale(ProductConfiguratorController):
         mode = (False, False)
         can_edit_vat = False
         def_country_id = order.partner_id.country_id
-        values, errors = {}, {}
+        values = self.prepare_address_values()
+        errors = self.prepare_address_errors()
 
         partner_id = int(kw.get('partner_id', -1))
 

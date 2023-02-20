@@ -1,3 +1,9 @@
+odoo (12.0.101) stable; urgency=low
+
+  * #11977 Cambios en website_sale para favorecer herencia.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 20 Feb 2023 17:08:04 +0100
+
 odoo (12.0.100) stable; urgency=low
 
   * #11745 Traducciones a euskera varias, para Miguel Altuna.
