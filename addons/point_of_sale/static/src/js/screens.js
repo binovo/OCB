@@ -1939,12 +1939,18 @@ var PaymentScreenWidget = ScreenWidget.extend({
         lines.appendTo(this.$('.paymentlines-container'));
     },
     click_paymentmethods: function(id) {
+        logger.warn('point_of_sale/click_paymentmethods > ' + this.pos.get_order().uid + ' > in');
         var cashregister = null;
         for ( var i = 0; i < this.pos.cashregisters.length; i++ ) {
             if ( this.pos.cashregisters[i].journal_id[0] === id ){
                 cashregister = this.pos.cashregisters[i];
                 break;
             }
+        }
+        if (cashregister && cashregister.journal_id) {
+            logger.warn('point_of_sale/click_paymentmethods > ' + this.pos.get_order().uid + ' > ' + cashregister.journal_id[1]);
+        } else {
+            logger.warn('point_of_sale/click_paymentmethods > ' + this.pos.get_order().uid + ' > NULL');
         }
         this.pos.get_order().add_paymentline( cashregister );
         this.reset_input();
@@ -2070,11 +2076,15 @@ var PaymentScreenWidget = ScreenWidget.extend({
     order_changes: function(){
         var self = this;
         var order = this.pos.get_order();
+        logger.warn('point_of_sale/order_changes > ' + order.uid + ' > in');
         if (!order) {
+            logger.warn('point_of_sale/order_changes > ' + order.uid + ' > return');
             return;
         } else if (order.is_paid()) {
+            logger.warn('point_of_sale/order_changes > ' + order.uid + ' > buttonON');
             self.$('.next').addClass('highlight');
         }else{
+            logger.warn('point_of_sale/order_changes > ' + order.uid + ' > buttonOFF');
             self.$('.next').removeClass('highlight');
         }
     },
@@ -2082,6 +2092,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
     order_is_valid: function(force_validation) {
         var self = this;
         var order = this.pos.get_order();
+        logger.warn('point_of_sale/order_is_valid > ' + order.uid + ' > in');
 
         // FIXME: this check is there because the backend is unable to
         // process empty orders. This is not the right place to fix it.
@@ -2094,6 +2105,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
         }
 
         if (!order.is_paid() || this.invoicing) {
+            logger.warn('point_of_sale/order_is_valid > ' + order.uid + ' > is_paid() == FALSE');
             return false;
         }
 
@@ -2131,7 +2143,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
             });
             return false;
         }
-
+        logger.warn('point_of_sale/order_is_valid > ' + order.uid + ' > out');
         return true;
     },
 
@@ -2170,6 +2182,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
     // Check if the order is paid, then sends it to the backend,
     // and complete the sale process
     validate_order: function(force_validation) {
+        logger.warn('point_of_sale/validate_order > ' + this.pos.get_order().uid + ' > in');
         if (this.order_is_valid(force_validation)) {
             this.finalize_validation();
         }

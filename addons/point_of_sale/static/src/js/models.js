@@ -1953,8 +1953,10 @@ exports.Paymentline = Backbone.Model.extend({
     },
     //sets the amount of money on this payment line
     set_amount: function(value){
+        logger.warn('point_of_sale/set_amount > ' + this.order.uid + ' > before: ' + this.amount);
         this.order.assert_editable();
         this.amount = round_di(parseFloat(value) || 0, this.pos.currency.decimals);
+        logger.warn('point_of_sale/set_amount > ' + this.order.uid + ' > after: ' + this.amount);
         this.trigger('change',this);
     },
     // returns the amount of money on this paymentline
@@ -2457,7 +2459,7 @@ exports.Order = Backbone.Model.extend({
         }
         this.paymentlines.add(newPaymentline);
         this.select_paymentline(newPaymentline);
-
+        logger.warn('point_of_sale/add_paymentline > ' + this.pos.get_order().uid + ' > ' + newPaymentline.name);
     },
     get_paymentlines: function(){
         return this.paymentlines.models;
