@@ -1,8 +1,12 @@
 odoo (12.0.107) stable; urgency=low
 
+  [Imanol Aranburu]
   * #11656 Cambiar grupo cuentas en plantilla iva exento repercutido.
 
- -- Imanol Aranburu <iaranburu@binovo.es>  Mon, 15 May 2023 10:35:48 +0200
+  [Alicia Rodríguez]
+  * #12507 Cambiar traducción pedido portal web
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Mon, 15 May 2023 12:38:00 +0200
 
 odoo (12.0.101) stable; urgency=low
 
