@@ -2076,15 +2076,11 @@ var PaymentScreenWidget = ScreenWidget.extend({
     order_changes: function(){
         var self = this;
         var order = this.pos.get_order();
-        logger.warn('point_of_sale/order_changes > ' + order.uid + ' > in');
         if (!order) {
-            logger.warn('point_of_sale/order_changes > ' + order.uid + ' > return');
             return;
         } else if (order.is_paid()) {
-            logger.warn('point_of_sale/order_changes > ' + order.uid + ' > buttonON');
             self.$('.next').addClass('highlight');
         }else{
-            logger.warn('point_of_sale/order_changes > ' + order.uid + ' > buttonOFF');
             self.$('.next').removeClass('highlight');
         }
     },
