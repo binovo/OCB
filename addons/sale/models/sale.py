@@ -782,12 +782,14 @@ class SaleOrderLine(models.Model):
             # Total of remaining amount to invoice on the sale ordered (and draft invoice included) to support upsell (when
             # delivered quantity is higher than ordered one). Draft invoice are ignored on purpose, the 'to invoice' should
             # come only from the SO lines.
-            total_sale_line = line.price_total
+            amt_to_invoice = line.price_total - invoiced_amount_total
             if line.product_id.invoice_policy == 'delivery':
-                total_sale_line = line.price_reduce_taxinc * line.qty_delivered
-
+                if line.qty_delivered == line.qty_invoiced:
+                    amt_to_invoice = 0
+                else:
+                    amt_to_invoice = line.price_reduce_taxinc * line.qty_delivered - invoiced_amount_total
             line.amt_invoiced = invoiced_amount_total - refund_amount_total
-            line.amt_to_invoice = (total_sale_line - invoiced_amount_total) if line.state in ['sale', 'done'] else 0.0
+            line.amt_to_invoice = amt_to_invoice if line.state in ['sale', 'done'] else 0.0
 
     @api.depends('qty_invoiced', 'qty_delivered', 'product_uom_qty', 'order_id.state')
     def _get_to_invoice_qty(self):
