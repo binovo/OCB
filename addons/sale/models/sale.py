@@ -762,8 +762,8 @@ class SaleOrderLine(models.Model):
         refund_lines_product = self.env['account.invoice.line']
         for line in self:
             # Invoice lines referenced by this line
-            invoice_lines = line.invoice_lines.filtered(lambda l: l.invoice_id.state in ('open', 'paid') and l.invoice_id.type == 'out_invoice')
-            refund_lines = line.invoice_lines.filtered(lambda l: l.invoice_id.state in ('open', 'paid') and l.invoice_id.type == 'out_refund')
+            invoice_lines = line.invoice_lines.filtered(lambda l: l.invoice_id.state != 'cancel' and l.invoice_id.type == 'out_invoice')
+            refund_lines = line.invoice_lines.filtered(lambda l: l.invoice_id.state != 'cancel' and l.invoice_id.type == 'out_refund')
             # Refund invoices linked to invoice_lines
             refund_invoices = invoice_lines.mapped('invoice_id.refund_invoice_ids').filtered(lambda inv: inv.state in ('open', 'paid'))
             refund_invoice_lines = (refund_invoices.mapped('invoice_line_ids') + refund_lines - refund_lines_product).filtered(lambda l: l.product_id == line.product_id)

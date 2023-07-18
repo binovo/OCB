@@ -67,14 +67,14 @@ class TestSaleOrderInvoicing(AccountingTestCase):
         payment.with_context(context).create_invoices()
         invoice_2 = order.invoice_ids[1]
 
-        self.assertEqual(sum(order.order_line.mapped('amt_to_invoice')), 800.0, 'Sale: the Amount To Invoice for the sale order should be 800.0.')
-        self.assertEqual(sum(order.order_line.mapped('amt_invoiced')), 0.0, 'Sale: the Amount Invoiced for the sale order should be 0.0.')
+        self.assertEqual(sum(order.order_line.mapped('amt_to_invoice')), 0.0, 'Sale: the Amount To Invoice for the sale order should be 0.0.')
+        self.assertEqual(sum(order.order_line.mapped('amt_invoiced')), 800.0, 'Sale: the Amount Invoiced for the sale order should be 800.0.')
 
         # Now I validate invoice_1.
         invoice_1.action_invoice_open()
 
-        self.assertEqual(sum(order.order_line.mapped('amt_to_invoice')), 300.0, 'Sale: the Amount To Invoice for the sale order should be 300.0.')
-        self.assertEqual(sum(order.order_line.mapped('amt_invoiced')), 500.0, 'Sale: the Amount Invoiced for the sale order should be 500.0.')
+        self.assertEqual(sum(order.order_line.mapped('amt_to_invoice')), 0.0, 'Sale: the Amount To Invoice for the sale order should be 0.0.')
+        self.assertEqual(sum(order.order_line.mapped('amt_invoiced')), 800.0, 'Sale: the Amount Invoiced for the sale order should be 800.0.')
 
         # Now I validate invoice_2.
         invoice_2.action_invoice_open()
@@ -194,8 +194,8 @@ class TestSaleOrderInvoicing(AccountingTestCase):
 
         self.assertEqual(sale_line_deli.amt_to_invoice, 0.0, 'Amount to invoice for delivered SO line is still zero, since its delivered quantity (on SO line) is zero')
         self.assertEqual(sale_line_deli.amt_invoiced, 0.0, 'Amount invoiced for delivered SO line is still zero, since its delivered quantity (on SO line) is zero, and there is no invoice at this moment')
-        self.assertEqual(sale_line_ord.amt_to_invoice, 40.0, 'Amount to invoice for ordered SO line should be 40, since there is a draft invoice')
-        self.assertEqual(sale_line_ord.amt_invoiced, 0.0, 'Amount invoiced for ordered SO line should zero, there is no validated invoice at this moment')
+        self.assertEqual(sale_line_ord.amt_to_invoice, 0.0, 'Amount to invoice for ordered SO line should be zero, since there is a draft invoice')
+        self.assertEqual(sale_line_ord.amt_invoiced, 40.0, 'Amount invoiced for ordered SO line should 40, since there is a draft invoice')
 
         # validate invoice
         invoice_1.action_invoice_open()
@@ -241,8 +241,8 @@ class TestSaleOrderInvoicing(AccountingTestCase):
         payment.with_context(invoice_context, open_invoices=True).create_invoices()
         invoice_3 = order.invoice_ids.sorted(key='id')[2]
 
-        self.assertEqual(sale_line_deli.amt_to_invoice, 500.0, 'Amount to invoice for delivered SO line is now 500, since we got a uninvoiced unit')
-        self.assertEqual(sale_line_deli.amt_invoiced, 1000.0, 'Amount invoiced for delivered SO line is still 1000')
+        self.assertEqual(sale_line_deli.amt_to_invoice, 0.0, 'Amount to invoice for delivered SO line is now 0, since we got a new unit in a invoice in draft')
+        self.assertEqual(sale_line_deli.amt_invoiced, 1500.0, 'Amount invoiced for delivered SO line is now 1500')
         self.assertEqual(sale_line_ord.amt_to_invoice, 0.0, 'Amount to invoice for ordered SO line is zero, since the invoice is validated')
         self.assertEqual(sale_line_ord.amt_invoiced, 40.0, 'Amount invoiced for ordered SO line should 40, there is a validated invoice at this moment')
 
@@ -250,7 +250,7 @@ class TestSaleOrderInvoicing(AccountingTestCase):
         order.action_cancel()
 
         self.assertEqual(sale_line_deli.amt_to_invoice, 0.0, 'Amount to invoice for delivered SO line is now 0, since SO is cancel')
-        self.assertEqual(sale_line_deli.amt_invoiced, 1000.0, 'Amount invoiced for delivered SO line is still 1000, even if the SO is cancelled')
+        self.assertEqual(sale_line_deli.amt_invoiced, 1500.0, 'Amount invoiced for delivered SO line is still 1500, even if the SO is cancelled')
         self.assertEqual(sale_line_ord.amt_to_invoice, 0.0, 'Amount to invoice for ordered SO line is zero, since the invoice is validated')
         self.assertEqual(sale_line_ord.amt_invoiced, 40.0, 'Amount invoiced for ordered SO line should 40, there is a validated invoice at this moment')
 
@@ -258,7 +258,7 @@ class TestSaleOrderInvoicing(AccountingTestCase):
         invoice_3.invoice_line_ids.write({'price_unit': 300})
 
         self.assertEqual(sale_line_deli.amt_to_invoice, 0.0, 'Amount to invoice for delivered SO line is now 0: nothing should change as the invoice is in draft state')
-        self.assertEqual(sale_line_deli.amt_invoiced, 1000.0, 'Amount invoiced for delivered SO line is still 1000, even if we change price of unvalidated invoice')
+        self.assertEqual(sale_line_deli.amt_invoiced, 1300.0, 'Amount invoiced for delivered SO line is now 1300, even if we change price of draft invoice')
         self.assertEqual(sale_line_ord.amt_to_invoice, 0.0, 'Amount to invoice for ordered SO line is zero, since the invoice is validated')
         self.assertEqual(sale_line_ord.amt_invoiced, 40.0, 'Amount invoiced for ordered SO line should 40, there is a validated invoice at this moment')
 
@@ -266,6 +266,6 @@ class TestSaleOrderInvoicing(AccountingTestCase):
         invoice_3.action_invoice_open()
 
         self.assertEqual(sale_line_deli.amt_to_invoice, 0.0, 'Amount to invoice for delivered SO line is now 0, since SO is cancel')
-        self.assertEqual(sale_line_deli.amt_invoiced, 1300.0, 'Amount invoiced for delivered SO line is incremented, since the 3rd invoice for this product is validated')
+        self.assertEqual(sale_line_deli.amt_invoiced, 1300.0, 'Amount invoiced for delivered SO line is still 1300, since the 3rd invoice for this product is validated')
         self.assertEqual(sale_line_ord.amt_to_invoice, 0.0, 'Amount to invoice for ordered SO line is zero, since the invoice is validated')
         self.assertEqual(sale_line_ord.amt_invoiced, 40.0, 'Amount invoiced for ordered SO line should 40, there is a validated invoice at this moment')

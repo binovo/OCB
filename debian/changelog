@@ -6,8 +6,14 @@ odoo (11.0.111) stable; urgency=low
   (amt_to_invoice) de las líneas a la hora de computarlo,
   para el caso en el que el producto tenga la política de facturación
   de entrega y la cantidad entregada sea igual a la facturada
+  * [12871] [FIX] sale: corregir el criterio del cálculo de las columnas
+  importe a facturar e importe facturado en las líneas del pedido de venta,
+  para que vayan acorde a las cantidades a facturas y cantidades facturadas,
+  la corrección trata de considerar como líneas facturadas aquellas que no
+  estén canceladas, es decir, aparte de las validadas y las pagadas se consideran
+  también las de estado borrador
 
- -- Ugaitz Olaizola <uolaizola@binovo.es>  Tue, 18 Jul 2023 08:34:06 +0200
+ -- Ugaitz Olaizola <uolaizola@binovo.es>  Tue, 18 Jul 2023 13:46:22 +0200
 
 odoo (11.0.75) stable; urgency=low
 
