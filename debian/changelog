@@ -1,3 +1,14 @@
+odoo (11.0.111) stable; urgency=low
+
+  [ Ugaitz Olaizola ]
+
+  * [12871] [UPD] sale: considerar 0 el valor de la columna importe a facturar
+  (amt_to_invoice) de las líneas a la hora de computarlo,
+  para el caso en el que el producto tenga la política de facturación
+  de entrega y la cantidad entregada sea igual a la facturada
+
+ -- Ugaitz Olaizola <uolaizola@binovo.es>  Tue, 18 Jul 2023 08:34:06 +0200
+
 odoo (11.0.75) stable; urgency=low
 
   * #9239: Añadir identificadores de clase en sale.report_invoice_layouted
