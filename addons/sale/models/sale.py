@@ -1039,7 +1039,7 @@ class SaleOrderLine(models.Model):
         calculated from the ordered quantity. Otherwise, the quantity delivered is used.
         """
         for line in self:
-            if line.order_id.state in ['sale', 'done']:
+            if line.order_id.state != "cancel":
                 if line.product_id.invoice_policy == 'order':
                     line.qty_to_invoice = line.product_uom_qty - line.qty_invoiced
                 else:
@@ -1364,7 +1364,7 @@ class SaleOrderLine(models.Model):
         for line in self:
             amount_invoiced = 0.0
             for invoice_line in line.invoice_lines:
-                if invoice_line.invoice_id.state in ['open', 'in_payment', 'paid']:
+                if invoice_line.invoice_id.state != "cancel":
                     invoice_date = invoice_line.invoice_id.date_invoice or fields.Date.today()
                     if invoice_line.invoice_id.type == 'out_invoice':
                         amount_invoiced += invoice_line.currency_id._convert(invoice_line.price_subtotal, line.currency_id, line.company_id, invoice_date)
@@ -1383,7 +1383,7 @@ class SaleOrderLine(models.Model):
         """
         for line in self:
             amount_to_invoice = 0.0
-            if line.state in ['sale', 'done']:
+            if line.state != "cancel":
                 # Note: do not use price_subtotal field as it returns zero when the ordered quantity is
                 # zero. It causes problem for expense line (e.i.: ordered qty = 0, deli qty = 4,
                 # price_unit = 20 ; subtotal is zero), but when you can invoice the line, you see an

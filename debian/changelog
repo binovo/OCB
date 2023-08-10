@@ -1,3 +1,11 @@
+odoo (12.0.113) stable; urgency=low
+
+  [Jesús Sánchez]
+  * #13052 sale: Modificar la función que computa el importe facturado y a facturar para que coja las
+  líneas de las facturas que están en estado borrador
+
+ -- Jesús Sánchez <jsanchez@binovo.es>  Tue, 29 Aug 2023 14:33:43 +0100
+
 odoo (12.0.107) stable; urgency=low
 
   [Imanol Aranburu]

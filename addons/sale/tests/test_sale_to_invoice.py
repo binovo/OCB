@@ -143,7 +143,9 @@ class TestSaleToInvoice(TestCommonSaleNoChart):
 
         # lines are in draft
         for line in self.sale_order.order_line:
-            self.assertTrue(float_is_zero(line.untaxed_amount_to_invoice, precision_digits=2), "The amount to invoice should be zero, as the line is in draf state")
+            untaxed_amount_to_invoice_expected = line.product_uom_qty * line.price_unit * (1 - line.discount / 100)
+            self.assertEquals(line.untaxed_amount_to_invoice, untaxed_amount_to_invoice_expected,
+                              "The amount to invoice should is qty to invoice * unit price minus discount")
             self.assertTrue(float_is_zero(line.untaxed_amount_invoiced, precision_digits=2), "The invoiced amount should be zero, as the line is in draft state")
 
         self.sale_order.action_confirm()
@@ -173,7 +175,12 @@ class TestSaleToInvoice(TestCommonSaleNoChart):
         """ Test invoice with a refund and check customer invoices credit note is created from respective invoice """
         # lines are in draft
         for line in self.sale_order.order_line:
-            self.assertTrue(float_is_zero(line.untaxed_amount_to_invoice, precision_digits=2), "The amount to invoice should be zero, as the line is in draf state")
+            if line.product_id.invoice_policy == "delivery":
+                untaxed_amount_to_invoice_expected = 0
+            else:
+                untaxed_amount_to_invoice_expected = line.product_uom_qty * line.price_unit * (1 - line.discount / 100)
+            self.assertEquals(line.untaxed_amount_to_invoice, untaxed_amount_to_invoice_expected,
+                              "The amount to invoice should be zero if the invoice policy of the product is delivery")
             self.assertTrue(float_is_zero(line.untaxed_amount_invoiced, precision_digits=2), "The invoiced amount should be zero, as the line is in draft state")
 
         # Confirm the SO
@@ -218,8 +225,8 @@ class TestSaleToInvoice(TestCommonSaleNoChart):
                 else:
                     self.assertEquals(self.sol_serv_order.qty_to_invoice, 1.0, "Changing the quantity on draft invoice update the qty to invoice on SO lines")
                     self.assertEquals(self.sol_serv_order.qty_invoiced, 2.0, "Changing the quantity on draft invoice update the invoiced qty on SO lines")
-                self.assertEquals(line.untaxed_amount_to_invoice, line.product_uom_qty * line.price_unit, "The amount to invoice should the total of the line, as the line is confirmed (no confirmed invoice)")
-                self.assertEquals(line.untaxed_amount_invoiced, 0.0, "The invoiced amount should be zero, as no invoice are validated for now")
+                self.assertEquals(line.untaxed_amount_to_invoice, line.product_uom_qty * line.price_unit - line.untaxed_amount_invoiced, "Amount to invoice is now set as qty to invoice * unit price minus untaxed_amount_invoiced since no price change on invoice, for ordered products")
+                self.assertEquals(line.untaxed_amount_invoiced, line.product_uom_qty * line.price_unit - line.untaxed_amount_to_invoice, "The invoiced amount is now set as qty to invoice * unit price minus untaxed_amount_to_invoice since no price change on invoice, for ordered products")
 
         invoice.action_invoice_open()
 
@@ -264,13 +271,13 @@ class TestSaleToInvoice(TestCommonSaleNoChart):
                 if line == self.sol_prod_order:
                     self.assertEquals(line.qty_to_invoice, 2.0, "The qty to invoice does not change when confirming the new invoice (2)")
                     self.assertEquals(line.qty_invoiced, 3.0, "The ordered (prod) sale line does not change on invoice 2 confirmation")
-                    self.assertEquals(line.untaxed_amount_to_invoice, line.price_unit * 5, "Amount to invoice is now set as qty to invoice * unit price since no price change on invoice, for ordered products")
-                    self.assertEquals(line.untaxed_amount_invoiced, 0.0, "Amount invoiced is zero as the invoice 1 and its refund are reconcilied")
+                    self.assertEquals(line.untaxed_amount_to_invoice, line.price_unit * 5 - line.untaxed_amount_invoiced, "Amount to invoice is now set as qty to invoice * unit price minus untaxed_amount_invoiced since no price change on invoice, for ordered products")
+                    self.assertEquals(line.untaxed_amount_invoiced, line.price_unit * 5 - line.untaxed_amount_to_invoice, "Amount invoiced is now set as qty to invoice * unit price minus untaxed_amount_to_invoice since no price change on invoice, for ordered products")
                 else:
                     self.assertEquals(line.qty_to_invoice, 1.0, "The qty to invoice does not change when confirming the new invoice (2)")
                     self.assertEquals(line.qty_invoiced, 2.0, "The ordered (serv) sale line does not change on invoice 2 confirmation")
-                    self.assertEquals(line.untaxed_amount_to_invoice, line.price_unit * 3, "Amount to invoice is now set as unit price * ordered qty - refund qty) even if the ")
-                    self.assertEquals(line.untaxed_amount_invoiced, 0.0, "Amount invoiced is zero as the invoice 1 and its refund are reconcilied")
+                    self.assertEquals(line.untaxed_amount_to_invoice, line.price_unit * 3 - line.untaxed_amount_invoiced, "Amount to invoice is now set as qty to invoice * unit price minus untaxed_amount_invoiced since no price change on invoice, for ordered products")
+                    self.assertEquals(line.untaxed_amount_invoiced, line.price_unit * 3 - line.untaxed_amount_to_invoice, "Amount invoiced is now set as qty to invoice * unit price minus untaxed_amount_to_invoice since no price change on invoice, for ordered products")
 
         # Change unit of ordered product on refund lines
         invoice_2.invoice_line_ids.filtered(lambda invl: invl.product_id == self.sol_prod_order.product_id).write({'price_unit': 100})
