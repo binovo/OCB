@@ -1,3 +1,12 @@
+odoo (11.0.116) stable; urgency=low
+
+  [ Ugaitz Olaizola ]
+  * #13409 [UPD] website: actualizar script de google analytics para compatibilizarlo con
+  Analytics 4, código backporteado de la versión 16.0 de OCB
+
+
+ -- Ugaitz Olaizola <uolaizola@binovo.es>  Fri, 29 Sep 2023 13:00:18 +0200
+
 odoo (11.0.111) stable; urgency=low
 
   [ Ugaitz Olaizola ]
