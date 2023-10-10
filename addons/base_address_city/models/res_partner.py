@@ -25,11 +25,11 @@ class Partner(models.Model):
         arch = super(Partner, self)._fields_view_get_address(arch)
         # render the partner address accordingly to address_view_id
         doc = etree.fromstring(arch)
-        if doc.xpath("//field[@name='city_id']"):
+        if doc.xpath("//div[hasclass('o_address_format')]//field[@name='city_id']"):
             return arch
 
         replacement_xml = """
-            <div>
+            <div class="o_address_format">
                 <field name="country_enforce_cities" invisible="1"/>
                 <field name="parent_id" invisible="1"/>
                 <field name='city' placeholder="%(placeholder)s" class="o_address_city"
