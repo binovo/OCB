@@ -1,3 +1,13 @@
+odoo (12.0.117) stable; urgency=low
+
+  [ Alicia Rodríguez ]
+  * #13449 [UPD] tools: Abrir el fichero devnull para que sea en modo escritura
+    Al parecer en alguna versión de pgdump posterior a la 13 se hace algún tipo
+    de escritura y como en odoo se abre dicho fichero en modo lectura fallaba al
+    intentar realizar los backups
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Wed, 25 Oct 2023 12:24:00 +0200
+
 odoo (12.0.116) stable; urgency=low
 
   [ Ugaitz Olaizola ]

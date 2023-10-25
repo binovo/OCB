@@ -122,7 +122,7 @@ def exec_pg_environ():
 def exec_pg_command(name, *args):
     prog = find_pg_tool(name)
     env = exec_pg_environ()
-    with open(os.devnull) as dn:
+    with open(os.devnull, "w") as dn:
         args2 = (prog,) + args
         rc = subprocess.call(args2, env=env, stdout=dn, stderr=subprocess.STDOUT)
         if rc:
