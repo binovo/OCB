@@ -136,40 +136,51 @@ class IrTranslationImport(object):
         # Step 2: insert new or upsert non-noupdate translations
         if self._overwrite:
             cr.execute(""" INSERT INTO %s(name, lang, res_id, src, type, value, module, state, comments)
-                           SELECT name, lang, res_id, src, type, value, module, state, comments
+                           SELECT max(name) AS name, lang, max(res_id) AS res_id, src, type, 
+                                  max(value) AS value, max(module) AS module, 
+                                  max(state) AS state, max(comments) AS comments
                            FROM %s
                            WHERE type = 'code'
                            AND noupdate IS NOT TRUE
+                           GROUP BY type, lang, src
                            ON CONFLICT (type, lang, md5(src)) WHERE type = 'code'
                             DO UPDATE SET (name, lang, res_id, src, type, value, module, state, comments) = (EXCLUDED.name, EXCLUDED.lang, EXCLUDED.res_id, EXCLUDED.src, EXCLUDED.type, EXCLUDED.value, EXCLUDED.module, EXCLUDED.state, EXCLUDED.comments)
                             WHERE EXCLUDED.value IS NOT NULL AND EXCLUDED.value != '';
                        """ % (self._model_table, self._table))
             count += cr.rowcount
             cr.execute(""" INSERT INTO %s(name, lang, res_id, src, type, value, module, state, comments)
-                           SELECT name, lang, res_id, src, type, value, module, state, comments
+                           SELECT name, lang, res_id, max(src) AS src, type, max(value) AS value, 
+                                  max(module) AS module, max(state) AS state, max(comments) AS comments
                            FROM %s
                            WHERE type = 'model'
                            AND noupdate IS NOT TRUE
+                           GROUP BY type, lang, name, res_id 
                            ON CONFLICT (type, lang, name, res_id) WHERE type = 'model'
                             DO UPDATE SET (name, lang, res_id, src, type, value, module, state, comments) = (EXCLUDED.name, EXCLUDED.lang, EXCLUDED.res_id, EXCLUDED.src, EXCLUDED.type, EXCLUDED.value, EXCLUDED.module, EXCLUDED.state, EXCLUDED.comments)
                             WHERE EXCLUDED.value IS NOT NULL AND EXCLUDED.value != '';
                        """ % (self._model_table, self._table))
             count += cr.rowcount
             cr.execute(""" INSERT INTO %s(name, lang, res_id, src, type, value, module, state, comments)
-                           SELECT name, lang, res_id, src, type, value, module, state, comments
+                           SELECT name, lang, max(res_id) AS res_id, src, type, 
+                                  max(value) AS value, max(module) AS module, 
+                                  max(state) AS state, max(comments) AS comments
                            FROM %s
                            WHERE type IN ('selection', 'constraint', 'sql_constraint')
                            AND noupdate IS NOT TRUE
+                           GROUP BY type, lang, name, src
                            ON CONFLICT (type, lang, name, md5(src)) WHERE type IN ('selection', 'constraint', 'sql_constraint')
                             DO UPDATE SET (name, lang, res_id, src, type, value, module, state, comments) = (EXCLUDED.name, EXCLUDED.lang, EXCLUDED.res_id, EXCLUDED.src, EXCLUDED.type, EXCLUDED.value, EXCLUDED.module, EXCLUDED.state, EXCLUDED.comments)
                             WHERE EXCLUDED.value IS NOT NULL AND EXCLUDED.value != '';
                        """ % (self._model_table, self._table))
             count += cr.rowcount
             cr.execute(""" INSERT INTO %s(name, lang, res_id, src, type, value, module, state, comments)
-                           SELECT name, lang, res_id, src, type, value, module, state, comments
+                           SELECT name, lang, res_id, src, type, 
+                                  max(value) AS value, max(module) AS module, 
+                                  max(state) AS state, max(comments) AS comments
                            FROM %s
                            WHERE type = 'model_terms'
                            AND noupdate IS NOT TRUE
+                           GROUP BY type, name, lang, res_id, src
                            ON CONFLICT (type, name, lang, res_id, md5(src))
                             DO UPDATE SET (name, lang, res_id, src, type, value, module, state, comments) = (EXCLUDED.name, EXCLUDED.lang, EXCLUDED.res_id, EXCLUDED.src, EXCLUDED.type, EXCLUDED.value, EXCLUDED.module, EXCLUDED.state, EXCLUDED.comments)
                             WHERE EXCLUDED.value IS NOT NULL AND EXCLUDED.value != '';

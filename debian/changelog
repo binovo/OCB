@@ -1,3 +1,10 @@
+odoo (12.0.118) stable; urgency=low
+
+  [ Imanol Aranburu ]
+  * #11392 [UPD] Cambios para poder importar fichero global de un idioma.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Wed, 15 Nov 2023 14:45:17 +0100
+
 odoo (12.0.117) stable; urgency=low
 
   [ Alicia Rodríguez ]
