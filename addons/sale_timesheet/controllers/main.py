@@ -31,6 +31,20 @@ class SaleTimesheetController(http.Controller):
             'actions': self._plan_prepare_actions(projects, values),
         }
 
+    def get_init_values(self, currency, projects):
+        return {
+            'projects': projects,
+            'currency': currency,
+            'timesheet_domain': [('project_id', 'in', projects.ids)],
+            'stat_buttons': self._plan_get_stat_button(projects),
+        }
+
+    def get_dashboard_domain(self, projects):
+        return [('project_id', 'in', projects.ids), ('timesheet_invoice_type', '!=', False)]
+
+    def get_repartition_domain(self, projects):
+        return [('project_id', 'in', projects.ids), ('employee_id', '!=', False), ('timesheet_invoice_type', '!=', False)]
+
     def _plan_prepare_values(self, projects):
 
         currency = request.env.user.company_id.currency_id
@@ -38,12 +52,7 @@ class SaleTimesheetController(http.Controller):
         hour_rounding = uom_hour.rounding
         billable_types = ['non_billable', 'non_billable_project', 'billable_time', 'billable_fixed']
 
-        values = {
-            'projects': projects,
-            'currency': currency,
-            'timesheet_domain': [('project_id', 'in', projects.ids)],
-            'stat_buttons': self._plan_get_stat_button(projects),
-        }
+        values = self.get_init_values(currency, projects)
 
         #
         # Hours, Rates and Profitability
@@ -60,7 +69,7 @@ class SaleTimesheetController(http.Controller):
         }
 
         # hours (from timesheet) and rates (by billable type)
-        dashboard_domain = [('project_id', 'in', projects.ids), ('timesheet_invoice_type', '!=', False)]  # force billable type
+        dashboard_domain = self.get_dashboard_domain(projects)  # force billable type
         dashboard_data = request.env['account.analytic.line'].read_group(dashboard_domain, ['unit_amount', 'timesheet_invoice_type'], ['timesheet_invoice_type'])
         dashboard_total_hours = sum([data['unit_amount'] for data in dashboard_data])
         for data in dashboard_data:
@@ -95,7 +104,7 @@ class SaleTimesheetController(http.Controller):
         # flatten the list of list
         employee_ids = list(itertools.chain.from_iterable([employee_id['employee_ids'] for employee_id in employee_ids]))
         employees = request.env['hr.employee'].sudo().browse(employee_ids) | request.env['account.analytic.line'].search([('project_id', 'in', projects.ids)]).mapped('employee_id')
-        repartition_domain = [('project_id', 'in', projects.ids), ('employee_id', '!=', False), ('timesheet_invoice_type', '!=', False)]  # force billable type
+        repartition_domain =  self.get_repartition_domain(projects) # force billable type
         repartition_data = request.env['account.analytic.line'].read_group(repartition_domain, ['employee_id', 'timesheet_invoice_type', 'unit_amount'], ['employee_id', 'timesheet_invoice_type'], lazy=False)
 
         # set repartition per type per employee
@@ -262,6 +271,12 @@ class SaleTimesheetController(http.Controller):
         lenght = len(self._table_header(projects))
         return [0.0] * (lenght - 1)  # before, M1, M2, M3, Done, Sold, Remaining
 
+    def get_where_table_rows_sql_query(self):
+        return """WHERE A.project_id IS NOT NULL
+                AND A.project_id IN %s
+                AND A.date < %s
+               """
+
     def _table_rows_sql_query(self, projects):
         initial_date = fields.Date.from_string(fields.Date.today())
         ts_months = sorted([fields.Date.to_string(initial_date - relativedelta(months=i, day=1)) for i in range(0, DEFAULT_MONTH_RANGE)])  # M1, M2, M3
@@ -277,11 +292,10 @@ class SaleTimesheetController(http.Controller):
             FROM account_analytic_line A
                 JOIN hr_employee E ON E.id = A.employee_id
                 LEFT JOIN sale_order_line S ON S.id = A.so_line
-            WHERE A.project_id IS NOT NULL
-                AND A.project_id IN %s
-                AND A.date < %s
+            """ + self.get_where_table_rows_sql_query() + \
+            """
             GROUP BY date_trunc('month', date)::date, S.order_id, A.so_line, E.id
-        """
+            """
 
         last_ts_month = fields.Date.to_string(fields.Date.from_string(ts_months[-1]) + relativedelta(months=1))
         query_params = (tuple(projects.ids), last_ts_month)
