@@ -379,7 +379,11 @@ export const editorCommands = {
         const changedElements = [];
         const defaultDirection = editor.options.direction;
         const shouldApplyStyle = !isSelectionFormat(editor.editable, 'switchDirection');
-        for (const block of new Set(selectedTextNodes.map(textNode => closestElement(textNode, 'ul,ol') || closestBlock(textNode)))) {
+        let blocks = new Set(selectedTextNodes.map(textNode => closestElement(textNode, 'ul,ol') || closestBlock(textNode)));
+        blocks.forEach(block => {
+            blocks = [...blocks, ...block.querySelectorAll('ul,ol')];
+        })
+        for (const block of blocks) {
             if (!shouldApplyStyle) {
                 block.removeAttribute('dir');
             } else {
@@ -491,7 +495,8 @@ export const editorCommands = {
                 cli.tagName == 'LI' &&
                 !li.has(cli) &&
                 !cli.classList.contains('oe-nested') &&
-                cli.isContentEditable
+                cli.isContentEditable &&
+                !cli.classList.contains('nav-item')
             ) {
                 li.add(cli);
             }
@@ -518,11 +523,15 @@ export const editorCommands = {
             if (node.nodeType === Node.TEXT_NODE && !isVisibleStr(node) && closestElement(node).isContentEditable) {
                 node.remove();
             } else {
-                let block = closestBlock(node);
-                if (!['OL', 'UL'].includes(block.tagName) && block.isContentEditable) {
-                    block = block.closest('li') || block;
-                    const ublock = block.closest('ol, ul');
-                    ublock && getListMode(ublock) == mode ? li.add(block) : blocks.add(block);
+                // Ensure nav-item lists are excluded from toggling
+                const isNavItemList = node => node.nodeName === 'LI' && node.classList.contains('nav-item');
+                let nodeToToggle = closestBlock(node);
+                nodeToToggle = isNavItemList(nodeToToggle) ? node : nodeToToggle;
+                if (!['OL', 'UL'].includes(nodeToToggle.tagName) && (nodeToToggle.isContentEditable || nodeToToggle.nodeType === Node.TEXT_NODE)) {
+                    const closestLi = closestElement(nodeToToggle, 'li');
+                    nodeToToggle = closestLi && !isNavItemList(closestLi) ? closestLi : nodeToToggle;
+                    const ublock = nodeToToggle.nodeName === 'LI' && nodeToToggle.closest('ol, ul');
+                    ublock && getListMode(ublock) == mode ? li.add(nodeToToggle) : blocks.add(nodeToToggle);
                 }
             }
         }
@@ -591,6 +600,7 @@ export const editorCommands = {
                     (node.nodeType === Node.TEXT_NODE && isVisibleStr(node)) ||
                     (isEmptyBlock(node.parentNode)) ||
                     (node.nodeType === Node.ELEMENT_NODE &&
+                    node.nodeName !== 'FIGURE' &&
                     ['inline', 'inline-block'].includes(getComputedStyle(node).display) &&
                     isVisibleStr(node.textContent) &&
                     !node.classList.contains('btn') &&

@@ -1954,6 +1954,10 @@ export class OdooEditor extends EventTarget {
             }
         }
         let insertedZws;
+        let { startContainer: start, startOffset, endContainer: end, endOffset } = range;
+        const startBlock = closestBlock(start);
+        const endBlock = closestBlock(end);
+        const [firstLeafOfStartBlock, lastLeafOfEndBlock] = [firstLeaf(startBlock), lastLeaf(endBlock)];
         if (sel && !sel.isCollapsed && !range.startOffset && !range.startContainer.previousSibling) {
             // Insert a zero-width space before the selection if the selection
             // is non-collapsed and at the beginning of its parent, so said
@@ -1966,12 +1970,16 @@ export class OdooEditor extends EventTarget {
             range.startContainer.before(zws);
             insertedZws = zws;
         }
-        let { startContainer: start, startOffset, endContainer: end, endOffset } = range;
-        const [startBlock, endBlock] = [closestBlock(start), closestBlock(end)];
+        // Do not join blocks in the following cases:
+        // 1. start and end share a common ancestor block with the range
+        // 2. selection spans multiple TDs
+        // 3. selection starts at beginning of startBlock and ends at end of
+        //    endBlock
         const doJoin =
-            (startBlock !== closestBlock(range.commonAncestorContainer) ||
-            endBlock !== closestBlock(range.commonAncestorContainer))
-            && (startBlock.tagName !== 'TD' && endBlock.tagName !== 'TD');
+            !(startBlock === closestBlock(range.commonAncestorContainer) &&
+                endBlock === closestBlock(range.commonAncestorContainer))
+            && (startBlock.tagName !== 'TD' && endBlock.tagName !== 'TD')
+            && !(firstLeafOfStartBlock === start && lastLeafOfEndBlock === end);
         let next = nextLeaf(end, this.editable);
 
         // Get the boundaries of the range so as to get the state to restore.
@@ -1992,6 +2000,12 @@ export class OdooEditor extends EventTarget {
         const contents = range.extractContents();
 
         setSelection(start, nodeSize(start));
+        const startLi = closestElement(start, 'li');
+        // Uncheck a list item with empty text in multi-list selection.
+        if (startLi && startLi.classList.contains('o_checked') &&
+            startLi.textContent === '\u200B' && closestElement(end, 'li') !== startLi) {
+            startLi.classList.remove('o_checked');
+        }
         range = getDeepRange(this.editable, { sel });
         // Restore unremovables removed by extractContents.
         [...contents.querySelectorAll('*')].filter(isUnremovable).forEach(n => {
@@ -2712,10 +2726,14 @@ export class OdooEditor extends EventTarget {
 
         let left;
         let top;
-        if (isRow && isRtl) {
-            left = tableRect.right - tableUiContainerRect.x;
-        } else if (isRow && !isRtl) {
-            left = elementRect.left - tableUiContainerRect.left - (isRow ? wrappedUi.clientWidth : 0);
+        if (isRow) {
+            if (isRtl) {
+                left = tableRect.right - tableUiContainerRect.x;
+            } else {
+                left = elementRect.left - tableUiContainerRect.left - wrappedUi.clientWidth;
+            }
+        } else if (isRtl) {
+            left = elementRect.left - tableUiContainerRect.left + wrappedUi.clientWidth;
         } else {
             left = elementRect.left - tableUiContainerRect.left - (isRow ? wrappedUi.clientWidth : 0);
         }
@@ -3001,6 +3019,7 @@ export class OdooEditor extends EventTarget {
             styleSection.querySelector('button span').textContent = activeLabel;
         }
 
+        const isInMedia = this.toolbar.classList.contains('oe-media');
         const linkNode = getInSelection(this.document, 'a');
         const linkButton = this.toolbar.querySelector('#create-link');
         linkButton && linkButton.classList.toggle('active', !!linkNode);
@@ -3011,6 +3030,11 @@ export class OdooEditor extends EventTarget {
         if (this.autohideToolbar && !this.isMobile && !this.toolbar.contains(sel.anchorNode)) {
             this._positionToolbar();
         }
+        // Hide create-link button if selection spans several blocks, always
+        // hide on media elements.
+        const range = getDeepRange(this.editable, { sel, correctTripleClick: true });
+        const spansBlocks = [...range.commonAncestorContainer.childNodes].some(isBlock);
+        linkButton && linkButton.classList.toggle('d-none', spansBlocks || isInMedia);
     }
     updateToolbarPosition() {
         if (

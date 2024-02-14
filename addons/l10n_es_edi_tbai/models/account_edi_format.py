@@ -369,8 +369,7 @@ class AccountEdiFormat(models.Model):
 
         return values
 
-    @staticmethod
-    def _l10n_es_tbai_get_invoice_line_price_total(invoice_line):
+    def _l10n_es_tbai_get_invoice_line_price_total(self, invoice_line):
         price_total = invoice_line.price_total
         retention_tax_lines = invoice_line.tax_ids.filtered(lambda t: t.l10n_es_type == "retencion")
         if retention_tax_lines:

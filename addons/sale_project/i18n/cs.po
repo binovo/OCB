@@ -11,13 +11,15 @@
 # Rastislav Brencic <rastislav.brencic@azet.sk>, 2022
 # karolína schusterová <karolina.schusterova@vdp.sk>, 2022
 # Jakub Smolka, 2023
+# Katerina Horylova, 2024
+# Wil Odoo, 2024
 # Aleš Fiala <f.ales1@seznam.cz>, 2024
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-02 10:34+0000\n"
+"POT-Creation-Date: 2024-02-06 13:32+0000\n"
 "PO-Revision-Date: 2022-09-22 05:55+0000\n"
 "Last-Translator: Aleš Fiala <f.ales1@seznam.cz>, 2024\n"
 "Language-Team: Czech (https://app.transifex.com/odoo/teams/41243/cs/)\n"
@@ -75,7 +77,7 @@ msgstr ""
 #: code:addons/sale_project/models/product.py:0
 #, python-format
 msgid "Based on Delivered Quantity (Manual)"
-msgstr ""
+msgstr "Na základě dodaného množství (manuálně)"
 
 #. module: sale_project
 #. odoo-python
@@ -163,7 +165,7 @@ msgstr "Počet faktur"
 #: code:addons/sale_project/models/product.py:0
 #, python-format
 msgid "Invoice ordered quantities as soon as this service is sold."
-msgstr ""
+msgstr "Objednané množství fakturujte, jakmile je tato služba prodána."
 
 #. module: sale_project
 #. odoo-python
@@ -174,6 +176,9 @@ msgid ""
 " for the order with a task for each sales order line to track the time "
 "spent."
 msgstr ""
+"Objednané množství fakturujte, jakmile je tato služba prodána. Vytvořte pro "
+"tuto zakázku projekt s úkolem pro každý řádek prodejní objednávky, abyste "
+"mohli sledovat vynaložený čas."
 
 #. module: sale_project
 #. odoo-python
@@ -183,6 +188,8 @@ msgid ""
 "Invoice ordered quantities as soon as this service is sold. Create a task in"
 " an existing project to track the time spent."
 msgstr ""
+"Objednané množství fakturujte, jakmile je tato služba prodána. Vytvořte úkol"
+" ve stávajícím projektu, abyste mohli sledovat strávený čas."
 
 #. module: sale_project
 #. odoo-python
@@ -192,6 +199,8 @@ msgid ""
 "Invoice ordered quantities as soon as this service is sold. Create an empty "
 "project for the order to track the time spent."
 msgstr ""
+"Objednané množství fakturujte, jakmile je tato služba prodána. Vytvořte "
+"prázdný projekt pro tuto zakázku, abyste mohli sledovat vynaložený čas."
 
 #. module: sale_project
 #. odoo-python
@@ -341,7 +350,7 @@ msgstr "Metoda aktualizace dodaného množství"
 #. module: sale_project
 #: model:ir.model.fields,field_description:sale_project.field_sale_order__milestone_count
 msgid "Milestone Count"
-msgstr ""
+msgstr "Počet milníků"
 
 #. module: sale_project
 #. odoo-python
@@ -493,6 +502,11 @@ msgid "Quantity"
 msgstr "Množství"
 
 #. module: sale_project
+#: model:ir.model,name:sale_project.model_sale_order_template_line
+msgid "Quotation Template Line"
+msgstr "Položka šablony nabídky"
+
+#. module: sale_project
 #: model:ir.model.fields,field_description:sale_project.field_sale_order_line__reached_milestones_ids
 msgid "Reached Milestones"
 msgstr ""
@@ -624,13 +638,6 @@ msgstr ""
 #: code:addons/sale_project/controllers/portal.py:0
 #, python-format
 msgid "Search in Sales Order"
-msgstr ""
-
-#. module: sale_project
-#. odoo-python
-#: code:addons/sale_project/controllers/portal.py:0
-#, python-format
-msgid "Search in Sales Order Item"
 msgstr ""
 
 #. module: sale_project
