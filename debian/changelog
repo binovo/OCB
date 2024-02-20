@@ -1,3 +1,11 @@
+odoo (12.0.124) stable; urgency=low
+
+  [ Ugaitz Olaizola ]
+  * 13681 [UPD] sale añadir clases en plantillas de portal para facilitar
+  la búsqueda vía expresiones XPATH
+
+ -- Ugaitz Olaizola <uolaizola@binovo.es>  Tue, 20 Feb 2024 13:56:53 +0100
+
 odoo (12.0.118) stable; urgency=low
 
   [ Imanol Aranburu ]

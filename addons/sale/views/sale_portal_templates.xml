@@ -46,24 +46,24 @@
             <t t-if="quotations" t-call="portal.portal_table">
                 <thead>
                     <tr class="active">
-                        <th>Quotation #</th>
-                        <th class="text-right">Order Date</th>
-                        <th class="text-right">Valid Until</th>
-                        <th class="text-center"/>
-                        <th class="text-right">Total</th>
+                        <th class="sale-order-name">Quotation #</th>
+                        <th class="text-right sale-order-date-order">Order Date</th>
+                        <th class="text-right sale-order-valid-date">Valid Until</th>
+                        <th class="text-center sale-order-state"/>
+                        <th class="text-right sale-order-total">Total</th>
                     </tr>
                 </thead>
                 <t t-foreach="quotations" t-as="quotation">
                     <tr>
-                        <td><a t-att-href="quotation.get_portal_url()"><t t-esc="quotation.name"/></a></td>
-                        <td class="text-right"><span t-field="quotation.date_order"/></td>
-                        <td class="text-right"><span t-field="quotation.validity_date"/></td>
-                        <td class="text-center">
-                            <span t-if="quotation.state == 'cancel'" class="badge badge-pill badge-secondary"><i class="fa fa-fw fa-remove"/> Cancelled</span>
-                            <span t-if="quotation.is_expired" class="badge badge-pill badge-secondary"><i class="fa fa-fw fa-clock-o"/> Expired</span>
+                        <td class="sale-order-name"><a t-att-href="quotation.get_portal_url()"><t t-esc="quotation.name"/></a></td>
+                        <td class="text-right sale-order-date-order"><span t-field="quotation.date_order"/></td>
+                        <td class="text-right sale-order-valid-date"><span t-field="quotation.validity_date"/></td>
+                        <td class="text-center sale-order-state">
+                            <span t-if="quotation.state == 'cancel'" class="badge badge-pill badge-secondary sale-order-cancelled"><i class="fa fa-fw fa-remove"/> Cancelled</span>
+                            <span t-if="quotation.is_expired" class="badge badge-pill badge-secondary sale-order-expired"><i class="fa fa-fw fa-clock-o"/> Expired</span>
                         </td>
-                        <td class="text-right">
-                            <span t-field="quotation.amount_total"/>
+                        <td class="text-right sale-order-total">
+                            <span class="sale-order-total" t-field="quotation.amount_total"/>
                         </td>
                     </tr>
                 </t>
@@ -84,28 +84,28 @@
             <t t-if="orders" t-call="portal.portal_table">
                 <thead>
                     <tr class="active">
-                        <th>
+                        <th class="sale-order-name">
                             <span class='d-none d-md-inline'>Sales Order #</span>
                             <span class='d-block d-md-none'>Ref.</span>
                         </th>
-                        <th class="text-right">Order Date</th>
-                        <th class="text-center"/>
-                        <th class="text-right">Total</th>
+                        <th class="text-right sale-order-date-order">Order Date</th>
+                        <th class="text-center sale-order-state"/>
+                        <th class="text-right sale-order-total">Total</th>
                     </tr>
                 </thead>
                 <t t-foreach="orders" t-as="order">
                     <tr>
-                        <td><a t-att-href="order.get_portal_url()"><t t-esc="order.name"/></a></td>
-                        <td class="text-right">
+                        <td class="sale-order-name"><a t-att-href="order.get_portal_url()"><t t-esc="order.name"/></a></td>
+                        <td class="text-right sale-order-date-order">
                             <span t-field="order.date_order" t-options="{'widget': 'date'}"/>&amp;nbsp;
                             <span class='d-none d-md-inline' t-field="order.date_order" t-options="{'time_only': True}"/>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center sale-order-state">
                             <span t-if="order.state == 'done'"  class="badge badge-pill badge-success">
                                 <i class="fa fa-fw fa-check" role="img" aria-label="Done" title="Done"/>Done
                             </span>
                         </td>
-                        <td class="text-right"><span t-field="order.amount_total"/></td>
+                        <td class="text-right sale-order-total"><span t-field="order.amount_total"/></td>
                     </tr>
                 </t>
             </t>
@@ -379,14 +379,14 @@
                         </t>
                     </t>
                 </div>
-                <div class="mb-3">
-                    <strong>Date:</strong> <span t-field="sale_order.date_order" t-options='{"widget": "date"}'/>
+                <div class="mb-3 sale-order-date-order">
+                    <strong>Date:</strong> <span class="sale-order-date-order" t-field="sale_order.date_order" t-options='{"widget": "date"}'/>
                 </div>
-                <div class="mb-3" t-if="sale_order.validity_date">
-                    <strong>Expiration Date:</strong> <span t-field="sale_order.validity_date" t-options='{"widget": "date"}'/>
+                <div class="mb-3 sale-order-valid-date" t-if="sale_order.validity_date">
+                    <strong>Expiration Date:</strong> <span class="sale-order-valid-date" t-field="sale_order.validity_date" t-options='{"widget": "date"}'/>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="row sale-order-address">
+                    <div class="col-lg-6 sale-order-invoice-shipping">
                         <strong t-if="sale_order.partner_shipping_id == sale_order.partner_invoice_id" class="d-block mb-1">Invoicing and Shipping Address</strong>
                         <strong t-if="sale_order.partner_shipping_id != sale_order.partner_invoice_id" class="d-block mb-1">Invoicing Address</strong>
                         <address t-field="sale_order.partner_invoice_id" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}'/>
@@ -431,16 +431,16 @@
                         <tr>
                             <!-- TODO: remove in master -->
                             <t t-set="colspan" t-value="6"/>
-                            <th class="text-left">Products</th>
-                            <th class="text-right">Quantity</th>
-                            <th t-attf-class="text-right {{ 'd-none d-sm-table-cell' if report_type == 'html' else '' }}">Unit Price</th>
-                            <th t-if="display_discount" t-attf-class="text-right {{ 'd-none d-sm-table-cell' if report_type == 'html' else '' }}">
+                            <th class="text-left sale-order-line-name">Products</th>
+                            <th class="text-right sale-order-line-qty">Quantity</th>
+                            <th t-attf-class="text-right sale-order-line-price-unit {{ 'd-none d-sm-table-cell' if report_type == 'html' else '' }}">Unit Price</th>
+                            <th t-if="display_discount" t-attf-class="text-right sale-order-line-discount {{ 'd-none d-sm-table-cell' if report_type == 'html' else '' }}">
                                 <span>Discount</span>
                                 <!-- TODO: remove in master -->
                                 <t t-set="colspan" t-value="colspan+1"/>
                             </th>
-                            <th t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">Taxes</th>
-                            <th class="text-right" >
+                            <th t-attf-class="text-right sale-order-line-taxes {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">Taxes</th>
+                            <th class="text-right sale-order-total" >
                                 <span groups="account.group_show_line_subtotals_tax_excluded">Amount</span>
                                 <span groups="account.group_show_line_subtotals_tax_included">Total Price</span>
                             </th>
@@ -457,21 +457,21 @@
 
                             <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
                                 <t t-if="not line.display_type">
-                                    <td id="product_name"><span t-field="line.name"/></td>
-                                    <td class="text-right">
+                                    <td class="sale-order-line-name" id="product_name"><span t-field="line.name"/></td>
+                                    <td class="text-right sale-order-line-qty">
                                         <div id="quote_qty">
-                                            <span t-field="line.product_uom_qty"/>
-                                            <span t-field="line.product_uom" groups="uom.group_uom"/>
+                                            <span class="sale-order-line-uom-qty" t-field="line.product_uom_qty"/>
+                                            <span class="sale-order-line-uom" t-field="line.product_uom" groups="uom.group_uom"/>
                                         </div>
                                     </td>
-                                    <td t-attf-class="text-right {{ 'd-none d-sm-table-cell' if report_type == 'html' else '' }}">
-                                        <div
+                                    <td t-attf-class="text-right sale-order-line-price-unit {{ 'd-none d-sm-table-cell' if report_type == 'html' else '' }}">
+                                        <div class="sale-order-line-price-unit"
                                             t-if="line.discount &gt;= 0"
                                             t-field="line.price_unit"
                                             t-att-style="line.discount and 'text-decoration: line-through' or None"
                                             t-att-class="(line.discount and 'text-danger' or '') + ' text-right'"
                                         />
-                                        <div t-if="line.discount">
+                                        <div t-if="line.discount" class="sale-order-line-discount">
                                             <t t-esc="(1-line.discount / 100.0) * line.price_unit" t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
                                         </div>
                                     </td>
@@ -480,10 +480,10 @@
                                             <t t-esc="((line.discount % 1) and '%s' or '%d') % line.discount"/>% discount
                                         </strong>
                                     </td>
-                                    <td t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
-                                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
+                                    <td t-attf-class="text-right sale-order-line-taxes {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                        <span class="sale-order-line-tax-id" t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_id))"/>
                                     </td>
-                                    <td class="text-right">
+                                    <td class="text-right sale-order-line-total">
                                         <span class="oe_order_line_price_subtotal" t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
                                         <span class="oe_order_line_price_total" t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
                                     </td>
