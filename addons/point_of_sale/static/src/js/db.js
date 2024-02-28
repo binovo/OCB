@@ -1,7 +1,6 @@
 odoo.define('point_of_sale.DB', function (require) {
 "use strict";
 
-var logger = require('point_of_sale.logger');
 var core = require('web.core');
 /* The PosDB holds reference to data that is either
  * - static: does not change between pos reloads
@@ -406,12 +405,9 @@ var PosDB = core.Class.extend({
     add_order: function(order){
         var order_id = order.uid;
         var orders  = this.load('orders',[]);
-        logger.warn('point_of_sale/add_order > in');
-        logger.warn('point_of_sale/add_order > ' + order.uid + ' > ' + order.simplified_invoice);
         // if the order was already stored, we overwrite its data
         for(var i = 0, len = orders.length; i < len; i++){
             if(orders[i].id === order_id){
-                logger.warn('point_of_sale/add_order > overwrite order: ' + order_id);
                 orders[i].data = order;
                 this.save('orders',orders);
                 return order_id;
@@ -422,7 +418,6 @@ var PosDB = core.Class.extend({
         // that where already stored should already have been removed.
         this.remove_unpaid_order(order);
 
-        logger.warn('point_of_sale/add_order > ' + order_id + ' > ' + JSON.stringify(order));
         orders.push({id: order_id, data: order});
         this.save('orders',orders);
         return order_id;

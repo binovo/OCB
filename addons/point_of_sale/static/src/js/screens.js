@@ -27,7 +27,6 @@ odoo.define('point_of_sale.screens', function (require) {
 // each screen display. A screen can be called with parameters, which are
 // to be used for the duration of the screen only. 
 
-var logger = require('point_of_sale.logger');
 var PosBaseWidget = require('point_of_sale.BaseWidget');
 var gui = require('point_of_sale.gui');
 var models = require('point_of_sale.models');
@@ -1939,18 +1938,12 @@ var PaymentScreenWidget = ScreenWidget.extend({
         lines.appendTo(this.$('.paymentlines-container'));
     },
     click_paymentmethods: function(id) {
-        logger.warn('point_of_sale/click_paymentmethods > ' + this.pos.get_order().uid + ' > in');
         var cashregister = null;
         for ( var i = 0; i < this.pos.cashregisters.length; i++ ) {
             if ( this.pos.cashregisters[i].journal_id[0] === id ){
                 cashregister = this.pos.cashregisters[i];
                 break;
             }
-        }
-        if (cashregister && cashregister.journal_id) {
-            logger.warn('point_of_sale/click_paymentmethods > ' + this.pos.get_order().uid + ' > ' + cashregister.journal_id[1]);
-        } else {
-            logger.warn('point_of_sale/click_paymentmethods > ' + this.pos.get_order().uid + ' > NULL');
         }
         this.pos.get_order().add_paymentline( cashregister );
         this.reset_input();
@@ -2088,7 +2081,6 @@ var PaymentScreenWidget = ScreenWidget.extend({
     order_is_valid: function(force_validation) {
         var self = this;
         var order = this.pos.get_order();
-        logger.warn('point_of_sale/order_is_valid > ' + order.uid + ' > in');
 
         // FIXME: this check is there because the backend is unable to
         // process empty orders. This is not the right place to fix it.
@@ -2101,7 +2093,6 @@ var PaymentScreenWidget = ScreenWidget.extend({
         }
 
         if (!order.is_paid() || this.invoicing) {
-            logger.warn('point_of_sale/order_is_valid > ' + order.uid + ' > is_paid() == FALSE');
             return false;
         }
 
@@ -2139,14 +2130,12 @@ var PaymentScreenWidget = ScreenWidget.extend({
             });
             return false;
         }
-        logger.warn('point_of_sale/order_is_valid > ' + order.uid + ' > out');
         return true;
     },
 
     finalize_validation: function() {
         var self = this;
         var order = this.pos.get_order();
-        logger.warn('point_of_sale/finalize_validation > ' + order.uid + ' > in');
 
         if ((order.is_paid_with_cash() || order.get_change()) && this.pos.config.iface_cashdrawer) {
 
@@ -2155,8 +2144,6 @@ var PaymentScreenWidget = ScreenWidget.extend({
 
         order.initialize_validation_date();
         order.finalized = true;
-
-        logger.warn('point_of_sale/finalize_validation > ' + order.uid + ' > order > ' + JSON.stringify(order.export_as_JSON()));
 
         if (order.is_to_invoice()) {
             var invoiced = this.pos.push_and_invoice_order(order);
@@ -2172,13 +2159,11 @@ var PaymentScreenWidget = ScreenWidget.extend({
             this.pos.push_order(order);
             this.gui.show_screen('receipt');
         }
-        logger.warn('point_of_sale/finalize_validation > ' + order.uid + ' > out');
     },
 
     // Check if the order is paid, then sends it to the backend,
     // and complete the sale process
     validate_order: function(force_validation) {
-        logger.warn('point_of_sale/validate_order > ' + this.pos.get_order().uid + ' > in');
         if (this.order_is_valid(force_validation)) {
             this.finalize_validation();
         }

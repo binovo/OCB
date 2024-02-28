@@ -1,7 +1,6 @@
 odoo.define('point_of_sale.models', function (require) {
 "use strict";
 
-var logger = require('point_of_sale.logger');
 var ajax = require('web.ajax');
 var BarcodeParser = require('barcodes.BarcodeParser');
 var PosDB = require('point_of_sale.DB');
@@ -840,9 +839,7 @@ exports.PosModel = Backbone.Model.extend({
     push_order: function(order, opts) {
         opts = opts || {};
         var self = this;
-        logger.warn('point_of_sale/push_order > in');
         if(order){
-            logger.warn('point_of_sale/push_order > ' + order.uid + ' > ' + order.simplified_invoice);
             this.db.add_order(order.export_as_JSON());
         }
 
@@ -857,7 +854,6 @@ exports.PosModel = Backbone.Model.extend({
 
             return flushed;
         });
-        logger.warn('point_of_sale/push_order > RETURN');
         return pushed;
     },
 
@@ -1953,10 +1949,8 @@ exports.Paymentline = Backbone.Model.extend({
     },
     //sets the amount of money on this payment line
     set_amount: function(value){
-        logger.warn('point_of_sale/set_amount > ' + this.order.uid + ' > before: ' + this.amount);
         this.order.assert_editable();
         this.amount = round_di(parseFloat(value) || 0, this.pos.currency.decimals);
-        logger.warn('point_of_sale/set_amount > ' + this.order.uid + ' > after: ' + this.amount);
         this.trigger('change',this);
     },
     // returns the amount of money on this paymentline
@@ -2362,12 +2356,10 @@ exports.Order = Backbone.Model.extend({
     },
 
     add_product: function(product, options){
-        logger.warn('point_of_sale/add_product > in');
         if(this._printed){
             this.destroy();
             return this.pos.get_order().add_product(product, options);
         }
-        logger.warn('point_of_sale/add_product > add > order ' + this.uid + ' > ' + product.id + ' (' + product.display_name + ')');
         this.assert_editable();
         options = options || {};
         var attr = JSON.parse(JSON.stringify(product));
@@ -2412,7 +2404,6 @@ exports.Order = Backbone.Model.extend({
         if(line.has_product_lot){
             this.display_lot_popup();
         }
-        logger.warn('point_of_sale/add_product > out');
     },
     get_selected_orderline: function(){
         return this.selected_orderline;
@@ -2459,7 +2450,6 @@ exports.Order = Backbone.Model.extend({
         }
         this.paymentlines.add(newPaymentline);
         this.select_paymentline(newPaymentline);
-        logger.warn('point_of_sale/add_paymentline > ' + this.pos.get_order().uid + ' > ' + newPaymentline.name);
     },
     get_paymentlines: function(){
         return this.paymentlines.models;
@@ -2650,11 +2640,9 @@ exports.Order = Backbone.Model.extend({
                 }
             }
         }
-        logger.warn('point_of_sale/get_due > ' + this.uid + ' > ' + due);
         return round_pr(due, this.pos.currency.rounding);
     },
     is_paid: function(){
-        logger.warn('point_of_sale/is_paid > ' + this.uid + ' > ' + (this.get_due() <= 0).toString());
         return this.get_due() <= 0;
     },
     is_paid_with_cash: function(){
