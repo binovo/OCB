@@ -409,14 +409,23 @@ export const editorCommands = {
                 textAlignStyles.set(block, block.style.textAlign);
             }
         });
+        // Calling `document.execCommand` will cause an input event with the
+        // input type "formatRemove". This would cause a new history step to be
+        // created in the middle of the process, which we prevent here.
+        editor.historyPauseSteps();
         editor.document.execCommand('removeFormat');
         for (const node of getTraversedNodes(editor.editable)) {
-            // The only possible background image on text is the gradient.
-            closestElement(node).style.backgroundImage = '';
+            if (node.nodeType === Node.ELEMENT_NODE && node.hasAttribute('color')) {
+                node.removeAttribute('color');
+            }
+            const element = closestElement(node);
+            element.style.removeProperty('color');
+            element.style.removeProperty('background');
         }
         textAlignStyles.forEach((textAlign, block) => {
             block.style.setProperty('text-align', textAlign);
         });
+        editor.historyUnpauseSteps();
     },
 
     // Align
@@ -560,7 +569,7 @@ export const editorCommands = {
             node => closestElement(node).isContentEditable
         );
         let coloredTds = [];
-        if (selectedTds.length) {
+        if (selectedTds.length && mode === "backgroundColor") {
             for (const td of selectedTds) {
                 colorElement(td, color, mode);
             }
@@ -583,7 +592,9 @@ export const editorCommands = {
         if (isEmptyBlock(range.endContainer)) {
             selectionNodes.push(range.endContainer, ...descendants(range.endContainer));
         }
-        const selectedNodes = selectionNodes.filter(node => !closestElement(node, 'table.o_selected_table'))
+        const selectedNodes = mode === "backgroundColor"
+            ? selectionNodes.filter(node => !closestElement(node, 'table.o_selected_table'))
+            : selectionNodes;
         function getFonts(selectedNodes) {
             return selectedNodes.flatMap(node => {
                 let font = closestElement(node, 'font') || closestElement(node, 'span');
@@ -598,7 +609,7 @@ export const editorCommands = {
                     }
                 } else if (
                     (node.nodeType === Node.TEXT_NODE && isVisibleStr(node)) ||
-                    (isEmptyBlock(node.parentNode)) ||
+                    (node.nodeName === 'BR' && isEmptyBlock(node.parentNode)) ||
                     (node.nodeType === Node.ELEMENT_NODE &&
                     node.nodeName !== 'FIGURE' &&
                     ['inline', 'inline-block'].includes(getComputedStyle(node).display) &&
@@ -740,7 +751,6 @@ export const editorCommands = {
         const newRow = document.createElement('tr');
         newRow.style.height = referenceRowHeight + 'px';
         const cells = referenceRow.querySelectorAll('td');
-        const referenceRowWidths = [...cells].map(cell => cell.style.width || cell.clientWidth + 'px');
         newRow.append(...Array.from(Array(cells.length)).map(() => {
             const td = document.createElement('td');
             const p = document.createElement('p');
@@ -750,11 +760,10 @@ export const editorCommands = {
         }));
         referenceRow[beforeOrAfter](newRow);
         newRow.style.height = referenceRowHeight + 'px';
-        // Preserve the width of the columns (applied only on the first row).
         if (getRowIndex(newRow) === 0) {
             let columnIndex = 0;
-            for (const column of newRow.children) {
-                column.style.width = referenceRowWidths[columnIndex];
+            for (const newColumn of newRow.children) {
+                newColumn.style.width = cells[columnIndex].style.width;
                 cells[columnIndex].style.width = '';
                 columnIndex++;
             }

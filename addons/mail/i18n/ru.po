@@ -25,9 +25,9 @@
 # Alena Vlasova, 2023
 # Elena Da, 2023
 # alenafairy, 2023
-# Смородин Даниил, 2023
 # Сергей Шебанин <sergey@shebanin.ru>, 2024
 # Wil Odoo, 2024
+# Смородин Даниил, 2024
 # 
 msgid ""
 msgstr ""
@@ -35,7 +35,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:53+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Смородин Даниил, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -818,7 +818,7 @@ msgstr "<span class=\"o_form_label\">Дополнительные ICE серве
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "<span class=\"o_form_label\">Email Templates</span>"
-msgstr ""
+msgstr "<span class=\"o_form_label\">Шаблоны писем</span>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
@@ -1986,7 +1986,7 @@ msgstr "Буддист"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_config_settings__secondary_color
 msgid "Button Color"
-msgstr ""
+msgstr "Цвет кнопки"
 
 #. module: mail
 #. odoo-python
@@ -2839,7 +2839,7 @@ msgstr "Клиент должен быть уведомлен о входяще�
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Customize the look and feel of automated emails"
-msgstr "Настройка внешнего вида и настроек автоматических электронных писем"
+msgstr "Настройте внешний вид автоматических электронных писем"
 
 #. module: mail
 #. odoo-javascript
@@ -3590,7 +3590,7 @@ msgstr "Помощник пересылки электронной почты"
 #: model:ir.model.fields,field_description:mail.field_mail_activity__mail_template_ids
 #: model:ir.model.fields,field_description:mail.field_mail_activity_type__mail_template_ids
 msgid "Email templates"
-msgstr "Шаблоны email’а"
+msgstr "Шаблоны писем"
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_view_mail_mail
@@ -8142,14 +8142,14 @@ msgstr "Ответственный"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_config_settings__restrict_template_rendering
 msgid "Restrict Template Rendering"
-msgstr "Ограничение рендеринга шаблонов"
+msgstr "Ограничить рендеринг шаблона"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Restrict mail templates edition and QWEB placeholders usage."
 msgstr ""
-"Ограничьте редактирование почтовых шаблонов и использование QWEB-"
-"заместителей."
+"Ограничить редактирование почтовых шаблонов и использование QWEB-"
+"плейсхолдеров."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__restricted_attachment_count
@@ -10111,7 +10111,7 @@ msgstr "Неподдерживаемый тип отчета %s найдено."
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Update Mail Layout"
-msgstr "Обновление макета почты"
+msgstr "Обновить макет почты"
 
 #. module: mail
 #. odoo-javascript
