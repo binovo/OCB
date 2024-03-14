@@ -701,8 +701,8 @@ msgid ""
 "A great way to keep track on employee’s PTOs, sick days, and approval "
 "status."
 msgstr ""
-"Una excelente manera de realizar un seguimiento del tiempo personal pagado "
-"de los empleados, los permisos por enfermedad y el estado de aprobación."
+"Una excelente manera de monitorear el tiempo personal pagado de los "
+"empleados, los permisos por enfermedad y el estado de aprobación."
 
 #. module: hr_holidays
 #: model_terms:ir.actions.act_window,help:hr_holidays.hr_leave_action_my
@@ -711,8 +711,8 @@ msgid ""
 "A great way to keep track on your time off requests, sick days, and approval"
 " status."
 msgstr ""
-"Una excelente manera de llevar el seguimiento de sus solicitudes de tiempo "
-"personal, permisos por enfermedad y estados de aprobación."
+"Una excelente manera de monitorear sus solicitudes de tiempo personal, "
+"permisos por enfermedad y el estado de aprobación."
 
 #. module: hr_holidays
 #. odoo-python
@@ -820,7 +820,7 @@ msgstr "Número de acumulaciones"
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave__message_needaction
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave_allocation__message_needaction
 msgid "Action Needed"
-msgstr "Acción requerida"
+msgstr "Se requiere una acción"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave__active
@@ -2182,12 +2182,8 @@ msgstr "Icono para indicar una actividad de excepción."
 
 #. module: hr_holidays
 #: model:ir.model.fields,help:hr_holidays.field_hr_leave_allocation__number_of_days_display
-msgid ""
-"If Accrual Allocation: Number of days allocated in addition to the ones you "
-"will get via the accrual' system."
+msgid "If Accrual Allocation: Days given by the accrual system."
 msgstr ""
-"Si hay asignación acumulada: número de días asignados además de los días que"
-" recibirá a través del sistema de acumulaciones."
 
 #. module: hr_holidays
 #: model:ir.model.fields,help:hr_holidays.field_hr_leave_allocation__number_of_hours_display

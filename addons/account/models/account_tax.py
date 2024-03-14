@@ -415,7 +415,7 @@ class AccountTax(models.Model):
         # mapping each child tax to its parent group
         all_taxes = self.env['account.tax']
         groups_map = {}
-        for tax in self.sorted(key=lambda r: r.sequence):
+        for tax in self.sorted(key=lambda r: (r.sequence, r._origin.id)):
             if tax.amount_type == 'group':
                 flattened_children = tax.children_tax_ids.flatten_taxes_hierarchy()
                 all_taxes += flattened_children
@@ -605,7 +605,7 @@ class AccountTax(models.Model):
                 if tax.include_base_amount:
                     base = recompute_base(base, incl_tax_amounts)
                     store_included_tax_total = True
-                if tax.price_include or self._context.get('force_price_include'):
+                if self._context.get('force_price_include', tax.price_include):
                     if tax.amount_type == 'percent':
                         incl_tax_amounts['percent_taxes'].append((i, tax.amount * sum_repartition_factor))
                     elif tax.amount_type == 'division':
@@ -826,6 +826,7 @@ class AccountTax(models.Model):
             'tax_tag_ids': [Command.set(tax_vals['tag_ids'])],
             'tax_id': tax_vals['group'].id if tax_vals['group'] else tax_vals['id'],
             'analytic_distribution': line_vals['analytic_distribution'] if tax_vals['analytic'] else {},
+            '_extra_grouping_key_': line_vals.get('extra_context', {}).get('_extra_grouping_key_'),
         }
 
     @api.model
@@ -847,6 +848,7 @@ class AccountTax(models.Model):
             'tax_tag_ids': [Command.set(line_vals['tax_tags'].ids)],
             'tax_id': (line_vals['group_tax'] or tax).id,
             'analytic_distribution': line_vals['analytic_distribution'] if tax.analytic else {},
+            '_extra_grouping_key_': line_vals.get('extra_context', {}).get('_extra_grouping_key_'),
         }
 
     @api.model
@@ -997,13 +999,13 @@ class AccountTax(models.Model):
 
             # Round them like what the creation of tax lines would do.
             for key, values in amount_per_tax_repartition_line_id.items():
-                currency = self.env['res.currency'].browse(key['currency_id'])
+                currency = self.env['res.currency'].browse(key['currency_id']) or comp_currency
                 values['tax_amount_rounded'] = comp_currency.round(values['tax_amount'])
                 values['tax_amount_currency_rounded'] = currency.round(values['tax_amount_currency'])
 
             # Dispatch the amount accross the tax values.
             for key, values in amount_per_tax_repartition_line_id.items():
-                foreign_currency = self.env['res.currency'].browse(key['currency_id'])
+                foreign_currency = self.env['res.currency'].browse(key['currency_id']) or comp_currency
                 for currency, amount_field in ((comp_currency, 'tax_amount'), (foreign_currency, 'tax_amount_currency')):
                     raw_value = values[amount_field]
                     rounded_value = values[f'{amount_field}_rounded']

@@ -8092,7 +8092,7 @@ msgstr "تمت الفوترة "
 #: model_terms:ir.ui.view,arch_db:account.view_invoice_tree
 #, python-format
 msgid "Invoices"
-msgstr "الفواتير"
+msgstr "فواتير العملاء "
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.portal_my_home_invoice
@@ -9363,7 +9363,7 @@ msgstr "بيان:"
 #. module: account
 #: model:ir.model,name:account.model_base_partner_merge_automatic_wizard
 msgid "Merge Partner Wizard"
-msgstr "معالج دمج الشريك"
+msgstr "معالج دمج الوكيل "
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account__message_has_error
@@ -11678,7 +11678,7 @@ msgstr "الرقم المرجعي. "
 #: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_form
 #, python-format
 msgid "Reference"
-msgstr "الرقم المرجعي "
+msgstr "المرجع "
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_payment__payment_reference
@@ -16593,6 +16593,13 @@ msgid ""
 msgstr ""
 "لا يمكنك إنشاء حركة موجودة بالفعل بحالة مرحّلة. الرجاء إنشاء مسودة حركة ثم "
 "ترحيلها بعد ذلك. "
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_account.py:0
+#, python-format
+msgid "You cannot create recursive groups."
+msgstr ""
 
 #. module: account
 #. odoo-python
