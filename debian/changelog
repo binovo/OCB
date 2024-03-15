@@ -1,3 +1,10 @@
+odoo (12.0.126) stable; urgency=low
+
+  [ Imanol Aranburu ]
+  * 14456 [UPD] Pasar contexto completo en la llamada a Configure a product.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Fri, 15 Mar 2024 13:09:12 +0100
+
 odoo (12.0.124) stable; urgency=low
 
   [ Ugaitz Olaizola ]

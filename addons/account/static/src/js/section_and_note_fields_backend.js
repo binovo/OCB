@@ -104,9 +104,9 @@ var SectionAndNoteListRenderer = ListRenderer.extend({
                         res_model: 'sale.product.configurator',
                         views: [[res_id, 'form']],
                         target: 'new',
-                        context: {
+                        context: _.extend(pyUtils.py_eval(context), {
                             'default_pricelist_id': pricelistId
-                        }
+                        })
                     }, {
                         on_close: function (products) {
                             if (products && products !== 'special'){
