@@ -334,6 +334,9 @@ class AccountJournal(models.Model):
                 journal.suspense_account_id = False
 
     def _inverse_type(self):
+        if self._context.get('account_journal_skip_alias_sync'):
+            return
+
         # Create an alias for purchase/sales journals
         for journal in self:
             if journal.type not in ('purchase', 'sale'):
@@ -348,7 +351,7 @@ class AccountJournal(models.Model):
                 journal.type,
             ) if string and is_encodable_as_ascii(string))
 
-            if journal.company_id != self.env.ref('base.main_company'):
+            if not journal.alias_name:
                 if is_encodable_as_ascii(journal.company_id.name):
                     alias_name = f"{alias_name}-{journal.company_id.name}"
                 else:

@@ -3020,7 +3020,7 @@ msgstr "Primer NS"
 #: code:addons/stock/models/stock_quant.py:0
 #, python-format
 msgid "Fix discrepancies"
-msgstr "Solucione las discrepancias"
+msgstr "Corregir discrepancias"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__group_propagation_option__fixed
@@ -5227,7 +5227,7 @@ msgstr "No disponible"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_reorder_report_search
 msgid "Not Snoozed"
-msgstr "No pospuesto"
+msgstr "Sin posponer"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
@@ -8569,8 +8569,8 @@ msgid ""
 "The stock will be reserved for operations waiting for availability and the "
 "reordering rules will be triggered."
 msgstr ""
-"Se reservarán las existencias para operaciones que están esperando "
-"disponibilidad y se activarán las reglas de reabastecimiento."
+"Se reservarán las existencias para operaciones que están en espera de "
+"disponibilidad y se activarán las reglas de reordenamiento."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_rule__propagate_warehouse_id

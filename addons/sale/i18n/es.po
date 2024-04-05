@@ -621,6 +621,11 @@ msgstr "<i class=\"fa fa-fw fa-check\"/><b>Pagado </b>"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content
+msgid "<i class=\"fa fa-fw fa-check\"/> <b>Reversed</b>"
+msgstr ""
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content
 msgid "<i class=\"fa fa-fw fa-clock-o\"/> <b>Waiting Payment</b>"
 msgstr "<i class=\"fa fa-fw fa-clock-o\"/><b>Esperando Pago </b>"
 
@@ -939,8 +944,9 @@ msgid ""
 "Ability to select a package type in sales orders and to force a quantity "
 "that is a multiple of the number of units per package."
 msgstr ""
-"Posibilidad de seleccionar un tipo de envase en pedidos de venta y forzar "
-"una cantidad que es un múltiplo de la cantidad de unidades por envase."
+"Posibilidad de seleccionar un tipo de empaquetado en pedidos de venta y "
+"forzar una cantidad que es un múltiplo de la cantidad de unidades por "
+"empaquetado."
 
 #. module: sale
 #. odoo-python
@@ -3853,7 +3859,7 @@ msgstr "Vender y comprar productos en diferentes unidades de medida"
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
 msgid "Sell products by multiple of unit # per package"
-msgstr "Vender productos en múltiples unidades por envase"
+msgstr "Vender productos en múltiples unidades por empaquetado"
 
 #. module: sale
 #: model_terms:ir.ui.view,arch_db:sale.res_config_settings_view_form
@@ -4460,8 +4466,8 @@ msgid ""
 "This product is packaged by %(pack_size).2f %(pack_name)s. You should sell "
 "%(quantity).2f %(unit)s."
 msgstr ""
-"Este producto se envasa en %(pack_name)s, en múltiplos de %(pack_size).2f. "
-"Debería vender %(quantity).2f %(unit)s."
+"Este producto se empaqueta en %(pack_name)s, en múltiplos de "
+"%(pack_size).2f. Debería vender %(quantity).2f %(unit)s."
 
 #. module: sale
 #: model_terms:ir.actions.act_window,help:sale.action_order_report_all

@@ -12,13 +12,13 @@
 # Jolien De Paepe, 2023
 # Ana Sanjuán, 2023
 # Francisco Santos, 2023
-# Gelo Joga, 2023
-# Larissa Manderfeld, 2024
 # Wil Odoo, 2024
 # Loida Vilaplana, 2024
-# Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2024
 # Sergio Del Castillo Baranda, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
+# Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2024
+# Gelo Joga, 2024
+# Larissa Manderfeld, 2024
 # Jairo Llopis <yajo.sk8@gmail.com>, 2024
 # 
 msgid ""
@@ -222,7 +222,7 @@ msgstr "'Ubicación- %s' % object.name"
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_lot_label
 msgid "'Lot-Serial - %s' % object.name"
-msgstr "'Lote-Número de Serie - %s' % object.name"
+msgstr "'Lote/Nº de Serie - %s' % object.name"
 
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_picking_type_label
@@ -1844,7 +1844,7 @@ msgstr ""
 #. module: stock
 #: model:ir.actions.server,name:stock.stock_quant_stock_move_line_desynchronization
 msgid "Correct inconsistencies for reservation"
-msgstr ""
+msgstr "Corrija las inconsistencias de las reservas"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__posx
@@ -2509,8 +2509,8 @@ msgid ""
 "replenished on order, etc."
 msgstr ""
 "Según los módulos instalados, esto le permitirá definir la ruta del producto"
-" en este empaquetado: si se comprará, se fabricará, se reabastecerá bajo "
-"pedido, etc."
+" en este envase: si se comprará, se fabricará, se reabastecerá bajo pedido, "
+"etc."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__route_ids
@@ -3022,7 +3022,7 @@ msgstr "Primer NS"
 #: code:addons/stock/models/stock_quant.py:0
 #, python-format
 msgid "Fix discrepancies"
-msgstr ""
+msgstr "Solucione las discrepancias"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__group_propagation_option__fixed
@@ -4611,7 +4611,7 @@ msgstr "Número de lote / serie (ZPL)"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_line__lot_name
 msgid "Lot/Serial Number Name"
-msgstr "Nombre del Numero de Lote/Serie"
+msgstr "Lote/Nº de Serie"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.product_form_view_procurement_button
@@ -4761,7 +4761,7 @@ msgstr "Marcar 'Por realizar'"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_orderpoint__product_max_qty
 msgid "Max Quantity"
-msgstr "Cantidad máxima"
+msgstr "Cant. máx."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_package_type__max_weight
@@ -4836,7 +4836,7 @@ msgstr "Método"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_orderpoint__product_min_qty
 msgid "Min Quantity"
-msgstr "Cantidad mínima"
+msgstr "Cant. mín."
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_warehouse_orderpoint
@@ -4931,7 +4931,7 @@ msgstr "Rutas multietapa"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_orderpoint__qty_multiple
 msgid "Multiple Quantity"
-msgstr "Cantidad múltiple"
+msgstr "Cant. múltiple"
 
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_storage_category_capacity_unique_package_type
@@ -6212,7 +6212,7 @@ msgstr "Envase del producto (ZPL)"
 #: model:ir.ui.menu,name:stock.menu_product_packagings
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
 msgid "Product Packagings"
-msgstr "Envases de productos"
+msgstr "Envases del producto"
 
 #. module: stock
 #. odoo-python
@@ -7018,8 +7018,8 @@ msgid ""
 "Reserve Only Full Packagings: will not reserve partial packagings. If customer orders 2 pallets of 1000 units each and you only have 1600 in stock, then only 1000 will be reserved\n"
 "Reserve Partial Packagings: allow reserving partial packagings. If customer orders 2 pallets of 1000 units each and you only have 1600 in stock, then 1600 will be reserved"
 msgstr ""
-"Reservar solo empaquetados completos: no se reservarán empaquetados parciales. Si el cliente ordena 2 tarimas de 1000 unidades cada una y solo tiene 1600 en existencias, entonces solo se reservarán 1000\n"
-"Reservar empaquetados parciales: permite reservar empaquetados parciales. Si el cliente pide 2 tarimas de 1000 unidades cada una y solo tiene 1600, entonces se reservarán 1600"
+"Reservar solo empaquetados completos: no se reservarán empaquetados parciales. Si el cliente ordena 2 paletas de 1000 unidades cada una y solo tiene 1600 en stock, entonces solo se reservarán 1000\n"
+"Reservar empaquetados parciales: permite reservar empaquetados parciales. Si el cliente pide 2 paletas de 1000 unidades cada una y solo tiene 1600, entonces se reservarán 1600"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_category__packaging_reserve_method
@@ -10137,6 +10137,8 @@ msgid ""
 "You cannot pack products into the same package when they are from both "
 "immediate and planned transfers."
 msgstr ""
+"No es posible empaquetar productos en el mismo paquete cuando son a la vez "
+"de transferencias inmediatas y de planeadas."
 
 #. module: stock
 #. odoo-python
@@ -10146,6 +10148,8 @@ msgid ""
 "You cannot pack products into the same package when they are from different "
 "transfers with different operation types."
 msgstr ""
+"No es posible empaquetar productos en el mismo paquete cuando pertenecen a "
+"distintas transferencias con diferentes tipos de operación."
 
 #. module: stock
 #. odoo-python

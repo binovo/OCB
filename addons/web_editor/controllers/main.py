@@ -138,6 +138,11 @@ class Web_Editor(http.Controller):
 
             :returns PNG image converted from given font
         """
+        # For custom icons, use the corresponding custom font
+        if icon.isdigit():
+            if int(icon) == 57467:
+                font = "/web/static/fonts/tiktok_only.woff"
+
         size = max(width, height, 1) if width else size
         width = width or size
         height = height or size
@@ -168,7 +173,9 @@ class Web_Editor(http.Controller):
         image = Image.new("RGBA", (width, height), color)
         draw = ImageDraw.Draw(image)
 
-        boxw, boxh = draw.textsize(icon, font=font_obj)
+        box = draw.textbbox((0, 0), icon, font=font_obj)
+        boxw = box[2] - box[0]
+        boxh = box[3] - box[1]
         draw.text((0, 0), icon, font=font_obj)
         left, top, right, bottom = image.getbbox()
 

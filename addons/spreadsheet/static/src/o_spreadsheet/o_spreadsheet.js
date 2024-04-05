@@ -20434,6 +20434,10 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
                 if (!this.isKeyStillDown) {
                     this.processContent();
                 }
+                // Required because typing '=SUM' and double-clicking another cell leaves ShowProvider and ShowDescription true
+                if (this.env.model.getters.getEditionMode() === "inactive") {
+                    this.processTokenAtCursor();
+                }
             });
         }
         // ---------------------------------------------------------------------------
@@ -21146,6 +21150,9 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
                     el === null || el === void 0 ? void 0 : el.focus({ preventScroll: true });
                 }
             }, () => [this.env.model.getters.getSelectedFigureId(), this.props.figure.id, this.figureRef.el]);
+            owl.onWillUnmount(() => {
+                this.props.onFigureDeleted();
+            });
         }
         clickAnchor(dirX, dirY, ev) {
             this.props.onClickAnchor(dirX, dirY, ev);
@@ -21163,6 +21170,7 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
                     });
                     this.props.onFigureDeleted();
                     ev.preventDefault();
+                    ev.stopPropagation();
                     break;
                 case "ArrowDown":
                 case "ArrowLeft":
@@ -21182,6 +21190,7 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
                         y: figure.y + delta[1],
                     });
                     ev.preventDefault();
+                    ev.stopPropagation();
                     break;
             }
         }
@@ -28802,6 +28811,15 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
                     return 0 /* CommandResult.Success */;
             }
         }
+        beforeHandle(cmd) {
+            switch (cmd.type) {
+                case "DELETE_SHEET":
+                    this.getters.getFigures(cmd.sheetId).forEach((figure) => {
+                        this.dispatch("DELETE_FIGURE", { id: figure.id, sheetId: cmd.sheetId });
+                    });
+                    break;
+            }
+        }
         handle(cmd) {
             switch (cmd.type) {
                 case "CREATE_SHEET":
@@ -34950,6 +34968,7 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
                     this.gridSelection.zones = this.gridSelection.zones.map((z) => this.getters.expandZone(sheetId, z));
                     this.gridSelection.anchor.zone = this.getters.expandZone(sheetId, this.gridSelection.anchor.zone);
                     this.setSelectionMixin(this.gridSelection.anchor, this.gridSelection.zones);
+                    this.selectedFigureId = null;
                     break;
             }
             /** Any change to the selection has to be  reflected in the selection processor. */
@@ -43275,9 +43294,9 @@ day_count_convention (number, default=${DEFAULT_DAY_COUNT_CONVENTION} ) ${_lt("A
     Object.defineProperty(exports, '__esModule', { value: true });
 
 
-    __info__.version = '16.0.34';
-    __info__.date = '2024-03-12T08:02:04.642Z';
-    __info__.hash = 'd503e6d';
+    __info__.version = '16.0.36';
+    __info__.date = '2024-03-25T10:54:14.110Z';
+    __info__.hash = '2c2117b';
 
 
 })(this.o_spreadsheet = this.o_spreadsheet || {}, owl);

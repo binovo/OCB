@@ -768,7 +768,7 @@ class HolidaysRequest(models.Model):
         that happens it's possible we need to adjust one of the dates. This function adjust the
         date, so that it can be passed to datetime().
 
-        E.g. a leave in US/Pacific for one day:
+        E.g. a leave in America/Los_Angeles for one day:
         - request_date_from: 1st of Jan
         - request_date_to:   1st of Jan
         - hour_from:         15:00 (7:00 local)
@@ -841,7 +841,7 @@ class HolidaysRequest(models.Model):
                         ))
                 else:
                     if leave.number_of_days > 1 and date_from_utc and date_to_utc:
-                        display_date += ' / %s' % format_date(self.env, date_to_utc) or ""
+                        display_date += ' - %s' % format_date(self.env, date_to_utc) or ""
                     if not target or self.env.context.get('hide_employee_name') and 'employee_id' in self.env.context.get('group_by', []):
                         res.append((
                             leave.id,
@@ -1543,13 +1543,13 @@ class HolidaysRequest(models.Model):
             if holiday.state == 'draft':
                 to_clean |= holiday
             elif holiday.state == 'confirm':
-                holiday.activity_schedule(
+                holiday.with_context(short_name=False).activity_schedule(
                     'hr_holidays.mail_act_leave_approval',
                     note=note,
                     user_id=holiday.sudo()._get_responsible_for_approval().id or self.env.user.id)
             elif holiday.state == 'validate1':
                 holiday.activity_feedback(['hr_holidays.mail_act_leave_approval'])
-                holiday.activity_schedule(
+                holiday.with_context(short_name=False).activity_schedule(
                     'hr_holidays.mail_act_leave_second_approval',
                     note=note,
                     user_id=holiday.sudo()._get_responsible_for_approval().id or self.env.user.id)
