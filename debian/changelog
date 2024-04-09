@@ -3,8 +3,10 @@ odoo (12.0.127) stable; urgency=low
   [ Jesús Sánchez ]
   * 14738 [UPD] project: Añadimos a la vista tree el campo tag_ids como invisible para poder ver los registros
   relacionados si se pone visible con el módulo ks_list_view_manager
+  [UPD] base: Añadimos a la vista tree el campo category_id como invisible para poder ver los registros relacionados
+  si se pone visible con el módulo ks_list_view_manager
 
- -- Jesús Sánchez <jsanchez@binovo.es>  Tue, 09 Apr 2024 12:35:48 +0100
+ -- Jesús Sánchez <jsanchez@binovo.es>  Tue, 09 Apr 2024 12:37:23 +0100
 
 odoo (12.0.126) stable; urgency=low
 
