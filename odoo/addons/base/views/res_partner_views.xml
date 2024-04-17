@@ -54,7 +54,7 @@
                     <field name="active" invisible="1"/>
                     <!--Añadimos el campo category_id como invisible para poder ver los registros
                     relacionados si se pone visible con el módulo ks_list_view_manager-->
-                    <field name="category_id" widget="many2many_tags" invisible="1"/>
+                    <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" invisible="1"/>
                 </tree>
             </field>
         </record>
