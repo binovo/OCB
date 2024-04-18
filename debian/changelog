@@ -1,3 +1,10 @@
+odoo (12.0.128) stable; urgency=low
+
+  [ Imanol Aranburu ]
+  * 14688 [UPD] hr_holidays: 14688 Refactorizar la función _update_accrual para poder heredar.
+
+ -- Imanol Aranburu <iaranburu@binovo.es>  Thu, 18 Apr 2024 12:59:48 +0200
+
 odoo (12.0.127) stable; urgency=low
 
   [ Jesús Sánchez ]

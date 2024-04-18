@@ -138,6 +138,12 @@ class HolidaysAllocation(models.Model):
         ('interval_number_check', "CHECK(interval_number > 0)", "The interval number should be greater than 0"),
     ]
 
+    def _calculate_number_of_days(self, holiday, p_number_of_days, days_to_give):
+        number_of_days = p_number_of_days + days_to_give
+        if holiday.accrual_limit > 0:
+            number_of_days = min(number_of_days, holiday.accrual_limit)
+        return number_of_days
+
     @api.model
     def _update_accrual(self):
         """
@@ -190,10 +196,8 @@ class HolidaysAllocation(models.Model):
                 # mean number of hours set on the employee's calendar
                 days_to_give = days_to_give / (holiday.employee_id.resource_calendar_id.hours_per_day or HOURS_PER_DAY)
 
-            values['number_of_days'] = holiday.number_of_days + days_to_give * prorata
-            if holiday.accrual_limit > 0:
-                values['number_of_days'] = min(values['number_of_days'], holiday.accrual_limit)
-
+            values['number_of_days'] = self._calculate_number_of_days(holiday, holiday.number_of_days,
+                                                                      days_to_give * prorata)
             holiday.write(values)
 
     @api.multi
