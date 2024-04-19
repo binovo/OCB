@@ -20,7 +20,10 @@ class PosMakePayment(models.TransientModel):
         active_id = self.env.context.get('active_id')
         if active_id:
             order = self.env['pos.order'].browse(active_id)
-            amount_total = -order.refunded_order_ids.amount_paid or order.amount_total
+            amount_total = order.amount_total
+            # If we refund the entire order, we refund what was paid originally, else we refund the value of the items returned
+            if float_is_zero(order.refunded_order_ids.amount_total + order.amount_total, precision_rounding=order.currency_id.rounding):
+                amount_total = -order.refunded_order_ids.amount_paid
             return amount_total - order.amount_paid
         return False
 
