@@ -1,3 +1,10 @@
+odoo (12.0.129) stable; urgency=low
+
+  [ Alicia Rodríguez ]
+  * 14971 [UPD] delivery: Adjust compute for picking weight
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Fri, 10 May 2024 13:09:00 +0200
+
 odoo (12.0.128) stable; urgency=low
 
   [ Imanol Aranburu ]
