@@ -21,8 +21,8 @@
 # Alena Vlasova, 2023
 # alenafairy, 2023
 # Wil Odoo, 2024
-# Смородин Даниил, 2024
 # Сергей Шебанин <sergey@shebanin.ru>, 2024
+# Смородин Даниил, 2024
 # 
 msgid ""
 msgstr ""
@@ -30,7 +30,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:32+0000\n"
 "PO-Revision-Date: 2022-09-22 05:54+0000\n"
-"Last-Translator: Сергей Шебанин <sergey@shebanin.ru>, 2024\n"
+"Last-Translator: Смородин Даниил, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -246,9 +246,9 @@ msgid ""
 " This description will be copied to every Sales Order, Delivery Order and "
 "Customer Invoice/Credit Note"
 msgstr ""
-"Описание продукта, которое Вы хотели бы предоставлять вашим потребителям.Это"
-" описание будет отображаться в каждом заказе покупателя, заказе на доставку "
-"и акте покупателю/ кредитном обязательстве"
+"Описание продукта, которое Вы хотели бы предоставлять вашим потребителям. "
+"Это описание будет отображаться в каждом заказе покупателя, заказе на "
+"доставку и счете покупателю/ кредитном обязательстве"
 
 #. module: product
 #. odoo-python
@@ -2015,7 +2015,7 @@ msgstr "Прейскурантами управляют на"
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_variant_easy_edit_view
 msgid "Pricing"
-msgstr "Установление цены"
+msgstr "Стоимость"
 
 #. module: product
 #. odoo-javascript
@@ -2304,7 +2304,7 @@ msgstr "Акции, купоны, подарочные карты и прогр�
 #. module: product
 #: model:product.pricelist,name:product.list0
 msgid "Public Pricelist"
-msgstr "Открытый каталог"
+msgstr "Публичный прайс"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_template_form_view

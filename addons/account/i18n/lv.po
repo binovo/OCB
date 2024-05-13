@@ -389,6 +389,13 @@ msgid "<b>Early Payment Discount applied.</b>"
 msgstr "<b>Pirmtermiņa apmaksas bonuss.</b>"
 
 #. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            on this account:"
+msgstr ""
+
+#. module: account
 #: model:mail.template,body_html:account.email_template_edi_credit_note
 msgid ""
 "<div style=\"margin: 0px; padding: 0px;\">\n"
@@ -5028,7 +5035,7 @@ msgstr "Klienti"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_invoice_layout_step
 msgid "Customize"
-msgstr "Customize"
+msgstr "Pielāgot"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_invoice_layout_step
@@ -15113,7 +15120,7 @@ msgid ""
 "This option permanently removes any track of email after it's been sent, "
 "including from the Technical menu in the Settings, in order to preserve "
 "storage space of your Odoo database."
-msgstr ""
+msgstr "Izdzēst nosūtītos e-pastus (tikai masveida sūtīšanas)"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account_template__chart_template_id
@@ -16481,11 +16488,9 @@ msgstr ""
 #: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid ""
-"You can't register payments for journal items being either all inbound, "
-"either all outbound."
+"You can't register payments for both inbound and outbound moves at the same "
+"time."
 msgstr ""
-"Jūs nevarat reģistrēt maksājumus par žurnāla vienībām, kas ir vai nu visas "
-"ienākošās, vai visas izejošās."
 
 #. module: account
 #. odoo-python

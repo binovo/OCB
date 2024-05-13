@@ -385,6 +385,13 @@ msgid "<b>Early Payment Discount applied.</b>"
 msgstr "<b>조기 납부 할인이 적용됩니다.</b>"
 
 #. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            on this account:"
+msgstr ""
+
+#. module: account
 #: model:mail.template,body_html:account.email_template_edi_credit_note
 msgid ""
 "<div style=\"margin: 0px; padding: 0px;\">\n"
@@ -16145,9 +16152,9 @@ msgstr "선택한 전표에 결제할 항목이 더 이상 없으므로 결제 �
 #: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid ""
-"You can't register payments for journal items being either all inbound, "
-"either all outbound."
-msgstr "전표가 인바운드이거나 아웃바운드로만 구성된 경우에는 결제 등록을 할 수 없습니다."
+"You can't register payments for both inbound and outbound moves at the same "
+"time."
+msgstr ""
 
 #. module: account
 #. odoo-python

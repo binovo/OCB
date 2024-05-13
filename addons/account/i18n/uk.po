@@ -6,7 +6,6 @@
 # Bohdan Lisnenko, 2022
 # Martin Trigaux, 2023
 # Wil Odoo, 2024
-# Леонід Харченко, 2024
 # Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024
 # 
 msgid ""
@@ -390,6 +389,15 @@ msgid "<b>Early Payment Discount applied.</b>"
 msgstr "<b>Знижку раннього платежу застосовано.</b>"
 
 #. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            on this account:"
+msgstr ""
+"<br/>\n"
+"                            на це:"
+
+#. module: account
 #: model:mail.template,body_html:account.email_template_edi_credit_note
 msgid ""
 "<div style=\"margin: 0px; padding: 0px;\">\n"
@@ -670,7 +678,10 @@ msgid ""
 "<span attrs=\"{'invisible': ['|', '|', '|', ('state', '!=', 'draft'), "
 "('name', '!=', '/'), ('posted_before', '=', True), ('quick_edit_mode', '=', "
 "True)]}\">Draft</span>"
-msgstr "Чернетка"
+msgstr ""
+"<span attrs=\"{'invisible': ['|', '|', '|', ('state', '!=', 'draft'), "
+"('name', '!=', '/'), ('posted_before', '=', True), ('quick_edit_mode', '=', "
+"True)]}\">Чернетка</span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_invoice_send_wizard_form
@@ -16714,11 +16725,11 @@ msgstr ""
 #: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid ""
-"You can't register payments for journal items being either all inbound, "
-"either all outbound."
+"You can't register payments for both inbound and outbound moves at the same "
+"time."
 msgstr ""
-"Ви не можете зареєструвати платежі для статей журналу, які є або всіма "
-"вхідними, або всіма вихідними."
+"Ви не можете зареєструвати платежі за вхідні та вихідні переміщення "
+"одночасно."
 
 #. module: account
 #. odoo-python
@@ -16984,6 +16995,9 @@ msgid ""
 "already posted.                 If you are absolutely sure you want to "
 "modify the opening balance of your accounts, reset the move to draft."
 msgstr ""
+"Ви не можете імпортувати \"openning_balance\" якщо проводка відкриття (%s) "
+"вже опублікована. Якщо ви абсолютно впевнені, що хочете змінити початковий "
+"баланс своїх рахунків, скиньте проводку до чернетки."
 
 #. module: account
 #. odoo-python

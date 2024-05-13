@@ -270,8 +270,6 @@ msgid "...and switch the timeline contents to fit your needs."
 msgstr ""
 
 #. module: website
-#: model:website,contact_us_button_url:website.default_website
-#: model:website,contact_us_button_url:website.website2
 #: model_terms:ir.ui.view,arch_db:website.layout
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "/contactus"
@@ -1215,7 +1213,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "<span>Theme</span>"
-msgstr ""
+msgstr " <span>Tēma</span> "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
@@ -1252,7 +1250,6 @@ msgid ""
 msgstr ""
 
 #. module: website
-#: model:ir.model.fields,help:website.field_base_automation__website_published
 #: model:ir.model.fields,help:website.field_ir_actions_server__website_published
 #: model:ir.model.fields,help:website.field_ir_cron__website_published
 msgid ""
@@ -1983,7 +1980,6 @@ msgid "Autosizing"
 msgstr ""
 
 #. module: website
-#: model:ir.model.fields,field_description:website.field_base_automation__website_published
 #: model:ir.model.fields,field_description:website.field_ir_actions_server__website_published
 #: model:ir.model.fields,field_description:website.field_ir_cron__website_published
 msgid "Available on the Website"
@@ -2014,7 +2010,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 #, python-format
 msgid "Background"
-msgstr "Background"
+msgstr "Fons"
 
 #. module: website
 #. odoo-javascript
@@ -2723,7 +2719,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_map_options
 msgid "Color filter"
-msgstr ""
+msgstr "Krāsas filtrs"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_progress_bar_options
@@ -2734,7 +2730,7 @@ msgstr "Krāsas"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "Cols"
-msgstr ""
+msgstr "Kolonnas"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_image_gallery_options
@@ -2931,7 +2927,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "Content Width"
-msgstr ""
+msgstr "Satura platums"
 
 #. module: website
 #. odoo-javascript
@@ -3034,7 +3030,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.snippets
 #, python-format
 msgid "Cover"
-msgstr ""
+msgstr "Nosegt"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_facebook_page_options
@@ -3366,7 +3362,7 @@ msgstr "Aizkavējies"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features_grid
 msgid "Delete Blocks"
-msgstr "Delete Blocks"
+msgstr "Dzēst blokus"
 
 #. module: website
 #. odoo-javascript
@@ -3808,7 +3804,7 @@ msgstr "Nolaižamā izvēlne"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_countdown_options
 msgid "Due Date"
-msgstr "Apmaksas termiņš"
+msgstr "Termiņš"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features_grid
@@ -4149,7 +4145,6 @@ msgid "Extension View"
 msgstr "Extension View"
 
 #. module: website
-#: model:ir.model.fields,field_description:website.field_base_automation__xml_id
 #: model:ir.model.fields,field_description:website.field_ir_actions_server__xml_id
 #: model:ir.model.fields,field_description:website.field_ir_cron__xml_id
 #: model:ir.model.fields,field_description:website.field_website_page__xml_id
@@ -4397,7 +4392,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 #: model_terms:ir.ui.view,arch_db:website.snippet_options_background_options
 msgid "Fixed"
-msgstr "Fixed"
+msgstr "Fiksēts"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
@@ -4792,7 +4787,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_image_gallery_options
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "Grid"
-msgstr "Grid"
+msgstr "Režģis"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.menu_search
@@ -5064,8 +5059,8 @@ msgid "Home page of the current website"
 msgstr ""
 
 #. module: website
-#. odoo-javascript
 #. odoo-python
+#. odoo-javascript
 #: code:addons/website/models/website.py:0
 #: code:addons/website/static/src/client_actions/website_preview/website_preview.xml:0
 #: model:ir.model.fields,field_description:website.field_website_page__is_homepage
@@ -5160,7 +5155,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: website
-#: model:ir.model.fields,help:website.field_base_automation__xml_id
 #: model:ir.model.fields,help:website.field_ir_actions_server__xml_id
 #: model:ir.model.fields,help:website.field_ir_cron__xml_id
 msgid "ID of the action if defined in a XML file"
@@ -5550,7 +5544,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,help:website.field_website__theme_id
 msgid "Installed theme"
-msgstr ""
+msgstr "Uzstādītā tēma"
 
 #. module: website
 #. odoo-javascript
@@ -6845,7 +6839,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "No condition"
-msgstr ""
+msgstr "Nav nosacījuma"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_comparisons
@@ -6920,12 +6914,6 @@ msgstr "Nav"
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "Normal"
 msgstr "Standarta"
-
-#. module: website
-#: model:website,prevent_zero_price_sale_text:website.default_website
-#: model:website,prevent_zero_price_sale_text:website.website2
-msgid "Not Available For Sale"
-msgstr ""
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_pages_kanban_view
@@ -7307,7 +7295,10 @@ msgid "Page Layout"
 msgstr ""
 
 #. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/components/dialog/page_properties.xml:0
 #: model_terms:ir.ui.view,arch_db:website.website_page_properties_view_form
+#, python-format
 msgid "Page Name"
 msgstr ""
 
@@ -7412,7 +7403,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.snippet_options_background_options
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Parallax"
-msgstr ""
+msgstr "Paralakss"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_theme_website_menu__parent_id
@@ -7578,7 +7569,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_website_form_options
 #, python-format
 msgid "Position"
-msgstr "Amats"
+msgstr "Novietojums"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_media_list
@@ -7603,6 +7594,13 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.color_combinations_debug_view
 msgid "Preset"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/components/fullscreen_indication/fullscreen_indication.js:0
+#, python-format
+msgid "Press %(key)s to exit full string"
 msgstr ""
 
 #. module: website
@@ -7712,7 +7710,7 @@ msgstr "Professional"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_table_of_content
 msgid "Professional themes"
-msgstr ""
+msgstr "Profesionālās tēmas"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_tabs
@@ -7829,7 +7827,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_rating
 msgid "Quality"
-msgstr ""
+msgstr "Izšķirtspēja"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -8008,7 +8006,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.theme_view_kanban
 msgid "Remove theme"
-msgstr ""
+msgstr "Noņemt tēmu"
 
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__theme_ir_asset__directive__replace
@@ -9050,7 +9048,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
 msgid "Switch Theme"
-msgstr ""
+msgstr "Mainīt tēmu"
 
 #. module: website
 #. odoo-javascript
@@ -9303,7 +9301,6 @@ msgid "The full URL to access the document through the website."
 msgstr "The full URL to access the document through the website."
 
 #. module: website
-#: model:ir.model.fields,help:website.field_base_automation__website_url
 #: model:ir.model.fields,help:website.field_ir_actions_server__website_url
 #: model:ir.model.fields,help:website.field_ir_cron__website_url
 msgid "The full URL to access the server action through the website."
@@ -9384,7 +9381,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.theme_view_search
 #, python-format
 msgid "Theme"
-msgstr "Theme"
+msgstr "Tēma"
 
 #. module: website
 #: model:ir.model,name:website.model_theme_ir_asset
@@ -9418,7 +9415,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_website_menu__theme_template_id
 #: model:ir.model.fields,field_description:website.field_website_page__theme_template_id
 msgid "Theme Template"
-msgstr ""
+msgstr "Tēmas veidne"
 
 #. module: website
 #: model:ir.model,name:website.model_theme_ir_ui_view
@@ -10638,7 +10635,6 @@ msgid "Website Pages"
 msgstr ""
 
 #. module: website
-#: model:ir.model.fields,field_description:website.field_base_automation__website_path
 #: model:ir.model.fields,field_description:website.field_ir_actions_server__website_path
 #: model:ir.model.fields,field_description:website.field_ir_cron__website_path
 msgid "Website Path"
@@ -10693,7 +10689,6 @@ msgid "Website URL"
 msgstr "Website URL"
 
 #. module: website
-#: model:ir.model.fields,field_description:website.field_base_automation__website_url
 #: model:ir.model.fields,field_description:website.field_ir_actions_server__website_url
 #: model:ir.model.fields,field_description:website.field_ir_cron__website_url
 msgid "Website Url"
@@ -10959,6 +10954,7 @@ msgid ""
 msgstr ""
 
 #. module: website
+#. odoo-python
 #: code:addons/website/models/website_menu.py:0
 #, python-format
 msgid ""

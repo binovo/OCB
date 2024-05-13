@@ -17,9 +17,9 @@
 # Jiří Podhorecký, 2023
 # Tomáš Píšek, 2024
 # Jakub Krkoška, 2024
-# Aleš Fiala <f.ales1@seznam.cz>, 2024
 # Katerina Horylova, 2024
 # Jakub Smolka, 2024
+# Aleš Fiala <f.ales1@seznam.cz>, 2024
 # 
 msgid ""
 msgstr ""
@@ -27,7 +27,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:54+0000\n"
-"Last-Translator: Jakub Smolka, 2024\n"
+"Last-Translator: Aleš Fiala <f.ales1@seznam.cz>, 2024\n"
 "Language-Team: Czech (https://app.transifex.com/odoo/teams/41243/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -196,6 +196,8 @@ msgid ""
 ".\n"
 "      Attach all documents or links to the task directly, to have all research information centralized."
 msgstr ""
+".\n"
+"      Připojte všechny dokumenty nebo odkazy přímo k úkolu, abyste měli všechny informace o výzkumu pohromadě."
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_task__repeat_day__10
@@ -470,7 +472,7 @@ msgstr ""
 "                <br><br><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">Tento zákaznický průzkum byl odeslán, protože váš úkol byl přesunut do fáze <b t-out=\"object.stage_id.name or ''\">Probíhá</b></span>\n"
 "            </t>\n"
 "            <t t-if=\"object.project_id.rating_status == 'periodic'\">\n"
-"                <br><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">Tento zákaznický průzkum je zasílán <b t-out=\"object.project_id.rating_status_period or ''\">týdně</b>, pokud je úkol je fázi <b t-out=\"object.stage_id.name or ''\">Probíhá</b>.</span>\n"
+"                <br><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">Tento zákaznický průzkum je zasílán <b t-out=\"object.project_id.rating_status_period or ''\">týdně</b>, pokud je úkol ve fázi <b t-out=\"object.stage_id.name or ''\">Probíhá</b>.</span>\n"
 "            </t>\n"
 "        </td></tr>\n"
 "    </tbody>\n"
@@ -657,7 +659,7 @@ msgstr "<span class=\"o_stat_text\">Nejnovější hodnocení</span>"
 #: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_form
 #: model_terms:ir.ui.view,arch_db:project.view_task_form2
 msgid "<span class=\"o_stat_text\">Sub-tasks</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Dílčí úkoly</span>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_milestone_view_form
@@ -687,7 +689,7 @@ msgstr "<strong class=\"d-block mb-2\">Přílohy</strong>"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_task_planned_hours_template
 msgid "<strong>Allocated Hours:</strong>"
-msgstr ""
+msgstr "<strong>Přidělené hodiny:</strong>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_task
@@ -757,7 +759,7 @@ msgstr ""
 #: code:addons/project/models/project.py:0
 #, python-format
 msgid "A new task will be created on the following dates:"
-msgstr ""
+msgstr "Nový úkol bude vytvořen v následujících datech:"
 
 #. module: project
 #. odoo-python
@@ -1076,6 +1078,8 @@ msgstr "Archivováno"
 #, python-format
 msgid "Archived tasks cannot be recurring. Please unarchive the task first."
 msgstr ""
+"Archivované úkoly se nemohou opakovat. Nejprve prosím zrušte archivaci "
+"úkolu."
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_type_delete_confirmation_wizard
@@ -1114,7 +1118,7 @@ msgstr "Přiřazení odpovědné osoby k úkolu"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
 msgid "Assign each new project to this plan"
-msgstr ""
+msgstr "Přiřaďte každý nový projekt tomuto plánu"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_form
@@ -1134,7 +1138,7 @@ msgstr "Přiřazeno"
 #: code:addons/project/models/project.py:0
 #, python-format
 msgid "Assigned On: %s"
-msgstr ""
+msgstr "Přiřazeno dne: %s"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.act_res_users_2_project_task_opened
@@ -1188,6 +1192,8 @@ msgid ""
 "At each stage, employees can block tasks or mark them as ready for the next step.\n"
 "                                    You can customize here the labels for each state."
 msgstr ""
+"V každé fázi mohou zaměstnanci úkoly zablokovat nebo je označit jako připravené k dalšímu kroku.\n"
+"                                    Štítky pro jednotlivé fáze si můžete přizpůsobit zde."
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_milestone__message_attachment_count
@@ -1528,6 +1534,8 @@ msgid ""
 "Communicate with customers on the task using the email gateway. Attach logo designs to the task, so that information flows from\n"
 "      designers to the workers who print the t-shirt. Organize priorities amongst orders using the"
 msgstr ""
+"Komunikujte se zákazníky o úkolu pomocí e-mailové brány. Připojte k úkolu návrhy loga, aby informace proudily od designérů\n"
+"      k pracovníkům, kteří tričko tisknou. Uspořádejte priority mezi objednávkami pomocí"
 
 #. module: project
 #: model:ir.model,name:project.model_res_company
@@ -1823,6 +1831,8 @@ msgid ""
 "Customers propose feedbacks by email; Odoo creates tasks automatically, and you can\n"
 "      communicate on the task directly. Your managers decide which feedback is accepted"
 msgstr ""
+"Zákazníci navrhují zpětnou vazbu e-mailem; Odoo vytváří úkoly automaticky a můžete o\n"
+"      úkolu přímo komunikovat. Vaši manažeři rozhodnou, která zpětná vazba je přijata"
 
 #. module: project
 #. odoo-python
@@ -1885,6 +1895,8 @@ msgid ""
 "Date on which the stage of your task has last been modified.\n"
 "Based on this information you can identify tasks that are stalling and get statistics on the time it usually takes to move tasks from one stage to another."
 msgstr ""
+"Datum poslední změny fáze úkolu.\n"
+"Na základě těchto informací můžete identifikovat úkoly, které se zasekávají, a získat statistiku času, který obvykle trvá přesunout úkoly z jedné fáze do druhé."
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__date
@@ -1970,13 +1982,13 @@ msgstr "Prosinec"
 #: model:ir.model.fields,field_description:project.field_res_company__analytic_plan_id
 #: model:ir.model.fields,field_description:project.field_res_config_settings__analytic_plan_id
 msgid "Default Plan"
-msgstr ""
+msgstr "Výchozí plán"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_res_company__analytic_plan_id
 #: model:ir.model.fields,help:project.field_res_config_settings__analytic_plan_id
 msgid "Default Plan for a new analytic account for projects"
-msgstr ""
+msgstr "Výchozí plán pro nový analytický účet pro projekty"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__alias_defaults
@@ -2356,6 +2368,8 @@ msgid ""
 "Field %s is not a stored field, only stored fields (regular or many2many) "
 "are valid for the 'groupby' parameter"
 msgstr ""
+"Pole %s není uložené pole, pro parametr 'groupby' jsou platná pouze uložená "
+"pole (běžná nebo many2many)"
 
 #. module: project
 #. odoo-javascript
@@ -2481,6 +2495,8 @@ msgstr "Získejte zpětnou vazbu od zákazníků"
 msgid ""
 "Grant employees access to your project or tasks by adding them as followers."
 msgstr ""
+"Udělte zaměstnancům přístup ke svému projektu nebo svým úkolům tím, že je "
+"přidáte jako sledující."
 
 #. module: project
 #. odoo-python
@@ -2490,6 +2506,8 @@ msgid ""
 "Grant portal users access to your project or tasks by adding them as "
 "followers."
 msgstr ""
+"Udělte uživatelům portálu přístup ke svému projektu nebo svým úkolům tím, že"
+" je přidáte jako sledující."
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_type__legend_done
@@ -2519,6 +2537,8 @@ msgid ""
 "Handle your idea gathering within Tasks of your new Project and discuss them"
 " in the chatter of the tasks. Use the"
 msgstr ""
+"Sbírejte nápady v rámci úkolů nového projektu a diskutujte o nich v rámci "
+"rozhovoru o úkolech. Použijte"
 
 #. module: project
 #. odoo-javascript
@@ -2806,7 +2826,7 @@ msgstr "Neplatná agregační funkce% r."
 #: code:addons/project/report/project_task_burndown_chart_report.py:0
 #, python-format
 msgid "Invalid field %r on model %r"
-msgstr ""
+msgstr "Neplatné pole %r na modelu %r"
 
 #. module: project
 #. odoo-python
@@ -2854,12 +2874,12 @@ msgstr "Fakturováno"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__is_analytic_account_id_changed
 msgid "Is Analytic Account Manually Changed"
-msgstr ""
+msgstr "Jsou analytický účet měněn ručně"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__is_blocked
 msgid "Is Blocked"
-msgstr ""
+msgstr "Je blokováno"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_milestone__is_deadline_exceeded
@@ -2919,6 +2939,8 @@ msgid ""
 "It seems that some tasks are part of a recurrence. At least one of them must"
 " be kept as a model to create the next occurences."
 msgstr ""
+"Zdá se, že některé úkoly jsou součástí opakování. Alespoň jeden z nich musí "
+"být zachován jako model pro vytvoření dalších výskytů."
 
 #. module: project
 #. odoo-javascript
@@ -2934,6 +2956,7 @@ msgstr "Zdá se, že tento úkol je součástí opakování."
 msgid ""
 "It seems that this task is recurrent. Would you like to stop its recurrence?"
 msgstr ""
+"Zdá se, že tento úkol se opakuje. Chtěli byste zastavit jeho opakování?"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_task__repeat_month__january
@@ -3406,7 +3429,7 @@ msgstr "Moje oblíbené"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form_extended
 msgid "My Private Tasks"
-msgstr ""
+msgstr "Moje soukromé úkoly"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
@@ -3460,6 +3483,8 @@ msgid ""
 "Name of your project. It can be anything you want e.g. the name of a "
 "customer or a service."
 msgstr ""
+"Název vašeho projektu. Může to být cokoliv chcete, např. jméno zákazníka "
+"nebo služby."
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__label_tasks
@@ -3688,12 +3713,12 @@ msgstr "Nic"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 msgid "Not Blocked"
-msgstr ""
+msgstr "Není blokováno"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 msgid "Not Blocking"
-msgstr ""
+msgstr "Žádné blokování"
 
 #. module: project
 #. odoo-python
@@ -3849,7 +3874,7 @@ msgstr "Otevřít úkoly"
 #: code:addons/project/models/project.py:0
 #, python-format
 msgid "Operation should be = or != (not %s)"
-msgstr ""
+msgstr "Operace by měla být = nebo != (ne %s)"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_force_thread_id
@@ -4090,7 +4115,7 @@ msgstr "Předchozí"
 #: code:addons/project/static/src/xml/project_task_kanban_examples.xml:0
 #, python-format
 msgid "Prioritize Tasks by using the"
-msgstr ""
+msgstr "Stanovit prioritu úkolů pomocí"
 
 #. module: project
 #. odoo-python
@@ -4774,7 +4799,7 @@ msgstr "So"
 #: code:addons/project/models/project.py:0
 #, python-format
 msgid "Satisfaction"
-msgstr ""
+msgstr "Spokojenost"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__report_project_task_user__rating_last_text__top
@@ -5006,7 +5031,7 @@ msgstr "Sdílet pouze ke čtení"
 #: code:addons/project/models/project_task_recurrence.py:0
 #, python-format
 msgid "Should repeat at least once"
-msgstr ""
+msgstr "Mělo by se opakovat alespoň jednou"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__is_favorite
@@ -5127,7 +5152,7 @@ msgstr "Fáze k odstranění"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 msgid "Stalling for 30 Days+"
-msgstr ""
+msgstr "Odstavení na 30 dní+"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__date_start
@@ -5381,12 +5406,12 @@ msgstr "Úkol blokován"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_form2
 msgid "Task description..."
-msgstr ""
+msgstr "Popis úkolu..."
 
 #. module: project
 #: model:mail.message.subtype,name:project.mt_task_progress
 msgid "Task in Progress"
-msgstr ""
+msgstr "Probíhající úkol"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
@@ -5459,7 +5484,7 @@ msgstr "Analýza úkolů"
 #: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 msgid "Tasks Due Today"
-msgstr ""
+msgstr "Úkoly splatné dnes"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
@@ -5513,6 +5538,7 @@ msgid ""
 "The end date should be after the day of the month or the last day of the "
 "month"
 msgstr ""
+"Datum ukončení by mělo být po dni v měsíci nebo posledním dni v měsíci"
 
 #. module: project
 #. odoo-python
@@ -5968,7 +5994,7 @@ msgstr "Použitelnost"
 #: code:addons/project/static/src/xml/project_task_kanban_examples.xml:0
 #, python-format
 msgid "Use"
-msgstr ""
+msgstr "Použijte"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__alias_enabled
@@ -6045,6 +6071,8 @@ msgid ""
 "Use the chatter to <b>send emails</b> and communicate efficiently with your customers. \n"
 "    Add new people to the followers' list to make them aware of the main changes about this task."
 msgstr ""
+"Pomocí chatu můžete <b>odesílat e-maily</b> a efektivně komunikovat se svými zákazníky.\n"
+"    Přidávejte nové lidi do seznamu sledovaných, abyste je informovali o hlavních změnách týkajících se tohoto úkolu."
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_stage_personal__user_id
@@ -6224,6 +6252,9 @@ msgid ""
 "creating a tag that is already existing in other projects, it won't generate"
 " any duplicates."
 msgstr ""
+"Můžete vidět pouze štítky, které jsou již ve vašem projektu přítomny. Pokud "
+"se pokusíte vytvořit štítek, který již existuje v jiných projektech, "
+"nevygeneruje žádné duplikáty."
 
 #. module: project
 #. odoo-python
@@ -6310,6 +6341,9 @@ msgid ""
 "you navigate.<br/> You can discard these changes from here or manually save "
 "your task.<br/>Let's save it manually."
 msgstr ""
+"Máte neuložené změny – žádné obavy! Odoo je bude při navigaci automaticky "
+"ukládat.<br/> Zde můžete tyto změny zahodit nebo ručně uložit svůj "
+"úkol.<br/>Uložme jej ručně."
 
 #. module: project
 #. odoo-javascript
@@ -6326,13 +6360,15 @@ msgid ""
 "You should at least have one personal stage. Create a new stage to which the"
 " tasks can be transferred after this one is deleted."
 msgstr ""
+"Měli byste mít alespoň jednu osobní fázi. Vytvořte novou fázi, do které lze "
+"úkoly přenést po odstranění této."
 
 #. module: project
 #. odoo-python
 #: code:addons/project/models/project_task_recurrence.py:0
 #, python-format
 msgid "You should select a least one day"
-msgstr ""
+msgstr "Měli byste vybrat alespoň jeden den"
 
 #. module: project
 #. odoo-javascript
@@ -6357,7 +6393,7 @@ msgstr ""
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_kanban
 msgid "assignee"
-msgstr ""
+msgstr "nabyvatel"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_sharing_project_task_view_kanban
@@ -6376,7 +6412,7 @@ msgstr "avatar"
 #: code:addons/project/static/src/xml/project_task_kanban_examples.xml:0
 #, python-format
 msgid "bullets to indicate the status of a task."
-msgstr ""
+msgstr "odrážky k označení stavu úkolu."
 
 #. module: project
 #. odoo-javascript
@@ -6384,7 +6420,7 @@ msgstr ""
 #, python-format
 msgid ""
 "button to inform your colleagues that a task is ready for the next stage."
-msgstr ""
+msgstr "informovat své kolegy o tom, že úkol byl připraven pro další fázi."
 
 #. module: project
 #. odoo-javascript
@@ -6497,7 +6533,7 @@ msgstr ""
 #: code:addons/project/static/src/xml/project_task_kanban_examples.xml:0
 #, python-format
 msgid "to indicate a problem or a need for discussion on a task."
-msgstr ""
+msgstr "k označení problému nebo potřebu diskuse o úkolu."
 
 #. module: project
 #. odoo-javascript

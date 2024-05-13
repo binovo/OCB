@@ -13,8 +13,8 @@
 # Amin Cheloh <amincheloh@gmail.com>, 2023
 # Martin Trigaux, 2023
 # Wichanon Jamwutthipreecha, 2023
-# Rasareeyar Lappiam, 2024
 # Wil Odoo, 2024
+# Rasareeyar Lappiam, 2024
 # 
 msgid ""
 msgstr ""
@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Rasareeyar Lappiam, 2024\n"
 "Language-Team: Thai (https://app.transifex.com/odoo/teams/41243/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -390,6 +390,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_register_form
 msgid "<b>Early Payment Discount applied.</b>"
 msgstr "<b>ใช้ส่วนลดการชำระเงินก่อนกำหนดแล้ว</b>"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            on this account:"
+msgstr ""
+"<br/>\n"
+"                            ในบัญชีนี้:"
 
 #. module: account
 #: model:mail.template,body_html:account.email_template_edi_credit_note
@@ -14561,6 +14570,8 @@ msgid ""
 "The selected payment method is not available for this payment, please select"
 " the payment method again."
 msgstr ""
+"วิธีการชำระเงินที่เลือกไม่พร้อมใช้งานสำหรับการชำระเงินนี้ "
+"โปรดเลือกวิธีการชำระเงินอีกครั้ง"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
@@ -16472,10 +16483,10 @@ msgstr ""
 #: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid ""
-"You can't register payments for journal items being either all inbound, "
-"either all outbound."
+"You can't register payments for both inbound and outbound moves at the same "
+"time."
 msgstr ""
-"คุณไม่สามารถลงทะเบียนการชำระเงินสำหรับรายการสมุดรายวันที่เป็นขาเข้าทั้งหมดหรือขาออกทั้งหมดก็ได้"
+"คุณไม่สามารถลงทะเบียนการชำระเงิน สำหรับการย้ายทั้งขาเข้าและขาออกพร้อมกันได้"
 
 #. module: account
 #. odoo-python
@@ -16578,7 +16589,7 @@ msgstr ""
 #: code:addons/account/models/account_account.py:0
 #, python-format
 msgid "You cannot create recursive groups."
-msgstr ""
+msgstr "คุณไม่สามารถสร้างกลุ่มแบบเรียกซ้ำได้"
 
 #. module: account
 #. odoo-python
@@ -16613,6 +16624,7 @@ msgid ""
 "You cannot delete this account tag (%s), it is used on the chart of account "
 "definition."
 msgstr ""
+"คุณไม่สามารถลบแท็กบัญชีนี้ (%s) ได้ แท็กนี้ใช้ในแผนภูมิคำจำกัดความบัญชี"
 
 #. module: account
 #. odoo-python
@@ -16634,6 +16646,7 @@ msgid ""
 "You cannot delete this report (%s), it is used by the accounting PDF "
 "generation engine."
 msgstr ""
+"คุณไม่สามารถลบรายงานนี้ (%s) ได้ รายงานนี้ถูกใช้โดยกลไกการสร้าง PDF ทางบัญชี"
 
 #. module: account
 #. odoo-python
@@ -16732,6 +16745,9 @@ msgid ""
 "already posted.                 If you are absolutely sure you want to "
 "modify the opening balance of your accounts, reset the move to draft."
 msgstr ""
+"คุณไม่สามารถนำเข้า \"openning_balance\" ได้หากมีการโพสต์การย้ายการเปิด (%s) "
+"แล้ว                 หากคุณแน่ใจจริงๆ ว่าต้องการแก้ไขยอดคงเหลือเปิดบัญชี "
+"ให้รีเซ็ตการย้ายเป็นร่าง"
 
 #. module: account
 #. odoo-python

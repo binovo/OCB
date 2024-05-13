@@ -5,7 +5,8 @@
 # Translators:
 # Martin Trigaux, 2022
 # Олеся Шевчук, 2023
-# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2023
+# Kseina Tyshchenko, 2024
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024
 # 
 msgid ""
 msgstr ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:55+0000\n"
-"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2023\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -145,7 +146,7 @@ msgstr ""
 #: code:addons/stock/models/stock_warehouse.py:0
 #, python-format
 msgid "%(name)s (copy)(%(id)s)"
-msgstr ""
+msgstr "%(name)s (копія)(%(id)s)"
 
 #. module: stock
 #. odoo-python
@@ -4503,6 +4504,13 @@ msgid "Locations"
 msgstr "Розташування"
 
 #. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid "Locations to update"
+msgstr "Розташування для оновлення"
+
+#. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Lock"
 msgstr "Заблокувати"
@@ -7175,7 +7183,7 @@ msgstr ""
 #: code:addons/stock/models/stock_rule.py:0
 #, python-format
 msgid "Rule %s belongs to %s while the route belongs to %s."
-msgstr ""
+msgstr "Правило %s належить %s, а маршрут належить %s."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_rule__rule_message
@@ -8748,6 +8756,10 @@ msgid ""
 "reference values or assign the existing reference sequence to this operation"
 " type."
 msgstr ""
+"Цей префікс послідовності вже використовується іншим типом операції. "
+"Рекомендується вибрати унікальний префікс, щоб уникнути проблем та/або "
+"повторюваних референсних значень, або призначити існуючу послідовність "
+"референсу цьому типу операції."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__property_stock_production
@@ -10064,6 +10076,8 @@ msgid ""
 "You cannot pack products into the same package when they are from different "
 "transfers with different operation types."
 msgstr ""
+"Ви не можете упаковувати товари в одну упаковку, якщо вони з різних "
+"переміщень з різними типами операцій."
 
 #. module: stock
 #. odoo-python

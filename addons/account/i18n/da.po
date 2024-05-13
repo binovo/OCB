@@ -12,9 +12,9 @@
 # Stefan Mølgaard, 2023
 # Ejner Sønniksen <ejner@vkdata.dk>, 2023
 # Mads Søndergaard, 2023
-# lhmflexerp <lhm@flexerp.dk>, 2024
 # Martin Trigaux, 2024
 # Kjeld Borch Egevang <kjeld@mail4us.dk>, 2024
+# lhmflexerp <lhm@flexerp.dk>, 2024
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # 
 msgid ""
@@ -392,6 +392,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_register_form
 msgid "<b>Early Payment Discount applied.</b>"
 msgstr "<b>Rabat ved tidlig betaling anvendes.</b>"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            on this account:"
+msgstr ""
 
 #. module: account
 #: model:mail.template,body_html:account.email_template_edi_credit_note
@@ -1369,7 +1376,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_reconcile_model_name_unique
 msgid "A reconciliation model already bears this name."
-msgstr ""
+msgstr "En forsoningsmodel har allerede dette navn."
 
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_report_line_code_uniq
@@ -1404,7 +1411,7 @@ msgstr ""
 #: code:addons/account/models/account_bank_statement.py:0
 #, python-format
 msgid "A statement should only contain lines from the same journal."
-msgstr ""
+msgstr "En opgørelse må kun indeholde linjer fra samme journal."
 
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_fiscal_position_tax_tax_src_dest_uniq
@@ -1885,7 +1892,7 @@ msgstr "Regnskabsperioder"
 #. module: account
 #: model:ir.model,name:account.model_account_report
 msgid "Accounting Report"
-msgstr ""
+msgstr "Regnskabsrapport"
 
 #. module: account
 #: model:ir.model,name:account.model_account_report_column
@@ -3138,7 +3145,7 @@ msgstr "Bank Mellemregningskonto"
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid "Bank Transaction"
-msgstr ""
+msgstr "Banktransaktion"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_form
@@ -6105,7 +6112,7 @@ msgstr "Standard e-mail"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_bank_statement_search
 msgid "Empty"
-msgstr ""
+msgstr "Tom"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_company__account_use_credit_limit
@@ -8019,7 +8026,7 @@ msgstr "Faktura/regnings dato"
 #. module: account
 #: model:mail.template,name:account.email_template_edi_invoice
 msgid "Invoice: Sending"
-msgstr ""
+msgstr "Faktura: Send"
 
 #. module: account
 #: model:mail.template,report_name:account.email_template_edi_invoice
@@ -10907,7 +10914,7 @@ msgstr "Betalingsbetingelser: Straksbetaling"
 #. module: account
 #: model:mail.template,name:account.mail_template_data_payment_receipt
 msgid "Payment: Payment Receipt"
-msgstr ""
+msgstr "Betalings: Betalingskvittering"
 
 #. module: account
 #. odoo-python
@@ -12517,6 +12524,8 @@ msgid ""
 "Sent manually to customer when clicking on 'Send receipt by email' in "
 "payment action"
 msgstr ""
+"Sendt manuelt til kunde når der klikkes på 'Send kvittering per email' ved "
+"betaling"
 
 #. module: account
 #: model:mail.template,description:account.email_template_edi_credit_note
@@ -12526,7 +12535,7 @@ msgstr "Sendes til kunder med kreditnotaen vedhæftet"
 #. module: account
 #: model:mail.template,description:account.email_template_edi_invoice
 msgid "Sent to customers with their invoices in attachment"
-msgstr ""
+msgstr "Sendt til kunder med deres fakturaer vedhæftet"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__res_company__fiscalyear_last_month__9
@@ -16468,11 +16477,9 @@ msgstr ""
 #: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid ""
-"You can't register payments for journal items being either all inbound, "
-"either all outbound."
+"You can't register payments for both inbound and outbound moves at the same "
+"time."
 msgstr ""
-"Du kan ikke registrere betalinger for journal bilag der enten alle er "
-"indgående eller udgående."
 
 #. module: account
 #. odoo-python

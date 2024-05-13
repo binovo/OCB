@@ -29,12 +29,12 @@
 # Veikko Väätäjä <veikko.vaataja@gmail.com>, 2022
 # Eino Mäkitalo <eino.makitalo@netitbe.fi>, 2022
 # Heikki Katajisto <heikki.katajisto@myyntivoima.fi>, 2022
-# Martin Trigaux, 2022
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2022
 # Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2022
 # Richard Mouthier <rmo@odoo.com>, 2022
 # Karoliina Nisula <karoliina.nisula@tawasta.fi>, 2023
 # Kim Asplund <kim.asplund@gmail.com>, 2023
+# Martin Trigaux, 2024
 # Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024
 # 
 msgid ""
@@ -2655,6 +2655,10 @@ msgid ""
 "click the <i class=\"fa fa-cloud-upload fa-fw\"></i> button now to ensure "
 "your work is saved before you exit this tab."
 msgstr ""
+"Varoitus! Viimeisimmät muutokset ovat liian suuria tallennettavaksi "
+"automaattisesti. Napsauta nyt <i class=\"fa fa-cloud-upload fa-fw\"></i> "
+"-painiketta varmistaaksesi, että työsi on tallennettu, ennen kuin poistut "
+"tältä välilehdeltä."
 
 #. module: web
 #. odoo-javascript
@@ -5211,6 +5215,7 @@ msgstr "Syntaksivirhe"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
 #: code:addons/web/static/src/webclient/user_menu/user_menu_items.xml:0
 #, python-format
 msgid "TIP"
@@ -6259,6 +6264,13 @@ msgstr "kaikki tietueet"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
+#, python-format
+msgid "and"
+msgstr "ja"
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/core/domain_selector/domain_selector_branch_operator.xml:0
 #: code:addons/web/static/src/core/domain_selector/domain_selector_branch_operator.xml:0
 #: code:addons/web/static/src/core/domain_selector/domain_selector_branch_operator.xml:0
@@ -6857,3 +6869,10 @@ msgstr "kirjoita oletusteksti tai paina ENTER"
 #, python-format
 msgid "— press"
 msgstr "- lehdistö"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
+#, python-format
+msgid "— search for"
+msgstr "- etsi"
