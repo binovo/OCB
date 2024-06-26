@@ -1,3 +1,11 @@
+odoo (12.0.132) stable; urgency=low
+
+  [ Alicia Rodríguez ]
+  * 15348 [UPD] hr_attendance: Ajustar modo quiosco para evitar bloqueo en salida > 12h
+    Se compotará como el resto de mensajes, volverá a la pantalla inicial a los pocos segundos
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Wed, 26 Jun 2024 13:18:00 +0200
+
 odoo (12.0.129) stable; urgency=low
 
   [ Alicia Rodríguez ]
