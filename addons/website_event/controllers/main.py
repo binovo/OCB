@@ -273,7 +273,10 @@ class WebsiteEventController(http.Controller):
                 if not value:
                     continue
             elif isinstance(registration_fields[field_name], (fields.Many2one, fields.Integer)):
-                value = int(value) or False  # 0 is considered as a void many2one aka False
+                value = int(value) if value else 0
+                is_instance_many2one = isinstance(registration_fields[field_name], fields.Many2one)
+                # 0 is considered as a void many2one aka False
+                value = False if is_instance_many2one and not value else value
             else:
                 value = value
 
