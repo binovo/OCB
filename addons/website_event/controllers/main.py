@@ -277,6 +277,11 @@ class WebsiteEventController(http.Controller):
                 is_instance_many2one = isinstance(registration_fields[field_name], fields.Many2one)
                 # 0 is considered as a void many2one aka False
                 value = False if is_instance_many2one and not value else value
+            elif isinstance(registration_fields[field_name], fields.Many2many):
+                # Multiple selector in form_details only contains the first value
+                # we reparse the form using getlist to get them all
+                record_ids = request.httprequest.form.getlist(key)
+                value = [(6, 0, [record_id for record_id in record_ids])]
             else:
                 value = value
 
