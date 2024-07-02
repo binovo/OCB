@@ -269,6 +269,9 @@ class WebsiteEventController(http.Controller):
             field_name = attr_name.split('-')[0]
             if field_name not in registration_fields:
                 continue
+            elif isinstance(registration_fields[field_name], (fields.Date, fields.Datetime)):
+                if not value:
+                    continue
             elif isinstance(registration_fields[field_name], (fields.Many2one, fields.Integer)):
                 value = int(value) or False  # 0 is considered as a void many2one aka False
             else:
