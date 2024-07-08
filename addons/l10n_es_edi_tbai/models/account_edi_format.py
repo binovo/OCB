@@ -160,6 +160,13 @@ class AccountEdiFormat(models.Model):
             )
             res[invoice]['attachment'] = attachment
 
+        # FAILURE
+        # NOTE: 'warning' means timeout so absolutely keep the XML and chain index
+        elif res[invoice].get('blocking_level') == 'error':
+            invoice._update_l10n_es_tbai_submitted_xml(xml_doc=None, cancel=False)  # deletes XML
+            # delete index (avoids re-trying same XML and chaining off of it)
+            invoice.l10n_es_tbai_chain_index = False
+
         return res
 
     def _l10n_es_tbai_cancel_invoice_edi(self, invoice):
@@ -201,6 +208,11 @@ class AccountEdiFormat(models.Model):
                 ),
                 attachment_ids=[attachment.id],
             )
+
+        # FAILURE
+        # NOTE: 'warning' means timeout so absolutely keep the XML and chain index
+        elif res[invoice].get('blocking_level') == 'error':
+            invoice._update_l10n_es_tbai_submitted_xml(xml_doc=None, cancel=True)  # will need to be re-created
 
         return res
 
