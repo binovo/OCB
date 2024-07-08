@@ -139,8 +139,8 @@ class AccountEdiFormat(models.Model):
         # Call the web service and get response
         res = self._l10n_es_tbai_post_to_web_service(invoice, inv_xml)
 
-        # ALWAYS attach document to chatter not only when it is SUCCESS
-        if invoice.l10n_es_tbai_post_xml:
+        # SUCCESS
+        if res[invoice].get('success'):
             # Create attachment
             attachment = self.env['ir.attachment'].create({
                 'name': invoice.name + '_post.xml',
@@ -154,7 +154,7 @@ class AccountEdiFormat(models.Model):
             test_suffix = '(test mode)' if invoice.company_id.l10n_es_edi_test_env else ''
             invoice.with_context(no_new_invoice=True).message_post(
                 body=Markup("<pre>TicketBAI: posted emission XML {test_suffix}\n{message}</pre>").format(
-                    test_suffix=test_suffix, message=res[invoice].get('message')
+                    test_suffix=test_suffix, message=res[invoice]['message']
                 ),
                 attachment_ids=[attachment.id],
             )
@@ -182,8 +182,8 @@ class AccountEdiFormat(models.Model):
         # Call the web service and get response
         res = self._l10n_es_tbai_post_to_web_service(invoice, cancel_xml, cancel=True)
 
-        # ALWAYS attach document to chatter not only when it is SUCCESS
-        if invoice.l10n_es_tbai_cancel_xml:
+        # SUCCESS
+        if res[invoice].get('success'):
             # Create attachment
             attachment = self.env['ir.attachment'].create({
                 'name': invoice.name + '_cancel.xml',
@@ -197,7 +197,7 @@ class AccountEdiFormat(models.Model):
             test_suffix = '(test mode)' if invoice.company_id.l10n_es_edi_test_env else ''
             invoice.with_context(no_new_invoice=True).message_post(
                 body=Markup("<pre>TicketBAI: posted cancellation XML {test_suffix}\n{message}</pre>").format(
-                    test_suffix=test_suffix, message=res[invoice].get('message')
+                    test_suffix=test_suffix, message=res[invoice]['message']
                 ),
                 attachment_ids=[attachment.id],
             )
