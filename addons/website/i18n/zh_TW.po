@@ -4419,7 +4419,7 @@ msgstr "實色"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_tabs_options
 msgid "Fill and justify"
-msgstr "Fill and justify"
+msgstr "填充和對齊"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_snippet_filter__filter_id
@@ -9929,7 +9929,7 @@ msgstr "向下飄移"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menus_logos
 msgid "Tops"
-msgstr "頂部"
+msgstr "上衣"
 
 #. module: website
 #: model:ir.model.fields,help:website.field_website_visitor__page_count
@@ -11790,7 +11790,7 @@ msgstr "此頁"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "valuation, rank"
-msgstr "評價, 品評, 點評, 排名"
+msgstr "評價, 評分, 品評, 點評, 排名"
 
 #. module: website
 #. odoo-javascript

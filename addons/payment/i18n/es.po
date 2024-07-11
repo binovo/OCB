@@ -5,11 +5,11 @@
 # Translators:
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022
 # David Ramia, 2023
-# Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2023
 # Iran Villalobos López, 2023
 # Abraham Anes <abrahamanes@gmail.com>, 2023
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
+# Pedro M. Baeza <pedro.baeza@tecnativa.com>, 2024
 # Larissa Manderfeld, 2024
 # 
 msgid ""
@@ -1639,7 +1639,7 @@ msgstr "El token de acceso es inválido."
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_transaction__child_transaction_ids
 msgid "The child transactions of the source transaction."
-msgstr ""
+msgstr "Las transacciones hijas de la transacción de origen."
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_token__payment_details
@@ -1687,7 +1687,7 @@ msgstr "La referencia interna de la transacción"
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_icon__provider_ids
 msgid "The list of providers supporting this payment icon"
-msgstr ""
+msgstr "La lista de proveedores que son compatibles con este icono de pago"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_provider__main_currency_id
@@ -2000,7 +2000,7 @@ msgstr "Verificado"
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
 msgid "Void Transaction"
-msgstr "Transacción vacía"
+msgstr "Anular transacción"
 
 #. module: payment
 #. odoo-javascript
