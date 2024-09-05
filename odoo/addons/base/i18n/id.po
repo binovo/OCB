@@ -11304,7 +11304,7 @@ msgid ""
 "\n"
 "    Supported documents are SO, PO.\n"
 msgstr ""
-"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otoamtis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
+"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otomatis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
 "\n"
 "    Dokumen yang bisa disinkronisasi adalah SO, PO.\n"
 
@@ -11315,7 +11315,7 @@ msgid ""
 "\n"
 "    Supported documents are invoices/credit notes.\n"
 msgstr ""
-"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otoamtis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
+"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otomatis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
 "\n"
 "    Dokumen yang bisa disinkronisasi adalah faktur/nota kredit.\n"
 
@@ -28544,6 +28544,15 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odoo tidak dapat menggabungkan PDF yang dibuat."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
+"Odoo tidak dapat merge PDf yang dibuat karena {num_errors} file yang korup"
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -35327,7 +35336,7 @@ msgid ""
 "This module allows ecommerce users to choose to deliver to Pick-Up points "
 "for the FEDEX connector."
 msgstr ""
-"Modul ini memungkina user ecommerce untuk memilih untuk mengirim ke titik "
+"Modul ini memungkinkan user ecommerce untuk memilih untuk mengirim ke titik "
 "Pick-Up untuk konektor FEDEX."
 
 #. module: base
@@ -37156,6 +37165,12 @@ msgstr "Lihat sesi livechat untuk lead"
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "Lihat Record yang Bermasalah"
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -38092,6 +38107,8 @@ msgid ""
 "You cannot reduce the number of decimal places of a currency already used on"
 " an accounting entry."
 msgstr ""
+"Anda tidak dapat mengurangi jumlah tempat desimal mata uang yang sudah "
+"digunakan pada entri akuntansi."
 
 #. module: base
 #. odoo-python

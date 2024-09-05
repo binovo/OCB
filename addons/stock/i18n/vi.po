@@ -1500,15 +1500,15 @@ msgid ""
 "Changing the company of this record is forbidden at this point, you should "
 "rather archive it and create a new one."
 msgstr ""
-"Việc thay đổi công ty trong tập dữ liệu này hiện bị cấm, bạn nên lưu trữ và "
-"tạo một công ty mới."
+"Việc thay đổi công ty trong bản ghi này hiện bị cấm, bạn nên lưu trữ và tạo "
+"một công ty mới."
 
 #. module: stock
 #. odoo-python
 #: code:addons/stock/models/stock_picking.py:0
 #, python-format
 msgid "Changing the operation type of this record is forbidden at this point."
-msgstr "Việc thay đổi loại hoạt động của tập dữ liệu này hiện bị cấm."
+msgstr "Việc thay đổi loại hoạt động của bản ghi này hiện bị cấm."
 
 #. module: stock
 #. odoo-python
@@ -9091,7 +9091,7 @@ msgstr "Loại hoạt động"
 #: model:ir.model.fields,help:stock.field_stock_lot__activity_exception_decoration
 #: model:ir.model.fields,help:stock.field_stock_picking__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Loại hoạt động ngoại lệ trên tập dữ liệu."
+msgstr "Loại hoạt động ngoại lệ trên bản ghi."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_delivery_ups
@@ -9875,6 +9875,7 @@ msgstr "Bạn không thể thay đổi loại sản phẩm đã được sử d�
 msgid ""
 "You can not create a snoozed orderpoint that is not manually triggered."
 msgstr ""
+"Bạn không thể tạo điểm đặt hàng bị tạm dừng không được kích hoạt thủ công."
 
 #. module: stock
 #. odoo-python
@@ -9923,6 +9924,8 @@ msgid ""
 "You can only snooze manual orderpoints. You should rather archive 'auto-"
 "trigger' orderpoints if you do not want them to be triggered."
 msgstr ""
+"Bạn chỉ có thể tạm dừng các điểm đặt hàng thủ công. Bạn nên lưu trữ các điểm"
+" đặt hàng 'tự động kích hoạt' nếu bạn không muốn chúng được kích hoạt."
 
 #. module: stock
 #. odoo-python
@@ -10311,8 +10314,8 @@ msgid ""
 "You tried to create a record that already exists. The existing record was "
 "modified instead."
 msgstr ""
-"Bạn đã cố tạo một tập dữ liệu đã tồn tại. Thay vào đó, bạn nên điều chỉnh "
-"tập dữ liệu hiện có."
+"Bạn đã cố tạo một bản ghi đã tồn tại. Thay vào đó, bạn nên điều chỉnh bản "
+"ghi hiện có."
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_orderpoint_replenish

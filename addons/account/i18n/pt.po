@@ -6257,7 +6257,7 @@ msgstr "Vazio"
 #: model:ir.model.fields,help:account.field_res_company__account_use_credit_limit
 #: model:ir.model.fields,help:account.field_res_config_settings__account_use_credit_limit
 msgid "Enable the use of credit limit on partners."
-msgstr "Habilitar o uso de limite de crédito para usuários."
+msgstr "Habilitar o uso de limite de crédito para utilizadores."
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report__filter_hierarchy__by_default
@@ -9063,7 +9063,7 @@ msgstr "Deixe vazio para atribuir o mesmo Vendedor da fatura."
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
 msgid "Leave empty to use the default outstanding account"
-msgstr "Deixe em branco para usar a conta padrão de pendentes"
+msgstr "Deixe em branco para usar a conta predefinida de pendentes"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_position_form
@@ -9458,7 +9458,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_reconcile_model__match_partner_ids
 msgid "Matching partners"
-msgstr "Usuários correspondentes"
+msgstr "Parceiros correspondentes"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_search
@@ -13941,9 +13941,9 @@ msgid ""
 "You will need to clear the %(model)s's %(sequence_field)s to proceed.\n"
 "In doing so, you might want to resequence your entries in order to maintain a continuous date-based sequence."
 msgstr ""
-"O %(date_field)s (%(date)s) não corresponde ao número de sequência do %(model)s (%(sequence)s) relacionado\n"
+"A %(date_field)s (%(date)s) não corresponde ao número de sequência do %(model)s (%(sequence)s) relacionado\n"
 "Será necessário limpar o %(sequence_field)s do %(model)s para prosseguir.\n"
-"Ao fazer isto, talvez seja necessário ressequenciar seus lançamentos para manter uma sequência contínua baseada em data."
+"Ao fazer isto, talvez seja necessário ressequenciar os seus lançamentos para manter uma sequência contínua baseada nas datas."
 
 #. module: account
 #. odoo-python
@@ -14376,7 +14376,7 @@ msgid ""
 "The following regular expression is invalid to create a partner mapping: %s"
 msgstr ""
 "A seguinte expressão regular é inválida para criar um mapeamento de "
-"usuários: %s"
+"parceiros: %s"
 
 #. module: account
 #. odoo-python
@@ -17226,12 +17226,16 @@ msgstr "para este cliente. Pode alocá-los para marcar esta fatura como paga."
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "for this vendor. You can allocate them to mark this bill as paid."
 msgstr ""
+"para este fornecedor. Pode agora alocá-los para marcar esta fatura de "
+"fornecedor como paga."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid ""
 "for this vendor. You can allocate them to mark this credit note as paid."
 msgstr ""
+"para este fornecedor. Pode agora alocá-los para marcar esta nota de crédito "
+"de fornecedor como paga."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_position_form

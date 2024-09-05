@@ -646,7 +646,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"            ケニア・トレモール・デバイスのEDI統合\n"
+"            ケニアTremolデバイスEDI統合\n"
 "        "
 
 #. module: base
@@ -10716,7 +10716,7 @@ msgid ""
 "\n"
 "https://paymentservices.amazon.com/docs/EN/12.html"
 msgstr ""
-"# Amazon決済サービス\n"
+"# Amazon payment Services\n"
 "\n"
 "## 実装詳細\n"
 "\n"
@@ -10731,7 +10731,7 @@ msgstr ""
 "\n"
 "以下との統合を選択しています:\n"
 "[Redirection](https://paymentservices-reference.payfort.com/docs/api/build/index.html#redirection)\n"
-"APIは、Amazon決済サービスが2022年7月現在に提供している3つのゲートウェイのうち、当社のニーズに最も適したゲートウェイであるためです。\n"
+"APIは、Amazon payment Servicesが2022年7月現在に提供している3つのゲートウェイのうち、当社のニーズに最も適したゲートウェイであるためです。\n"
 "他のゲートウェイの詳細については、タスクの開発メモを参照して下さい。\n"
 "\n"
 "## 詳細をマージ\n"
@@ -25242,21 +25242,21 @@ msgstr "更新不可"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Non-relational field %(field)r in path %(field_path)r in %(use)s)"
-msgstr "無関係のフィールド%(field)r パス%(field_path)r  %(use)s内)"
+msgstr "非リレーショナルフィールド%(field)r パス%(field_path)r  %(use)s内)"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Non-relational field %r in dependency %r"
-msgstr "非リレーションフィールド %r その依存関係 %r"
+msgstr "非リレーショナルフィールド %r その依存関係 %r"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Non-relational field name '%s' in related field '%s'"
-msgstr "非リレーションフィールド名 '%s' そのリレーションフィールド '%s'"
+msgstr "非リレーショナルフィールド名 '%s' そのリレーションフィールド '%s'"
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_testing_utilities
@@ -27239,6 +27239,14 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odooは生成されたPDFをマージできません。"
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -28337,7 +28345,7 @@ msgstr "支払い-アカウント"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_payment_invoice_online_payment_patch
 msgid "Payment - Account / Invoice Online Payment Patch"
-msgstr ""
+msgstr "支払 - アカウント / 請求書オンライン支払パッチ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment
@@ -34897,9 +34905,7 @@ msgstr "インポート中に不明なエラーが発生しました:"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Unknown field \"%(field)s\" in \"group_by\" value in %(attribute)s=%(value)r"
-msgstr ""
-"%(attribute)s=%(value)rの &quot;group_by&quot;値の不明なフィールド "
-"&quot;%(field)s&quot;"
+msgstr "不明なフィールド \"%(field)s\" が \"group_by\" 値、%(attribute)s=%(value)r内にあります"
 
 #. module: base
 #. odoo-python
@@ -35602,6 +35608,12 @@ msgstr "ビュー継承モード"
 #: model:ir.module.module,summary:base.module_website_crm_livechat
 msgid "View livechat sessions for leads"
 msgstr "リードのWebチャットセッションを表示する"
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr ""
 
 #. module: base
 #. odoo-python
