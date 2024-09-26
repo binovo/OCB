@@ -1,3 +1,10 @@
+odoo (11.0.137) stable; urgency=low
+
+  [ Alicia Rodríguez ]
+  * [UPD] website: Renombrar test para que no se ejecute por problema recurrente
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Thu, 26 Sep 2024 13:38:00 +0200
+
 odoo (11.0.116) stable; urgency=low
 
   [ Ugaitz Olaizola ]
