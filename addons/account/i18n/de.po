@@ -1552,6 +1552,22 @@ msgstr ""
 " dieses Kontos, um dies zuzulassen."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+"%s ist ein Kreditorenkonto, aber wird in einem Verkaufsvorgang verwendet."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+"%s ist ein Debitorenkonto, aber wird in einem Einkaufsvorgang verwendet."
+
+#. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
 msgid "Account Cash Rounding"
 msgstr "Bargeldrundung"
@@ -13997,6 +14013,15 @@ msgstr ""
 "Das %(date_field)s (%(date)s) stimmt nicht mit der Sequenznummer des entsprechenden %(model)s (%(sequence)s) überein.\n"
 "Sie müssen die %(sequence_field)s des %(model)s zum Fortfahren entfernen.\n"
 "Dabei können Sie Ihre Einträge neu anordnen, um eine kontinuierliche datumsbezogene Sequenz zu gewährleisten."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python

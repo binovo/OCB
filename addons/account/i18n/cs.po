@@ -1545,6 +1545,20 @@ msgstr ""
 "bylo možné."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
 msgid "Account Cash Rounding"
 msgstr "Účet zaokrouhlení"
@@ -13875,6 +13889,15 @@ msgstr ""
 "%(date_field)s (%(date)s) neodpovídá pořadovému číslu souvisejícího %(model)s (%(sequence)s)\n"
 "Chcete-li pokračovat, budete muset vymazat %(model)s %(sequence_field)s.\n"
 "Při tom můžete chtít změnit pořadí položek, abyste zachovali souvislou posloupnost založenou na datech."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python

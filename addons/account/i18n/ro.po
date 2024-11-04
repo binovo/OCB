@@ -1467,6 +1467,20 @@ msgstr ""
 "acestui cont pentru a permite acest lucru."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
 msgid "Account Cash Rounding"
 msgstr "Rotunjirea numerarului contului"
@@ -13848,6 +13862,15 @@ msgstr ""
 "Data %(date_field)s (%(date)s) nu se potrivește cu numărul secvenței aferentă %(model)s (%(sequence)s)\n"
 "Trebuie să ștergeți %(model)s's %(sequence_field)s pentru a continua.\n"
 "În acest scop, ar trebui să resecvențiați înregistrările pentru a menține o secvență continuă bazată pe data."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python

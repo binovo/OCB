@@ -9,8 +9,9 @@
 # Odoo - Paolo Gatti (pgi), 2023
 # Sebastiano Picchi, 2023
 # Martin Trigaux, 2023
-# Sergio Zanchetta <primes2h@gmail.com>, 2024
 # Wil Odoo, 2024
+# Simone Rubino, 2024
+# Sergio Zanchetta <primes2h@gmail.com>, 2024
 # Marianna Ciofani, 2024
 # 
 msgid ""
@@ -1551,6 +1552,22 @@ msgid ""
 msgstr ""
 "Il conto %s non consente la riconciliazione. Modificare prima la relativa "
 "configurazione del conto."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+"Il conto %s è di debito ma viene utilizzato in un'operazione di vendita."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+"Il conto %s è di credito ma viene utilizzato in un'operazione d'acquisto."
 
 #. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
@@ -8224,7 +8241,7 @@ msgstr "Fatture"
 #: model_terms:ir.ui.view,arch_db:account.portal_my_home_invoice
 #: model_terms:ir.ui.view,arch_db:account.portal_my_home_menu_invoice
 msgid "Invoices &amp; Bills"
-msgstr "Fatture cliente/fornitore"
+msgstr "Fatture"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_invoice_report_all
@@ -9595,7 +9612,7 @@ msgstr "Valute estere mancanti nei parziali con id: %s"
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_move_line_check_accountable_required_fields
 msgid "Missing required account on accountable line."
-msgstr "Il conto richiesto non è presente sulla riga contabile."
+msgstr "Il conto è obbligatorio sulla riga contabile."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_reconcile_model_line__model_id
@@ -13986,6 +14003,17 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
+"La disponibilità è impostata su \"Il Paese corrisponde a\" ma il campo Paese"
+" non è configurato."
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid "The Bill/Refund date is required to validate this document."
@@ -16734,9 +16762,9 @@ msgid ""
 "account set either on the company or the %s payment method in the %s "
 "journal."
 msgstr ""
-"Nn è possibile creare un nuovo pagamento senza aver configurato per "
-"l'azienda un conto per i pagamenti in sospeso/ricevuti o il %s metodo di "
-"pagamento nel %s registro."
+"Impossibile creare un nuovo pagamento senza aver impostato un conto per i "
+"pagamenti/ricevute in sospeso nell'azienda o nel metodo di pagamento %s nel "
+"registro %s."
 
 #. module: account
 #. odoo-python

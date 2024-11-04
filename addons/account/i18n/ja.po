@@ -1497,6 +1497,20 @@ msgid ""
 msgstr "アカウント%sは消込を許可していません。まず、このアカウントの構成を変更して許可します。"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
 msgid "Account Cash Rounding"
 msgstr "勘定科目現金丸め表示"
@@ -13508,6 +13522,15 @@ msgstr ""
 "%(date_field)s (%(date)s)  は %(model)s (%(sequence)s)に関連するシーケンス番号に一致しません。\n"
 "処理を進めるためには%(model)sの%(sequence_field)s をクリアにする必要があります。\n"
 "その際、日付ベースの連続したシーケンスを維持したい場合には、エントリーの順序を変更して下さい。"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python

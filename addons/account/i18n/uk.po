@@ -1539,6 +1539,20 @@ msgstr ""
 " щоб дозволити узгодження."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
 msgid "Account Cash Rounding"
 msgstr "Округлення рахунку в бухобліку"
@@ -13929,6 +13943,15 @@ msgstr ""
 "%(date_field)s (%(date)s) не відповідає номеру послідовності пов'язаної %(model)s (%(sequence)s)\n"
 "Щоби продовжити, потрібно очистити %(model)s %(sequence_field)s.\n"
 "При цьому ви можете змінити послідовність ваших записів, щоб підтримувати безперервну послідовність на основі дат."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python

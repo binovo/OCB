@@ -1546,6 +1546,20 @@ msgstr ""
 "akun ini untuk memungkinkan rekonsiliasi."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
 msgid "Account Cash Rounding"
 msgstr "Pembulatan Uang Tunai"
@@ -13923,6 +13937,15 @@ msgstr ""
 "%(date_field)s (%(date)s) tidak cocok dengan nomor sequence yang terkait %(model)s (%(sequence)s)\n"
 "Anda harus menghapus %(sequence_field)s milik %(model)s untuk melanjutkan.\n"
 "Dengan begitu, Anda mungkin harus melakukan resequence untuk entri Anda untuk menjaga sequence berdasarkan data yang kontinu."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python
