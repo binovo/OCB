@@ -8,10 +8,11 @@ from unittest.mock import patch
 from odoo import fields
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.exceptions import ValidationError
-from odoo.tests.common import Form, TransactionCase
+from odoo.tests.common import Form, TransactionCase, tagged
 from odoo.exceptions import AccessError, RedirectWarning, UserError
 
 
+@tagged("post_install", "-at_install")
 class StockQuant(TransactionCase):
     @classmethod
     def setUpClass(cls):

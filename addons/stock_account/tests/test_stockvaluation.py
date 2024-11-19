@@ -5,7 +5,7 @@ from datetime import timedelta
 
 from odoo.exceptions import UserError
 from odoo.fields import Datetime
-from odoo.tests.common import Form, TransactionCase
+from odoo.tests.common import Form, TransactionCase, tagged
 from odoo import Command
 
 
@@ -47,6 +47,7 @@ def _create_accounting_data(env):
     return stock_input_account, stock_output_account, stock_valuation_account, expense_account, stock_journal
 
 
+@tagged("post_install", "-at_install")
 class TestStockValuation(TransactionCase):
     @classmethod
     def setUpClass(cls):

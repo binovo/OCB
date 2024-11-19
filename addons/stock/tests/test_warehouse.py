@@ -5,8 +5,10 @@ from odoo.addons.stock.tests.common2 import TestStockCommon
 from odoo.tests import Form
 from odoo.exceptions import UserError
 from odoo.tools import mute_logger
+from odoo.tests.common import tagged
 
 
+@tagged("post_install", "-at_install")
 class TestWarehouse(TestStockCommon):
 
     @classmethod
