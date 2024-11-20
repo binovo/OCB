@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import Form
+from odoo.tests import Form, common
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.stock.tests import common2
 

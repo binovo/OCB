@@ -6,12 +6,13 @@ from freezegun import freeze_time
 
 from odoo import Command, fields
 from odoo.exceptions import UserError
-from odoo.tests import Form
+from odoo.tests import Form, common
 from odoo.tools.misc import format_date
 
 from odoo.addons.mrp.tests.common import TestMrpCommon
 
 
+@common.tagged('post_install', '-at_install')
 class TestMrpOrder(TestMrpCommon):
 
     @classmethod

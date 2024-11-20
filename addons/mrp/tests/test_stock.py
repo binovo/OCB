@@ -7,6 +7,7 @@ from odoo.exceptions import UserError
 from odoo.tests import Form
 
 
+@common.common.tagged('post_install', '-at_install')
 class TestWarehouseMrp(common.TestMrpCommon):
     @classmethod
     def setUpClass(cls):
