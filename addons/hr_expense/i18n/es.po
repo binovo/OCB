@@ -1472,7 +1472,31 @@ msgstr ""
 #: code:addons/hr_expense/models/hr_expense.py:0
 #, python-format
 msgid "Only Managers and HR Officers can refuse expenses"
+msgstr "Solo los gerentes y encargados de RR. HH. pueden rechazar gastos"
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense.py:0
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Employee(s) should have a bank account set."
 msgstr ""
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense.py:0
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Go to Employee(s)"
+msgstr ""
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense.py:0
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Employee(s)"
+msgstr "Empleado(s)"
 
 #. module: hr_expense
 #: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_my_all
@@ -1534,7 +1558,7 @@ msgstr "Cuenta de teléfono, correo postal, etc."
 #, python-format
 msgid ""
 "Please specify an expense journal in order to generate accounting entries."
-msgstr ""
+msgstr "Especifique un diario de gastos para generar los asientos contables."
 
 #. module: hr_expense
 #. odoo-javascript
@@ -1850,7 +1874,7 @@ msgstr ""
 #: code:addons/hr_expense/models/hr_expense.py:0
 #, python-format
 msgid "Please specify a bank journal in order to generate accounting entries."
-msgstr ""
+msgstr "Especifique un diario bancario para generar los asientos contables."
 
 #. module: hr_expense
 #. odoo-python
