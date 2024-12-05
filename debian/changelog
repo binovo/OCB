@@ -1,3 +1,10 @@
+odoo (12.0.142) stable; urgency=low
+
+  [ Alicia Rodríguez ]
+  * 16537 [UPD] product: Ajustar vista del campo precio para tarifas del productos
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Thu, 05 Nov 2024 09:06:00 +0100
+
 odoo (12.0.132) stable; urgency=low
 
   [ Alicia Rodríguez ]
