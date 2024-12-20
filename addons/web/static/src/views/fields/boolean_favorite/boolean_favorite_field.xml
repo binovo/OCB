@@ -3,15 +3,21 @@
 
     <t t-name="web.BooleanFavoriteField" owl="1">
         <div class="o_favorite" t-on-click.prevent.stop="() => props.update(!props.value)">
-            <a href="#">
-                <i
-                    class="fa"
-                    role="img"
-                    t-att-class="props.value ? 'fa-star' : 'fa-star-o'"
-                    t-att-title="props.value ? 'Remove from Favorites' : 'Add to Favorites'"
-                    t-att-aria-label="props.value ? 'Remove from Favorites' : 'Add to Favorites'"
-                />
-                <t t-if="!props.noLabel"> <t t-esc="props.value ? 'Remove from Favorites' : 'Add to Favorites'" /></t>
+            <a href="#" t-if="props.value">
+                <i class="fa fa-star" role="img"
+                   title="Remove from Favorites"
+                   aria-label="Remove from Favorites"/>
+                <span t-if="!props.noLabel">
+                    Remove from Favorites
+                </span>
+            </a>
+            <a href="#" t-else="">
+                <i class="fa fa-star-o" role="img"
+                   title="Add to Favorites"
+                   aria-label="Add to Favorites"/>
+                <span t-if="!props.noLabel">
+                    Add to Favorites
+                </span>
             </a>
         </div>
     </t>
