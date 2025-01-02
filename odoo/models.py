@@ -2893,6 +2893,11 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
                 exc = AccessError("No value found for %s.%s" % (self, field.name))
                 self.env.cache.set_failed(self, [field], exc)
 
+
+    def _build_query(self, param_ids):
+        query = Query(['"%s"' % self._table], ['"%s".id IN %%s' % self._table], [param_ids])
+        return query
+
     @api.multi
     def _read_from_database(self, field_names, inherited_field_names=[]):
         """ Read the given fields of the records in ``self`` from the database,
@@ -2911,7 +2916,9 @@ class BaseModel(MetaModel('DummyModel', (object,), {'_register': False})):
 
         # make a query object for selecting ids, and apply security rules to it
         param_ids = object()
-        query = Query(['"%s"' % self._table], ['"%s".id IN %%s' % self._table], [param_ids])
+        # Sacamos el cálculo de query a un función para poder heredarla y poder
+        # añadir clausulas al where si fuese necesario
+        query = self._build_query(param_ids)
         self._apply_ir_rules(query, 'read')
 
         # determine the fields that are stored as columns in tables; ignore 'id'

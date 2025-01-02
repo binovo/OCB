@@ -1,3 +1,13 @@
+odoo (12.0.143) stable; urgency=low
+
+  [ Alicia Rodríguez ]
+  * 16617 [UPD] odoo: Ajustar funcionalidad models para poder hacer herencia
+    Por necesidades de Flor10 hemos tenido que sacra un parte de la función
+    _read_from_database para poder realizar una herencencia y poder externdes
+    si fuese necesario el where de la query que genera odoo.
+
+ -- Alicia Rodríguez <arodriguez@binovo.es>  Thu, 02 Jan 2025 14:11:00 +0100
+
 odoo (12.0.142) stable; urgency=low
 
   [ Alicia Rodríguez ]
