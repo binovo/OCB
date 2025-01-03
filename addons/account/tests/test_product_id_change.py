@@ -58,7 +58,7 @@ class TestProductIdChange(AccountingTestCase):
             'name': 'invoice to client',
             'account_id': self.account_receivable.id,
             'type': 'out_invoice',
-            'date_invoice': time.strftime('%Y') + '-06-26',
+            'date_invoice': str(int(time.strftime('%Y')) -1) + '-06-26',
             'fiscal_position_id': fp.id,
         })
         out_line = self.invoice_line_model.create({
@@ -75,7 +75,7 @@ class TestProductIdChange(AccountingTestCase):
             'name': 'invoice to supplier',
             'account_id': self.account_receivable.id,
             'type': 'in_invoice',
-            'date_invoice': time.strftime('%Y') + '-06-26',
+            'date_invoice': str(int(time.strftime('%Y')) -1) + '-06-26',
             'fiscal_position_id': fp.id,
         })
         in_line = self.invoice_line_model.create({

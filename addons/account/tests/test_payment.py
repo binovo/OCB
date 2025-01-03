@@ -51,7 +51,7 @@ class TestPayment(AccountingTestCase):
             'name': type,
             'account_id': account_id or self.account_receivable.id,
             'type': type,
-            'date_invoice': time.strftime('%Y') + '-06-26',
+            'date_invoice': str(int(time.strftime('%Y')) -1) + '-06-26',
         })
         self.invoice_line_model.create({
             'product_id': self.product.id,
@@ -68,7 +68,7 @@ class TestPayment(AccountingTestCase):
         """ Reconcile a journal entry corresponding to a payment with its bank statement line """
         bank_stmt = self.acc_bank_stmt_model.create({
             'journal_id': liquidity_aml.journal_id.id,
-            'date': time.strftime('%Y') + '-07-15',
+            'date': str(int(time.strftime('%Y')) -1) + '-07-15',
         })
         bank_stmt_line = self.acc_bank_stmt_line_model.create({
             'name': 'payment',
@@ -77,7 +77,7 @@ class TestPayment(AccountingTestCase):
             'amount': amount,
             'amount_currency': amount_currency,
             'currency_id': currency_id,
-            'date': time.strftime('%Y') + '-07-15'
+            'date': str(int(time.strftime('%Y')) -1) + '-07-15'
         })
 
         bank_stmt_line.process_reconciliation(payment_aml_rec=liquidity_aml)
@@ -90,7 +90,7 @@ class TestPayment(AccountingTestCase):
 
         ctx = {'active_model': 'account.invoice', 'active_ids': [inv_1.id, inv_2.id]}
         register_payments = self.register_payments_model.with_context(ctx).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
             'group_invoices': True,
@@ -121,7 +121,7 @@ class TestPayment(AccountingTestCase):
     def test_internal_transfer_journal_usd_journal_eur(self):
         """ Create a transfer from a EUR journal to a USD journal """
         payment = self.payment_model.create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_type': 'transfer',
             'amount': 50,
             'currency_id': self.currency_usd_id,
@@ -140,7 +140,7 @@ class TestPayment(AccountingTestCase):
 
     def test_payment_chf_journal_usd(self):
         payment = self.payment_model.create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_type': 'outbound',
             'amount': 50,
             'currency_id': self.currency_chf_id,
@@ -168,7 +168,7 @@ class TestPayment(AccountingTestCase):
 
         ids = [inv_1.id, inv_2.id, inv_3.id, inv_4.id]
         register_payments = self.register_payments_model.with_context(active_ids=ids).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
             'group_invoices': True,
@@ -224,7 +224,7 @@ class TestPayment(AccountingTestCase):
         inv_1 = self.create_invoice(amount=600)
         ids = [inv_1.id]
         register_payments = self.register_payments_model.with_context(active_ids=ids).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
         })
@@ -249,7 +249,7 @@ class TestPayment(AccountingTestCase):
         inv_2 = self.create_invoice(amount=500, type='in_invoice', partner=self.partner_china_exp.id)
         ids = [inv_2.id]
         register_payments = self.register_payments_model.with_context(active_ids=ids).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
             'group_invoices': True,
@@ -286,7 +286,7 @@ class TestPayment(AccountingTestCase):
 
         ids = [inv_1.id, inv_2.id, inv_3.id]
         register_payments = self.register_payments_model.with_context(active_ids=ids).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
             'group_invoices': True,
@@ -335,7 +335,7 @@ class TestPayment(AccountingTestCase):
         # When grouping invoices, we should have one payment per receivable account
         ids1 = [inv_1.id, inv_2.id, inv_3.id, inv_4.id]
         register_payments1 = self.register_payments_model.with_context(active_ids=ids1).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
             'group_invoices': True,
@@ -347,7 +347,7 @@ class TestPayment(AccountingTestCase):
         # When not grouping, we should have one payment per invoice
         ids2 = [inv_5.id, inv_6.id, inv_7.id, inv_8.id]
         register_payments2 = self.register_payments_model.with_context(active_ids=ids2).create({
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'payment_method_id': self.payment_method_manual_in.id,
             'group_invoices': False,
@@ -369,7 +369,7 @@ class TestPayment(AccountingTestCase):
             'partner_id': self.partner_agrolait.id,
             'amount': 25,
             'currency_id': self.currency_usd_id,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_payable.id,
             'journal_id': self.bank_journal_euro.id,
@@ -396,7 +396,7 @@ class TestPayment(AccountingTestCase):
             'partner_id': self.partner_agrolait.id,
             'amount': 25,
             'currency_id': self.currency_usd_id,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_payable.id,
             'journal_id': self.bank_journal_euro.id,
@@ -423,7 +423,7 @@ class TestPayment(AccountingTestCase):
             'partner_type': 'customer',
             'partner_id': self.partner_agrolait.id,
             'amount': 90,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_payable.id,
             'journal_id': self.bank_journal_euro.id,
@@ -447,11 +447,11 @@ class TestPayment(AccountingTestCase):
         self.env['res.currency.rate'].create({
             'currency_id': self.currency_usd_id,
             'rate': 0.895,
-            'name': time.strftime('%Y') + '-06-26'})
+            'name': str(int(time.strftime('%Y')) -1) + '-06-26'})
         self.env['res.currency.rate'].create({
             'currency_id': self.currency_usd_id,
             'rate': 0.88,
-            'name': time.strftime('%Y') + '-07-15'})
+            'name': str(int(time.strftime('%Y')) -1) + '-07-15'})
 
         invoice = self.create_invoice(amount=5325.6, type='in_invoice', currency_id=self.currency_usd_id, partner=self.partner_agrolait.id)
         self.assertRecordValues(invoice.move_id.line_ids, [
@@ -465,7 +465,7 @@ class TestPayment(AccountingTestCase):
             'partner_id': self.partner_agrolait.id,
             'amount': 5325,
             'currency_id': self.currency_usd_id,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_revenue.id,
             'journal_id': self.bank_journal_euro.id,
@@ -499,11 +499,11 @@ class TestPayment(AccountingTestCase):
         self.env['res.currency.rate'].create({
             'currency_id': self.currency_usd_id,
             'rate': 1,
-            'name': time.strftime('%Y') + '-06-26'})
+            'name': str(int(time.strftime('%Y')) -1) + '-06-26'})
         self.env['res.currency.rate'].create({
             'currency_id': self.currency_eur_id,
             'rate': 948,
-            'name': time.strftime('%Y') + '-06-26'})
+            'name': str(int(time.strftime('%Y')) -1) + '-06-26'})
 
         invoice = self.create_invoice(amount=247590.4, type='out_invoice', currency_id=self.currency_eur_id, partner=self.partner_agrolait.id)
         self.assertRecordValues(invoice.move_id.line_ids, [
@@ -517,7 +517,7 @@ class TestPayment(AccountingTestCase):
             'partner_id': self.partner_agrolait.id,
             'amount': 267,
             'currency_id': self.currency_usd_id,
-            'payment_date': time.strftime('%Y') + '-06-26',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-06-26',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_revenue.id,
             'journal_id': self.bank_journal_euro.id,
@@ -549,7 +549,7 @@ class TestPayment(AccountingTestCase):
             'partner_type': 'customer',
             'partner_id': self.partner_agrolait.id,
             'amount': 42,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_receivable.id,
             'journal_id': post_at_bank_rec_journal.id,
@@ -560,7 +560,7 @@ class TestPayment(AccountingTestCase):
             'partner_type': 'customer',
             'partner_id': self.partner_agrolait.id,
             'amount': 11,
-            'payment_date': time.strftime('%Y') + '-12-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-12-15',
             'payment_difference_handling': 'reconcile',
             'writeoff_account_id': self.account_receivable.id,
             'journal_id': post_at_bank_rec_journal.id,
@@ -644,7 +644,7 @@ class TestPayment(AccountingTestCase):
             'partner_type': 'customer',
             'partner_id': self.partner_agrolait.id,
             'amount': 90,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'journal_id': self.bank_journal_euro.id,
         })
@@ -670,7 +670,7 @@ class TestPayment(AccountingTestCase):
             'payment_type': 'transfer',
             'payment_method_id': self.payment_method_manual_out.id,
             'amount': 90,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'journal_id': self.bank_journal_euro.id,
             'destination_journal_id': self.cash_journal_euro.id,
         })
@@ -718,7 +718,7 @@ class TestPayment(AccountingTestCase):
             'partner_type': 'customer',
             'partner_id': self.partner_agrolait.id,
             'amount': 90,
-            'payment_date': time.strftime('%Y') + '-07-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-07-15',
             'payment_difference_handling': 'reconcile',
             'journal_id': self.bank_journal_euro.id,
         })
@@ -760,19 +760,19 @@ class TestPayment(AccountingTestCase):
         company = self.env.ref('base.main_company')
         self.env['res.currency.rate'].search([]).unlink()
         self.env['res.currency.rate'].create({
-            'name': time.strftime('%Y') + '-01-01',
+            'name': str(int(time.strftime('%Y')) -1) + '-01-01',
             'rate': 1.0,
             'currency_id': self.currency_eur_id,
             'company_id': company.id
         })
         self.env['res.currency.rate'].create({
-            'name': time.strftime('%Y') + '-01-01',
+            'name': str(int(time.strftime('%Y')) -1) + '-01-01',
             'rate': 0.5,  # Don't change this !
             'currency_id': self.currency_usd_id,
             'company_id': self.env.ref('base.main_company').id
         })
         self.env['res.currency.rate'].create({
-            'name': time.strftime('%Y') + '-01-15',
+            'name': str(int(time.strftime('%Y')) -1) + '-01-15',
             'rate': 1.0,  # Don't change this !
             'currency_id': self.currency_usd_id,
             'company_id': self.env.ref('base.main_company').id
@@ -783,7 +783,7 @@ class TestPayment(AccountingTestCase):
             'name': 'out_invoice',
             'account_id': self.partner_agrolait.property_account_receivable_id.id,
             'type': 'out_invoice',
-            'date_invoice': time.strftime('%Y') + '-01-01',
+            'date_invoice': str(int(time.strftime('%Y')) -1) + '-01-01',
         })
         self.invoice_line_model.create({
             'product_id': self.product.id,
@@ -795,7 +795,7 @@ class TestPayment(AccountingTestCase):
         })
         inv1.action_invoice_open()
         payment = self.env['account.payment'].create({
-            'payment_date': time.strftime('%Y') + '-01-15',
+            'payment_date': str(int(time.strftime('%Y')) -1) + '-01-15',
             'payment_method_id': self.payment_method_manual_in.id,
             'payment_type': 'inbound',
             'partner_type': 'customer',
