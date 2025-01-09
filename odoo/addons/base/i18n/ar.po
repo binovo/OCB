@@ -2130,6 +2130,9 @@ msgid ""
 "        ZATCA E-Invoicing, support for PoS\n"
 "    "
 msgstr ""
+"\n"
+"        الفوترة الإلكترونية لـ ZATCA، ودعم نقاط البيع\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase_product_matrix
@@ -20383,7 +20386,7 @@ msgstr "تنتمي الولايات الفيدرالية إلى دول وهي ج
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_fedex
 msgid "Fedex Shipping (Legacy)"
-msgstr ""
+msgstr "الشحن عن طريق Fedex (القديم) "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_fr_fec
