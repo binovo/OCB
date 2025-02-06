@@ -10,8 +10,8 @@
 # Arnis Putniņš <arnis@allegro.lv>, 2022
 # Martin Trigaux, 2023
 # InfernalLV <karlisdreizis@gmail.com>, 2023
-# ievaputnina <ievai.putninai@gmail.com>, 2024
 # Will Sensors, 2025
+# ievaputnina <ievai.putninai@gmail.com>, 2025
 # Armīns Jeltajevs <armins.jeltajevs@gmail.com>, 2025
 # 
 msgid ""
@@ -1921,7 +1921,7 @@ msgstr "Izdzēst"
 #: code:addons/point_of_sale/static/src/xml/ChromeWidgets/DebugWidget.xml:0
 #, python-format
 msgid "Delete Paid Orders"
-msgstr ""
+msgstr "Izdzēst apmaksātos pasūtījumus"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -1935,7 +1935,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/ChromeWidgets/DebugWidget.xml:0
 #, python-format
 msgid "Delete Unpaid Orders"
-msgstr ""
+msgstr "Izdzēst neapmaksātos pasūtījumus"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -2315,14 +2315,14 @@ msgstr "Sagaidāms"
 #: code:addons/point_of_sale/static/src/xml/ChromeWidgets/DebugWidget.xml:0
 #, python-format
 msgid "Export Paid Orders"
-msgstr ""
+msgstr "Eksportēt apmaksātos pasūtījumus"
 
 #. module: point_of_sale
 #. odoo-javascript
 #: code:addons/point_of_sale/static/src/xml/ChromeWidgets/DebugWidget.xml:0
 #, python-format
 msgid "Export Unpaid Orders"
-msgstr ""
+msgstr "Eksportēt neapmaksātos pasūtījumus"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -4192,7 +4192,7 @@ msgstr "Maksājumu metode"
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
 msgid "Payment methods available"
-msgstr ""
+msgstr "Pieejamās maksājumu metodes"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -4236,7 +4236,7 @@ msgstr ""
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_payment_methods_tree
 msgid "Payments Methods"
-msgstr ""
+msgstr "Maksājumu metodes"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -5824,7 +5824,7 @@ msgstr ""
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.ticket_validation_screen
 msgid "Sign in"
-msgstr "Piereģistrēties"
+msgstr "Pierakstīties"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
@@ -6872,7 +6872,7 @@ msgstr "Kopējais uzcenojums:"
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
 msgid "Total Paid (with rounding)"
-msgstr ""
+msgstr "Kopā apmaksāts (ar noapaļošanu)"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session__total_payments_amount

@@ -1881,6 +1881,13 @@ export class OdooEditor extends EventTarget {
         let range = getDeepRange(this.editable, { sel, correctTripleClick: true });
         if (!range) return;
         for (const node of descendants(closestBlock(range.commonAncestorContainer))) {
+            // Text nodes inside Knowledge Behavior should never be removed.
+            // TODO: `data-oe-protected` concept can't be used here since its scope is still
+            // too restrictive to work in this case. This has to be updated in further versions.
+            const closestBehavior = closestElement(node, '.o_knowledge_behavior_anchor');
+            if (closestBehavior) {
+                continue;
+            }
             if (node.nodeType === Node.TEXT_NODE && [...node.textContent].every(char => char === '\uFEFF')) {
                 const restore = prepareUpdate(...leftPos(node));
                 node.remove();
@@ -4011,6 +4018,13 @@ export class OdooEditor extends EventTarget {
             // selection was moved and the moment the event is triggered.
             return;
         }
+        const startTd = closestElement(selection.anchorNode, '.o_selected_td');
+        const endTd = closestElement(selection.focusNode, '.o_selected_td');
+        if (!(startTd && startTd === endTd) || currentKeyPress) {
+            // Prevent deselecting single cell unless selection changes
+            // through keyboard.
+            this.deselectTable();
+        }
         const anchorNode = selection.anchorNode;
         // Correct cursor if at editable root.
         if (
@@ -4022,15 +4036,11 @@ export class OdooEditor extends EventTarget {
             // The _onSelectionChange handler is going to be triggered again.
             return;
         }
-        let appliedCustomSelection = false;
         if (selection.rangeCount && selection.getRangeAt(0)) {
-            appliedCustomSelection = this._handleSelectionInTable();
-            if (!appliedCustomSelection) {
-                this.deselectTable();
-            }
+            this._handleSelectionInTable();
         }
         const isSelectionInEditable = this.isSelectionInEditable(selection);
-        if (!appliedCustomSelection) {
+        if (!hasTableSelection(this.editable)) {
             this._updateToolbar(!selection.isCollapsed && isSelectionInEditable);
         }
         if (!isSelectionInEditable) {

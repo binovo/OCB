@@ -33,6 +33,8 @@
 # Hed Shefer <hed@laylinetech.com>, 2024
 # Orel Nahmany, 2024
 # Ha Ketem <haketem@gmail.com>, 2024
+# Eyal arkush, 2025
+# or balmas, 2025
 # 
 msgid ""
 msgstr ""
@@ -40,7 +42,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Ha Ketem <haketem@gmail.com>, 2024\n"
+"Last-Translator: or balmas, 2025\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1373,7 +1375,7 @@ msgstr "תשלום נוסף יווצר באופן אוטומטי ביומן הי
 #: code:addons/account/models/account_bank_statement.py:0
 #, python-format
 msgid "A statement should only contain lines from the same journal."
-msgstr ""
+msgstr "הצהרה צריכה להכיל רק שורות מאותו יומן."
 
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_fiscal_position_tax_tax_src_dest_uniq
@@ -3492,7 +3494,7 @@ msgstr "אי אפשר ליצור מסמך מכירה ביומן שאינו יו�
 #: code:addons/account/wizard/accrued_orders.py:0
 #, python-format
 msgid "Cannot create an accrual entry with orders in different currencies."
-msgstr ""
+msgstr "לא ניתן ליצור פקודת צבירה עם הזמנות במטבעות שונים."
 
 #. module: account
 #. odoo-python
@@ -3520,7 +3522,7 @@ msgstr "לא ניתן ליצור קוד חשבון שאינו בשימוש."
 msgid ""
 "Cannot generate an unused journal code. Please change the name for journal "
 "%s."
-msgstr ""
+msgstr "לא ניתן לייצר קוד יומן לא בשימוש. אנא שנה את שם היומן."
 
 #. module: account
 #. odoo-python
@@ -6640,7 +6642,7 @@ msgstr "כדי שרשומה זו תירשם אוטומטית, צריך תארי�
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_move_line_check_non_accountable_fields_null
 msgid "Forbidden balance or account on non-accountable line"
-msgstr ""
+msgstr "יתרה או חשבון אסורים בשורה שאינה חשבונאית."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_validate_account_move__force_post
@@ -7225,6 +7227,8 @@ msgid ""
 "If set, this account will belong to Non Trade Receivable/Payable in reports and filters.\n"
 "If not, this account will belong to Trade Receivable/Payable in reports and filters."
 msgstr ""
+"אם מוגדר, חשבון זה יהיה שייך לקטגוריית חובות/התחייבויות שאינן סחירות בדוחות ובסינונים.\n"
+"אם לא מוגדר, חשבון זה יהיה שייך לקטגוריית חובות/התחייבויות סחירות בדוחות ובסינונים."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_group__preceding_subtotal
@@ -9066,6 +9070,12 @@ msgid ""
 "SEPA Credit Transfer: Pay in the SEPA zone by submitting a SEPA Credit Transfer file to your bank. Module account_sepa is necessary.\n"
 "SEPA Direct Debit: Get paid in the SEPA zone thanks to a mandate your partner will have granted to you. Module account_sepa is necessary.\n"
 msgstr ""
+"ידני: שלם או קבל תשלום בכל שיטה מחוץ ל-Odoo.\n"
+"ספקי תשלומים: לכל ספק תשלומים יש אמצעי תשלום משלו. בקש עסקה בכרטיס/לכרטיס הודות לאסימון תשלום שנשמר על ידי השותף בקנייה או בהרשמה מקוונת.\n"
+"צ'ק: שלם חשבונות בצ'ק והדפיס אותו מ-Odoo.\n"
+"הפקדת אצווה: אסוף מספר צ'קים של לקוחות בו-זמנית, תוך הפקה והגשה של הפקדה אצווה לבנק שלך. מודול account_batch_payment הכרחי.\n"
+"העברת אשראי SEPA: שלם באזור SEPA על ידי שליחת קובץ העברת אשראי SEPA לבנק שלך. מודול account_sepa הכרחי.\n"
+"הוראת קבע SEPA: קבל תשלום באזור SEPA הודות למנדט שהשותף שלך יעניק לך. מודול account_sepa הכרחי.\n"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__res_company__fiscalyear_last_month__3
@@ -13714,6 +13724,9 @@ msgid ""
 "same as the one from the company, this amount must strictly be equal to the "
 "balance."
 msgstr ""
+"הסכום המוצג במטבע המשני חייב להיות חיובי אם החשבון הוא מחויב ושלילי כאשר "
+"החשבון מזוכה. אם המטבע הוא אותו המטבע של החברה, הסכום הזה חייב להיות שווה "
+"בדיוק ליתרה."
 
 #. module: account
 #. odoo-python
@@ -14077,7 +14090,7 @@ msgstr ""
 #: code:addons/account/models/account_analytic_line.py:0
 #, python-format
 msgid "The journal item is not linked to the correct financial account"
-msgstr ""
+msgstr "הפריט יומן לא מקושר לחשבון הפיננסי הנכון"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_financial_year_op__fiscalyear_last_day
@@ -14161,7 +14174,7 @@ msgstr ""
 #: code:addons/account/models/partner.py:0
 #, python-format
 msgid "The partner cannot be deleted because it is used in Accounting"
-msgstr ""
+msgstr "לא ניתן למחוק את השותף היות והוא נמצא בשימוש במודול הנהלת החשבונות"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_partner__has_unreconciled_entries
@@ -14209,6 +14222,8 @@ msgid ""
 "The recipient bank account linked to this invoice is archived.\n"
 "So you cannot confirm the invoice."
 msgstr ""
+"חשבון הבנק של הנמען המקושר לחשבונית זו נשמר בארכיון.\n"
+"אז אתה לא יכול לאשר את החשבונית."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_reconcile_model__match_partner_category_ids
@@ -14364,6 +14379,8 @@ msgid ""
 "The selected destination account is set to use a specific currency. Every entry transferred to it will be converted into this currency, causing\n"
 "                        the loss of any pre-existing foreign currency amount."
 msgstr ""
+"חשבונות היעד שנבחרו מוגדרים לשימוש במטבע ספציפי. כל פקודה שתועבר אליו תומר למטבע זה, מה שיגרום \n"
+"לאובדן כל סכום במטבע חוץ שהיה קיים קודם."
 
 #. module: account
 #. odoo-python
@@ -14597,6 +14614,8 @@ msgid ""
 "There doesn't appear to be anything to invoice for the selected order. "
 "However, you can use the amount field to force an accrual entry."
 msgstr ""
+"לא נראה שיש משהו לחייב עבור ההזמנה שנבחרה. עם זאת, תוכל להשתמש בשדה הסכום "
+"כדי לכפות פקודת צבירה."
 
 #. module: account
 #. odoo-python
@@ -14717,6 +14736,9 @@ msgid ""
 " master budgets and the budgets are defined, the project managers can set "
 "the planned amount on each analytic account."
 msgstr ""
+"זו מאפשרת למנהלי חשבונות לנהל תקציבים אנליטיים ותקציבים מוצלבים. לאחר "
+"שהוגדרו התקציבים הראשיים והתקציבים, מנהלי הפרויקטים יכולים להגדיר את הסכום "
+"המתוכנן על כל חשבון אנליטי."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_config_settings__module_account_batch_payment
@@ -14811,7 +14833,7 @@ msgstr "יומן זה מכיל כבר פקודות יומן, לכן אינך י�
 #, python-format
 msgid ""
 "This journal is associated with a payment method. You cannot archive it"
-msgstr ""
+msgstr "יומן זה משויך לאמצעי תשלום. לא ניתן להעביר אותו לארכיון."
 
 #. module: account
 #. odoo-python
@@ -16422,7 +16444,7 @@ msgstr ""
 #: code:addons/account/models/account_account.py:0
 #, python-format
 msgid "You cannot merge accounts."
-msgstr ""
+msgstr "אינך יכול לאחד חשבונות."
 
 #. module: account
 #. odoo-python

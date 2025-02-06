@@ -16,8 +16,8 @@
 # Tomaž Jug <tomaz@editor.si>, 2023
 # Neun Pro, 2023
 # Katja Deržič, 2024
-# Gregor Flajs, 2024
 # Aleš Pipan, 2024
+# Gregor Flajs, 2025
 # Grega Vavtar <grega@hbs.si>, 2025
 # 
 msgid ""
@@ -240,7 +240,7 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_notification_layout
 msgid "&amp;nbsp;&amp;nbsp;"
-msgstr ""
+msgstr "&amp;nbsp;&amp;nbsp;"
 
 #. module: mail
 #. odoo-javascript
@@ -10142,7 +10142,7 @@ msgstr "Zapiši povratne informacije"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
 msgid "Write your message here..."
-msgstr ""
+msgstr "Tukaj napišite svoje sporočilo ..."
 
 #. module: mail
 #. odoo-python

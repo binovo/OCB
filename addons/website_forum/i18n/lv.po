@@ -7,8 +7,8 @@
 # JanisJanis <jbojars@gmail.com>, 2022
 # Martin Trigaux, 2022
 # Arnis Putniņš <arnis@allegro.lv>, 2022
-# ievaputnina <ievai.putninai@gmail.com>, 2024
 # Will Sensors, 2025
+# ievaputnina <ievai.putninai@gmail.com>, 2025
 # Armīns Jeltajevs <armins.jeltajevs@gmail.com>, 2025
 # 
 msgid ""
@@ -2794,7 +2794,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.mark_as_offensive
 msgid "Reason:"
-msgstr ""
+msgstr "Iemesls:"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_reason_view_list
@@ -2983,7 +2983,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.post_description_full
 msgid "Sign in"
-msgstr "Piereģistrēties"
+msgstr "Pierakstīties"
 
 #. module: website_forum
 #: model:ir.model.fields.selection,name:website_forum.selection__forum_forum__privacy__connected
