@@ -870,6 +870,10 @@ class GoogleCalendar(models.AbstractModel):
                     if actSrc == 'OE':
                         recs.delete_an_event(current_event[0])
                     elif actSrc == 'GG':
+                        event_id_split = event.GG.event['id'].rsplit('_', 1)
+                        if len(event_id_split) < 2:
+                            _logger.warn("Event with unsupported id format ignored: %s"%event.GG.event)
+                            continue
                         new_google_event_id = event.GG.event['id'].rsplit('_', 1)[1]
                         parent_oe = event_to_synchronize[base_event][0][1].OE.event
                         if 'T' in new_google_event_id:
