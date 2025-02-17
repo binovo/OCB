@@ -808,7 +808,7 @@ class SaleOrder(models.Model):
             currency = order.currency_id or order.company_id.currency_id
             fmt = partial(formatLang, self.with_context(lang=order.partner_id.lang).env, currency_obj=currency)
             res = {}
-            for line in order.order_line:
+            for line in order.order_line.filtered(lambda x: not x.display_type):
                 price_reduce = line.price_unit * (1.0 - line.discount / 100.0)
                 taxes = line.tax_id.compute_all(price_reduce, quantity=line.product_uom_qty, product=line.product_id, partner=order.partner_shipping_id)['taxes']
                 for tax in line.tax_id:
