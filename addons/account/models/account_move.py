@@ -74,6 +74,10 @@ class AccountMove(models.Model):
         return self.journal_id.sequence_override_regex or super()._sequence_yearly_regex
 
     @property
+    def _sequence_year_range_regex(self):
+        return self.journal_id.sequence_override_regex or super()._sequence_year_range_regex
+
+    @property
     def _sequence_fixed_regex(self):
         return self.journal_id.sequence_override_regex or super()._sequence_fixed_regex
 
@@ -3719,7 +3723,7 @@ class AccountMove(models.Model):
     def action_switch_invoice_into_refund_credit_note(self):
         for move in self:
             if move.posted_before:
-                raise ValidationError(_("You cannot switch the type of a posted document."))
+                raise ValidationError(_("You cannot switch the type of a document which has been posted once."))
             if move.move_type == 'entry':
                 raise ValidationError(_("This action isn't available for this document."))
             in_out, old_move_type = move.move_type.split('_')
