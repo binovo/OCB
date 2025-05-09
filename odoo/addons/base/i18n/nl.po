@@ -1547,7 +1547,7 @@ msgstr ""
 "        Module voor het importeren van FEC-standaardbestanden, handig voor het importeren van boekhoudgeschiedenis.\n"
 "\n"
 "        FEC-bestanden (fichier des écritures comptables) zijn de standaard boekhoudkundige rapportages die Franse bedrijven moeten indienen bij de belastingdienst.\n"
-"        Met deze module kunnen rekeningen, dagboeken, relaties en verhuizingen uit deze bestanden worden geïmporteerd.\n"
+"        Met deze module kunnen rekeningen, dagboeken, relaties en verplaatsingen uit deze bestanden worden geïmporteerd.\n"
 "\n"
 "        Alleen het CSV-formaat van FEC is geïmplementeerd.\n"
 "        'utf-8', 'utf-8-sig' en 'iso8859_15' zijn de enige toegestane coderingen.\n"
@@ -3599,7 +3599,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Voeg een selectie van verzendwijzes toe aan je E-commerce-winkel.\n"
+"Voeg een selectie van verzendmethoden toe aan je E-commerce-winkel.\n"
 "Configureer je eigen methoden met een prijslijst of integreer met carriers voor een volledig geautomatiseerd verzendproces."
 
 #. module: base
@@ -4063,7 +4063,7 @@ msgid ""
 "invoices from picking, the system is able to add and compute the shipping line.\n"
 msgstr ""
 "\n"
-"Staat je toe om nieuwe verzendwijzes toe te voegen in verkooporders en leveringen. ============================================================== \n"
+"Staat je toe om nieuwe verzendmethoden toe te voegen in verkooporders en leveringen. ============================================================== \n"
 "\n"
 "Je kunt je eigen vervoerder voor prijzen definiëren. Wanneer je een\n"
 "factuur aanmaakt vanuit een levering kan het systeem de verzendregel toevoegen en berekenen.\n"
@@ -9536,7 +9536,7 @@ msgstr ""
 "\n"
 "Prijslijst ondersteunt:\n"
 "-------------------\n"
-"    * Meerdere niveau's van korting (op product, categorie, hoeveelheden)\n"
+"    * Meerdere niveaus van korting (op product, categorie, hoeveelheden)\n"
 "    * Eenheidsprijs berekenen op basis van verschillende criteria:\n"
 "    * Andere prijslijsten\n"
 "    * Kostprijs\n"
@@ -17050,7 +17050,7 @@ msgstr "Instellingen installer"
 #: model:ir.model,name:base.model_ir_actions_todo
 #: model:ir.ui.menu,name:base.menu_ir_actions_todo_form
 msgid "Configuration Wizards"
-msgstr "Configuratie wizard"
+msgstr "Configuratiewizards"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_twitter_wall
@@ -23144,7 +23144,7 @@ msgstr "Integreer je Kassa met een Six-betaalterminal"
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_iot_six
 msgid "Integrate your POS with a Six payment terminal through IoT"
-msgstr "Integreer uw POS met een Six-betaalterminal via IoT"
+msgstr "Integreer je Kassa met een Six-betaalterminal via IoT"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_stripe
@@ -27921,7 +27921,7 @@ msgstr ""
 "\n"
 "### Touchscreen of toetsenbord?\n"
 "\n"
-"Het Kassa werkt perfect op elk soort aanraakapparaat, of\n"
+"De Kassa werkt perfect op elk soort aanraakapparaat, of\n"
 "het zijn multi-touch tablets zoals een iPad of een toetsenbordloos resistief touchscreen\n"
 "terminals.\n"
 "\n"
@@ -27940,7 +27940,7 @@ msgstr ""
 "specifieke hardware vereist**. Het werkt met elke **iPad, tablet-pc, laptop** of\n"
 "industriële Kassa-machine.\n"
 "\n"
-"Hoewel een internetverbinding vereist is om het Kassa te starten, zal het:\n"
+"Hoewel een internetverbinding vereist is om de Kassa te starten, zal het:\n"
 "blijven operationeel, zelfs na een volledige ontkoppeling.\n"
 "\n"
 "\n"
@@ -34897,7 +34897,7 @@ msgstr "Het uur moet tussen 0 en 23 . liggen"
 #: model:ir.model.fields,help:base.field_res_partner__user_id
 #: model:ir.model.fields,help:base.field_res_users__user_id
 msgid "The internal user in charge of this contact."
-msgstr "De interne gebruiker verantwoordelijk voor dit contract."
+msgstr "De interne gebruiker verantwoordelijk voor dit contact."
 
 #. module: base
 #. odoo-python

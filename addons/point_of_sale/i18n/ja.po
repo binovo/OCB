@@ -98,7 +98,7 @@ msgstr "%sプロダクトが \"%s\"用に見つかりました。"
 #: code:addons/point_of_sale/models/pos_session.py:0
 #, python-format
 msgid "%s untaxed"
-msgstr ""
+msgstr "%s 税抜金額"
 
 #. module: point_of_sale
 #. odoo-python
@@ -288,7 +288,7 @@ msgstr "<strong>金額:</strong>"
 #: code:addons/point_of_sale/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
 #, python-format
 msgid "? Clicking \"Confirm\" will validate the payment."
-msgstr "? '確認'をクリックすると、支払いが検証されます。"
+msgstr "? \"確定\" をクリックすると、支払いが検証されます。"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -494,7 +494,7 @@ msgstr "チケットにQRコードを追加し、ユーザがスキャンして�
 #: code:addons/point_of_sale/static/src/xml/Popups/ClosePosPopup.xml:0
 #, python-format
 msgid "Add a closing note..."
-msgstr "終了ノートを追加..."
+msgstr "クロージングメモを追加..."
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
@@ -1427,7 +1427,7 @@ msgstr "少なくとも1つのPOSを構成します。"
 #: code:addons/point_of_sale/static/src/xml/Popups/MoneyDetailsPopup.xml:0
 #, python-format
 msgid "Confirm"
-msgstr "確認"
+msgstr "確定"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -1435,7 +1435,7 @@ msgstr "確認"
 #: code:addons/point_of_sale/static/src/js/Popups/NumberPopup.js:0
 #, python-format
 msgid "Confirm ?"
-msgstr ""
+msgstr "確認"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
@@ -2488,7 +2488,7 @@ msgstr "プロダクトカテゴリのリストを表示する時に並び順を
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config__module_pos_discount
 #: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__pos_module_pos_discount
 msgid "Global Discounts"
-msgstr "グローバル値引"
+msgstr "全体割引"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.pos_payment_method_view_form
@@ -2908,7 +2908,7 @@ msgstr "返金済"
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order__is_total_cost_computed
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__is_total_cost_computed
 msgid "Is Total Cost Computed"
-msgstr "全原価計算済"
+msgstr "総コスト計算済"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session__is_in_company_currency
@@ -4358,7 +4358,7 @@ msgstr "プラスチック"
 #: code:addons/point_of_sale/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
 #, python-format
 msgid "Please Confirm Large Amount"
-msgstr "大量に確認してください"
+msgstr "高額のため確認してください"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -6890,12 +6890,12 @@ msgstr "現金取引合計"
 #: code:addons/point_of_sale/static/src/xml/Popups/ProductInfoPopup.xml:0
 #, python-format
 msgid "Total Cost:"
-msgstr "合計原価:"
+msgstr "総コスト"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order__total_discount
 msgid "Total Discount"
-msgstr "合計値引"
+msgstr "割引合計"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -6948,7 +6948,7 @@ msgstr "お支払い総額。"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__total_cost
 msgid "Total cost"
-msgstr "合計原価:"
+msgstr "総コスト"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_line
@@ -7411,7 +7411,7 @@ msgstr "セッションが開いている間は、POSで販売可能な製品を
 msgid ""
 "You cannot delete a rounding method that is used in a Point of Sale "
 "configuration."
-msgstr ""
+msgstr "POSの設定で使用されている丸め方法は削除できません。"
 
 #. module: point_of_sale
 #. odoo-python

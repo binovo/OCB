@@ -96,7 +96,7 @@ msgstr "\"%s\"에 대해 %s 품목이 검색되었습니다."
 #: code:addons/point_of_sale/models/pos_session.py:0
 #, python-format
 msgid "%s untaxed"
-msgstr ""
+msgstr "%s 비과세"
 
 #. module: point_of_sale
 #. odoo-python
@@ -7426,7 +7426,7 @@ msgstr "세션이 열려있는 동안 점포판매시스템에 팔리는 제품�
 msgid ""
 "You cannot delete a rounding method that is used in a Point of Sale "
 "configuration."
-msgstr ""
+msgstr "POS 환경설정에서 사용 중인 반올림 방식은 삭제할 수 없습니다."
 
 #. module: point_of_sale
 #. odoo-python

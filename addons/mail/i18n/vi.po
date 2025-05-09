@@ -1688,7 +1688,7 @@ msgstr "Tự động xóa"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_channel_view_form
 msgid "Auto Subscribe Groups"
-msgstr "Nhóm nhận tin tự động"
+msgstr "Tự động đăng ký nhóm"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel__group_ids
@@ -4664,20 +4664,20 @@ msgstr "Cuộc gọi đến..."
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
 msgid "Incoming Email Servers"
-msgstr "Máy chủ Nhận Email"
+msgstr "Máy chủ thư đến"
 
 #. module: mail
 #: model:ir.model,name:mail.model_fetchmail_server
 #: model_terms:ir.ui.view,arch_db:mail.view_email_server_form
 #: model_terms:ir.ui.view,arch_db:mail.view_email_server_search
 msgid "Incoming Mail Server"
-msgstr "Máy chủ nhận thư"
+msgstr "Máy chủ thư đến"
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_email_server_tree
 #: model:ir.ui.menu,name:mail.menu_action_fetchmail_server_tree
 msgid "Incoming Mail Servers"
-msgstr "Máy chủ nhận Mail"
+msgstr "Máy chủ thư đến"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_activity__automated
@@ -4819,7 +4819,7 @@ msgstr "Mời Người dõi theo"
 #: code:addons/mail/static/src/components/channel_invitation_form/channel_invitation_form.xml:0
 #, python-format
 msgid "Invite people"
-msgstr "Mời tham gia"
+msgstr "Mời mọi người"
 
 #. module: mail
 #. odoo-javascript
@@ -8182,7 +8182,7 @@ msgstr "Lên một công việc"
 #: model:ir.model.fields,field_description:mail.field_mail_template__scheduled_date
 #: model:ir.model.fields,field_description:mail.field_mail_template_preview__scheduled_date
 msgid "Scheduled Date"
-msgstr "Ngày dự kiến"
+msgstr "Ngày đã lên lịch"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_message_schedule_view_form
@@ -8238,7 +8238,7 @@ msgstr "Tìm kiếm Nhóm"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_email_server_search
 msgid "Search Incoming Mail Servers"
-msgstr "Tìm các máy chủ nhận email"
+msgstr "Tìm máy chủ thư đến"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_channel_rtc_session_view_search

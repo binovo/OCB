@@ -1952,7 +1952,7 @@ msgstr "Boekhoud dashboard"
 #: model_terms:ir.ui.view,arch_db:account.view_invoice_tree
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "Accounting Date"
-msgstr "Boekhouddatum"
+msgstr "Boekingsdatum"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_line_form
@@ -15586,7 +15586,7 @@ msgstr "Deze terugkerende boeking is afkomstig van %s"
 #: model:ir.model.fields,help:account.field_account_move__auto_post_until
 #: model:ir.model.fields,help:account.field_account_payment__auto_post_until
 msgid "This recurring move will be posted up to and including this date."
-msgstr "Deze terugkerende verhuizing wordt tot en met deze datum geboekt."
+msgstr "Deze terugkerende verplaatsing wordt tot en met deze datum geboekt."
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_validate_account_move
