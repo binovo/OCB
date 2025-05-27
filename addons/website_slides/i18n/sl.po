@@ -15,16 +15,16 @@
 # Neun Pro, 2023
 # Grega Vavtar <grega@hbs.si>, 2024
 # Katja Deržič, 2024
-# Wil Odoo, 2025
 # Aleš Pipan, 2025
+# Wil Odoo, 2025
 # 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 08:26+0000\n"
+"POT-Creation-Date: 2025-05-22 18:35+0000\n"
 "PO-Revision-Date: 2022-09-22 05:57+0000\n"
-"Last-Translator: Aleš Pipan, 2025\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1971,7 +1971,7 @@ msgstr "Naprej"
 #: code:addons/website_slides/static/src/xml/website_slides_share.xml:0
 #, python-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopiraj povezavo"
 
 #. module: website_slides
 #: model:slide.answer,comment:website_slides.slide_slide_demo_1_4_question_0_0
@@ -2695,6 +2695,11 @@ msgstr "Naziv datoteke"
 #, python-format
 msgid "File is too big. File size cannot exceed 25MB"
 msgstr ""
+
+#. module: website_slides
+#: model:ir.model,name:website_slides.model_ir_binary
+msgid "File streaming helper model for controllers"
+msgstr "Pomočni model za pretočno pretakanje datotek za krmilnike"
 
 #. module: website_slides
 #: model_terms:ir.ui.view,arch_db:website_slides.course_slides_cards
@@ -6448,13 +6453,6 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/slide_quiz_create.xml:0
 #, python-format
 msgid "e.g. \"Which animal cannot fly?\""
-msgstr ""
-
-#. module: website_slides
-#. odoo-javascript
-#: code:addons/website_slides/static/src/xml/slide_quiz_create.xml:0
-#, python-format
-msgid "e.g. \"{{placeholder || \"another animal\"}}\""
 msgstr ""
 
 #. module: website_slides

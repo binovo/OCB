@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 08:26+0000\n"
+"POT-Creation-Date: 2025-05-22 18:35+0000\n"
 "PO-Revision-Date: 2022-09-22 05:54+0000\n"
 "Last-Translator: Thi Huong Nguyen, 2025\n"
 "Language-Team: Vietnamese (https://app.transifex.com/odoo/teams/41243/vi/)\n"
@@ -3715,7 +3715,6 @@ msgid "Off Track"
 msgstr "Không đúng tiến độ"
 
 #. module: project
-#: model:account.analytic.account,name:project.analytic_office_design
 #: model:project.project,name:project.project_project_1
 msgid "Office Design"
 msgstr "Thiết kế văn phòng"
@@ -3999,6 +3998,20 @@ msgid "Portal Access URL"
 msgstr "URL truy cập cổng thông tin"
 
 #. module: project
+#. odoo-python
+#: code:addons/project/models/project.py:0
+#, python-format
+msgid "Portal Parent Task"
+msgstr ""
+
+#. module: project
+#. odoo-python
+#: code:addons/project/models/project.py:0
+#, python-format
+msgid "Portal Sub-tasks"
+msgstr ""
+
+#. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__portal_user_names
 msgid "Portal User Names"
 msgstr "Tên người dùng cổng thông tin"
@@ -4223,7 +4236,7 @@ msgstr "Cập nhật dự án"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__project_privacy_visibility
 msgid "Project Visibility"
-msgstr "Hiển thị dự án"
+msgstr "Chế độ hiển thị dự án"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
@@ -4555,7 +4568,6 @@ msgid "Related Document Model"
 msgstr "Model tài liệu liên quan"
 
 #. module: project
-#: model:account.analytic.account,name:project.analytic_renovations
 #: model:project.project,name:project.project_project_3
 msgid "Renovations"
 msgstr "Cải tạo"
@@ -4647,7 +4659,6 @@ msgid "Research"
 msgstr "Nghiên cứu"
 
 #. module: project
-#: model:account.analytic.account,name:project.analytic_research_development
 #: model:project.project,name:project.project_project_2
 msgid "Research & Development"
 msgstr "Nghiên cứu & Phát triển"
@@ -6023,7 +6034,7 @@ msgstr "Xem nhiệm vụ"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__privacy_visibility
 msgid "Visibility"
-msgstr "Hiển thị"
+msgstr "Chế độ hiển thị"
 
 #. module: project
 #. odoo-javascript
