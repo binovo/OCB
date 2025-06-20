@@ -36,6 +36,21 @@ class CustomerPortal(CustomerPortal):
         }
         return self._get_page_view_values(order, access_token, values, 'my_purchases_history', True, **kwargs)
 
+    def _prepare_searchbar_sortings(self):
+        return {
+            'date': {'label': _('Newest'), 'order': 'create_date desc, id desc'},
+            'name': {'label': _('Name'), 'order': 'name asc, id asc'},
+            'amount_total': {'label': _('Total'), 'order': 'amount_total desc, id desc'},
+        }
+
+    def _prepare_searchbar_filters(self):
+        return {
+            'all': {'label': _('All'), 'domain': [('state', 'in', ['purchase', 'done', 'cancel'])]},
+            'purchase': {'label': _('Purchase Order'), 'domain': [('state', '=', 'purchase')]},
+            'cancel': {'label': _('Cancelled'), 'domain': [('state', '=', 'cancel')]},
+            'done': {'label': _('Locked'), 'domain': [('state', '=', 'done')]},
+        }
+
     @http.route(['/my/purchase', '/my/purchase/page/<int:page>'], type='http', auth="user", website=True)
     def portal_my_purchase_orders(self, page=1, date_begin=None, date_end=None, sortby=None, filterby=None, **kw):
         values = self._prepare_portal_layout_values()
@@ -48,22 +63,13 @@ class CustomerPortal(CustomerPortal):
         if date_begin and date_end:
             domain += [('create_date', '>', date_begin), ('create_date', '<=', date_end)]
 
-        searchbar_sortings = {
-            'date': {'label': _('Newest'), 'order': 'create_date desc, id desc'},
-            'name': {'label': _('Name'), 'order': 'name asc, id asc'},
-            'amount_total': {'label': _('Total'), 'order': 'amount_total desc, id desc'},
-        }
+        searchbar_sortings = self._prepare_searchbar_sortings()
         # default sort by value
         if not sortby:
             sortby = 'date'
         order = searchbar_sortings[sortby]['order']
 
-        searchbar_filters = {
-            'all': {'label': _('All'), 'domain': [('state', 'in', ['purchase', 'done', 'cancel'])]},
-            'purchase': {'label': _('Purchase Order'), 'domain': [('state', '=', 'purchase')]},
-            'cancel': {'label': _('Cancelled'), 'domain': [('state', '=', 'cancel')]},
-            'done': {'label': _('Locked'), 'domain': [('state', '=', 'done')]},
-        }
+        searchbar_filters = self._prepare_searchbar_filters()
         # default filter by value
         if not filterby:
             filterby = 'all'
