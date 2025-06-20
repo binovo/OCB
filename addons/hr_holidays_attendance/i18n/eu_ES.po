@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 14:03+0000\n"
-"PO-Revision-Date: 2025-03-27 14:03+0000\n"
+"POT-Creation-Date: 2025-05-28 12:59+0000\n"
+"PO-Revision-Date: 2025-05-28 12:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "Laneratzea"
 #: code:addons/hr_holidays_attendance/static/src/xml/time_off_calendar.xml:0
 #, python-format
 msgid "Available"
-msgstr "Erabilgarri"
+msgstr "Eskuragarri"
 
 #. module: hr_holidays_attendance
 #: model:ir.model,name:hr_holidays_attendance.model_res_company
