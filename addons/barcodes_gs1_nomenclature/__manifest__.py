@@ -2,7 +2,7 @@
 
 {
     'name': 'Barcode - GS1 Nomenclature',
-    'version': '1.0',
+    'version': '1.1',
     'category': 'Hidden',
     'summary': 'Parse barcodes according to the GS1-128 specifications',
     'depends': ['barcodes', 'uom'],

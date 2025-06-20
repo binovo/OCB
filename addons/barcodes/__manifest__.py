@@ -1,6 +1,6 @@
 {
     'name': 'Barcode',
-    'version': '2.0',
+    'version': '2.1',
     'category': 'Hidden',
     'summary': 'Scan and Parse Barcodes',
     'depends': ['web'],

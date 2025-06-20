@@ -3,7 +3,7 @@
 
 {
     'name': 'Time Off',
-    'version': '1.6',
+    'version': '1.7',
     'category': 'Human Resources/Time Off',
     'sequence': 85,
     'summary': 'Allocate PTOs and follow leaves requests',
