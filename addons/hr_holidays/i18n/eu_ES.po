@@ -1913,7 +1913,7 @@ msgid ""
 "Filters only on allocations that belong to an time off type that is 'active'"
 " (active field is True)"
 msgstr ""
-""aktibo" ('aktibo' eremua Egiazkoa da) dagoen absentzia-mota bati dagozkion esleipenak soilik iragazten ditu"
+"'aktibo' ('aktibo' eremua Egiazkoa da) dagoen absentzia-mota bati dagozkion esleipenak soilik iragazten ditu"
 
 #. module: hr_holidays
 #: model_terms:ir.ui.view,arch_db:hr_holidays.view_hr_holidays_filter_report
@@ -1921,7 +1921,7 @@ msgid ""
 "Filters only on requests that belong to an time off type that is 'active' "
 "(active field is True)"
 msgstr ""
-""aktibo" ('aktibo' eremua Egiazkoa da) dagoen absentzia-mota bati dagozkion eskaerak soilik iragazten ditu"
+"'aktibo' ('aktibo' eremua Egiazkoa da) dagoen absentzia-mota bati dagozkion eskaerak soilik iragazten ditu"
 
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave__first_approver_id
@@ -2215,7 +2215,7 @@ msgstr "Eremua hutsik badago, maila hau izango da lehenengoa."
 msgid ""
 "If you want to change the number of days you should use the 'period' mode"
 msgstr ""
-"Egun-kopurua aldatu nahi baduzu, "epea" modua erabili beharko duzu"
+"Egun-kopurua aldatu nahi baduzu, 'epea' modua erabili beharko duzu"
 
 #. module: hr_holidays
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_accrual_plan__transition_mode__immediately
@@ -3680,10 +3680,10 @@ msgid ""
 "The status is 'Refused', when time off request is refused by manager.\n"
 "The status is 'Approved', when time off request is approved by manager."
 msgstr ""
-"Absentzia-eskaerak sortzean, egoera "Bidaltzeke" gisa ezartzen da.\n"
-"Erabiltzaileak absentzia-eskaera onesten duenean, egoera "Onesteke" gisa ezartzen da.\n"
-"Arduradunak absentzia-eskaera ukatzen duenean, egoera "Ukatuta" gisa ezartzen da.\n"
-"Arduradunak absentzia-eskaera onesten duenean, egoera "Onetsita" gisa ezartzen da."
+"Absentzia-eskaerak sortzean, egoera 'Bidaltzeke' gisa ezartzen da.\n"
+"Erabiltzaileak absentzia-eskaera onesten duenean, egoera 'Onesteke' gisa ezartzen da.\n"
+"Arduradunak absentzia-eskaera ukatzen duenean, egoera 'Ukatuta' gisa ezartzen da.\n"
+"Arduradunak absentzia-eskaera onesten duenean, egoera 'Onetsita' gisa ezartzen da."
 
 #. module: hr_holidays
 #: model:ir.model.fields,help:hr_holidays.field_hr_leave_allocation__state
@@ -3693,10 +3693,10 @@ msgid ""
 "The status is 'Refused', when an allocation request is refused by manager.\n"
 "The status is 'Approved', when an allocation request is approved by manager."
 msgstr ""
-"Esleipen-eskaerak sortzean, egoera "Bidaltzeke" gisa ezartzen da.\n"
-"Erabiltzaileak esleipen-eskaera onesten duenean, egoera "Onesteke" gisa ezartzen da.\n"
-"Arduradunak esleipen-eskaera ukatzen duenean, egoera "Ukatuta" gisa ezartzen da.\n"
-"Arduradunak esleipen-eskaera onesten duenean, egoera "Onetsita" gisa ezartzen da."
+"Esleipen-eskaerak sortzean, egoera 'Bidaltzeke' gisa ezartzen da.\n"
+"Erabiltzaileak esleipen-eskaera onesten duenean, egoera 'Onesteke' gisa ezartzen da.\n"
+"Arduradunak esleipen-eskaera ukatzen duenean, egoera 'Ukatuta' gisa ezartzen da.\n"
+"Arduradunak esleipen-eskaera onesten duenean, egoera 'Onetsita' gisa ezartzen da."
 
 #. module: hr_holidays
 #. odoo-python
