@@ -28,13 +28,13 @@ msgstr ""
 #. module: hr_org_chart
 #: model:ir.model,name:hr_org_chart.model_hr_employee_base
 msgid "Basic Employee"
-msgstr ""
+msgstr "Osnovni zaposleni"
 
 #. module: hr_org_chart
 #: model:ir.model.fields,help:hr_org_chart.field_hr_employee__subordinate_ids
 #: model:ir.model.fields,help:hr_org_chart.field_hr_employee_public__subordinate_ids
 msgid "Direct and indirect subordinates"
-msgstr ""
+msgstr "Neposredni in posredni podrejeni"
 
 #. module: hr_org_chart
 #. odoo-javascript
@@ -68,7 +68,7 @@ msgstr "Neposredno število podrejenih"
 #: code:addons/hr_org_chart/static/src/fields/hr_org_chart.xml:0
 #, python-format
 msgid "Indirect subordinates"
-msgstr ""
+msgstr "Posredni podrejeni"
 
 #. module: hr_org_chart
 #. odoo-javascript
@@ -76,7 +76,7 @@ msgstr ""
 #: code:addons/hr_org_chart/static/src/fields/hr_org_chart.xml:0
 #, python-format
 msgid "More managers"
-msgstr ""
+msgstr "Več menedžerjev"
 
 #. module: hr_org_chart
 #. odoo-javascript
@@ -95,7 +95,7 @@ msgstr "Organizacijski grafikon"
 #. module: hr_org_chart
 #: model:ir.model,name:hr_org_chart.model_hr_employee_public
 msgid "Public Employee"
-msgstr ""
+msgstr "Javni uslužbenec"
 
 #. module: hr_org_chart
 #. odoo-javascript

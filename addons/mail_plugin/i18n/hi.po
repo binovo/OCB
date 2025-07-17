@@ -244,7 +244,7 @@ msgstr "द्वारा निर्मित"
 #. module: mail_plugin
 #: model:ir.model.fields,field_description:mail_plugin.field_res_partner_iap__create_date
 msgid "Created on"
-msgstr ""
+msgstr "इस तारीख को बनाया गया"
 
 #. module: mail_plugin
 #. odoo-javascript
@@ -414,12 +414,12 @@ msgstr ""
 #. module: mail_plugin
 #: model:ir.model.fields,field_description:mail_plugin.field_res_partner_iap__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "इन्होंने आखिरी बार अपडेट किया"
 
 #. module: mail_plugin
 #: model:ir.model.fields,field_description:mail_plugin.field_res_partner_iap__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "आखिरी बार अपडेट हुआ"
 
 #. module: mail_plugin
 #: model_terms:ir.ui.view,arch_db:mail_plugin.app_auth
@@ -633,7 +633,7 @@ msgstr ""
 #: code:addons/mail_plugin/static/src/to_translate/translations_gmail.xml:0
 #, python-format
 msgid "Refresh"
-msgstr ""
+msgstr "रीफ्रेश करें"
 
 #. module: mail_plugin
 #. odoo-javascript
@@ -789,7 +789,7 @@ msgstr ""
 #: code:addons/mail_plugin/static/src/to_translate/translations_outlook.xml:0
 #, python-format
 msgid "Website"
-msgstr ""
+msgstr "वेबसाइट"
 
 #. module: mail_plugin
 #. odoo-javascript
