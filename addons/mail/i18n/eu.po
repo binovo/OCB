@@ -5209,7 +5209,7 @@ msgstr ""
 #: code:addons/mail/models/mail_thread.py:668
 #, python-format
 msgid "View %s"
-msgstr ""
+msgstr "Ikusi %s"
 
 #. module: mail
 #. openerp-web
