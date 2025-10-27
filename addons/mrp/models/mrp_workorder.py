@@ -9,7 +9,6 @@ from odoo.exceptions import UserError
 from odoo.tools import float_compare, float_round
 from odoo.addons import decimal_precision as dp
 
-
 class MrpWorkorder(models.Model):
     _name = 'mrp.workorder'
     _description = 'Work Order'
@@ -247,7 +246,10 @@ class MrpWorkorder(models.Model):
 
     @api.multi
     def write(self, values):
-        if list(values.keys()) != ['time_ids'] and any(workorder.state == 'done' for workorder in self):
+        if (not self.env.context.get('skip_user_error_check')
+            and list(values.keys()) != ['time_ids']
+            and any(workorder.state == 'done' for workorder in self)
+        ):
             raise UserError(_('You can not change the finished work order.'))
         return super(MrpWorkorder, self).write(values)
 
