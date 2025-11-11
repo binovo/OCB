@@ -2148,7 +2148,7 @@ var PaymentScreenWidget = ScreenWidget.extend({
         order.initialize_validation_date();
         order.finalized = true;
 
-        logger.info("PointOfSale [" + order.name + "] -> is_to_invoice: " + order.is_to_invoice());
+        logger.info("PointOfSale [" + order.name + " / " + order.uid + "] -> is_to_invoice: " + order.is_to_invoice());
 
         if (order.is_to_invoice()) {
             var invoiced = this.pos.push_and_invoice_order(order);
@@ -2161,11 +2161,11 @@ var PaymentScreenWidget = ScreenWidget.extend({
                 self.gui.show_screen('receipt');
             });
         } else {
-            logger.info("PointOfSale [" + order.name + "] -> BEFORE push_order");
+            logger.info("PointOfSale [" + order.name + " / " + order.uid + "] -> BEFORE push_order");
             this.pos.push_order(order);
-            logger.info("PointOfSale [" + order.name + "] -> AFTER push_order");
+            logger.info("PointOfSale [" + order.name + " / " + order.uid + "] -> AFTER push_order");
             this.gui.show_screen('receipt');
-            logger.info("PointOfSale [" + order.name + "] -> show_screen");
+            logger.info("PointOfSale [" + order.name + " / " + order.uid + "] -> show_screen");
         }
     },
 
