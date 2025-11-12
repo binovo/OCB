@@ -1,0 +1,255 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* spreadsheet_dashboard_hr_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-12 09:03+0000\n"
+"PO-Revision-Date: 2025-11-12 09:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid " days"
+msgstr " egun"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Assignee"
+msgstr "Esleitutako pertsona"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Assignees"
+msgstr "Esleitutako pertsonak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Current"
+msgstr "Unekoa"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Customer"
+msgstr "Bezeroa"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Days to assign"
+msgstr "Esleitu arteko egunak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Days to close"
+msgstr "Itxi arteko egunak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Hours Logged"
+msgstr "Erregistratutako orduak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Hours logged"
+msgstr "Erregistratutako orduak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "KPI"
+msgstr "KPIa"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Period"
+msgstr "Aldia"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Previous"
+msgstr "Aurrekoa"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Project"
+msgstr "Proiektua"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tag"
+msgstr "Etiketa"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tags"
+msgstr "Etiketak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks"
+msgstr "Zereginak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks Analysis by Assignees"
+msgstr "Zereginen analisia, esleitutako pertsonen arabera"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks Analysis by Customer"
+msgstr "Zereginen analisia, bezeroaren arabera"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks Analysis by Project"
+msgstr "Zereginen analisia, proiektuaren arabera"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks Analysis by Tags"
+msgstr "Zereginak etiketen arabera aztertzea"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks by Stage"
+msgstr "Zereginak etapen arabera"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Tasks by State"
+msgstr "Zereginak egoeraren arabera"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Time to Assign"
+msgstr "Esleitzeko denbora"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Time to Close"
+msgstr "Ixteko denbora"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Top Assignees"
+msgstr "Esleitutako pertsona nagusiak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Top Customers"
+msgstr "Bezero nagusiak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Top Projects"
+msgstr "Proiektu nagusiak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "Top Tags"
+msgstr "Etiketa nagusiak"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "last period"
+msgstr "azken aldia"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "since last period"
+msgstr "azken alditik"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "stats - current"
+msgstr "estatistikak - egungoa"
+
+#. module: spreadsheet_dashboard_hr_timesheet
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_timesheet/data/files/tasks_dashboard.json:0
+#, python-format
+msgid "stats - previous"
+msgstr "estatistikak - aurrekoa"

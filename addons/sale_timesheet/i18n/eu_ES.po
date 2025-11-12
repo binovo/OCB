@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 13:47+0000\n"
-"PO-Revision-Date: 2025-05-07 13:47+0000\n"
+"POT-Creation-Date: 2025-11-12 09:09+0000\n"
+"PO-Revision-Date: 2025-11-12 09:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -51,14 +51,17 @@ msgid ""
 "% of timesheets that are billable compared to the total number of timesheets"
 " linked to the AA of the project, rounded to the unit."
 msgstr ""
-"Faktura daitezkeen ordu-orrien ehunekoa, proiektuaren kontu analitikoari lotutako ordu-orrien kopuruarekin konparatuta eta zenbaki osoetan borobilduta."
+"Faktura daitezkeen ordu-orrien ehunekoa, proiektuaren kontu analitikoari "
+"lotutako ordu-orrien kopuruarekin konparatuta eta zenbaki osoetan "
+"borobilduta."
 
 #. module: sale_timesheet
 #. odoo-python
 #: code:addons/sale_timesheet/wizard/project_create_sale_order.py:0
 #, python-format
 msgid "%(amount)s %(label)s will be added to the new Sales Order."
-msgstr "%(amount)s %(label)s etiketa gehituko zaizkio salmenta-eskaera berriari."
+msgstr ""
+"%(amount)s %(label)s etiketa gehituko zaizkio salmenta-eskaera berriari."
 
 #. module: sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.project_update_default_description
@@ -76,7 +79,6 @@ msgid ""
 "<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" "
 "title=\"Arrow\"/>"
 msgstr ""
-"<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" title=\"Arrow\"/>"
 
 #. module: sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.res_config_settings_view_form
@@ -132,7 +134,17 @@ msgstr ""
 "  - Eskuzkoa: kopurua eskuz ezartzen da lerroan\n"
 "  - Gastuetan oinarritutako analisia: kopurua kontabilizatutako gastuen batura da\n"
 "  - Ordutegi-orria: kopurua salmenta-lerroari lotutako zereginetan emandako orduen batura da\n"
-"  - Izakinen mugimendua: kopurua berretsitako eskaera-prestaeretatik dator"
+"  - Izakinen mugimendua: kopurua berretsitako eskaera-prestaeretatik dator\n"
+
+#. module: sale_timesheet
+#: model:ir.model,name:sale_timesheet.model_account_move_reversal
+msgid "Account Move Reversal"
+msgstr ""
+
+#. module: sale_timesheet
+#: model:project.project,name:sale_timesheet.project_support
+msgid "After-Sales Services"
+msgstr ""
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_project__allocated_hours
@@ -151,7 +163,8 @@ msgid ""
 "An employee cannot be selected more than once in the mapping. Please remove "
 "duplicate(s) and try again."
 msgstr ""
-"Langileak ezin dira esleipenean behin baino gehiagotan hautatu. Ezabatu bikoiztutako langileak eta saiatu berriro."
+"Langileak ezin dira esleipenean behin baino gehiagotan hautatu. Ezabatu "
+"bikoiztutako langileak eta saiatu berriro."
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_account_analytic_line
@@ -370,6 +383,11 @@ msgid "Customer"
 msgstr "Bezeroa"
 
 #. module: sale_timesheet
+#: model:product.template,name:sale_timesheet.product_service_order_timesheet_product_template
+msgid "Customer Care (Prepaid Hours)"
+msgstr ""
+
+#. module: sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.project_project_view_kanban_inherit_sale_timesheet
 msgid "Customer Ratings"
 msgstr "Bezeroen balorazioak"
@@ -444,6 +462,11 @@ msgid "Fixed price services"
 msgstr "Prezio finkoko zerbitzuak"
 
 #. module: sale_timesheet
+#: model:product.template,name:sale_timesheet.product_service_deliver_manual_product_template
+msgid "Furniture Delivery (Manual)"
+msgstr ""
+
+#. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_sale_order_line__has_displayed_warning_upsell
 msgid "Has Displayed Warning Upsell"
 msgstr "Salmenta gehigarriari buruzko abisua bistaratua du"
@@ -507,7 +530,8 @@ msgid ""
 "Invoice based on timesheets (delivered quantity) on projects or tasks you'll"
 " create later on."
 msgstr ""
-"Fakturatu geroago sortuko diren proiektu edo zereginetako ordu-orrien (entregatutako kopuruaren) arabera."
+"Fakturatu geroago sortuko diren proiektu edo zereginetako ordu-orrien "
+"(entregatutako kopuruaren) arabera."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -517,7 +541,9 @@ msgid ""
 "Invoice based on timesheets (delivered quantity), and create a project for "
 "the order with a task for each sales order line to track the time spent."
 msgstr ""
-"Fakturatu ordu-orrien (entregatutako kopuruaren) arabera eta sortu salmenta-eskaeraren lerro bakoitzeko zeregin bat daukan proiektu bat salmentarako, emandako denboraren jarraipena egiteko."
+"Fakturatu ordu-orrien (entregatutako kopuruaren) arabera eta sortu salmenta-"
+"eskaeraren lerro bakoitzeko zeregin bat daukan proiektu bat salmentarako, "
+"emandako denboraren jarraipena egiteko."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -527,7 +553,8 @@ msgid ""
 "Invoice based on timesheets (delivered quantity), and create a task in an "
 "existing project to track the time spent."
 msgstr ""
-"Fakturatu ordu-orrien (entregatutako kopuruaren) arabera eta sortu zeregin bat lehendik dagoen proiektu batean, emandako denboraren jarraipena egiteko."
+"Fakturatu ordu-orrien (entregatutako kopuruaren) arabera eta sortu zeregin "
+"bat lehendik dagoen proiektu batean, emandako denboraren jarraipena egiteko."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -537,7 +564,8 @@ msgid ""
 "Invoice based on timesheets (delivered quantity), and create an empty "
 "project for the order to track the time spent."
 msgstr ""
-"Fakturatu ordu-orrien (entregatutako kopuruaren) arabera eta sortu hutsik dagoen proiektu bat, emandako denboraren jarraipena egiteko."
+"Fakturatu ordu-orrien (entregatutako kopuruaren) arabera eta sortu hutsik "
+"dagoen proiektu bat, emandako denboraren jarraipena egiteko."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_account_analytic_line__timesheet_invoice_id
@@ -593,12 +621,23 @@ msgid "Journal Item"
 msgstr "Egunkariko elementua"
 
 #. module: sale_timesheet
+#: model:product.template,name:sale_timesheet.product_service_deliver_timesheet_2_product_template
+msgid "Junior Architect (Invoice on Timesheets)"
+msgstr ""
+
+#. module: sale_timesheet
 #: model_terms:ir.actions.act_window,help:sale_timesheet.timesheet_action_from_sales_order_item
 msgid ""
 "Keep track of your working hours by project every day and bill your "
 "customers for that time."
 msgstr ""
-"Egin proiektu bakoitzari egunero eskainitako orduen jarraipena eta fakturatu denbora hori bezeroei."
+"Egin proiektu bakoitzari egunero eskainitako orduen jarraipena eta fakturatu"
+" denbora hori bezeroei."
+
+#. module: sale_timesheet
+#: model:product.template,name:sale_timesheet.product_service_deliver_milestones_product_template
+msgid "Kitchen Assembly (Milestones)"
+msgstr ""
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_create_invoice____last_update
@@ -713,7 +752,8 @@ msgstr "Fakturatu ezin diren orduak"
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_timesheets_analysis_report__timesheet_revenues
 msgid "Number of hours spent multiplied by the unit price per hour/day."
-msgstr "Eskainitako ordu-kopurua, orduko/eguneko aleko prezioarekin biderkatuta."
+msgstr ""
+"Eskainitako ordu-kopurua, orduko/eguneko aleko prezioarekin biderkatuta."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_timesheets_analysis_report__billable_time
@@ -742,7 +782,10 @@ msgid ""
 "yet invoiced (and validated, if applicable) will be invoiced without "
 "distinction."
 msgstr ""
-"Epe horretan oraindik fakturatu (eta, hala badagokio, baliozkotu) ez diren ordu-orriak soilik fakturatuko dira. Epea adierazten ez bada, fakturatu (eta, hala badagokio, baliozkotu) gabeko lordu-orri guztiak fakturatuko dira, modu bereizgabean."
+"Epe horretan oraindik fakturatu (eta, hala badagokio, baliozkotu) ez diren "
+"ordu-orriak soilik fakturatuko dira. Epea adierazten ez bada, fakturatu "
+"(eta, hala badagokio, baliozkotu) gabeko lordu-orri guztiak fakturatuko "
+"dira, modu bereizgabean."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -775,7 +818,8 @@ msgid ""
 "Percentage of time delivered compared to the prepaid amount that must be "
 "reached for the upselling opportunity activity to be triggered."
 msgstr ""
-"Erabilitako denbora, salmenta-aukera osagarriaren jarduera aktibatzeko erdietsi behar den aurreordaindutako kopuruarekin konparatuta."
+"Erabilitako denbora, salmenta-aukera osagarriaren jarduera aktibatzeko "
+"erdietsi behar den aurreordaindutako kopuruarekin konparatuta."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_project__pricing_type
@@ -791,7 +835,7 @@ msgstr "Produktua"
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_product_product
 msgid "Product Variant"
-msgstr "Produktu-aldaera"
+msgstr "Produktuaren aldaera"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_project_create_sale_order_line__product_id
@@ -799,7 +843,8 @@ msgid ""
 "Product of the sales order item. Must be a service invoiced based on "
 "timesheets on tasks."
 msgstr ""
-"Salmenta-eskaerako elementuko produktua. Zereginen ordu-orrien arabera fakturatutako zerbitzu bat izan behar du."
+"Salmenta-eskaerako elementuko produktua. Zereginen ordu-orrien arabera "
+"fakturatutako zerbitzu bat izan behar du."
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_project_project
@@ -890,7 +935,8 @@ msgstr "Salmenta-eskaeran geratzen diren orduak:"
 msgid ""
 "Review your timesheets by billing type and make sure your time is billable."
 msgstr ""
-"Berrikusi fakturazio-motaren araberako ordu-orriak eta ziurtatu denbora fakturatu daitekeela."
+"Berrikusi fakturazio-motaren araberako ordu-orriak eta ziurtatu denbora "
+"fakturatu daitekeela."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_task__so_analytic_account_id
@@ -905,7 +951,7 @@ msgstr "Salmenta-lerroa/Langileen jarraipena"
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
-msgstr "Samenten ordainketa aurreratuaren faktura"
+msgstr "Salmenten ordainketa aurreratuaren faktura"
 
 #. module: sale_timesheet
 #. odoo-python
@@ -915,6 +961,7 @@ msgstr "Samenten ordainketa aurreratuaren faktura"
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_create_sale_order__sale_order_id
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_task__sale_order_id
 #: model:ir.model.fields,field_description:sale_timesheet.field_timesheets_analysis_report__order_id
+#: model:project.project,name:sale_timesheet.so_template_project
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.hr_timesheet_report_search_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.timesheet_view_search
 #, python-format
@@ -964,7 +1011,9 @@ msgid ""
 "invoiced to your customer. Remove the sales order item for the timesheet "
 "entry to be non-billable."
 msgstr ""
-"Emandako denbora gehituko zaion salmenta-eskaerako elementua, hura bezeroari fakturatzeko. Kendu salmenta-eskaerako elementua ordu-orriko sarrera fakturatu ezin izateko."
+"Emandako denbora gehituko zaion salmenta-eskaerako elementua, hura bezeroari"
+" fakturatzeko. Kendu salmenta-eskaerako elementua ordu-orriko sarrera "
+"fakturatu ezin izateko."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_project_task__sale_order_id
@@ -995,12 +1044,19 @@ msgstr "Bilatu salmenta-eskaerako elementuan"
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_sale_order__project_id
 msgid "Select a non billable project on which tasks can be created."
-msgstr "Bilatu fakturatu ezin daitekeen baina zereginak sortzeko aukera ematen duen proiektu bat."
+msgstr ""
+"Bilatu fakturatu ezin daitekeen baina zereginak sortzeko aukera ematen duen "
+"proiektu bat."
 
 #. module: sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.res_config_settings_view_form
 msgid "Sell services and invoice time spent"
 msgstr "Saldu zerbitzuak eta fakturatu emandako denbora"
+
+#. module: sale_timesheet
+#: model:product.template,name:sale_timesheet.product_service_deliver_timesheet_1_product_template
+msgid "Senior Architect (Invoice on Timesheets)"
+msgstr ""
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_create_sale_order_line__product_id
@@ -1033,10 +1089,13 @@ msgid ""
 "task. It can be modified on each task individually by selecting a specific "
 "sales order item."
 msgstr ""
-"Zereginei emandako denbora fakturatzeko lehenespenez erabiliko den zerbitzua. Zerbitzua zeregin bakoitzean edita dezakezu, salmenta-eskaerako elementu jakin bat hautatuta."
+"Zereginei emandako denbora fakturatzeko lehenespenez erabiliko den "
+"zerbitzua. Zerbitzua zeregin bakoitzean edita dezakezu, salmenta-eskaerako "
+"elementu jakin bat hautatuta."
 
 #. module: sale_timesheet
 #: model:ir.actions.act_window,name:sale_timesheet.product_template_action_default_services
+#: model:project.project,label_tasks:sale_timesheet.project_support
 msgid "Services"
 msgstr "Zerbitzuak"
 
@@ -1051,9 +1110,14 @@ msgid "Start Date"
 msgstr "Hasiera-data"
 
 #. module: sale_timesheet
+#: model:project.project,label_tasks:sale_timesheet.so_template_project
+msgid "Tareas"
+msgstr "Zereginak"
+
+#. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_project_task
 msgid "Task"
-msgstr "Zeregina"
+msgstr "Ataza"
 
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_project_task_recurrence
@@ -1076,7 +1140,8 @@ msgid ""
 "The %s product is required by the Timesheets app and cannot be archived nor "
 "deleted."
 msgstr ""
-"%s produktua nahitaezkoa da ordu-orrien aplikazioan eta ezin da hura artxibatu edo ezabatu."
+"%s produktua nahitaezkoa da ordu-orrien aplikazioan eta ezin da hura "
+"artxibatu edo ezabatu."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -1086,7 +1151,8 @@ msgid ""
 "The %s product is required by the Timesheets app and cannot be linked to a "
 "company."
 msgstr ""
-"%s produktua nahitaezkoa da ordu-orrien aplikazioan eta ezin da ezein enpresarekin lotu."
+"%s produktua nahitaezkoa da ordu-orrien aplikazioan eta ezin da ezein "
+"enpresarekin lotu."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -1126,14 +1192,17 @@ msgid ""
 "The sales order cannot be created because some timesheets of this project "
 "are already linked to another sales order."
 msgstr ""
-"Ezin da salmenta-eskaera sortu, proiektu honen ordu-orri batzuk beste salmenta-eskaera batzuei lotuta daudelako."
+"Ezin da salmenta-eskaera sortu, proiektu honen ordu-orri batzuk beste "
+"salmenta-eskaera batzuei lotuta daudelako."
 
 #. module: sale_timesheet
 #. odoo-python
 #: code:addons/sale_timesheet/wizard/project_create_invoice.py:0
 #, python-format
 msgid "The selected Sales Order should contain something to invoice."
-msgstr "Hautatutako salmenta-eskaerak fakturatu daitekeen zereginen bat eduki behar du."
+msgstr ""
+"Hautatutako salmenta-eskaerak fakturatu daitekeen zereginen bat eduki behar "
+"du."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_project_project__pricing_type
@@ -1147,7 +1216,14 @@ msgid ""
 "senior consultants would deliver the same service (= consultancy), but at a "
 "different rate because of their level of seniority."
 msgstr ""
-"Zereginen araberako tarifa aukera bikaina da zerbitzu desberdinak bezero desberdinei prezio desberdinetan fakturatu nahi badizkiezu. Tarifa finkoa aukera bikaina da zerbitzuak tarifa finkoan orduka edo langileka fakturatzen badituzu, zerbitzua eskaini duen langilea edozein izanik ere. Langileek zerbitzu bera tarifa desberdinean eskaintzen badute, langileen araberako tarifa erabiltzea gomendatzen dizugu. Adibidez, aholkulari hasiberri eta nagusiek zerbitzu bera eskainiko lukete (=aholkularitza), baina tarifa desberdinetan, esperientzia-maila desberdina dute eta."
+"Zereginen araberako tarifa aukera bikaina da zerbitzu desberdinak bezero "
+"desberdinei prezio desberdinetan fakturatu nahi badizkiezu. Tarifa finkoa "
+"aukera bikaina da zerbitzuak tarifa finkoan orduka edo langileka fakturatzen"
+" badituzu, zerbitzua eskaini duen langilea edozein izanik ere. Langileek "
+"zerbitzu bera tarifa desberdinean eskaintzen badute, langileen araberako "
+"tarifa erabiltzea gomendatzen dizugu. Adibidez, aholkulari hasiberri eta "
+"nagusiek zerbitzu bera eskainiko lukete (=aholkularitza), baina tarifa "
+"desberdinetan, esperientzia-maila desberdina dute eta."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_project_sale_line_employee_map__cost
@@ -1155,7 +1231,8 @@ msgid ""
 "This cost overrides the employee's default employee hourly wage in "
 "employee's HR Settings"
 msgstr ""
-"Kostu honek langilearen orduko soldata lehenetsia baliogabetzen du langilearen  Giza Baliabideak aplikazioaren konfigurazioan"
+"Kostu honek langilearen orduko soldata lehenetsia baliogabetzen du "
+"langilearen  Giza Baliabideak aplikazioaren konfigurazioan"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_product_product__service_upsell_threshold
@@ -1311,7 +1388,8 @@ msgstr "Honen ordu-orriak: %s"
 #. module: sale_timesheet
 #: model:ir.model.fields.selection,name:sale_timesheet.selection__product_template__service_type__timesheet
 msgid "Timesheets on project (one fare per SO/Project)"
-msgstr "Proiektuaren ordu-orriak (prezio bakarra salmenta-eskaerako/proiektuko)"
+msgstr ""
+"Proiektuaren ordu-orriak (prezio bakarra salmenta-eskaerako/proiektuko)"
 
 #. module: sale_timesheet
 #. odoo-python
@@ -1346,7 +1424,8 @@ msgid ""
 "Total amount to invoice on the sales order, including all items (services, "
 "storables, expenses, ...)"
 msgstr ""
-"Bezeroaren eskaeran fakturatu beharreko zenbateko osoa, elementu guztiak (zerbitzuak, pilagarriak, gastuak...) barne"
+"Bezeroaren eskaeran fakturatu beharreko zenbateko osoa, elementu guztiak "
+"(zerbitzuak, pilagarriak, gastuak...) barne"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_account_bank_statement_line__timesheet_total_duration
@@ -1357,7 +1436,8 @@ msgid ""
 "Total recorded duration, expressed in the encoding UoM, and rounded to the "
 "unit"
 msgstr ""
-"Erregistratutako iraupena, guztira, UdM kodeketan adierazia eta zenbaki osoetan borobildua"
+"Erregistratutako iraupena, guztira, UdM kodeketan adierazia eta zenbaki "
+"osoetan borobildua"
 
 #. module: sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.portal_my_timesheets_inherit
@@ -1376,7 +1456,8 @@ msgid ""
 "Track your working hours by projects every day and invoice this time to your"
 " customers."
 msgstr ""
-"Egin proiektu bakoitzari egunero eskaintzen dizkiozun orduen jarraipena eta fakturatu iezaiezu denbora hori bezeroei."
+"Egin proiektu bakoitzari egunero eskaintzen dizkiozun orduen jarraipena eta "
+"fakturatu iezaiezu denbora hori bezeroei."
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_create_sale_order_line__price_unit
@@ -1405,7 +1486,9 @@ msgstr "Ikusi ordu-orriak"
 #. module: sale_timesheet
 #: model_terms:ir.ui.view,arch_db:sale_timesheet.view_product_timesheet_form
 msgid "Warn the salesperson for an upsell when work done exceeds"
-msgstr "Jakinarazi saltzaileari salmenta gehigarri bat egiteko egindako lanak hau gainditzen badu:"
+msgstr ""
+"Jakinarazi saltzaileari salmenta gehigarri bat egiteko egindako lanak hau "
+"gainditzen badu:"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_project_project__warning_employee_rate
@@ -1433,7 +1516,8 @@ msgid ""
 "You cannot link a billable project to a sales order item that comes from an "
 "expense or a vendor bill."
 msgstr ""
-"Ezin dituzu proiektu fakturagarriak hornitzailearen gastu edo faktura batetik datorren salmenta-eskaeretako elementuekin lotu."
+"Ezin dituzu proiektu fakturagarriak hornitzailearen gastu edo faktura "
+"batetik datorren salmenta-eskaeretako elementuekin lotu."
 
 #. module: sale_timesheet
 #. odoo-python
@@ -1443,7 +1527,8 @@ msgid ""
 "You cannot link a billable project to a sales order item that is not a "
 "service."
 msgstr ""
-"Ezin dituzu proiektu fakturagarriak zerbitzuak ez diren salmenta-eskaeretako elementuekin lotu."
+"Ezin dituzu proiektu fakturagarriak zerbitzuak ez diren salmenta-eskaeretako"
+" elementuekin lotu."
 
 #. module: sale_timesheet
 #. odoo-python
