@@ -190,7 +190,7 @@ class Project(models.Model):
         self._cr.execute(query_string, query_param)
         invoice_ids = [line.get('move_id') for line in self._cr.dictfetchall()]
         action = {
-            'name': _('Invoices'),
+            'name': _('Customer Invoices'),
             'type': 'ir.actions.act_window',
             'res_model': 'account.move',
             'views': [[False, 'tree'], [False, 'form'], [False, 'kanban']],
@@ -573,7 +573,7 @@ class Project(models.Model):
         if self.user_has_groups('account.group_account_readonly'):
             buttons.append({
                 'icon': 'pencil-square-o',
-                'text': _lt('Invoices'),
+                'text': _lt('Customer Invoices'),
                 'number': self.invoice_count,
                 'action_type': 'object',
                 'action': 'action_open_project_invoices',

@@ -95,6 +95,14 @@ msgid "Customer"
 msgstr ""
 
 #. module: sale_project
+#. odoo-python
+#: code:addons/sale_project/models/project.py:0
+#: code:addons/sale_project/models/project.py:0
+#, python-format
+msgid "Customer Invoices"
+msgstr ""
+
+#. module: sale_project
 #. odoo-javascript
 #: code:addons/sale_project/static/src/components/project_right_side_panel/project_right_side_panel.xml:0
 #, python-format
@@ -259,14 +267,6 @@ msgstr ""
 #: code:addons/sale_project/static/src/components/project_right_side_panel/project_right_side_panel.xml:0
 #, python-format
 msgid "Invoiced"
-msgstr ""
-
-#. module: sale_project
-#. odoo-python
-#: code:addons/sale_project/models/project.py:0
-#: code:addons/sale_project/models/project.py:0
-#, python-format
-msgid "Invoices"
 msgstr ""
 
 #. module: sale_project
