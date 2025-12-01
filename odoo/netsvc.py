@@ -191,6 +191,18 @@ def init_logger():
         'firebase_admin', # deprecated method_whitelist
     ]:
         warnings.filterwarnings('ignore', category=DeprecationWarning, module=module)
+        
+    # Filter out the specific Werkzeug deprecation warning
+    warnings.filterwarnings(
+        "ignore",
+        message=r'.*is deprecated and will be removed in Werkzeug 2.4.*',
+        category=DeprecationWarning,
+    )
+    warnings.filterwarnings(
+        "ignore",
+        message=r'.*is deprecated and will be removed in Werkzeug 3.0.*',
+        category=DeprecationWarning,
+    )
 
     # reportlab<4.0.6 triggers this in Py3.10/3.11
     warnings.filterwarnings('ignore', r'the load_module\(\) method is deprecated', category=DeprecationWarning, module='importlib._bootstrap')
