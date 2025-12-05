@@ -294,8 +294,14 @@ class Task(models.Model):
     def _compute_effective_hours(self):
         if not any(self._ids):
             for task in self:
-                task.effective_hours = sum(task.timesheet_ids.mapped('unit_amount'))
-            return
+                not_permission_timesheet_amount = sum(
+                    self.env["account.analytic.line"]
+                    .search([("task_id", "in", task.ids)])
+                    .filtered(lambda t: t.id not in task.timesheet_ids.ids)
+                    .mapped("unit_amount")
+                )
+                task.effective_hours = sum(task.timesheet_ids.mapped('unit_amount')) + not_permission_timesheet_amount
+                return
         timesheet_read_group = self.env['account.analytic.line'].read_group([('task_id', 'in', self.ids)], ['unit_amount', 'task_id'], ['task_id'])
         timesheets_per_task = {res['task_id'][0]: res['unit_amount'] for res in timesheet_read_group}
         for task in self:
