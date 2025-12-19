@@ -834,7 +834,7 @@ msgstr "Si no contribuye o desarrolla en Odoo, salte esta página."
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.sfinished
 msgid "If you wish, you can"
-msgstr "Si quiere, puede"
+msgstr "Si lo desea, puede"
 
 #. module: survey
 #: model:survey.stage,name:survey.stage_in_progress

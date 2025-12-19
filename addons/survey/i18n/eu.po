@@ -780,7 +780,7 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.sfinished
 msgid "If you wish, you can"
-msgstr ""
+msgstr "Nahi izan ezkero,"
 
 #. module: survey
 #: model:survey.stage,name:survey.stage_in_progress
@@ -2092,4 +2092,4 @@ msgstr ""
 #. module: survey
 #: model:ir.ui.view,arch_db:survey.sfinished
 msgid "review your answers"
-msgstr ""
+msgstr "zure erantzunak berrikusi ditzakezu"
