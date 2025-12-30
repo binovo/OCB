@@ -38,11 +38,21 @@ def geo_find(addr, apikey=False):
                           % result['error_message'])
             raise UserError(error_msg)
 
+    return geo_prepare(result)
+
+
+def geo_prepare(results):
+    res = {}
     try:
-        geo = result['results'][0]['geometry']['location']
-        return float(geo['lat']), float(geo['lng'])
+        geo = results['results'][0]['geometry']['location']
+        res = {
+            'partner_latitude': float(geo['lat']),
+            'partner_longitude': float(geo['lng'])
+        }
     except (KeyError, ValueError, IndexError):
-        return None
+        pass
+    res['formatted_address'] = results['results'][0]['formatted_address']
+    return res
 
 
 def geo_query_address(street=None, zip=None, city=None, state=None, country=None):
@@ -62,6 +72,7 @@ class ResPartner(models.Model):
     partner_latitude = fields.Float(string='Geo Latitude', digits=(16, 5))
     partner_longitude = fields.Float(string='Geo Longitude', digits=(16, 5))
     date_localization = fields.Date(string='Geolocation Date')
+    formatted_address = fields.Char(string='Formatted Address')
 
     @classmethod
     def _geo_localize(cls, apikey, street='', zip='', city='', state='', country=''):
@@ -85,8 +96,9 @@ class ResPartner(models.Model):
                                            partner.country_id.name)
             if result:
                 partner.write({
-                    'partner_latitude': result[0],
-                    'partner_longitude': result[1],
-                    'date_localization': fields.Date.context_today(partner)
+                    'partner_latitude': result['partner_latitude'],
+                    'partner_longitude': result['partner_longitude'],
+                    'date_localization': fields.Date.context_today(partner),
+                    'formatted_address': result['formatted_address'],
                 })
         return True

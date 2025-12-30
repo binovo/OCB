@@ -24,6 +24,7 @@
                                 <span> ;  Long:  </span>
                                 <field name="partner_longitude" nolabel="1" class="oe_inline"/>
                                 <span>) </span>
+                                <field name="formatted_address" nolabel="1" class="oe_inline"/>
                             </div>
                         </group>
                     </page>
