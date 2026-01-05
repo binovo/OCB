@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-12 09:05+0000\n"
-"PO-Revision-Date: 2025-11-12 09:05+0000\n"
+"POT-Creation-Date: 2025-11-21 12:47+0000\n"
+"PO-Revision-Date: 2025-11-21 12:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,7 @@ msgid ""
 "the time off %s. If you don't want a timesheet, you should leave the "
 "internal project and task empty."
 msgstr ""
+"%s absentziaren ordu-orri bat sortu ahal izateko, barneko proiektua nahiz zeregina behar dira. Ordu-orririk sortu nahi ez baduzu, utzi barneko proiektua eta zeregina hutsik."
 
 #. module: project_timesheet_holidays
 #: model:ir.model,name:project_timesheet_holidays.model_res_company
@@ -54,7 +55,7 @@ msgstr "Langilea"
 #. module: project_timesheet_holidays
 #: model:ir.model.fields,field_description:project_timesheet_holidays.field_hr_leave_type__timesheet_generate
 msgid "Generate Timesheet"
-msgstr "Sortu ordu-partea"
+msgstr "Sortu ordu-orria"
 
 #. module: project_timesheet_holidays
 #: model:ir.model.fields,field_description:project_timesheet_holidays.field_account_analytic_line__global_leave_id
@@ -67,8 +68,7 @@ msgid ""
 "If checked, when validating a time off, timesheet will be generated in the "
 "Vacation Project of the company."
 msgstr ""
-"Absentzia bat baliozkotzean markatuz gero, ordu-parte bat sortuko da "
-"konpainiaren absentzien proiektuan."
+"Absentzia bat baliozkotzean markatuz gero, ordu-orri bat sortuko da konpainiaren absentzien proiektuan."
 
 #. module: project_timesheet_holidays
 #. odoo-python
@@ -122,7 +122,7 @@ msgstr "Baliabidearen absentzien xehetasunak"
 #: model:ir.model.fields,field_description:project_timesheet_holidays.field_hr_leave_type__timesheet_task_id
 #: model_terms:ir.ui.view,arch_db:project_timesheet_holidays.res_config_settings_view_form
 msgid "Task"
-msgstr "Ataza"
+msgstr "Zeregina"
 
 #. module: project_timesheet_holidays
 #: model:ir.model.fields,help:project_timesheet_holidays.field_res_config_settings__internal_project_id
@@ -131,6 +131,7 @@ msgid ""
 "off requests. You can specify another project on each time off type "
 "individually."
 msgstr ""
+"Absentzien eskaeren bidez ordu-orriak automatikoki sortzean erabiltzen den proiektu lehenetsia. Absentzia-mota bakoitzean beste proiektu bat zehazteko aukera duzu."
 
 #. module: project_timesheet_holidays
 #: model:ir.model.fields,help:project_timesheet_holidays.field_res_config_settings__leave_timesheet_task_id
@@ -138,6 +139,7 @@ msgid ""
 "The default task used when automatically generating timesheets via time off "
 "requests. You can specify another task on each time off type individually."
 msgstr ""
+"Absentzien eskaeren bidez ordu-orriak automatikoki sortzean erabiltzen den zeregin lehenetsia. Absentzia-mota bakoitzean beste zeregin bat zehazteko aukera duzu."
 
 #. module: project_timesheet_holidays
 #. odoo-python
@@ -180,6 +182,7 @@ msgid ""
 "You cannot create timesheets for a task that is linked to a time off type. "
 "Please use the Time Off application to request new time off instead."
 msgstr ""
+"Ezin duzu ordu-orririk sortu absentzia-mota batekin lotutako zereginetan. Horren ordez, erabili Absentziak aplikazioa."
 
 #. module: project_timesheet_holidays
 #. odoo-python
@@ -189,6 +192,7 @@ msgid ""
 "You cannot delete timesheets that are linked to time off requests. Please "
 "cancel your time off request from the Time Off application instead."
 msgstr ""
+"Ezin dituzu absentzien eskaerekin lotutako ordu-orriak ezabatu. Horren ordez, utzi absentzien eskaera bertan behera Absentziak aplikaziotik."
 
 #. module: project_timesheet_holidays
 #. odoo-python
@@ -198,3 +202,4 @@ msgid ""
 "You cannot modify timesheets that are linked to time off requests. Please "
 "use the Time Off application to modify your time off requests instead."
 msgstr ""
+"Ezin dituzu absentzien eskaerekin lotutako ordu-orriak aldatu. Horren ordez, erabili Absentziak aplikazioa absentzien eskaerak aldatzeko."
