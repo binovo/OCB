@@ -16,6 +16,7 @@ from odoo.addons.base.models.res_partner import _tz_get
 from odoo.exceptions import ValidationError
 from odoo.osv import expression
 from odoo.tools.float_utils import float_round
+from odoo.tools.sql import create_index
 
 from odoo.tools import date_utils
 from .resource_mixin import timezone_datetime
@@ -867,6 +868,10 @@ class ResourceCalendarAttendance(models.Model):
         ('line_section', "Section")], default=False, help="Technical field for UX purpose.")
     sequence = fields.Integer(default=10,
         help="Gives the sequence of this line when displaying the resource calendar.")
+    
+    def init(self):
+        create_index(self._cr, 'resource_calendar_attendance_date_from_to_idx', 'resource_calendar_attendance', ["date_from", "date_to"])
+        super().init()
 
     @api.onchange('hour_from', 'hour_to')
     def _onchange_hours(self):
