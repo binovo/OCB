@@ -14,6 +14,8 @@ var session = require('web.session');
 var time = require('web.time');
 var utils = require('web.utils');
 
+var logger = require("point_of_sale.logger");
+
 var QWeb = core.qweb;
 var _t = core._t;
 var Mutex = concurrency.Mutex;
@@ -841,6 +843,7 @@ exports.PosModel = Backbone.Model.extend({
         var self = this;
         if(order){
             this.db.add_order(order.export_as_JSON());
+            logger.info("PointOfSale [" + order.name + " / " + order.uid + "] -> push_order > add_order");
         }
 
         var pushed = new $.Deferred();
@@ -926,6 +929,8 @@ exports.PosModel = Backbone.Model.extend({
     // wrapper around the _save_to_server that updates the synch status widget
     _flush_orders: function(orders, options) {
         var self = this;
+        var info_ids = orders.map(item => item.id);
+        logger.info("PointOfSale > _flush_orders > " + info_ids.join(' | '));
         this.set('synch',{ state: 'connecting', pending: orders.length});
 
         return self._save_to_server(orders, options).done(function (server_ids) {
@@ -2024,6 +2029,7 @@ exports.Order = Backbone.Model.extend({
             this.init_from_JSON(options.json);
         } else {
             this.sequence_number = this.pos.pos_session.sequence_number++;
+            logger.info("PointOfSale > sequence_number: " + this.sequence_number);
             this.uid  = this.generate_unique_id();
             this.name = _t("Order ") + this.uid;
             this.validation_date = undefined;
