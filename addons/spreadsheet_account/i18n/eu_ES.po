@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* spreadsheet_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-21 12:47+0000\n"
+"PO-Revision-Date: 2025-11-21 12:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_datasource.js:0
+#, python-format
+msgid "%s is not a valid year."
+msgstr "%s urteak ez du balio."
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid ""
+"'%s' is not a valid period. Supported formats are \"21/12/2022\", "
+"\"Q1/2022\", \"12/2022\", and \"2022\"."
+msgstr ""
+"'%s' epeak ez du balio. Onartutako formatuak: \"2022/12/21\",  \"2022/Q1\", \"2022/12\” eta \"2022\"."
+
+#. module: spreadsheet_account
+#: model:ir.model,name:spreadsheet_account.model_account_account
+msgid "Account"
+msgstr "Kontua"
+
+#. module: spreadsheet_account
+#: model:ir.model,name:spreadsheet_account.model_res_company
+msgid "Companies"
+msgstr "Enpresak"
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid "Get the total balance for the specified account(s) and period."
+msgstr "Lortu zehaztutako kontuen eta epeko balantzea."
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid "Get the total credit for the specified account(s) and period."
+msgstr "Lortu zehaztutako kontuen eta epeko kreditua."
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid "Get the total debit for the specified account(s) and period."
+msgstr "Lortu zehaztutako kontuen eta epeko zorra."
+
+#. module: spreadsheet_account
+#. odoo-python
+#: code:addons/spreadsheet_account/models/account.py:0
+#, python-format
+msgid "Journal items for account prefix %s"
+msgstr "%s kontuaren aurrizkiaren egunkari-oharrak"
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid "Returns the account ids of a given group."
+msgstr "Talde jakin baten kontuaren IDak ematen ditu."
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid ""
+"Returns the ending date of the fiscal year encompassing the provided date."
+msgstr ""
+"Zehaztutako datari dagokion urte fiskalaren amaiera-data ematen du."
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_functions.js:0
+#, python-format
+msgid ""
+"Returns the starting date of the fiscal year encompassing the provided date."
+msgstr ""
+"Zehaztutako datari dagokion urte fiskalaren hasiera-data ematen du."
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/index.js:0
+#, python-format
+msgid "See records"
+msgstr "Ikusi erregistroak"
+
+#. module: spreadsheet_account
+#. odoo-javascript
+#: code:addons/spreadsheet_account/static/src/accounting_datasource.js:0
+#, python-format
+msgid "The company fiscal year could not be found."
+msgstr "Ezin izan da enpresaren urte fiskala aurkitu."
