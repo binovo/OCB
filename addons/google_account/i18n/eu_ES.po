@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* google_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-21 12:47+0000\n"
+"PO-Revision-Date: 2025-11-21 12:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: google_account
+#: model:ir.model,name:google_account.model_google_service
+msgid "Google Service"
+msgstr "Googleren zerbitzua"
+
+#. module: google_account
+#. odoo-python
+#: code:addons/google_account/models/google_service.py:0
+#, python-format
+msgid "Method not supported [%s] not in [GET, POST, PUT, PATCH or DELETE]!"
+msgstr "¡Metodoa ez da onartzen [%s] ez dago [GET, POST, PUT, PATCH edo DELETE]!"
+
+#. module: google_account
+#. odoo-python
+#: code:addons/google_account/models/google_service.py:0
+#, python-format
+msgid ""
+"Something went wrong during your token generation. Maybe your Authorization "
+"Code is invalid or already expired"
+msgstr ""
+"Errore bat gertatu da tokena sortzean. Baliteke baimen-kodea ez baliozkoa izatea edo iraungita egotea"
