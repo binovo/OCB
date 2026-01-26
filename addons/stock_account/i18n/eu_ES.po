@@ -1,0 +1,1075 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-21 12:46+0000\n"
+"PO-Revision-Date: 2025-11-21 12:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid " Product cost updated from %(previous)s to %(new_cost)s."
+msgstr "Produktuaren prezioa eguneratu da %(previous)s preziotik %(new_cost)s preziora."
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_quant.py:0
+#, python-format
+msgid " [Accounted on %s]"
+msgstr "[Kontabilizazio-data: %s]"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid "%(user)s changed cost from %(previous)s to %(new_price)s - %(product)s"
+msgstr "%(user)s erabiltzaileak kostua aldatu du. Lehen %(previous)s zen eta orain %(new_price)s da - %(product)s"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid ""
+"%(user)s changed stock valuation from  %(previous)s to %(new_value)s - "
+"%(product)s"
+msgstr ""
+"%(user)s erabiltzaileak stock-eko balorazioa aldatu du. Lehen %(previous)s zen eta orain %(new_value)s da - %(product)s"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid ""
+")\n"
+"                            <small class=\"mx-2 fst-italic\">Use a negative added value to record a decrease in the product value</small>"
+msgstr ""
+")\n"
+"                            <small class=\"mx-2 fst-italic\">Erabili balio agregatu negatibo bat produktuaren balioan murrizketa bat erregistratzeko</small>"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_category_property_form
+msgid "<b>Set other input/output accounts on specific </b>"
+msgstr "<b>Konfiguratu sarrerako edo irteerako beste kontu batzuk hemen: </b>"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_account_report_invoice_document
+msgid "<span>Product</span>"
+msgstr "<span>Produktua</span>"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_account_report_invoice_document
+msgid "<span>Quantity</span>"
+msgstr "<span>Kopurua</span>"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_account_report_invoice_document
+msgid "<span>SN/LN</span>"
+msgstr "<span>SN/LN</span>"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Kontabilitate-planaren txantiloia"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move__account_move_ids
+msgid "Account Move"
+msgstr "Kontuko mugimendua"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_category_property_form
+msgid "Account Stock Properties"
+msgstr "Stock kontuaren propietateak"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_quant__accounting_date
+#: model:ir.model.fields,field_description:stock_account.field_stock_request_count__accounting_date
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__date
+msgid "Accounting Date"
+msgstr "Kontabilitate-data"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_move_form_inherit
+msgid "Accounting Entries"
+msgstr "Kontabilitate-idazpenak"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_location_form_inherit
+msgid "Accounting Information"
+msgstr "Kontabilitate-informazioa"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_tree
+msgid "Add Manual Valuation"
+msgstr "Gehitu eskuzko balorazioa"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+msgid ""
+"Add additional cost (transport, customs, ...) in the value of the product."
+msgstr ""
+"Gehitu kostu gehigarri bat (garraioa, aduana, etab.) produktuaren balioan."
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid "Added Value"
+msgstr "Balio agregatua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__added_value
+msgid "Added value"
+msgstr "Balio agregatua"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_res_config_settings__module_stock_landed_costs
+#: model_terms:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+msgid ""
+"Affect landed costs on reception operations and split them among products to"
+" update their cost price."
+msgstr ""
+"Eragin hartzeko eragiketen helburuko gastuei eta zatitu produktuen artean haien kostaprezioa eguneratzeko."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move__analytic_account_line_id
+msgid "Analytic Account Line"
+msgstr "Kontu analitikoko lerroa"
+
+#. module: stock_account
+#: model:ir.model.fields.selection,name:stock_account.selection__product_category__property_valuation__real_time
+msgid "Automated"
+msgstr "Automatizatuta"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_product__avg_cost
+msgid "Average Cost"
+msgstr "Batez besteko kostua"
+
+#. module: stock_account
+#: model:ir.model.fields.selection,name:stock_account.selection__product_category__property_cost_method__average
+msgid "Average Cost (AVCO)"
+msgstr "Batez besteko kostua (AVCO)"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid "Cancel"
+msgstr "Utzi"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"Cannot find a stock input account for the product %s. You must define one on"
+" the product category, or on the location, before processing this operation."
+msgstr ""
+"Ezin da aurkitu %s produktuaren izakinen sarrerako kontua. Eragiketa prozesatu aurretik, definitu kontu produktuaren kategorian edo kokapenean."
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"Cannot find a stock output account for the product %s. You must define one "
+"on the product category, or on the location, before processing this "
+"operation."
+msgstr ""
+"Ezin da aurkitu %s produktuaren izakinen irteerako kontua. Eragiketa prozesatu aurretik, definitu kontu produktuaren kategorian edo kokapenean."
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"Changing your cost method is an important change that will impact your "
+"inventory valuation. Are you sure you want to make that change?"
+msgstr ""
+"Kostuen metodoa aldatzeak nabarmenki eragingo dio inbentarioaren balorazioari. Ziur zaude aldaketa egin nahi duzula?"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_stock_quantity_history_inherit_stock_account
+msgid "Choose a date to get the valuation at that date"
+msgstr "Aukeratu balorazioa egiteko data"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__company_id
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__company_id
+msgid "Company"
+msgstr "Enpresa"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurazio-ezarpenak"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"Configuration error. Please configure the price difference account on the "
+"product or its category to process this operation."
+msgstr ""
+"Konfigurazio-errorea. Eragiketa hau egiteko, konfiguratu prezio-desberdintasunaren kontua produktuan edo haren kategoria."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_category__property_cost_method
+#: model:ir.model.fields,field_description:stock_account.field_product_product__cost_method
+#: model:ir.model.fields,field_description:stock_account.field_product_template__cost_method
+#: model:ir.model.fields,field_description:stock_account.field_stock_quant__cost_method
+msgid "Costing Method"
+msgstr "Kostuen metodoa"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid "Costing method change for product category %s: from %s to %s."
+msgstr "%s produktu-kategoriaren kostuaren metodoa aldatzea, %s metodotik %s metodora."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__account_id
+msgid "Counterpart Account"
+msgstr "Kontrapartida-kontua"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_category__property_stock_account_input_categ_id
+msgid ""
+"Counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account\n"
+"                set on the source location. This is the default value for all products in this category. It can also directly be set on each product."
+msgstr ""
+"Sarrerako stockeko mugimendu guztien kontrapartida-egunkariko elementuak kontu honetan kontabilizatuko dira, jatorrizko kokapenean\n"
+"                balorazio-kontu bat ezarri bada izan ezik. Hori da kategoria honetako produktu guztien balio lehenetsia. Produktu bakoitzean ere ezar daiteke."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_picking__country_code
+msgid "Country Code"
+msgstr "Herrialde-kodea"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__create_uid
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__create_uid
+msgid "Created by"
+msgstr "Nork sortua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__create_date
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__create_date
+msgid "Created on"
+msgstr "Noiz sortua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_quant__currency_id
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__currency_id
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__currency_id
+msgid "Currency"
+msgstr "Dibisa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__current_quantity_svl
+msgid "Current Quantity"
+msgstr "Uneko zenbatekoa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__current_value_svl
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid "Current Value"
+msgstr "Uneko balioa"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_form
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_tree
+msgid "Date"
+msgstr "Data"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_quant__accounting_date
+msgid ""
+"Date at which the accounting entries will be created in case of automated "
+"inventory valuation. If empty, the inventory date will be used."
+msgstr ""
+"Kontabilitate-idazpenak sortuko diren data, inbentarioa automatikoki baliozkotzen bada. Hutsik uzten baduzu, inbentarioaren data erabiliko da."
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_valuation_layer__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Stock-eragiketa guztietan erabiltzen den neurri-unitate lehenetsia."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__description
+msgid "Description"
+msgstr "Deskribapena"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_res_config_settings__group_lot_on_invoice
+msgid "Display Lots & Serial Numbers on Invoices"
+msgstr "Sorta- eta serie-zenbakiak fakturetan erakutsi"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__display_name
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__display_name
+msgid "Display Name"
+msgstr "Izena erakutsi"
+
+#. module: stock_account
+#: model:res.groups,name:stock_account.group_lot_on_invoice
+msgid "Display Serial & Lot Number on Invoices"
+msgstr "Erakutsi serie- eta sorta-zenbakia fakturetan"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+msgid "Documentation"
+msgstr "Dokumentazioa"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"Due to a change of product category (from %s to %s), the costing method"
+"                                has changed for product template %s: from %s"
+" to %s."
+msgstr ""
+"Produktu-kategoria aldatu denez (lehen %s zen eta orain %s da), kostuen metodoa                                aldatu da %s produktuaren txantiloian : lehen %s zen eta orain %s da."
+
+#. module: stock_account
+#: model:ir.model.fields.selection,name:stock_account.selection__product_category__property_cost_method__fifo
+msgid "First In First Out (FIFO)"
+msgstr ""
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_inventory_valuation_search
+msgid "Group by..."
+msgstr "Taldekatu honela..."
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_inventory_valuation_search
+msgid "Has Remaining Qty"
+msgstr "Zenbateko soberakinak ditu"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__id
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__id
+msgid "ID"
+msgstr "IDa"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_inventory_valuation_search
+msgid "Incoming"
+msgstr "Sarrerakoa"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_location
+msgid "Inventory Locations"
+msgstr "Inbentarioaren kokapenak"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/__init__.py:0
+#: code:addons/stock_account/models/account_chart_template.py:0
+#: model:ir.model.fields,field_description:stock_account.field_product_category__property_valuation
+#: model:ir.model.fields,field_description:stock_account.field_product_product__valuation
+#: model:ir.model.fields,field_description:stock_account.field_product_template__valuation
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__property_valuation
+#: model_terms:ir.ui.view,arch_db:stock_account.view_category_property_form_stock
+#: model_terms:ir.ui.view,arch_db:stock_account.view_inventory_valuation_search
+#, python-format
+msgid "Inventory Valuation"
+msgstr "Inbentarioaren kalkulua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__account_move_line_id
+msgid "Invoice Line"
+msgstr "Faktura-lerroa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__price_diff_value
+msgid "Invoice value correction with invoice currency"
+msgstr "Fakturaren balioan dibisa zuzentzea"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__account_journal_id
+msgid "Journal"
+msgstr "Egunkaria"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_account_move
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__account_move_id
+msgid "Journal Entry"
+msgstr "Egunkariko idazpena"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Egunkariko oharra"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_res_config_settings__module_stock_landed_costs
+msgid "Landed Costs"
+msgstr "Kostua helburuan"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer____last_update
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation____last_update
+msgid "Last Modified on"
+msgstr "Azken aldatze-data:"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__write_uid
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__write_uid
+msgid "Last Updated by"
+msgstr "Nork eguneratua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__write_date
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__write_date
+msgid "Last Updated on"
+msgstr "Noiz eguneratua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__stock_valuation_layer_id
+msgid "Linked To"
+msgstr "Honi lotuta:"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+msgid "Lots &amp; Serial numbers will appear on the invoice"
+msgstr "Sortak &amp; Serie-zenbakiak fakturan agertuko dira"
+
+#. module: stock_account
+#: model:ir.model.fields.selection,name:stock_account.selection__product_category__property_valuation__manual_periodic
+msgid "Manual"
+msgstr "Eskuzkoa"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid "Manual Stock Valuation: %s."
+msgstr "Izakinen eskuzko kalkulua: %s."
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid "Manual Stock Valuation: No Reason Given."
+msgstr "Izakinen eskuzko kalkulua: ez da arrazoirik eman."
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_category__property_valuation
+#: model:ir.model.fields,help:stock_account.field_product_product__valuation
+#: model:ir.model.fields,help:stock_account.field_product_template__valuation
+#: model:ir.model.fields,help:stock_account.field_stock_valuation_layer_revaluation__property_valuation
+msgid ""
+"Manual: The accounting entries to value the inventory are not posted automatically.\n"
+"        Automated: An accounting entry is automatically created to value the inventory when a product enters or leaves the company.\n"
+"        "
+msgstr ""
+"Eskuzkoa: inbentarioa kalkulatzeko kontabilitate-idazpenak ez dira automatikoki argitaratzen.\n"
+"        Automatizatua: produktu bat enpresara sartzen edo bertatik ateratzen denean, kontabilitate-idazpen bat sortzen da automatikoki inbentarioa kalkulatzeko."
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_tree
+msgid "Moved Quantity"
+msgstr "Mugitutako zenbatekoa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__new_value
+msgid "New value"
+msgstr "Balio berria"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__new_value_by_qty
+msgid "New value by quantity"
+msgstr "Kopuruaren araberako balio berria"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_tree
+msgid "Open Valuation Layer"
+msgstr "Ireki balorazio-geruza"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_form
+msgid "Other Info"
+msgstr "Bestelako informazioa"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_inventory_valuation_search
+msgid "Outgoing"
+msgstr "Irteerakoa"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_product_template
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__product_id
+#: model_terms:ir.ui.view,arch_db:stock_account.view_inventory_valuation_search
+msgid "Product"
+msgstr "Produktua"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_product_category
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__categ_id
+msgid "Product Category"
+msgstr "Produktu-kategoria"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Produktuaren mugimenduak (stockeko mugimendu-lerroak)"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+#, python-format
+msgid "Product Revaluation"
+msgstr "Produktua berriro ebaluatzea"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__product_tmpl_id
+msgid "Product Template"
+msgstr "Produktuaren txantiloia"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_product_product
+msgid "Product Variant"
+msgstr "Produktu-aldaera"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid "Product value manually modified (from %s to %s)"
+msgstr "Produktuaren balioa eskuz aldatu da (lehen %s zen eta orain %s da)"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__quantity
+msgid "Quantity"
+msgstr "Kopurua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_product__quantity_svl
+msgid "Quantity Svl"
+msgstr "Izakinen balorazio-geruzen (SVL) kopurua"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_quant
+msgid "Quants"
+msgstr "Kopuruak"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__reason
+msgid "Reason"
+msgstr "Arrazoia"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_valuation_layer_revaluation__reason
+msgid "Reason of the revaluation"
+msgstr "Berriro ebaluatzeko arrazoia"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__reference
+msgid "Reference"
+msgstr "Erreferentzia"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__product_id
+msgid "Related product"
+msgstr "Erlazionatutako produktua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__remaining_qty
+msgid "Remaining Qty"
+msgstr "Geratzen den zenbatekoa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__remaining_value
+msgid "Remaining Value"
+msgstr "Geratzen den balioa XX"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Itzulketen kudeaketa XX"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_return_picking_line
+msgid "Return Picking Line"
+msgstr "Itzulketen kudeaketaren lerroa XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid "Revaluation of %s"
+msgstr "%s elementua berriro tasatzea XX"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid "Revalue"
+msgstr "Berriro tasatu"
+
+#. module: stock_account
+#: model:ir.model.fields.selection,name:stock_account.selection__product_category__property_cost_method__standard
+msgid "Standard Price"
+msgstr "Prezio estandarra"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_category__property_cost_method
+#: model:ir.model.fields,help:stock_account.field_product_product__cost_method
+#: model:ir.model.fields,help:stock_account.field_product_template__cost_method
+#: model:ir.model.fields,help:stock_account.field_stock_quant__cost_method
+msgid ""
+"Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first.\n"
+"        "
+msgstr ""
+"Prezio estandarra: produktuan definitutako kostu estandarraren arabera tasatzen dira produktuak.\n"
+"		Batez besteko kostua (AVCO, Average Cost): batez besteko kostu haztatuaren arabera tasatzen dira produktuak.\n"
+"		Lehena sartzen, lehena irteten (FIFO, First In First Out): enpresara lehenik sartzen direnak lehenik irtengo direla jakintzat emanda tasatzen dira produktuak. XX"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_account_input_categ_id
+msgid "Stock Input Account"
+msgstr "Izakinen sarreraren kontua XX"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_journal
+msgid "Stock Journal"
+msgstr "Izakinen egunkaria"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_move
+#: model:ir.model.fields,field_description:stock_account.field_account_bank_statement_line__stock_move_id
+#: model:ir.model.fields,field_description:stock_account.field_account_move__stock_move_id
+#: model:ir.model.fields,field_description:stock_account.field_account_payment__stock_move_id
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__stock_move_id
+msgid "Stock Move"
+msgstr "Stockeko mugimenduak"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_account_output_categ_id
+msgid "Stock Output Account"
+msgstr "Izakinen irteeraren kontua XX"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_quantity_history
+msgid "Stock Quantity History"
+msgstr "Izakin-kopuruaren historia"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_report_stock_report_product_product_replenishment
+msgid "Stock Replenishment Report"
+msgstr "Stocka berriro jartzeari buruzko txostena"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_request_count
+msgid "Stock Request an Inventory Count"
+msgstr "Izakinen inbentarioa zenbatzeko eskaera XX"
+
+#. module: stock_account
+#. odoo-javascript
+#: code:addons/stock_account/static/src/stock_account_forecasted/forecasted_header.js:0
+#: model:ir.actions.act_window,name:stock_account.stock_valuation_layer_action
+#: model:ir.actions.act_window,name:stock_account.stock_valuation_layer_report_action
+#: model_terms:ir.ui.view,arch_db:stock_account.view_stock_quant_tree_editable_inherit
+#, python-format
+msgid "Stock Valuation"
+msgstr "Izakinen tasazioa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_valuation_account_id
+msgid "Stock Valuation Account"
+msgstr "Izakinen tasazioaren kontua"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_location__valuation_in_account_id
+msgid "Stock Valuation Account (Incoming)"
+msgstr "Izakinen tasazioaren kontua (sarrerakoak)"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_location__valuation_out_account_id
+msgid "Stock Valuation Account (Outgoing)"
+msgstr "Izakinen tasazioaren kontua (irteerakoak)"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_valuation_layer
+#: model:ir.model.fields,field_description:stock_account.field_account_bank_statement_line__stock_valuation_layer_ids
+#: model:ir.model.fields,field_description:stock_account.field_account_move__stock_valuation_layer_ids
+#: model:ir.model.fields,field_description:stock_account.field_account_move_line__stock_valuation_layer_ids
+#: model:ir.model.fields,field_description:stock_account.field_account_payment__stock_valuation_layer_ids
+#: model:ir.model.fields,field_description:stock_account.field_product_product__stock_valuation_layer_ids
+#: model:ir.model.fields,field_description:stock_account.field_stock_move__stock_valuation_layer_ids
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__stock_valuation_layer_ids
+msgid "Stock Valuation Layer"
+msgstr "Izakinen tasazio-geruza XX"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_product__company_currency_id
+msgid ""
+"Technical field to correctly show the currently selected company's currency "
+"that corresponds to the totaled value of the product's valuation layers"
+msgstr ""
+"Une honetan hautatuta dagoen enpresaren moneta zuzen erakusten duen eremu teknikoa. Produktuaren tasatze-geruzen guztizko balioarekin bat dator zenbateko hori. XX"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_picking__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"Herrialdearen ISO kodea, bi karakteretan.\n"
+"Erabili eremu hau bilaketa azkarrak egiteko."
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"The Stock Input and/or Output accounts cannot be the same as the Stock "
+"Valuation account."
+msgstr ""
+"Izakinen sarrerako eta/edo irteerako kontuek ezin dute izan izakinen tasazioaren kontuaren berdinak. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"The action leads to the creation of a journal entry, for which you don't "
+"have the access rights."
+msgstr ""
+"Ekintza honen ondorioz egunkariko partida bat sortuko da, baina zuk ez duzu egunkari horretarako sarbiderik. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid "The added value doesn't have any impact on the stock valuation"
+msgstr "Balio erantsiak ez du eraginik izakinen tasazioan"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"The move lines are not in a consistent state: some are entering and other "
+"are leaving the company."
+msgstr ""
+"Mugimendu-lerroak ez daude egoera koherente batean: batzuk enpresan sartzen ari dira, eta beste batzuk enpresatik irteten. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"The move lines are not in a consistent states: they are doing an "
+"intercompany in a single step while they should go through the intercompany "
+"transit location."
+msgstr ""
+"Mugimendu-lerroak ez daude egoera koherenteetan: enpresa arteko transakzioak urrats bakarrean egiten ari dira, baina enpresa arteko iragate-kokapenetik pasatu beharko lirateke. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"The move lines are not in a consistent states: they do not share the same "
+"origin or destination company."
+msgstr ""
+"Mugimendu-lerroak ez daude egoera koherenteetan: ez dute jatorrizko edo helmugako enpresa bera."
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid ""
+"The value of a stock valuation layer cannot be negative. Landed cost could "
+"be use to correct a specific transfer."
+msgstr ""
+"Izakinen tasazio-geruza baten balioak ezin du negatiboa izan. Guztizko kostua erabil daiteke transferentzia jakin bat zuzentzeko."
+
+#. module: stock_account
+#: model_terms:ir.actions.act_window,help:stock_account.stock_valuation_layer_action
+#: model_terms:ir.actions.act_window,help:stock_account.stock_valuation_layer_report_action
+msgid ""
+"There are no valuation layers. Valuation layers are created when there are "
+"product moves that impact the valuation of the stock."
+msgstr ""
+"Ez dago tasazio-geruzarik. Izakinen tasazioari eragiten dioten produktu-mugimenduak egiten direnean sortzen dira tasazio-geruzak. XX"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_report_tree
+msgid "Total Remaining Quantity"
+msgstr "Geratzen den zenbatekoa, guztira"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_report_tree
+msgid "Total Remaining Value"
+msgstr "Geratzen den balioa, guztira"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_product__total_value
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__value
+#: model_terms:ir.ui.view,arch_db:stock_account.product_product_stock_tree_inherit_stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_tree
+#: model_terms:ir.ui.view,arch_db:stock_account.view_stock_quant_tree_editable_inherit
+msgid "Total Value"
+msgstr "Balioa, guztira"
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_picking
+msgid "Transfer"
+msgstr "Transferitu"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_move__to_refund
+#: model:ir.model.fields,help:stock_account.field_stock_return_picking_line__to_refund
+msgid ""
+"Trigger a decrease of the delivered/received quantity in the associated Sale"
+" Order/Purchase Order"
+msgstr ""
+"Abiarazi bidalitako/jasotako zenbatekoaren murrizketa bat dagokion salmenta-eskaeran/eskabide-orrian XX"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.product_product_stock_tree_inherit_stock_account
+msgid "Unit Cost"
+msgstr "Kostu unitarioa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__unit_cost
+msgid "Unit Value"
+msgstr "Balio unitarioa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__uom_id
+#: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer_revaluation__product_uom_name
+msgid "Unit of Measure"
+msgstr "Neurketa-unitatea"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_move__to_refund
+#: model:ir.model.fields,field_description:stock_account.field_stock_return_picking_line__to_refund
+msgid "Update quantities on SO/PO"
+msgstr "Eguneratu salmenta-eskaeren/eskabide-orrien kopuruak"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_location__valuation_in_account_id
+msgid ""
+"Used for real-time inventory valuation. When set on a virtual location (non "
+"internal type), this account will be used to hold the value of products "
+"being moved from an internal location into this location, instead of the "
+"generic Stock Output Account set on the product. This has no effect for "
+"internal locations."
+msgstr ""
+"Inbentarioa denbora errealean tasatzeko erabiltzen da. Kokapen birtual batean (ez barne-kokapen batean) ezartzen denean, kontu hau erabiliko da barneko kokapen batetik kokapen honetara mugitzen ari diren produktuen balioari atxikitzeko, ez produktuan ezarritako izakinen irteeraren kontu orokorra. Horrek ez du eraginik barne-kokapenetan."
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_stock_location__valuation_out_account_id
+msgid ""
+"Used for real-time inventory valuation. When set on a virtual location (non "
+"internal type), this account will be used to hold the value of products "
+"being moved out of this location and into an internal location, instead of "
+"the generic Stock Output Account set on the product. This has no effect for "
+"internal locations."
+msgstr ""
+"Inbentarioa denbora errealean tasatzeko erabiltzen da. Kokapen birtual batean (ez barne-kokapen batean) ezartzen denean, kontu hau erabiliko da kokapen honetatik barneko kokapen batera mugitzen ari diren produktuen balioari atxikitzeko, ez produktuan ezarritako izakinen irteeraren kontu orokorra. Horrek ez du eraginik barne-kokapenetan. XX"
+
+#. module: stock_account
+#: model:ir.ui.menu,name:stock_account.menu_valuation
+#: model_terms:ir.ui.view,arch_db:stock_account.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_form
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_picking
+#: model_terms:ir.ui.view,arch_db:stock_account.view_stock_quant_tree_editable_inherit
+msgid "Valuation"
+msgstr "Tasazioa"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_product__company_currency_id
+msgid "Valuation Currency"
+msgstr "Tasazioaren moneta"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.product_product_stock_tree_inherit_stock_account
+msgid "Valuation Report"
+msgstr "Tasazio-txostena"
+
+#. module: stock_account
+#. odoo-javascript
+#: code:addons/stock_account/static/src/xml/inventory_report.xml:0
+#: model_terms:ir.ui.view,arch_db:stock_account.view_stock_quantity_history_inherit_stock_account
+#, python-format
+msgid "Valuation at Date"
+msgstr "Tasatze-data"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid "Valuation method change for product category %s: from %s to %s."
+msgstr "Tasatze-metodoa aldatu da %s produktu-kategoriarako: %s izatetik %s izatera pasatu da."
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_stock_quant__value
+msgid "Value"
+msgstr "Balioa"
+
+#. module: stock_account
+#. odoo-javascript
+#: code:addons/stock_account/static/src/stock_account_forecasted/forecasted_header.xml:0
+#, python-format
+msgid "Value On Hand:"
+msgstr "Izakinen balioa: XX"
+
+#. module: stock_account
+#: model:ir.model.fields,field_description:stock_account.field_product_product__value_svl
+msgid "Value Svl"
+msgstr "Balioa XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid "Warning"
+msgstr "Abisua"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_category__property_stock_valuation_account_id
+msgid ""
+"When automated inventory valuation is enabled on a product, this account "
+"will hold the current value of the products."
+msgstr ""
+"Produktu batean inbentarioaren tasazio automatizatua gaitzen denean, kontu honetan atxikiko zaio produktuen uneko balioari."
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_category__property_stock_account_output_categ_id
+msgid ""
+"When doing automated inventory valuation, counterpart journal items for all outgoing stock moves will be posted in this account,\n"
+"                unless there is a specific valuation account set on the destination location. This is the default value for all products in this category.\n"
+"                It can also directly be set on each product."
+msgstr ""
+"Inbentarioaren tasazio automatizatua egitean, izakinen irteerako mugimendu guztiei dagozkien egunkariko elementuen kontrapartidak kontu honetan argitaratuko dira, salbu eta helmugako kokapenean tasazio-kontu espezifiko bat ezarrita badago. Hau da kategoria honetako produktu guztien balio lehenetsia. Zuzenean produktu bakoitzean ere ezar daiteke. XX"
+
+#. module: stock_account
+#: model:ir.model.fields,help:stock_account.field_product_category__property_stock_journal
+msgid ""
+"When doing automated inventory valuation, this is the Accounting Journal in "
+"which entries will be automatically posted when stock moves are processed."
+msgstr ""
+"Inbentarioaren tasazio automatizatua egitean, partidak kontabilitate-egunkari honetan argitaratuko dira automatikoki izakinen mugimenduak prozesatu ondoren."
+
+#. module: stock_account
+#: model:ir.model,name:stock_account.model_stock_valuation_layer_revaluation
+msgid "Wizard model to reavaluate a stock inventory for a product"
+msgstr "Produktu baten izakinen inbentarioa berriro ebaluatzeko morroiaren eredua XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid "You cannot revalue a product with a standard cost method."
+msgstr "Ezin da produkturik berriro tasatu kostu estandarraren metodoarekin. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/wizard/stock_valuation_layer_revaluation.py:0
+#, python-format
+msgid "You cannot revalue a product with an empty or negative stock."
+msgstr "Ezin da izakinik ez duen edo kopuru negatibo bat duen produktu bat berriro tasatu. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"You cannot update the cost of a product in automated valuation as it leads "
+"to the creation of a journal entry, for which you don't have the access "
+"rights."
+msgstr ""
+"Ezin da tasazio automatizatua gaituta daukan produktu baten kostua eguneratu, egunkariko partida bat sortzen duelako eta ez duzulako izango partida horretarako sarbiderik. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"You don't have any input valuation account defined on your product category."
+" You must define one before processing this operation."
+msgstr ""
+"Ez daukazu sarrerak tasatzeko konturik definituta produktu-kategoria honetan. Eragiketa hau prozesatu aurretik, kontu bat definitu behar duzu. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"You don't have any output valuation account defined on your product "
+"category. You must define one before processing this operation."
+msgstr ""
+"Ez daukazu irteerak tasatzeko konturik definituta produktu-kategoria honetan. Eragiketa hau prozesatu aurretik, kontu bat definitu behar duzu. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid ""
+"You don't have any stock input account defined on your product category. You"
+" must define one before processing this operation."
+msgstr ""
+"Ez daukazu izakinen sarreren konturik definituta produktu-kategoria honetan. Eragiketa hau prozesatu aurretik, kontu bat definitu behar duzu. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"You don't have any stock journal defined on your product category, check if "
+"you have installed a chart of accounts."
+msgstr ""
+"Ez daukazu izakinen egunkaririk definituta produktu-kategoria honetan. Egiaztatu ea kontuen diagramarik instalatu duzun. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#: code:addons/stock_account/models/product.py:0
+#: code:addons/stock_account/models/product.py:0
+#: code:addons/stock_account/models/stock_move.py:0
+#, python-format
+msgid ""
+"You don't have any stock valuation account defined on your product category."
+" You must define one before processing this operation."
+msgstr ""
+"Ez daukazu izakinak tasatzeko konturik definituta produktu-kategoria honetan. Eragiketa hau prozesatu aurretik, kontu bat definitu behar duzu. XX"
+
+#. module: stock_account
+#. odoo-python
+#: code:addons/stock_account/models/product.py:0
+#, python-format
+msgid "You must set a counterpart account on your product category."
+msgstr "Kontrapartida-kontu bat ezarri behar duzu produktu-kategoria honetan. XX"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid "by"
+msgstr "Egilea:"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.stock_valuation_layer_revaluation_form_view
+msgid "for"
+msgstr "honentzat:"
+
+#. module: stock_account
+#: model_terms:ir.ui.view,arch_db:stock_account.view_category_property_form
+msgid "locations"
+msgstr "kokapenak"
