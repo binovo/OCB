@@ -12,6 +12,6 @@
         'wizards/compliance_letter_view.xml',
         'reports/compliance_letter_report.xml',
     ],
-    "auto_install": True,
+    "auto_install": False,
     "license": "LGPL-3",
 }
