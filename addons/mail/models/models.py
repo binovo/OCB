@@ -5,6 +5,7 @@ from lxml.builder import E
 from markupsafe import Markup
 
 from odoo import api, models, tools, _
+from odoo.tools import float_compare
 
 import logging
 
@@ -23,6 +24,15 @@ class BaseModel(models.AbstractModel):
     # ------------------------------------------------------------
     # GENERIC MAIL FEATURES
     # ------------------------------------------------------------
+    def compare_float_values(self, new_value, initial_value, col_info):
+        if col_info.get('type') in ['monetary', 'float']:
+            # We convert False to 0.0 so that float_compare doesn't fail
+            # Odoo usually returns False for empty numeric fields in the 'initial' dict
+            val1 = new_value or 0.0
+            val2 = initial_value or 0.0
+            return float_compare(val1, val2, precision_digits=4) != 0
+        # Original logic for Strings, Many2one, Booleans, etc.
+        return new_value != initial_value and (new_value or initial_value) # because browse null != False
 
     def _mail_track(self, tracked_fields, initial):
         """ For a given record, fields to check (tuple column name, column info)
@@ -50,7 +60,7 @@ class BaseModel(models.AbstractModel):
             initial_value = initial[col_name]
             new_value = self[col_name]
 
-            if new_value != initial_value and (new_value or initial_value):  # because browse null != False
+            if self.compare_float_values(new_value, initial_value, col_info):
                 tracking_sequence = getattr(self._fields[col_name], 'tracking',
                                             getattr(self._fields[col_name], 'track_sequence', 100))  # backward compatibility with old parameter name
                 if tracking_sequence is True:
