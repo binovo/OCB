@@ -93,11 +93,12 @@ class ResourceMixin(models.AbstractModel):
 
         # compute number of days as quarters
         days = sum(
-            float_utils.round(ROUNDING_FACTOR * day_hours[day] / day_total[day]) / ROUNDING_FACTOR
+            float_utils.float_round(ROUNDING_FACTOR * day_hours[day] / day_total[day],
+                                    precision_rounding=0.01) / ROUNDING_FACTOR
             for day in day_hours
         )
         return {
-            'days': days,
+            'days': float_utils.float_round(days, precision_rounding=0.01),
             'hours': sum(day_hours.values()),
         }
 
@@ -139,11 +140,12 @@ class ResourceMixin(models.AbstractModel):
 
         # compute number of days as quarters
         days = sum(
-            float_utils.round(ROUNDING_FACTOR * day_hours[day] / day_total[day]) / ROUNDING_FACTOR
+            float_utils.float_round(ROUNDING_FACTOR * day_hours[day] / day_total[day],
+                                    precision_rounding=0.01) / ROUNDING_FACTOR
             for day in day_hours
         )
         return {
-            'days': days,
+            'days': float_utils.float_round(days, precision_rounding=0.01),
             'hours': sum(day_hours.values()),
         }
 
