@@ -105,11 +105,12 @@ class MicrosoftOutlookMixin(models.AbstractModel):
         """Refresh the access token thanks to the refresh token.
 
         :return:
-            access_token, access_token_expiration
+            access_token, refresh_token, access_token_expiration
         """
         response = self._fetch_outlook_token('refresh_token', refresh_token=refresh_token)
         return (
             response['access_token'],
+            response['refresh_token'],
             int(time.time()) + response['expires_in'],
         )
 
@@ -163,6 +164,7 @@ class MicrosoftOutlookMixin(models.AbstractModel):
                 raise UserError(_('Please login your Outlook mail server before using it.'))
             (
                 self.microsoft_outlook_access_token,
+                self.microsoft_outlook_refresh_token,
                 self.microsoft_outlook_access_token_expiration,
             ) = self._fetch_outlook_access_token(self.microsoft_outlook_refresh_token)
             _logger.info(
