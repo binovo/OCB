@@ -625,6 +625,10 @@ class ResourceCalendar(models.Model):
         to_full = to_datetime + timedelta(days=1)
         intervals = self._attendance_intervals_batch(from_full, to_full, resources=resources)
 
+        result = self._prepare_day_total(intervals, resources_list)
+        return result
+
+    def _prepare_day_total(self, intervals, resources_list):
         result = defaultdict(lambda: defaultdict(float))
         for resource in resources_list:
             day_total = result[resource.id]
