@@ -6594,3 +6594,10 @@ msgstr "generarán tareas en su proyecto"
 #: model:mail.template,subject:project.rating_project_request_email_template
 msgid "{{ object.project_id.company_id.name }}: Satisfaction Survey"
 msgstr "{{ object.project_id.company_id.name }}: Encuesta de satisfacción"
+
+#. module: project
+#: code:addons/project/models/project.py:316
+#: model:ir.model.fields,field_description:project.field_project_project__sync_analytic_account_name
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Keep project name and analytic account name synchronized"
+msgstr "Mantener nombre de proyecto y nombre de cuenta analítica sincronizados"

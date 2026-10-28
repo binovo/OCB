@@ -312,6 +312,9 @@ class Project(models.Model):
             "Track the costs and revenues of your project by setting this analytic account on your related documents (e.g. sales orders, invoices, purchase orders, vendor bills, expenses etc.).\n"
             "This analytic account can be changed on each task individually if necessary.\n"
             "An analytic account is required in order to use timesheets.")
+    sync_analytic_account_name = fields.Boolean(
+        string='Keep project name and analytic account name synchronized',
+        default=True)
     analytic_account_balance = fields.Monetary(related="analytic_account_id.balance")
 
     favorite_user_ids = fields.Many2many(
@@ -663,17 +666,22 @@ class Project(models.Model):
             # archiving/unarchiving a project does it on its tasks, too
             self.with_context(active_test=False).mapped('tasks').write({'active': vals['active']})
         if 'name' in vals and self.analytic_account_id:
-            projects_read_group = self.env['project.project']._read_group(
-                [('analytic_account_id', 'in', self.analytic_account_id.ids)],
-                ['analytic_account_id'],
-                ['analytic_account_id']
-            )
-            analytic_account_to_update = self.env['account.analytic.account'].browse([
-                res['analytic_account_id'][0]
-                for res in projects_read_group
-                if res['analytic_account_id'] and res['analytic_account_id_count'] == 1
-            ])
-            analytic_account_to_update.write({'name': self.name})
+            if 'sync_analytic_account_name' in vals:
+                projects = self if vals['sync_analytic_account_name'] else self.browse()
+            else:
+                projects = self.filtered('sync_analytic_account_name')
+            if projects.analytic_account_id:
+                projects_read_group = self.env['project.project']._read_group(
+                    [('analytic_account_id', 'in', projects.analytic_account_id.ids)],
+                    ['analytic_account_id'],
+                    ['analytic_account_id']
+                )
+                analytic_account_to_update = self.env['account.analytic.account'].browse([
+                    res['analytic_account_id'][0]
+                    for res in projects_read_group
+                    if res['analytic_account_id'] and res['analytic_account_id_count'] == 1
+                ])
+                analytic_account_to_update.write({'name': self.name})
         return res
 
     def unlink(self):

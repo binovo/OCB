@@ -493,6 +493,10 @@
                             <field name="name" class="o_text_overflow" placeholder="e.g. Office Party"/>
                         </h1>
                     </div>
+                    <div class="o_row">
+                        <field name="sync_analytic_account_name"/>
+                        <label for="sync_analytic_account_name" string="Keep project name and analytic account name synchronized"/>
+                    </div>
                     <group>
                         <group>
                             <field name="label_tasks" string="Name of the tasks"/>
