@@ -379,10 +379,8 @@ class HrEmployeePrivate(models.Model):
             if account_ids and address_home_id:
                 self.env['res.partner.bank'].browse(account_ids).partner_id = address_home_id
             self.message_unsubscribe(self.address_home_id.ids)
-            if address_home_id:
-                self._message_subscribe([address_home_id])
         if 'user_id' in vals:
-            # Update the profile pictures with user, except if provided 
+            # Update the profile pictures with user, except if provided
             vals.update(self._sync_user(self.env['res.users'].browse(vals['user_id']),
                                         (bool(all(emp.image_1920 for emp in self)))))
         if 'work_permit_expiration_date' in vals:
