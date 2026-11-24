@@ -13,7 +13,7 @@ import time
 
 from email.header import decode_header, Header
 from email.utils import getaddresses, formataddr
-from lxml import etree
+from lxml import etree, html
 
 import odoo
 from odoo.loglevels import ustr
@@ -81,10 +81,25 @@ class _Cleaner(clean.Cleaner):
     strip_classes = False
     sanitize_style = False
 
+    def _normalize_tree_after_quote_detection(self, doc):
+        """Canonicalize doc once after quote tagging and before cleaning."""
+        normalized = html.fromstring(html.tostring(doc))
+        doc.clear()
+        doc.tag = normalized.tag
+        doc.attrib.update(normalized.attrib)
+        doc.text = normalized.text
+        doc.tail = normalized.tail
+        for child in normalized:
+            doc.append(child)
+
     def __call__(self, doc):
         # perform quote detection before cleaning and class removal
         for el in doc.iter(tag=etree.Element):
             self.tag_quote(el)
+
+        # Normalize the intermediate tree once more to avoid parser-dependent
+        # failures on malformed/unusual unicode input after quote tagging.
+        self._normalize_tree_after_quote_detection(doc)
 
         super(_Cleaner, self).__call__(doc)
 
@@ -185,6 +200,11 @@ def html_sanitize(src, silent=True, sanitize_tags=True, sanitize_attributes=Fals
     # html: remove encoding attribute inside tags
     doctype = re.compile(r'(<[^>]*\s)(encoding=(["\'][^"\']*?["\']|[^\s\n\r>]+)(\s[^>]*|/)?>)', re.IGNORECASE | re.DOTALL)
     src = doctype.sub(u"", src)
+    # Normalization pass before parsing: parser quirks are easier to control if
+    # equivalent malformed constructs are aligned first.
+    src = re.sub(r'</?o:.*?>', '', src)
+    src = src.replace('--!>', '-->')
+    src = re.sub(r'(<!-->|<!--->)', '<!-- -->', src)
 
     logger = logging.getLogger(__name__ + '.html_sanitize')
 
@@ -247,6 +267,9 @@ def html_sanitize(src, silent=True, sanitize_tags=True, sanitize_attributes=Fals
         cleaned = cleaned.replace(u'%7C', u'|')
         cleaned = cleaned.replace(u'&lt;%', u'<%')
         cleaned = cleaned.replace(u'%&gt;', u'%>')
+        # Keep normalization stable after serialization as well.
+        cleaned = cleaned.replace(u'--!>', u'-->')
+        cleaned = re.sub(r'(<!-->|<!--->)', '<!-- -->', cleaned)
         # html considerations so real html content match database value
         cleaned.replace(u'\xa0', u'&nbsp;')
     except etree.ParserError as e:

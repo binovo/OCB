@@ -284,6 +284,25 @@ class TestSanitizer(BaseCase):
         self.assertNotIn('<title>404 - Not Found</title>', html)
         self.assertIn('<h1>404 - Not Found</h1>', html)
 
+    def test_malformed_comment_and_outlook_tags_normalization(self):
+        self.assertEqual(
+            html_sanitize(u'<!-- test --!><p>Hello</p>', silent=False),
+            u'<p>Hello</p>',
+        )
+        self.assertEqual(
+            html_sanitize(u'<p>Hello</p><!--->', silent=False),
+            u'<p>Hello</p>',
+        )
+        self.assertEqual(
+            html_sanitize(u'<o:p></o:p><p>Hello</p>', silent=False),
+            u'<p>Hello</p>',
+        )
+
+    def test_non_printing_unicode_does_not_crash(self):
+        sanitized = html_sanitize(u'<p>Hello\u2060World</p><!--!>', silent=False)
+        self.assertIn(u'Hello', sanitized)
+        self.assertIn(u'World', sanitized)
+
     def test_cid_with_at(self):
         img_tag = '<img src="@">'
         sanitized = html_sanitize(img_tag, sanitize_tags=False, strip_classes=True)
